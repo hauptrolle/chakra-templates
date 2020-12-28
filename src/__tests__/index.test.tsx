@@ -6,6 +6,6 @@ describe("Index Page", () => {
   it("should render the headline", () => {
     render(<Index />);
 
-    expect(screen.getByText("Nextplate")).toBeInTheDocument();
+    expect(screen.getByText("Chakra Templates")).toBeInTheDocument();
   });
 });
