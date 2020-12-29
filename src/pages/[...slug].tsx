@@ -3,7 +3,9 @@ import { Container, Stack, Box, Flex, Text, Heading } from "@chakra-ui/react";
 import directoryTree, { DirectoryTree } from "directory-tree";
 import path from "path";
 
-import { Header } from "../internalComponents/Header";
+import { Header } from "../components/Header";
+import { TEMPLATE_DIR } from "../constants";
+import { toSentenceCase } from "../utils";
 
 type PageProps = {
   category: string;
@@ -18,7 +20,7 @@ const Templates: NextPage<PageProps> = ({ category, template, tree }) => {
       <Stack maxW={"6xl"} py={12} px={8} as={Container} spacing={12}>
         <Box>
           <Text color={"gray.600"} fontSize={"sm"} mb={2}>
-            {category}
+            {toSentenceCase(category)}
           </Text>
           <Heading
             size={"lg"}
@@ -30,15 +32,14 @@ const Templates: NextPage<PageProps> = ({ category, template, tree }) => {
             borderColor={"gray.200"}
             mb={5}
             pb={5}
-            textTransform={"capitalize"}
           >
-            {template}
+            {toSentenceCase(template)}
           </Heading>
         </Box>
 
-        {tree.children?.map((template) => (
+        {tree.children?.map((t) => (
           <Box
-            key={template.name}
+            key={t.name}
             rounded={"md"}
             border={1}
             borderColor={"gray.200"}
@@ -46,9 +47,13 @@ const Templates: NextPage<PageProps> = ({ category, template, tree }) => {
           >
             <Box p={4} minH={20}>
               <Heading as={"h3"} fontWeight={400} size={"md"}>
-                {template.name}
+                {toSentenceCase(t.name.split(".")[0])}
               </Heading>
             </Box>
+            <iframe
+              width={"100%"}
+              src={`/templates/${category}/${template}/${t.name.split(".")[0]}`}
+            />
           </Box>
         ))}
       </Stack>
@@ -62,10 +67,9 @@ export const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
 
   const componentsDir = path.join(
     process.cwd(),
-    `src/components/${category}/${template}`
+    `${TEMPLATE_DIR}/${category}/${template}`
   );
   const tree = directoryTree(componentsDir);
-  console.log(tree);
 
   return {
     props: {
@@ -77,7 +81,7 @@ export const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const componentsDir = path.join(process.cwd(), "src/components");
+  const componentsDir = path.join(process.cwd(), TEMPLATE_DIR);
   const tree = directoryTree(componentsDir);
 
   // Todo fix type :/

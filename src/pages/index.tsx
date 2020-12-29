@@ -13,7 +13,9 @@ import {
 import path from "path";
 import directoryTree, { DirectoryTree } from "directory-tree";
 
-import { Header } from "../internalComponents/Header";
+import { TEMPLATE_DIR } from "../constants";
+import { Header } from "../components/Header";
+import { toSentenceCase } from "../utils";
 
 type PageProps = {
   tree: DirectoryTree;
@@ -44,7 +46,7 @@ const Home: NextPage<PageProps> = ({ tree }) => {
               mb={5}
               pb={5}
             >
-              {category.name}
+              {toSentenceCase(category.name)}
               <Tag ml={3} size={"sm"} colorScheme={"green"}>
                 New
               </Tag>
@@ -55,7 +57,7 @@ const Home: NextPage<PageProps> = ({ tree }) => {
                   <Link href={`/${category.name}/${template.name}`}>
                     <a>
                       <Text as={"h3"} fontWeight={600}>
-                        {template.name}
+                        {toSentenceCase(template.name)}
                       </Text>
                       <Text color={"gray.600"} fontSize={"sm"}>
                         {template.children?.length} Components
@@ -73,7 +75,7 @@ const Home: NextPage<PageProps> = ({ tree }) => {
 };
 
 export const getStaticProps: GetStaticProps<PageProps> = async () => {
-  const componentsDir = path.join(process.cwd(), "src/components");
+  const componentsDir = path.join(process.cwd(), TEMPLATE_DIR);
   const tree = directoryTree(componentsDir);
 
   return {
