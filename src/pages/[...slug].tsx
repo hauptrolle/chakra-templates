@@ -1,11 +1,25 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import { Container, Stack, Box, Flex, Text, Heading } from "@chakra-ui/react";
+import Link from "next/link";
+import {
+  Container,
+  Stack,
+  Box,
+  Flex,
+  Text,
+  Heading,
+  HStack,
+  Button,
+  IconButton,
+} from "@chakra-ui/react";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 import directoryTree, { DirectoryTree } from "directory-tree";
 import path from "path";
 
 import { Header } from "../components/Header";
+import { ResizableFrame } from "../components/ResizableFrame";
 import { TEMPLATE_DIR } from "../constants";
 import { toSentenceCase } from "../utils";
+import { useState } from "react";
 
 type PageProps = {
   category: string;
@@ -14,6 +28,8 @@ type PageProps = {
 };
 
 const Templates: NextPage<PageProps> = ({ category, template, tree }) => {
+  const [tabState, setTabState] = useState<"preview" | "code">("preview");
+
   return (
     <>
       <Header />
@@ -45,13 +61,39 @@ const Templates: NextPage<PageProps> = ({ category, template, tree }) => {
             borderColor={"gray.200"}
             borderStyle={"solid"}
           >
-            <Box p={4} minH={20}>
-              <Heading as={"h3"} fontWeight={400} size={"md"}>
-                {toSentenceCase(t.name.split(".")[0])}
-              </Heading>
+            <Box p={4}>
+              <Flex alignItems={"center"} justify={"space-between"}>
+                <Heading as={"h3"} fontWeight={400} size={"md"}>
+                  {toSentenceCase(t.name.split(".")[0])}
+                </Heading>
+                <HStack>
+                  <Button
+                    size={"sm"}
+                    colorScheme={tabState === "preview" ? "green" : undefined}
+                    onClick={() => setTabState("preview")}
+                  >
+                    Preview
+                  </Button>
+                  <Button size={"sm"}>Code</Button>
+                  <Link
+                    href={`/templates/${category}/${template}/${
+                      t.name.split(".")[0]
+                    }`}
+                    passHref
+                  >
+                    <IconButton
+                      as={"a"}
+                      cursor={"pointer"}
+                      icon={<ExternalLinkIcon />}
+                      size={"xs"}
+                      aria-label={"Open in Fullscreen"}
+                      title={"Open in Fullscreen"}
+                    />
+                  </Link>
+                </HStack>
+              </Flex>
             </Box>
-            <iframe
-              width={"100%"}
+            <ResizableFrame
               src={`/templates/${category}/${template}/${t.name.split(".")[0]}`}
             />
           </Box>
