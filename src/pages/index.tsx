@@ -16,6 +16,7 @@ import { TEMPLATE_DIR } from "../constants";
 import { Header } from "../components/Header";
 import { toSentenceCase } from "../utils";
 import { Steps } from "../components/Steps";
+import { Footer } from "../components/Footer";
 
 type PageProps = {
   tree: DirectoryTree;
@@ -111,6 +112,7 @@ const Home: NextPage<PageProps> = ({ tree }) => {
           </Box>
         ))}
       </Stack>
+      <Footer />
     </>
   );
 };

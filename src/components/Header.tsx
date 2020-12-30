@@ -4,7 +4,6 @@ import {
   Container,
   DarkMode,
   Heading,
-  HStack,
   Stack,
   Text,
 } from "@chakra-ui/react";
@@ -52,7 +51,7 @@ export const Header = () => {
             are ready to go ✌️
           </Text>
           <Box>
-            <HStack spacing={6}>
+            <Stack spacing={6} direction={{ base: "column", sm: "row" }}>
               <Link href={"/#components"} passHref={true}>
                 <Button
                   variant="outline"
@@ -66,7 +65,7 @@ export const Header = () => {
               <Button variant="ghost" colorScheme={"teal"}>
                 Suggest Template
               </Button>
-            </HStack>
+            </Stack>
           </Box>
         </Stack>
       </Box>
