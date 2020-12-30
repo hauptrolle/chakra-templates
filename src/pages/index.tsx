@@ -6,7 +6,6 @@ import {
   Text,
   Box,
   Stack,
-  Tag,
   Flex,
   SimpleGrid,
 } from "@chakra-ui/react";
@@ -16,6 +15,7 @@ import directoryTree, { DirectoryTree } from "directory-tree";
 import { TEMPLATE_DIR } from "../constants";
 import { Header } from "../components/Header";
 import { toSentenceCase } from "../utils";
+import { Steps } from "../components/Steps";
 
 type PageProps = {
   tree: DirectoryTree;
@@ -25,6 +25,7 @@ const Home: NextPage<PageProps> = ({ tree }) => {
   return (
     <>
       <Header />
+      <Steps />
       <Stack
         maxW={"6xl"}
         py={12}
