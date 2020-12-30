@@ -52,6 +52,24 @@ const Home: NextPage<PageProps> = ({ tree }) => {
             >
               {toSentenceCase(category.name)}
             </Heading>
+
+            {category.children?.length === 0 ? (
+              <Flex
+                w={"full"}
+                bg={"gray.100"}
+                h={24}
+                alignItems={"center"}
+                justifyContent={"center"}
+                textAlign={"center"}
+                color={"gray.500"}
+                mb={4}
+                p={2}
+                rounded={"md"}
+              >
+                Nothing here yet. Components coming soon.
+              </Flex>
+            ) : null}
+
             <SimpleGrid columns={[1, 1, 3]} spacing={10}>
               {category.children?.map((template) => (
                 <Box key={template.name}>
@@ -79,7 +97,10 @@ const Home: NextPage<PageProps> = ({ tree }) => {
                         {toSentenceCase(template.name)}
                       </Text>
                       <Text color={"gray.600"} fontSize={"sm"}>
-                        {template.children?.length} Components
+                        {template.children?.length}{" "}
+                        {template.children?.length === 1
+                          ? "Component"
+                          : "Components"}
                       </Text>
                     </a>
                   </Link>
