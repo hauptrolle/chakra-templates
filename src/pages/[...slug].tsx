@@ -161,11 +161,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const componentsDir = path.join(process.cwd(), TEMPLATE_DIR);
   const tree = directoryTree(componentsDir);
 
-  // Todo fix type :/
-  const paths: any = tree.children
-    ?.map((category) =>
-      category.children
-        ?.map((template) => ({
+  const paths = tree
+    .children!.map((category) =>
+      category
+        .children!.map((template) => ({
           params: {
             slug: [category.name, template.name],
           },
