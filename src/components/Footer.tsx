@@ -29,6 +29,7 @@ export const Footer = () => {
         <Box
           mt={-4}
           minW={12}
+          maxW={12}
           as={BigHead}
           accessory="none"
           body="chest"
