@@ -1,27 +1,13 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import Link from "next/link";
-import {
-  Container,
-  Stack,
-  Box,
-  Flex,
-  Text,
-  Heading,
-  HStack,
-  Button,
-  IconButton,
-} from "@chakra-ui/react";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
+import { Container, Stack, Box, Flex, Text, Heading } from "@chakra-ui/react";
+import * as fs from "fs";
 import directoryTree, { DirectoryTree } from "directory-tree";
 import path from "path";
 
 import { Header } from "../components/Header";
-import { ResizableFrame } from "../components/ResizableFrame";
+import { Example } from "../components/Example";
 import { TEMPLATE_DIR } from "../constants";
 import { toSentenceCase } from "../utils";
-import { useState } from "react";
-import * as fs from "fs";
-import { CodeSample } from "../components/CodeSample";
 
 type PageProps = {
   category: string;
@@ -31,8 +17,6 @@ type PageProps = {
 };
 
 const Templates: NextPage<PageProps> = ({ category, template, tree, code }) => {
-  const [tabState, setTabState] = useState<"preview" | "code">("preview");
-
   return (
     <>
       <Header />
@@ -64,65 +48,13 @@ const Templates: NextPage<PageProps> = ({ category, template, tree, code }) => {
         </Box>
 
         {tree.children?.map((t) => (
-          <Box key={t.name}>
-            <Flex alignItems={"center"} justify={"space-between"} mb={4}>
-              <Heading as={"h3"} color={"gray.700"} size={"sm"}>
-                {toSentenceCase(t.name.split(".")[0])}
-              </Heading>
-              <HStack spacing={4}>
-                <Button
-                  size={"sm"}
-                  bg={tabState === "preview" ? "teal.100" : undefined}
-                  color={tabState === "preview" ? "teal.700" : undefined}
-                  _hover={{
-                    bg: tabState === "preview" ? "teal.100" : undefined,
-                  }}
-                  onClick={() => setTabState("preview")}
-                >
-                  Preview
-                </Button>
-                <Button
-                  size={"sm"}
-                  bg={tabState === "code" ? "teal.100" : undefined}
-                  color={tabState === "code" ? "teal.700" : undefined}
-                  _hover={{
-                    bg: tabState === "code" ? "teal.100" : undefined,
-                  }}
-                  onClick={() => setTabState("code")}
-                >
-                  Code
-                </Button>
-                <Link
-                  href={`/templates/${category}/${template}/${
-                    t.name.split(".")[0]
-                  }`}
-                  passHref
-                >
-                  <IconButton
-                    as={"a"}
-                    cursor={"pointer"}
-                    icon={<ExternalLinkIcon />}
-                    size={"sm"}
-                    aria-label={"Open in Fullscreen"}
-                    title={"Open in Fullscreen"}
-                  />
-                </Link>
-              </HStack>
-            </Flex>
-
-            <Box boxShadow={"xl"}>
-              <Box display={tabState === "preview" ? "block" : "none"}>
-                <ResizableFrame
-                  src={`/templates/${category}/${template}/${
-                    t.name.split(".")[0]
-                  }`}
-                />
-              </Box>
-              <Box display={tabState === "code" ? "block" : "none"}>
-                {code ? <CodeSample code={code[t.name]} /> : null}
-              </Box>
-            </Box>
-          </Box>
+          <Example
+            key={t.name}
+            template={t}
+            category={category}
+            subCategory={template}
+            code={code![t.name]}
+          />
         ))}
       </Stack>
     </>
