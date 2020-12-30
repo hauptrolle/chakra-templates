@@ -62,7 +62,14 @@ export const Header = () => {
                   Browse Components
                 </Button>
               </Link>
-              <Button variant="ghost" colorScheme={"teal"}>
+              <Button
+                variant="ghost"
+                colorScheme={"teal"}
+                as={"a"}
+                href={
+                  "https://github.com/hauptrolle/chakra-templates/issues/new/choose"
+                }
+              >
                 Suggest Template
               </Button>
             </Stack>
