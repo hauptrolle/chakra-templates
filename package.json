@@ -38,13 +38,16 @@
     "@chakra-ui/react": "^1.1.0",
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
+    "add": "^2.0.6",
     "directory-tree": "^2.2.5",
     "framer-motion": "^3.1.1",
     "next": "10.0.4",
     "nprogress": "^0.2.0",
     "re-resizable": "^6.9.0",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-code-blocks": "^0.0.8",
+    "react-dom": "17.0.1",
+    "yarn": "^1.22.10"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.8",

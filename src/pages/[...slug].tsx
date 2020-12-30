@@ -20,14 +20,17 @@ import { ResizableFrame } from "../components/ResizableFrame";
 import { TEMPLATE_DIR } from "../constants";
 import { toSentenceCase } from "../utils";
 import { useState } from "react";
+import * as fs from "fs";
+import { CodeSample } from "../components/CodeSample";
 
 type PageProps = {
   category: string;
   template: string;
   tree: DirectoryTree;
+  code?: Record<string, string>;
 };
 
-const Templates: NextPage<PageProps> = ({ category, template, tree }) => {
+const Templates: NextPage<PageProps> = ({ category, template, tree, code }) => {
   const [tabState, setTabState] = useState<"preview" | "code">("preview");
 
   return (
@@ -42,60 +45,83 @@ const Templates: NextPage<PageProps> = ({ category, template, tree }) => {
             size={"lg"}
             fontWeight={600}
             as={Flex}
-            alignItems={"center"}
+            alignItems={"baseline"}
             borderBottom={1}
             borderStyle={"solid"}
             borderColor={"gray.200"}
             mb={5}
             pb={5}
+            _after={{
+              ml: 3,
+              content: '""',
+              width: 4,
+              height: 1,
+              bgGradient: "linear(to-r, teal.200, blue.600)",
+            }}
           >
             {toSentenceCase(template)}
           </Heading>
         </Box>
 
         {tree.children?.map((t) => (
-          <Box
-            key={t.name}
-            rounded={"md"}
-            border={1}
-            borderColor={"gray.200"}
-            borderStyle={"solid"}
-          >
-            <Box p={4}>
-              <Flex alignItems={"center"} justify={"space-between"}>
-                <Heading as={"h3"} fontWeight={400} size={"md"}>
-                  {toSentenceCase(t.name.split(".")[0])}
-                </Heading>
-                <HStack>
-                  <Button
+          <Box key={t.name}>
+            <Flex alignItems={"center"} justify={"space-between"} mb={4}>
+              <Heading as={"h3"} color={"gray.700"} size={"sm"}>
+                {toSentenceCase(t.name.split(".")[0])}
+              </Heading>
+              <HStack spacing={4}>
+                <Button
+                  size={"sm"}
+                  bg={tabState === "preview" ? "teal.100" : undefined}
+                  color={tabState === "preview" ? "teal.700" : undefined}
+                  _hover={{
+                    bg: tabState === "preview" ? "teal.100" : undefined,
+                  }}
+                  onClick={() => setTabState("preview")}
+                >
+                  Preview
+                </Button>
+                <Button
+                  size={"sm"}
+                  bg={tabState === "code" ? "teal.100" : undefined}
+                  color={tabState === "code" ? "teal.700" : undefined}
+                  _hover={{
+                    bg: tabState === "code" ? "teal.100" : undefined,
+                  }}
+                  onClick={() => setTabState("code")}
+                >
+                  Code
+                </Button>
+                <Link
+                  href={`/templates/${category}/${template}/${
+                    t.name.split(".")[0]
+                  }`}
+                  passHref
+                >
+                  <IconButton
+                    as={"a"}
+                    cursor={"pointer"}
+                    icon={<ExternalLinkIcon />}
                     size={"sm"}
-                    colorScheme={tabState === "preview" ? "green" : undefined}
-                    onClick={() => setTabState("preview")}
-                  >
-                    Preview
-                  </Button>
-                  <Button size={"sm"}>Code</Button>
-                  <Link
-                    href={`/templates/${category}/${template}/${
-                      t.name.split(".")[0]
-                    }`}
-                    passHref
-                  >
-                    <IconButton
-                      as={"a"}
-                      cursor={"pointer"}
-                      icon={<ExternalLinkIcon />}
-                      size={"xs"}
-                      aria-label={"Open in Fullscreen"}
-                      title={"Open in Fullscreen"}
-                    />
-                  </Link>
-                </HStack>
-              </Flex>
+                    aria-label={"Open in Fullscreen"}
+                    title={"Open in Fullscreen"}
+                  />
+                </Link>
+              </HStack>
+            </Flex>
+
+            <Box boxShadow={"xl"}>
+              <Box display={tabState === "preview" ? "block" : "none"}>
+                <ResizableFrame
+                  src={`/templates/${category}/${template}/${
+                    t.name.split(".")[0]
+                  }`}
+                />
+              </Box>
+              <Box display={tabState === "code" ? "block" : "none"}>
+                {code ? <CodeSample code={code[t.name]} /> : null}
+              </Box>
             </Box>
-            <ResizableFrame
-              src={`/templates/${category}/${template}/${t.name.split(".")[0]}`}
-            />
           </Box>
         ))}
       </Stack>
@@ -113,11 +139,20 @@ export const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
   );
   const tree = directoryTree(componentsDir);
 
+  const code = tree.children?.reduce((prev, curr) => {
+    const content = fs.readFileSync(curr.path, "utf-8");
+    return {
+      ...prev,
+      [curr.name]: content,
+    };
+  }, {});
+
   return {
     props: {
       tree,
       category,
       template,
+      code,
     },
   };
 };

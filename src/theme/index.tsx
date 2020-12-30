@@ -7,7 +7,7 @@ export const theme = extendTheme({
         pointerEvents: "none",
       },
       "#nprogress .bar": {
-        background: "green.200",
+        background: "teal.200",
         position: "fixed",
         zIndex: "1031",
         top: 0,
