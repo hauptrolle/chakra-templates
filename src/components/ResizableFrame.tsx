@@ -6,6 +6,8 @@ type IframeProps = {
   src: string;
 };
 
+const MIN_HEIGHT = 222;
+
 export const ResizableFrame = ({ src }: IframeProps) => {
   const ref = useRef<HTMLIFrameElement>(null);
   const [height, setHeight] = useState<number | undefined>(undefined);
@@ -18,19 +20,26 @@ export const ResizableFrame = ({ src }: IframeProps) => {
 
   useEffect(() => {
     ref.current?.addEventListener("load", syncHeight);
+
+    return () => {
+      ref.current?.removeEventListener("load", syncHeight);
+    };
   }, []);
 
+  const getHeight = () =>
+    height !== undefined && height >= MIN_HEIGHT ? height : MIN_HEIGHT;
+
   return (
-    <Box bg={"gray.200"} p={4}>
+    <Box bg={"gray.200"}>
       <Box>
         <Resizable
           bounds={"parent"}
           minWidth={320}
-          minHeight={height}
-          maxHeight={height}
+          minHeight={getHeight()}
+          maxHeight={getHeight()}
           onResize={syncHeight}
         >
-          <iframe width={"100%"} height={height} src={src} ref={ref} />
+          <iframe width={"100%"} height={getHeight()} src={src} ref={ref} />
         </Resizable>
       </Box>
     </Box>

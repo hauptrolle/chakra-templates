@@ -39,23 +39,42 @@ const Home: NextPage<PageProps> = ({ tree }) => {
               size={"lg"}
               fontWeight={600}
               as={Flex}
-              alignItems={"center"}
-              borderBottom={1}
-              borderStyle={"solid"}
-              borderColor={"gray.200"}
+              alignItems={"baseline"}
               mb={5}
               pb={5}
+              _after={{
+                ml: 3,
+                content: '""',
+                width: 4,
+                height: 1,
+                bgGradient: "linear(to-r, teal.200, blue.600)",
+              }}
             >
               {toSentenceCase(category.name)}
-              <Tag ml={3} size={"sm"} colorScheme={"green"}>
-                New
-              </Tag>
             </Heading>
             <SimpleGrid columns={[1, 1, 3]} spacing={10}>
               {category.children?.map((template) => (
                 <Box key={template.name}>
                   <Link href={`/${category.name}/${template.name}`}>
-                    <a>
+                    <a role="group">
+                      <Flex
+                        w={"full"}
+                        bg={"gray.100"}
+                        h={24}
+                        alignItems={"center"}
+                        justifyContent={"center"}
+                        textAlign={"center"}
+                        color={"gray.500"}
+                        mb={4}
+                        p={2}
+                        rounded={"md"}
+                        transition={"all .3s ease"}
+                        _groupHover={{
+                          boxShadow: "xl",
+                        }}
+                      >
+                        Preview image coming soon.
+                      </Flex>
                       <Text as={"h3"} fontWeight={600}>
                         {toSentenceCase(template.name)}
                       </Text>
