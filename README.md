@@ -1,22 +1,16 @@
-# Nextplate 🍽️
+# Chakra Templates
 
-> This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+> A growing collection of responsive Chakra UI Templates ready to drop into your React project.
+> Don't waste your time, building the same templates over and over again. Just copy and paste the code, and you are ready to go
 
-This is **the** Next.js boilerplate I use for the most of my projects. It contains the following conventions/features:
+### Find your template
 
-* Fully written in [Typescript](https://www.typescriptlang.org/)
-* Unit testing with [Jest](https://jestjs.io/) & [React Testing Library](https://testing-library.com/)
-* Code formatting with [Prettier](https://prettier.io/)
-* Git hooks with [Husky](https://github.com/typicode/husky)
+Every template is embedded within an iframe on the page, so you can easily check what they look like and test the responsive behaviour.
 
-## Getting Started
+### Copy the code
 
-Run the development server:
+Just click the code tab to see the actual source code of the template. Copy and paste it into your project and your are ready to go!
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### Enjoy your free time
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Your just saved yourself a bunch of time not building the same stuff over and over again. Enjoy your free time!
