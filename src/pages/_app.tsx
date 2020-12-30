@@ -20,6 +20,9 @@ function App({ Component, pageProps }: AppProps) {
           href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
           rel="stylesheet"
         />
+        {process.env.NODE_ENV === "production" && (
+          <script async src="https://cdn.splitbee.io/sb.js" />
+        )}
       </Head>
       <Component {...pageProps} />
     </ChakraProvider>
