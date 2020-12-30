@@ -36,14 +36,7 @@ export default function Simple() {
 
   return (
     <>
-      <Box
-        bg={"gray.100"}
-        px={4}
-        position={"fixed"}
-        top={0}
-        left={0}
-        w={"full"}
-      >
+      <Box bg={"gray.100"} px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
             size={"md"}
@@ -100,9 +93,7 @@ export default function Simple() {
         ) : null}
       </Box>
 
-      <Box p={4} mt={16}>
-        Main Content Here
-      </Box>
+      <Box p={4}>Main Content Here</Box>
     </>
   );
 }
