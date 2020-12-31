@@ -1,0 +1,35 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "hauptrolle",
+      "name": "Achim Rolle",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1164541?v=4",
+      "profile": "http://www.hauptrolle.me",
+      "contributions": [
+        "bug",
+        "business",
+        "code",
+        "content",
+        "doc",
+        "design",
+        "example",
+        "ideas",
+        "maintenance",
+        "question",
+        "review",
+        "test"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "chakra-templates",
+  "projectOwner": "hauptrolle",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
