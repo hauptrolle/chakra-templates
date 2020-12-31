@@ -24,6 +24,16 @@
         "review",
         "test"
       ]
+    },
+    {
+      "login": "lazarnikolov94",
+      "name": "Lazar Nikolov",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5396211?v=4",
+      "profile": "https://nikolovlazar.com",
+      "contributions": [
+        "code",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
