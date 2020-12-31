@@ -1,6 +1,11 @@
 {
-  "name": "nextplate",
-  "version": "0.0.1",
+  "name": "chakra-templates",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hauptrolle/chakra-templates.git"
+  },
+  "author": "Achim Rolle <achimrolle@googlemail.com>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
