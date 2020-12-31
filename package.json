@@ -8,7 +8,8 @@
     "lint:ts": "tsc --noEmit",
     "test:watch": "jest --watch",
     "test:ci": "jest --ci --coverage",
-    "takeScreenshots": "node ./takePreviewScreenshots.js"
+    "screenshots:build": "tsc --esModuleInterop true createScreenshots/index.ts --outDir createScreenshots/.build",
+    "screenshots:take": "yarn screenshots:build && node createScreenshots/.build/"
   },
   "husky": {
     "hooks": {
@@ -57,6 +58,7 @@
     "@testing-library/react": "^11.2.2",
     "@types/node": "^14.14.16",
     "@types/nprogress": "^0.2.0",
+    "@types/puppeteer": "^5.4.2",
     "@types/react": "^17.0.0",
     "babel-jest": "^26.6.3",
     "husky": "^4.3.6",
