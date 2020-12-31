@@ -16,7 +16,7 @@ export const Footer = () => {
       borderStyle={"solid"}
       borderColor={"gray.100"}
     >
-      <Box>Build with Chakra UI & Next.js</Box>
+      <Box>Built with Chakra UI & Next.js</Box>
       <Flex
         alignItems={"center"}
         as={"a"}
