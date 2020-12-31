@@ -70,6 +70,7 @@ export const Example = ({
               size={"sm"}
               aria-label={"Open in Fullscreen"}
               title={"Open in Fullscreen"}
+              target="_blank"
             />
           </Link>
         </HStack>
