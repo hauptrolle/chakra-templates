@@ -28,15 +28,19 @@ export const Header = () => {
       <Box bg={"gray.800"} color={"white"}>
         <Stack as={Container} maxW={"6xl"} spacing={10} py={12} px={8}>
           <Box>
-            <Heading
-              display={"inline"}
-              as={"h1"}
-              size={"2xl"}
-              bgGradient="linear(to-r, teal.200, blue.600)"
-              bgClip="text"
-            >
-              Chakra Templates
-            </Heading>
+            <Link href={"/"} passHref>
+              <Box as={"a"}>
+                <Heading
+                  display={"inline"}
+                  as={"h1"}
+                  size={"2xl"}
+                  bgGradient="linear(to-r, teal.200, blue.600)"
+                  bgClip="text"
+                >
+                  Chakra Templates
+                </Heading>
+              </Box>
+            </Link>
           </Box>
           <Text
             color={"gray.300"}
@@ -52,7 +56,7 @@ export const Header = () => {
           </Text>
           <Box>
             <Stack spacing={6} direction={{ base: "column", sm: "row" }}>
-              <Link href={"/#components"} passHref={true}>
+              <Link href={"/#components"} passHref>
                 <Button
                   variant="outline"
                   colorScheme={"teal"}
