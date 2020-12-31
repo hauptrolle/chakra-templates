@@ -34,6 +34,15 @@
         "code",
         "bug"
       ]
+    },
+    {
+      "login": "iboshkov",
+      "name": "Ilija Boshkov",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/2392895?v=4",
+      "profile": "https://github.com/iboshkov",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
