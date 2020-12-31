@@ -63,16 +63,15 @@ export const Example = ({
             }`}
             passHref
           >
-            <a target="_blank">
-              <IconButton
-                as={"a"}
-                cursor={"pointer"}
-                icon={<ExternalLinkIcon />}
-                size={"sm"}
-                aria-label={"Open in Fullscreen"}
-                title={"Open in Fullscreen"}
-              />
-            </a>
+            <IconButton
+              as={"a"}
+              cursor={"pointer"}
+              icon={<ExternalLinkIcon />}
+              size={"sm"}
+              aria-label={"Open in Fullscreen"}
+              title={"Open in Fullscreen"}
+              target="_blank"
+            />
           </Link>
         </HStack>
       </Flex>
