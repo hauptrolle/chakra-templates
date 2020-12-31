@@ -1,6 +1,6 @@
 # Chakra Templates
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 > A growing collection of responsive Chakra UI Templates ready to drop into your React project.
@@ -29,6 +29,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="http://www.hauptrolle.me"><img src="https://avatars0.githubusercontent.com/u/1164541?v=4" width="100px;" alt=""/><br /><sub><b>Achim Rolle</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/issues?q=author%3Ahauptrolle" title="Bug reports">🐛</a> <a href="#business-hauptrolle" title="Business development">💼</a> <a href="https://github.com/hauptrolle/chakra-templates/commits?author=hauptrolle" title="Code">💻</a> <a href="#content-hauptrolle" title="Content">🖋</a> <a href="https://github.com/hauptrolle/chakra-templates/commits?author=hauptrolle" title="Documentation">📖</a> <a href="#design-hauptrolle" title="Design">🎨</a> <a href="#example-hauptrolle" title="Examples">💡</a> <a href="#ideas-hauptrolle" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-hauptrolle" title="Maintenance">🚧</a> <a href="#question-hauptrolle" title="Answering Questions">💬</a> <a href="https://github.com/hauptrolle/chakra-templates/pulls?q=is%3Apr+reviewed-by%3Ahauptrolle" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/hauptrolle/chakra-templates/commits?author=hauptrolle" title="Tests">⚠️</a></td>
     <td align="center"><a href="https://nikolovlazar.com"><img src="https://avatars2.githubusercontent.com/u/5396211?v=4" width="100px;" alt=""/><br /><sub><b>Lazar Nikolov</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=lazarnikolov94" title="Code">💻</a> <a href="https://github.com/hauptrolle/chakra-templates/issues?q=author%3Alazarnikolov94" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/iboshkov"><img src="https://avatars0.githubusercontent.com/u/2392895?v=4" width="100px;" alt=""/><br /><sub><b>Ilija Boshkov</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=iboshkov" title="Code">💻</a></td>
   </tr>
 </table>
 
