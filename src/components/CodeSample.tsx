@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { CodeBlock, a11yDark } from "react-code-blocks";
-import { Box, Button, Tooltip } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 import copy from "copy-to-clipboard";
 
 type CodeSampleProps = {
@@ -8,33 +8,29 @@ type CodeSampleProps = {
 };
 
 export const CodeSample = ({ code }: CodeSampleProps) => {
-  const [copyTooltipOpen, setCopyTooltipOpen] = useState(false);
+  const initialText = "Copy";
+  const [copyButtonText, setCopyButtonText] = useState(initialText);
 
   const copyCode = () => {
     copy(code);
-    setCopyTooltipOpen(true);
+    setCopyButtonText("Copied 👌");
     setTimeout(() => {
-      setCopyTooltipOpen(false);
+      setCopyButtonText(initialText);
     }, 2000);
   };
 
   return (
     <Box fontFamily={"'Fira Code', monospace"} position="relative">
-      <Tooltip
-        label="Copied 👌"
-        aria-label="Copy confirmation"
-        isOpen={copyTooltipOpen}
+      <Button
+        size="sm"
+        position="absolute"
+        top={4}
+        right={4}
+        onClick={copyCode}
       >
-        <Button
-          size="sm"
-          position="absolute"
-          top={4}
-          right={4}
-          onClick={copyCode}
-        >
-          Copy
-        </Button>
-      </Tooltip>
+        {copyButtonText}
+      </Button>
+
       <CodeBlock
         text={code}
         language={"tsx"}
