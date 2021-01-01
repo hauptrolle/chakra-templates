@@ -25,7 +25,13 @@ export const Header = () => {
           }
         />
       </Head>
-      <Box color={"white"} bgGradient="linear(to-tr, gray.800, gray.900)">
+      <Box
+        color={"white"}
+        bgGradient="linear(to-r, gray.900, teal.900)"
+        borderBottom={3}
+        borderStyle={"solid"}
+        borderColor={"teal.100"}
+      >
         <Stack as={Container} maxW={"6xl"} spacing={10} py={12} px={8}>
           <Box>
             <Link href={"/"} passHref>
@@ -34,7 +40,7 @@ export const Header = () => {
                   display={"inline"}
                   as={"h1"}
                   size={"2xl"}
-                  bgGradient="linear(to-r, teal.200, blue.600)"
+                  bgGradient="linear(to-r, teal.200, teal.300)"
                   bgClip="text"
                 >
                   Chakra Templates
@@ -43,7 +49,7 @@ export const Header = () => {
             </Link>
           </Box>
           <Text
-            color={"gray.300"}
+            color={"gray.100"}
             maxW={"2xl"}
             lineHeight={1.8}
             fontSize={"lg"}
