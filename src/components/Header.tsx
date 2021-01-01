@@ -25,7 +25,7 @@ export const Header = () => {
           }
         />
       </Head>
-      <Box bg={"gray.800"} color={"white"}>
+      <Box color={"white"} bgGradient="linear(to-tr, gray.800, gray.900)">
         <Stack as={Container} maxW={"6xl"} spacing={10} py={12} px={8}>
           <Box>
             <Link href={"/"} passHref>
