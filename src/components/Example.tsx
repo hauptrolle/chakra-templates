@@ -31,14 +31,18 @@ export const Example = ({
 }: ExampleProps) => {
   return (
     <Box key={template.name} bg={"gray.100"} padding={4} rounded={"md"}>
-      <Tabs
-        variant="soft-rounded"
-        colorScheme="teal"
-        justify={"space-between"}
-        size={"sm"}
-      >
-        <TabList alignItems={"center"} justifyContent={"space-between"}>
-          <Heading as={"h3"} color={"gray.700"} size={"sm"}>
+      <Tabs variant="soft-rounded" colorScheme="teal" size={"sm"}>
+        <TabList
+          alignItems={"center"}
+          justifyContent={"space-between"}
+          flexDirection={{ base: "column", md: "row" }}
+        >
+          <Heading
+            as={"h3"}
+            color={"gray.700"}
+            size={"sm"}
+            mb={{ base: 4, md: 0 }}
+          >
             {toSentenceCase(template.name.split(".")[0])}
           </Heading>
           <HStack spacing={4}>
