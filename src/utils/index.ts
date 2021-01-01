@@ -1,4 +1,7 @@
 export const toSentenceCase = (value: string) => {
-  const res = value.replace(/([A-Z])/g, " $1");
-  return res.charAt(0).toUpperCase() + res.slice(1);
+  return value
+    .replace(/([a-z\xE0-\xFF])([A-Z\xC0\xDF])/g, "$1 $2")
+    .split(" ")
+    .map((s) => s.charAt(0).toUpperCase() + s.slice(1))
+    .join(" ");
 };

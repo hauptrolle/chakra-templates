@@ -5,6 +5,7 @@ describe("utils", () => {
     const testData = [
       ["navigation", "Navigation"],
       ["pageSections", "Page Sections"],
+      ["imageWithTextAndCTA", "Image With Text And CTA"],
     ];
 
     testData.map((data) => {
