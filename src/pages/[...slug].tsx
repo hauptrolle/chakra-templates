@@ -1,13 +1,13 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { Container, Stack, Box, Flex, Text, Heading } from "@chakra-ui/react";
 import * as fs from "fs";
-import directoryTree, { DirectoryTree } from "directory-tree";
-import path from "path";
+import { DirectoryTree } from "directory-tree";
 
 import { Header } from "../components/Header";
 import { Example } from "../components/Example";
 import { TEMPLATE_DIR } from "../constants";
 import { toSentenceCase } from "../utils";
+import { getDirectoryTree } from "../utils/getDirectoryTree";
 
 type PageProps = {
   category: string;
@@ -65,11 +65,7 @@ export const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
   const category = params && params.slug ? params.slug[0] : "";
   const template = params && params.slug ? params.slug[1] : "";
 
-  const componentsDir = path.join(
-    process.cwd(),
-    `${TEMPLATE_DIR}/${category}/${template}`
-  );
-  const tree = directoryTree(componentsDir);
+  const tree = getDirectoryTree(`${TEMPLATE_DIR}/${category}/${template}`);
 
   const code = tree.children?.reduce((prev, curr) => {
     const content = fs.readFileSync(curr.path, "utf-8");
@@ -90,8 +86,7 @@ export const getStaticProps: GetStaticProps<PageProps> = async ({ params }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const componentsDir = path.join(process.cwd(), TEMPLATE_DIR);
-  const tree = directoryTree(componentsDir);
+  const tree = getDirectoryTree();
 
   const paths = tree
     .children!.map((category) =>

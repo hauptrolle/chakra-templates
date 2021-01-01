@@ -10,14 +10,13 @@ import {
   Flex,
   SimpleGrid,
 } from "@chakra-ui/react";
-import path from "path";
-import directoryTree, { DirectoryTree } from "directory-tree";
+import { DirectoryTree } from "directory-tree";
 
-import { TEMPLATE_DIR } from "../constants";
 import { Header } from "../components/Header";
 import { toSentenceCase } from "../utils";
 import { Steps } from "../components/Steps";
 import { Footer } from "../components/Footer";
+import { getDirectoryTree } from "../utils/getDirectoryTree";
 
 type PageProps = {
   tree: DirectoryTree;
@@ -126,8 +125,7 @@ const Home: NextPage<PageProps> = ({ tree }) => {
 };
 
 export const getStaticProps: GetStaticProps<PageProps> = async () => {
-  const componentsDir = path.join(process.cwd(), TEMPLATE_DIR);
-  const tree = directoryTree(componentsDir);
+  const tree = getDirectoryTree();
 
   return {
     props: {
