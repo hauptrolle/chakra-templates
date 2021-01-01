@@ -34,7 +34,7 @@ export const ResizableFrame = ({ src }: IframeProps) => {
       <Box>
         <Resizable
           bounds={"parent"}
-          minWidth={320}
+          minWidth={250}
           minHeight={getHeight()}
           maxHeight={getHeight()}
           onResize={syncHeight}
