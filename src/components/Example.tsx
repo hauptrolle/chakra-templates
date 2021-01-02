@@ -30,7 +30,13 @@ export const Example = ({
   subCategory,
 }: ExampleProps) => {
   return (
-    <Box key={template.name} bg={"gray.100"} padding={4} rounded={"md"}>
+    <Box
+      key={template.name}
+      bg={"gray.50"}
+      padding={4}
+      rounded={"md"}
+      borderWidth={1}
+    >
       <Tabs variant="soft-rounded" colorScheme="teal" size={"sm"}>
         <TabList
           alignItems={"center"}
@@ -66,13 +72,20 @@ export const Example = ({
             </Link>
           </HStack>
         </TabList>
-        <TabPanels boxShadow={"xl"}>
+        <TabPanels boxShadow={"2xl"} borderRadius="2xl">
           <TabPanel px={0} pb={0}>
-            <ResizableFrame
-              src={`/templates/${category}/${subCategory}/${
-                template.name.split(".")[0]
-              }`}
-            />
+            <Box
+              borderRadius="2xl"
+              overflow="hidden"
+              borderWidth={1}
+              borderColor="gray.300"
+            >
+              <ResizableFrame
+                src={`/templates/${category}/${subCategory}/${
+                  template.name.split(".")[0]
+                }`}
+              />
+            </Box>
           </TabPanel>
           <TabPanel px={0} pb={0}>
             <CodeSample code={code} />
