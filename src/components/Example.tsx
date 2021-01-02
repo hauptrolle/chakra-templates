@@ -32,7 +32,7 @@ export const Example = ({
   const exampleLink = `/templates/${category.id}/${subCategory.id}/${template.filename}`;
 
   return (
-    <Box bg={"gray.100"} padding={4} rounded={"md"}>
+    <Box bg={"gray.50"} padding={4} rounded={"md"} borderWidth={1}>
       <Tabs variant="soft-rounded" colorScheme="teal" size={"sm"}>
         <TabList
           alignItems={"center"}
@@ -63,9 +63,15 @@ export const Example = ({
             </Link>
           </HStack>
         </TabList>
-        <TabPanels boxShadow={"2xl"} borderRadius="2xl">
+        <TabPanels borderRadius="2xl">
           <TabPanel px={0} pb={0}>
-            <ResizableFrame src={exampleLink} />
+            <Box
+              boxShadow={
+                "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px"
+              }
+            >
+              <ResizableFrame src={exampleLink} />
+            </Box>
           </TabPanel>
           <TabPanel px={0} pb={0}>
             <CodeSample code={code} />
