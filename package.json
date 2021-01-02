@@ -48,6 +48,7 @@
     "@emotion/styled": "^11.0.0",
     "add": "^2.0.6",
     "copy-to-clipboard": "^3.3.1",
+    "directory-tree": "^2.2.5",
     "framer-motion": "^3.1.1",
     "next": "10.0.4",
     "nprogress": "^0.2.0",

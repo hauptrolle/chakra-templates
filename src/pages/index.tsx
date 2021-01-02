@@ -66,7 +66,7 @@ const Home = () => {
               </Flex>
             ) : null}
 
-            <SimpleGrid columns={[1, 1, 3]} spacing={10}>
+            <SimpleGrid columns={[1, 1, 2]} spacing={10}>
               {category.children?.map((subCategory) => (
                 <Box key={subCategory.name}>
                   <Link href={`/${category.id}/${subCategory.id}`}>
@@ -74,7 +74,7 @@ const Home = () => {
                       <Flex
                         w={"full"}
                         bg={"gray.50"}
-                        h={28}
+                        h={48}
                         position={"relative"}
                         mb={4}
                         rounded={"md"}
