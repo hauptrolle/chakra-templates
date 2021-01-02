@@ -12,15 +12,15 @@ import {
 import Link from "next/link";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
-import { toSentenceCase } from "../utils";
 import { ResizableFrame } from "./ResizableFrame";
 import { CodeSample } from "./CodeSample";
+import { Template, Category, SubCategory } from "../data";
 
 type ExampleProps = {
-  template: any;
+  template: Template;
   code: string;
-  category: string;
-  subCategory: string;
+  category: Category;
+  subCategory: SubCategory;
 };
 
 export const Example = ({
@@ -29,14 +29,10 @@ export const Example = ({
   category,
   subCategory,
 }: ExampleProps) => {
+  const exampleLink = `/templates/${category.id}/${subCategory.id}/${template.filename}`;
+
   return (
-    <Box
-      key={template.name}
-      bg={"gray.50"}
-      padding={4}
-      rounded={"md"}
-      borderWidth={1}
-    >
+    <Box bg={"gray.100"} padding={4} rounded={"md"}>
       <Tabs variant="soft-rounded" colorScheme="teal" size={"sm"}>
         <TabList
           alignItems={"center"}
@@ -49,17 +45,12 @@ export const Example = ({
             size={"sm"}
             mb={{ base: 4, md: 0 }}
           >
-            {toSentenceCase(template.name.split(".")[0])}
+            {template.name}
           </Heading>
           <HStack spacing={4}>
             <Tab>Preview</Tab>
             <Tab>Code</Tab>
-            <Link
-              href={`/templates/${category}/${subCategory}/${
-                template.name.split(".")[0]
-              }`}
-              passHref
-            >
+            <Link href={exampleLink} passHref>
               <IconButton
                 as={"a"}
                 cursor={"pointer"}
@@ -74,18 +65,7 @@ export const Example = ({
         </TabList>
         <TabPanels boxShadow={"2xl"} borderRadius="2xl">
           <TabPanel px={0} pb={0}>
-            <Box
-              borderRadius="2xl"
-              overflow="hidden"
-              borderWidth={1}
-              borderColor="gray.300"
-            >
-              <ResizableFrame
-                src={`/templates/${category}/${subCategory}/${
-                  template.name.split(".")[0]
-                }`}
-              />
-            </Box>
+            <ResizableFrame src={exampleLink} />
           </TabPanel>
           <TabPanel px={0} pb={0}>
             <CodeSample code={code} />
