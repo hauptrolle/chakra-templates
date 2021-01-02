@@ -30,7 +30,7 @@ export const ResizableFrame = ({ src }: IframeProps) => {
     height !== undefined && height >= MIN_HEIGHT ? height : MIN_HEIGHT;
 
   return (
-    <Box bg={"gray.200"}>
+    <Box bg={"gray.400"}>
       <Box>
         <Resizable
           bounds={"parent"}
