@@ -12,11 +12,11 @@ import {
 } from "@chakra-ui/react";
 import { DirectoryTree } from "directory-tree";
 
-import { Header } from "../components/Header";
-import { toSentenceCase } from "../utils";
-import { Steps } from "../components/Steps";
-import { Footer } from "../components/Footer";
-import { getDirectoryTree } from "../utils/getDirectoryTree";
+import { toSentenceCase } from "@utils";
+import { Header } from "@components/Header";
+import { Steps } from "@components/Steps";
+import { Footer } from "@components/Footer";
+import { getDirectoryTree } from "@utils/getDirectoryTree";
 
 type PageProps = {
   tree: DirectoryTree;
