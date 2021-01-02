@@ -11,7 +11,7 @@ const features = Array.apply(null, Array(3)).map(function (x, i) {
   };
 });
 
-export default function SimpleThreeColumn() {
+export default function SimpleThreeColumns() {
   return (
     <Box p={4}>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
