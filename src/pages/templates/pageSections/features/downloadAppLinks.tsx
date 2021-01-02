@@ -30,24 +30,26 @@ export default function DownloadAppLinks() {
         >
           <DownloadIcon color={"white"} w={10} h={10} />
         </Box>
-        <Heading fontSize={"4xl"}>Download our app</Heading>
+        <Heading fontSize={"4xl"} align={"center"}>
+          Download our app
+        </Heading>
         <Text align={"center"} color={"gray.600"} fontSize={"lg"}>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
           sed diam voluptua.
         </Text>
-        <HStack pt={6}>
-          <Link href={"#"} passHref>
+        <Stack direction={["column", "row"]} pt={6}>
+          <Link href={""} passHref>
             <a target={"_blank"}>
               <AppStoreBadge />
             </a>
           </Link>
-          <Link href={"#"} passHref>
+          <Link href={""} passHref>
             <a target={"_blank"}>
               <PlayStoreBadge />
             </a>
           </Link>
-        </HStack>
+        </Stack>
       </Stack>
 
       {/* <Container maxW={'6xl'} mt={10}>
