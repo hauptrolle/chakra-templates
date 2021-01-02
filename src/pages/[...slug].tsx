@@ -3,11 +3,11 @@ import { Container, Stack, Box, Flex, Text, Heading } from "@chakra-ui/react";
 import * as fs from "fs";
 import { DirectoryTree } from "directory-tree";
 
-import { Header } from "@components/Header";
-import { Example } from "@components/Example";
+import { Header } from "@/components/Header";
+import { Example } from "@/components/Example";
 import { TEMPLATE_DIR } from "../constants";
-import { toSentenceCase } from "@utils/toSentenceCase";
-import { getDirectoryTree } from "@utils/getDirectoryTree";
+import { toSentenceCase } from "@/utils/toSentenceCase";
+import { getDirectoryTree } from "@/utils/getDirectoryTree";
 
 type PageProps = {
   category: string;

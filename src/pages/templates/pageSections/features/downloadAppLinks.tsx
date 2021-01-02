@@ -12,8 +12,8 @@ import {
 import { DownloadIcon } from "@chakra-ui/icons";
 import Link from "next/link";
 
-import PlayStoreBadge from "@components/PlayStoreBadge";
-import AppStoreBadge from "@components/AppStoreBadge";
+import PlayStoreBadge from "@/components/PlayStoreBadge";
+import AppStoreBadge from "@/components/AppStoreBadge";
 
 export default function DownloadAppLinks() {
   return (

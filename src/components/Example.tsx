@@ -12,9 +12,9 @@ import {
 import Link from "next/link";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
-import { toSentenceCase } from "@utils/toSentenceCase";
-import { ResizableFrame } from "@components/ResizableFrame";
-import { CodeSample } from "@components/CodeSample";
+import { toSentenceCase } from "@/utils/toSentenceCase";
+import { ResizableFrame } from "@/components/ResizableFrame";
+import { CodeSample } from "@/components/CodeSample";
 
 type ExampleProps = {
   template: any;
