@@ -11,6 +11,8 @@ import { ArrowDownIcon } from "@chakra-ui/icons";
 import Link from "next/link";
 import Head from "next/head";
 
+import { HeaderBackground } from "./HeaderBackground";
+
 export const Header = () => {
   return (
     <DarkMode>
@@ -31,8 +33,26 @@ export const Header = () => {
         borderBottom={3}
         borderStyle={"solid"}
         borderColor={"teal.100"}
+        position={"relative"}
+        overflow={"hidden"}
       >
-        <Stack as={Container} maxW={"6xl"} spacing={10} py={12} px={8}>
+        <Box
+          as={HeaderBackground}
+          position={"absolute"}
+          left={"50%"}
+          transform={"translateX(-50%)"}
+          bottom={0}
+          zIndex={0}
+        />
+        <Stack
+          position={"relative"}
+          zIndex={1}
+          as={Container}
+          maxW={"6xl"}
+          spacing={10}
+          py={12}
+          px={8}
+        >
           <Box>
             <Link href={"/"} passHref>
               <Box as={"a"}>
