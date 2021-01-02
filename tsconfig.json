@@ -16,7 +16,7 @@
     "baseUrl": "src/",
     "paths": {
       "@components/*": ["components/*"],
-      "@utils": ["utils"],
+      "@utils": ["utils/index.ts"],
       "@utils/*": ["utils/*"]
     }
   },
