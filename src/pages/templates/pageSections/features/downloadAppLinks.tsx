@@ -1,14 +1,4 @@
-import {
-  Box,
-  Container,
-  Heading,
-  SimpleGrid,
-  Icon,
-  Text,
-  Stack,
-  HStack,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Container, Heading, Text, Stack } from "@chakra-ui/react";
 import { DownloadIcon } from "@chakra-ui/icons";
 import Link from "next/link";
 
@@ -39,34 +29,18 @@ export default function DownloadAppLinks() {
           sed diam voluptua.
         </Text>
         <Stack direction={["column", "row"]} pt={6}>
-          <Link href={""} passHref>
+          <Link href={"/"} passHref>
             <a target={"_blank"}>
               <AppStoreBadge />
             </a>
           </Link>
-          <Link href={""} passHref>
+          <Link href={"/"} passHref>
             <a target={"_blank"}>
               <PlayStoreBadge />
             </a>
           </Link>
         </Stack>
       </Stack>
-
-      {/* <Container maxW={'6xl'} mt={10}>
-        <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10}>
-          {features.map((feature) => (
-            <HStack key={feature.id} align={'top'}>
-              <Box color={'green.400'} px={2}>
-                <Icon as={CheckIcon} />
-              </Box>
-              <VStack align={'start'}>
-                <Text fontWeight={600}>{feature.title}</Text>
-                <Text color={'gray.600'}>{feature.text}</Text>
-              </VStack>
-            </HStack>
-          ))}
-        </SimpleGrid>
-      </Container> */}
     </Box>
   );
 }
