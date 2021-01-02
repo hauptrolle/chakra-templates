@@ -6,7 +6,7 @@ import { DirectoryTree } from "directory-tree";
 import { Header } from "@components/Header";
 import { Example } from "@components/Example";
 import { TEMPLATE_DIR } from "../constants";
-import { toSentenceCase } from "@utils";
+import { toSentenceCase } from "@utils/toSentenceCase";
 import { getDirectoryTree } from "@utils/getDirectoryTree";
 
 type PageProps = {

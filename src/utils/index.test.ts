@@ -1,4 +1,4 @@
-import { toSentenceCase } from "./index";
+import { toSentenceCase } from "./toSentenceCase";
 
 describe("utils", () => {
   describe("toSentenceCase", () => {

@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { DirectoryTree } from "directory-tree";
 
-import { toSentenceCase } from "@utils";
+import { toSentenceCase } from "@utils/toSentenceCase";
 import { Header } from "@components/Header";
 import { Steps } from "@components/Steps";
 import { Footer } from "@components/Footer";
