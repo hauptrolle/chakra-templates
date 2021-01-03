@@ -63,6 +63,10 @@ export const data: Category[] = [
         id: "hero",
         children: [
           {
+            name: "Download App Links",
+            filename: "downloadAppLinks",
+          },
+          {
             name: "With text & CTA",
             filename: "textWithCallToAction",
           },
