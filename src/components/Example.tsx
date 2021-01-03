@@ -12,15 +12,15 @@ import {
 import Link from "next/link";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
-import { toSentenceCase } from "@/utils/toSentenceCase";
 import { ResizableFrame } from "@/components/ResizableFrame";
 import { CodeSample } from "@/components/CodeSample";
+import { Template, Category, SubCategory } from "data";
 
 type ExampleProps = {
-  template: any;
+  template: Template;
   code: string;
-  category: string;
-  subCategory: string;
+  category: Category;
+  subCategory: SubCategory;
 };
 
 export const Example = ({
@@ -29,8 +29,10 @@ export const Example = ({
   category,
   subCategory,
 }: ExampleProps) => {
+  const exampleLink = `/templates/${category.id}/${subCategory.id}/${template.filename}`;
+
   return (
-    <Box key={template.name} bg={"gray.100"} padding={4} rounded={"md"}>
+    <Box bg={"gray.50"} padding={4} rounded={"md"} borderWidth={1}>
       <Tabs variant="soft-rounded" colorScheme="teal" size={"sm"}>
         <TabList
           alignItems={"center"}
@@ -43,17 +45,12 @@ export const Example = ({
             size={"sm"}
             mb={{ base: 4, md: 0 }}
           >
-            {toSentenceCase(template.name.split(".")[0])}
+            {template.name}
           </Heading>
           <HStack spacing={4}>
             <Tab>Preview</Tab>
             <Tab>Code</Tab>
-            <Link
-              href={`/templates/${category}/${subCategory}/${
-                template.name.split(".")[0]
-              }`}
-              passHref
-            >
+            <Link href={exampleLink} passHref>
               <IconButton
                 as={"a"}
                 cursor={"pointer"}
@@ -66,13 +63,15 @@ export const Example = ({
             </Link>
           </HStack>
         </TabList>
-        <TabPanels boxShadow={"xl"}>
+        <TabPanels borderRadius="2xl">
           <TabPanel px={0} pb={0}>
-            <ResizableFrame
-              src={`/templates/${category}/${subCategory}/${
-                template.name.split(".")[0]
-              }`}
-            />
+            <Box
+              boxShadow={
+                "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px"
+              }
+            >
+              <ResizableFrame src={exampleLink} />
+            </Box>
           </TabPanel>
           <TabPanel px={0} pb={0}>
             <CodeSample code={code} />

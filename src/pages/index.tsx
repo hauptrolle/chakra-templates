@@ -1,4 +1,3 @@
-import { GetStaticProps, NextPage } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -10,19 +9,14 @@ import {
   Flex,
   SimpleGrid,
 } from "@chakra-ui/react";
-import { DirectoryTree } from "directory-tree";
 
 import { toSentenceCase } from "@/utils/toSentenceCase";
 import { Header } from "@/components/Header";
 import { Steps } from "@/components/Steps";
 import { Footer } from "@/components/Footer";
-import { getDirectoryTree } from "@/utils/getDirectoryTree";
+import { data } from "data";
 
-type PageProps = {
-  tree: DirectoryTree;
-};
-
-const Home: NextPage<PageProps> = ({ tree }) => {
+const Home = () => {
   return (
     <>
       <Header />
@@ -35,7 +29,7 @@ const Home: NextPage<PageProps> = ({ tree }) => {
         spacing={20}
         id={"components"}
       >
-        {tree.children?.map((category) => (
+        {data.map((category) => (
           <Box key={category.name}>
             <Heading
               size={"lg"}
@@ -52,7 +46,7 @@ const Home: NextPage<PageProps> = ({ tree }) => {
                 bgGradient: "linear(to-r, teal.200, blue.600)",
               }}
             >
-              {toSentenceCase(category.name)}
+              {category.name}
             </Heading>
 
             {category.children?.length === 0 ? (
@@ -72,15 +66,15 @@ const Home: NextPage<PageProps> = ({ tree }) => {
               </Flex>
             ) : null}
 
-            <SimpleGrid columns={[1, 1, 3]} spacing={10}>
+            <SimpleGrid columns={[1, 1, 2]} spacing={10}>
               {category.children?.map((subCategory) => (
                 <Box key={subCategory.name}>
-                  <Link href={`/${category.name}/${subCategory.name}`}>
+                  <Link href={`/${category.id}/${subCategory.id}`}>
                     <a role="group">
                       <Flex
                         w={"full"}
                         bg={"gray.50"}
-                        h={28}
+                        h={48}
                         position={"relative"}
                         mb={4}
                         rounded={"md"}
@@ -97,7 +91,7 @@ const Home: NextPage<PageProps> = ({ tree }) => {
                         }}
                       >
                         <Image
-                          src={`/preview/${category.name}-${subCategory.name}.png`}
+                          src={`/preview/${category.id}-${subCategory.id}.png`}
                           layout={"fill"}
                           objectFit={"contain"}
                         />
@@ -122,16 +116,6 @@ const Home: NextPage<PageProps> = ({ tree }) => {
       <Footer />
     </>
   );
-};
-
-export const getStaticProps: GetStaticProps<PageProps> = async () => {
-  const tree = getDirectoryTree();
-
-  return {
-    props: {
-      tree,
-    },
-  };
 };
 
 export default Home;
