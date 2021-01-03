@@ -6,8 +6,6 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-``
-
 > A growing collection of responsive Chakra UI Templates ready to drop into your React project.
 > Don't waste your time, building the same templates over and over again. Just copy and paste the code, and you are ready to go
 
