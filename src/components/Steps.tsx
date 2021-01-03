@@ -28,8 +28,8 @@ export const Steps = () => {
               <Flex
                 w={8}
                 h={8}
-                bgGradient={"linear(to-r, teal.100, blue.100)"}
-                color={"teal.600"}
+                bg={"teal.200"}
+                color={"teal.700"}
                 rounded={"full"}
                 alignItems={"center"}
                 justify={"center"}

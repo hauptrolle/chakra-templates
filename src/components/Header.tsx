@@ -56,13 +56,7 @@ export const Header = () => {
           <Box>
             <Link href={"/"} passHref>
               <Box as={"a"}>
-                <Heading
-                  display={"inline"}
-                  as={"h1"}
-                  size={"2xl"}
-                  bgGradient="linear(to-r, teal.200, teal.300)"
-                  bgClip="text"
-                >
+                <Heading display={"inline"} as={"h1"} size={"2xl"}>
                   Chakra Templates
                 </Heading>
               </Box>
