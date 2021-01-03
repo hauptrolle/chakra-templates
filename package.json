@@ -22,24 +22,6 @@
       "pre-push": "yarn lint:ts && yarn test:ci"
     }
   },
-  "jest": {
-    "collectCoverageFrom": [
-      "./src/**/*.{js,jsx,ts,tsx}"
-    ],
-    "setupFilesAfterEnv": [
-      "<rootDir>/setupTests.ts"
-    ],
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/.next/"
-    ],
-    "transform": {
-      "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest"
-    },
-    "transformIgnorePatterns": [
-      "/node_modules/"
-    ]
-  },
   "dependencies": {
     "@bigheads/core": "^0.3.1",
     "@chakra-ui/icons": "^1.0.2",

@@ -10,11 +10,11 @@ import {
   SimpleGrid,
 } from "@chakra-ui/react";
 
-import { Header } from "../components/Header";
-import { toSentenceCase } from "../utils";
-import { Steps } from "../components/Steps";
-import { Footer } from "../components/Footer";
-import { data } from "../data";
+import { toSentenceCase } from "@/utils/toSentenceCase";
+import { Header } from "@/components/Header";
+import { Steps } from "@/components/Steps";
+import { Footer } from "@/components/Footer";
+import { data } from "data";
 
 const Home = () => {
   return (

@@ -1,12 +1,12 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { Container, Stack, Box, Flex, Text, Heading } from "@chakra-ui/react";
 import * as fs from "fs";
-
-import { Header } from "../components/Header";
-import { Example } from "../components/Example";
-import { TEMPLATE_DIR } from "../constants";
-import { data, Template, Category, SubCategory } from "../data";
 import path from "path";
+
+import { Header } from "@/components/Header";
+import { Example } from "@/components/Example";
+import { TEMPLATE_DIR } from "../constants";
+import { data, Template, Category, SubCategory } from "data";
 
 type PageProps = {
   category: Category;

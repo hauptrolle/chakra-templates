@@ -45,6 +45,10 @@ export const data: Category[] = [
         id: "features",
         children: [
           {
+            name: "Download App Links",
+            filename: "downloadAppLinks",
+          },
+          {
             name: "Simple three column grid",
             filename: "simpleThreeColumns",
           },
