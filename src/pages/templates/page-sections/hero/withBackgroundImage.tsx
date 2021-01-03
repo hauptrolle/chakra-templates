@@ -7,7 +7,7 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 
-export default function ImageWithTextAndCTA() {
+export default function WithBackgroundImage() {
   const heroHeight = useBreakpointValue({ base: "250px", md: "400px" });
   const ctaSize = useBreakpointValue({ base: "md", md: "lg" });
   const heroTextSize = useBreakpointValue({ base: "2xl", md: "4xl" });

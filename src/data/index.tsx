@@ -67,11 +67,11 @@ export const data: Category[] = [
             filename: "textWithCallToAction",
           },
           {
-            name: "With text, image & CTA",
-            filename: "imageWithTextAndCTA",
+            name: "With background image and gradient",
+            filename: "withBackgroundImage",
           },
           {
-            name: "With background image and gradient",
+            name: "With text, image & CTA",
             filename: "withImage",
           },
         ],
