@@ -32,7 +32,16 @@ export const Example = ({
   const exampleLink = `/templates/${category.id}/${subCategory.id}/${template.filename}`;
 
   return (
-    <Box bg={"gray.50"} padding={4} rounded={"md"} borderWidth={1}>
+    <Box
+      bg={"gray.50"}
+      padding={4}
+      rounded={"md"}
+      borderWidth={1}
+      id={template.filename}
+      style={{
+        scrollMarginTop: "2rem",
+      }}
+    >
       <Tabs variant="soft-rounded" colorScheme="teal" size={"sm"}>
         <TabList
           alignItems={"center"}
