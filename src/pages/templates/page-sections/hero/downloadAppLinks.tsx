@@ -1,4 +1,12 @@
-import { Box, Container, Heading, Text, Stack, Image } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Heading,
+  Text,
+  Stack,
+  Image,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import Link from "next/link";
 
 import PlayStoreBadge from "@/components/PlayStoreBadge";
@@ -11,16 +19,26 @@ export default function DownloadAppLinks() {
       p={4}
       display={"flex"}
       alignItems={"center"}
-      flexDirection={"row"}
+      flexDirection={["column", "column", "row"]}
     >
       <Stack spacing={4}>
-        <Heading fontSize={"4xl"}>Download our app</Heading>
-        <Text color={"gray.600"} fontSize={"lg"}>
+        <Heading textAlign={["center", "center", "left"]} fontSize={"4xl"}>
+          Download our app
+        </Heading>
+        <Text
+          textAlign={["center", "center", "left"]}
+          color={"gray.600"}
+          fontSize={"lg"}
+        >
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
           sed diam voluptua.
         </Text>
-        <Stack direction={["column", "row"]} pt={6}>
+        <Stack
+          justifyContent={["center", "center", "left"]}
+          direction={"row"}
+          pt={6}
+        >
           <Link href={"/"} passHref>
             <a target={"_blank"}>
               <AppStoreBadge />
@@ -33,8 +51,20 @@ export default function DownloadAppLinks() {
           </Link>
         </Stack>
       </Stack>
-      <Box p={10}>
-        <Image alt={"Device"} maxW={"xl"} src={"/images/device.png"} />
+      <Box p={[0, 0, 10]} pt={[20, 20, 0]}>
+        <Image
+          style={{
+            transform: useBreakpointValue([
+              "rotate(-45deg)",
+              "rotate(-45deg)",
+              "rotate(0deg)",
+            ]),
+          }}
+          alt={"Device"}
+          w={"100%"}
+          fit={"contain"}
+          src={"/images/device.png"}
+        />
       </Box>
     </Container>
   );
