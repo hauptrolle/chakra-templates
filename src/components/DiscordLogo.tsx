@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export default function DiscordLogo(props) {
+export default function DiscordLogo() {
   return (
     <svg
       width={37}
@@ -8,7 +8,6 @@ export default function DiscordLogo(props) {
       viewBox="0 0 37 26"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      {...props}
     >
       <path
         fillRule="evenodd"
