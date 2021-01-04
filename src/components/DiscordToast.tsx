@@ -13,7 +13,7 @@ import {
 import { motion, isValidMotionProp } from "framer-motion";
 
 import { DISCORD_INVITE_LINK } from "../constants";
-import DiscordLogo from "./DiscordLogo";
+import { DiscordIcon } from "./DiscordIcon";
 
 const MotionBox = motion.custom(
   forwardRef((props: BoxProps, ref: ForwardedRef<HTMLDivElement>) => {
@@ -54,7 +54,7 @@ export const DiscordToast = () => {
               flexDirection={"row"}
               alignItems={"center"}
             >
-              <DiscordLogo />
+              <DiscordIcon w={8} h={6} />
               <Stack ml={4}>
                 <Text as={"h3"} color={"white"}>
                   Join our Discord server!
