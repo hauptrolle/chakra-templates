@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import type { AppProps } from "next/app";
 import Router from "next/router";
 import Head from "next/head";
@@ -5,6 +6,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import NProgress from "nprogress";
 
 import { theme } from "../theme";
+import { DiscordToast } from "@/components/DiscordToast";
 
 Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());

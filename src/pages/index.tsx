@@ -15,10 +15,12 @@ import { Header } from "@/components/Header";
 import { Steps } from "@/components/Steps";
 import { Footer } from "@/components/Footer";
 import { data } from "data";
+import { DiscordToast } from "@/components/DiscordToast";
 
 const Home = () => {
   return (
     <>
+      <DiscordToast />
       <Header />
       <Steps />
       <Stack
