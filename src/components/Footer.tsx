@@ -1,58 +1,66 @@
-import { Container, Flex, Box, Stack, Text } from "@chakra-ui/react";
-import { BigHead } from "@bigheads/core";
+import { Container, Icon, Box, Stack, Text, Link } from "@chakra-ui/react";
+import { IoLogoVercel } from "react-icons/io5";
+import NextLink from "next/link";
+
+const NAVIGATION_ITEMS = [
+  {
+    label: "Templates",
+    href: "/templates",
+    internal: true,
+  },
+  {
+    label: "Discord",
+    href: "https://discord.gg/CfUTeTw89G",
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/hauptrolle/chakra-templates",
+  },
+  {
+    label: "Twitter",
+    href: "https://twitter.com/ChakraTemplates",
+  },
+  {
+    label: "Figma",
+    href: "#", // TODO add link to figma file
+  },
+  {
+    label: "Analytics",
+    href: "https://app.splitbee.io/public/chakra-templates.dev",
+  },
+];
 
 export const Footer = () => {
   return (
-    <Container
-      fontSize={"sm"}
-      maxW={"6xl"}
-      py={12}
-      px={8}
-      as={Stack}
-      direction={{ base: "column", md: "row" }}
-      justify={"space-between"}
-      alignItems={"center"}
-      borderTop={1}
-      borderStyle={"solid"}
-      borderColor={"gray.100"}
-    >
-      <Box>Built with Chakra UI & Next.js</Box>
-      <Flex
-        alignItems={"center"}
-        as={"a"}
-        href={"http://hauptrolle.me/"}
-        _hover={{
-          color: "teal.400",
-        }}
-      >
-        <Text as={"span"}>by Achim Rolle</Text>
-        <Box
-          mt={-4}
-          minW={12}
-          maxW={12}
-          as={BigHead}
-          accessory="none"
-          body="chest"
-          circleColor="blue"
-          clothing="shirt"
-          clothingColor="black"
-          eyebrows="leftLowered"
-          eyes="simple"
-          faceMask
-          faceMaskColor="black"
-          facialHair="none"
-          graphic="react"
-          hair="short"
-          hairColor="brown"
-          hat="none"
-          hatColor="black"
-          lashes={false}
-          lipColor="turqoise"
-          mask={false}
-          mouth="grin"
-          skinTone="light"
-        />
-      </Flex>
-    </Container>
+    <Box bg={"gray.50"} color={"gray.500"} py={{ base: 4, sm: 8 }}>
+      <Container as={Stack} spacing={6} maxW={"7xl"}>
+        <Stack
+          direction={{ base: "column", sm: "row" }}
+          justify={"space-between"}
+          as={"nav"}
+          spacing={3}
+        >
+          {NAVIGATION_ITEMS.map((navItem) => (
+            <NextLink href={navItem.href} passHref>
+              <Link>{navItem.label}</Link>
+            </NextLink>
+          ))}
+        </Stack>
+        <Stack
+          direction={{ base: "column", md: "row" }}
+          justify={"space-between"}
+        >
+          <Text>
+            Hosted on <Icon mt={-1} as={IoLogoVercel} />
+            Vercel
+          </Text>
+          <Text>
+            Made on the Internet by{" "}
+            <Link href={"https://www.hauptrolle.me"}>Achim Rolle</Link> and{" "}
+            <Link href={"https://nikolovlazar.com"}>Lazar Nikolov</Link>
+          </Text>
+        </Stack>
+      </Container>
+    </Box>
   );
 };
