@@ -1,73 +1,70 @@
-import { Container, Icon, Box, Stack, Text, Link } from "@chakra-ui/react";
-import { IoLogoVercel } from "react-icons/io5";
-import NextLink from "next/link";
+import { Container, Icon, Box, Stack, Text, Link } from '@chakra-ui/react';
+import { IoLogoVercel } from 'react-icons/io5';
+import NextLink from 'next/link';
 import {
   ANALYTICS_LINK,
   DISCORD_INVITE_LINK,
   GITHUB_LINK,
   TWITTER_LINK,
-} from "../constants";
+} from '../constants';
 
 const NAVIGATION_ITEMS = [
   {
-    label: "Templates",
-    href: "/templates",
+    label: 'Templates',
+    href: '/templates',
     internal: true,
   },
   {
-    label: "Discord",
+    label: 'Discord',
     href: DISCORD_INVITE_LINK,
   },
   {
-    label: "GitHub",
+    label: 'GitHub',
     href: GITHUB_LINK,
   },
   {
-    label: "Twitter",
+    label: 'Twitter',
     href: TWITTER_LINK,
   },
   {
-    label: "Figma",
-    href: "/#", // TODO add link to figma file
+    label: 'Figma',
+    href: '/#', // TODO add link to figma file
   },
   {
-    label: "Analytics",
+    label: 'Analytics',
     href: ANALYTICS_LINK,
   },
 ];
 
 export const Footer = () => {
   return (
-    <Box bg={"gray.50"} color={"gray.500"} py={{ base: 4, sm: 8 }}>
-      <Container as={Stack} spacing={6} maxW={"7xl"}>
+    <Box bg={'gray.50'} color={'gray.500'} py={{ base: 4, sm: 8 }}>
+      <Container as={Stack} spacing={6} maxW={'7xl'}>
         <Stack
-          direction={{ base: "column", sm: "row" }}
-          justify={"space-between"}
-          as={"nav"}
-          spacing={3}
-        >
+          direction={{ base: 'column', sm: 'row' }}
+          justify={'space-between'}
+          as={'nav'}
+          spacing={3}>
           {NAVIGATION_ITEMS.map((navItem) => (
             <NextLink key={navItem.href} href={navItem.href} passHref>
-              <Link target={"_blank"}>{navItem.label}</Link>
+              <Link target={'_blank'}>{navItem.label}</Link>
             </NextLink>
           ))}
         </Stack>
         <Stack
-          direction={{ base: "column", md: "row" }}
-          justify={"space-between"}
-        >
+          direction={{ base: 'column', md: 'row' }}
+          justify={'space-between'}>
           <Text>
             <a
               href="https://vercel.com/?utm_source=chakra-templates.dev"
-              target={"_blank"}
-            >
+              target={'_blank'}>
               Hosted on <Icon mt={-1} as={IoLogoVercel} /> Vercel
             </a>
           </Text>
           <Text>
-            Made on the Internet by{" "}
-            <Link href={"https://www.hauptrolle.me"}>Achim Rolle</Link> and{" "}
-            <Link href={"https://twitter.com/NikolovLazar"}>Lazar Nikolov</Link>
+            Made on the Internet by{' '}
+            <Link href={'https://www.hauptrolle.me'}>Achim Rolle</Link> and{' '}
+            <Link href={'https://twitter.com/NikolovLazar'}>Lazar Nikolov</Link>
           </Text>
         </Stack>
       </Container>

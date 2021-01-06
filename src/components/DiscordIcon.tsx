@@ -1,8 +1,8 @@
-import { createIcon } from "@chakra-ui/icons";
+import { createIcon } from '@chakra-ui/icons';
 
 export const DiscordIcon = createIcon({
-  displayName: "Discord",
-  viewBox: "0 0 37 26",
+  displayName: 'Discord',
+  viewBox: '0 0 37 26',
   path: (
     <path
       fillRule="evenodd"

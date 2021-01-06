@@ -1,11 +1,11 @@
-import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import { Container, Stack, Box, Flex, Text, Heading } from "@chakra-ui/react";
-import * as fs from "fs";
-import path from "path";
+import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
+import { Container, Stack, Box, Flex, Text, Heading } from '@chakra-ui/react';
+import * as fs from 'fs';
+import path from 'path';
 
-import { Example } from "@/components/Example";
-import { TEMPLATE_DIR } from "../constants";
-import { data, Template, Category, SubCategory } from "data";
+import { Example } from '@/components/Example';
+import { TEMPLATE_DIR } from '../constants';
+import { data, Template, Category, SubCategory } from 'data';
 
 type PageProps = {
   category: Category;
@@ -22,19 +22,19 @@ const Templates: NextPage<PageProps> = ({
 }) => {
   return (
     <>
-      <Stack maxW={"6xl"} py={12} px={8} as={Container} spacing={12}>
+      <Stack maxW={'6xl'} py={12} px={8} as={Container} spacing={12}>
         <Box>
-          <Text color={"gray.600"} fontSize={"sm"} mb={2}>
+          <Text color={'gray.600'} fontSize={'sm'} mb={2}>
             {subCategory.name}
           </Text>
           <Heading
-            size={"lg"}
+            size={'lg'}
             fontWeight={600}
             as={Flex}
-            alignItems={"baseline"}
+            alignItems={'baseline'}
             borderBottom={1}
-            borderStyle={"solid"}
-            borderColor={"gray.200"}
+            borderStyle={'solid'}
+            borderColor={'gray.200'}
             mb={5}
             pb={5}
             _after={{
@@ -42,9 +42,8 @@ const Templates: NextPage<PageProps> = ({
               content: '""',
               width: 4,
               height: 1,
-              bgGradient: "linear(to-r, teal.200, blue.600)",
-            }}
-          >
+              bgGradient: 'linear(to-r, teal.200, blue.600)',
+            }}>
             {category.name}
           </Heading>
         </Box>
@@ -83,7 +82,7 @@ export const getStaticProps: GetStaticProps<
     );
     const content = fs.readFileSync(
       `${filePath}/${curr.filename}.tsx`,
-      "utf-8"
+      'utf-8'
     );
     return {
       ...prev,

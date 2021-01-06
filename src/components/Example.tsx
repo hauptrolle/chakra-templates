@@ -8,13 +8,13 @@ import {
   Tab,
   TabPanels,
   TabPanel,
-} from "@chakra-ui/react";
-import Link from "next/link";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
+} from '@chakra-ui/react';
+import Link from 'next/link';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 
-import { ResizableFrame } from "@/components/ResizableFrame";
-import { CodeSample } from "@/components/CodeSample";
-import { Template, Category, SubCategory } from "data";
+import { ResizableFrame } from '@/components/ResizableFrame';
+import { CodeSample } from '@/components/CodeSample';
+import { Template, Category, SubCategory } from 'data';
 
 type ExampleProps = {
   template: Template;
@@ -33,27 +33,24 @@ export const Example = ({
 
   return (
     <Box
-      bg={"gray.50"}
+      bg={'gray.50'}
       padding={4}
-      rounded={"md"}
+      rounded={'md'}
       borderWidth={1}
       id={template.filename}
       style={{
-        scrollMarginTop: "2rem",
-      }}
-    >
-      <Tabs variant="soft-rounded" colorScheme="teal" size={"sm"}>
+        scrollMarginTop: '2rem',
+      }}>
+      <Tabs variant="soft-rounded" colorScheme="teal" size={'sm'}>
         <TabList
-          alignItems={"center"}
-          justifyContent={"space-between"}
-          flexDirection={{ base: "column", md: "row" }}
-        >
+          alignItems={'center'}
+          justifyContent={'space-between'}
+          flexDirection={{ base: 'column', md: 'row' }}>
           <Heading
-            as={"h3"}
-            color={"gray.700"}
-            size={"sm"}
-            mb={{ base: 4, md: 0 }}
-          >
+            as={'h3'}
+            color={'gray.700'}
+            size={'sm'}
+            mb={{ base: 4, md: 0 }}>
             {template.name}
           </Heading>
           <HStack spacing={4}>
@@ -61,12 +58,12 @@ export const Example = ({
             <Tab>Code</Tab>
             <Link href={exampleLink} passHref>
               <IconButton
-                as={"a"}
-                cursor={"pointer"}
+                as={'a'}
+                cursor={'pointer'}
                 icon={<ExternalLinkIcon />}
-                size={"sm"}
-                aria-label={"Open in Fullscreen"}
-                title={"Open in Fullscreen"}
+                size={'sm'}
+                aria-label={'Open in Fullscreen'}
+                title={'Open in Fullscreen'}
                 target="_blank"
               />
             </Link>
@@ -74,7 +71,7 @@ export const Example = ({
         </TabList>
         <TabPanels borderRadius="2xl">
           <TabPanel px={0} pb={0}>
-            <Box boxShadow={"largeSoft"}>
+            <Box boxShadow={'largeSoft'}>
               <ResizableFrame src={exampleLink} />
             </Box>
           </TabPanel>

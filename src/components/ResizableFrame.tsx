@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState } from "react";
-import { Box } from "@chakra-ui/react";
-import { Resizable } from "re-resizable";
+import { useEffect, useRef, useState } from 'react';
+import { Box } from '@chakra-ui/react';
+import { Resizable } from 're-resizable';
 
 type IframeProps = {
   src: string;
@@ -19,10 +19,10 @@ export const ResizableFrame = ({ src }: IframeProps) => {
   };
 
   useEffect(() => {
-    ref.current?.addEventListener("load", syncHeight);
+    ref.current?.addEventListener('load', syncHeight);
 
     return () => {
-      ref.current?.removeEventListener("load", syncHeight);
+      ref.current?.removeEventListener('load', syncHeight);
     };
   }, []);
 
@@ -30,16 +30,15 @@ export const ResizableFrame = ({ src }: IframeProps) => {
     height !== undefined && height >= MIN_HEIGHT ? height : MIN_HEIGHT;
 
   return (
-    <Box bg={"gray.500"}>
+    <Box bg={'gray.500'}>
       <Box>
         <Resizable
-          bounds={"parent"}
+          bounds={'parent'}
           minWidth={250}
           minHeight={getHeight()}
           maxHeight={getHeight()}
-          onResize={syncHeight}
-        >
-          <iframe width={"100%"} height={getHeight()} src={src} ref={ref} />
+          onResize={syncHeight}>
+          <iframe width={'100%'} height={getHeight()} src={src} ref={ref} />
         </Resizable>
       </Box>
     </Box>
