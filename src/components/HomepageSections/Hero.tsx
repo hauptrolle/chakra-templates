@@ -18,7 +18,7 @@ export const Hero = () => {
       spacing={{ base: 10, md: 24 }}
       direction={{ base: "column", md: "row" }}
     >
-      <Stack spacing={6} flex={2}>
+      <Stack spacing={9} flex={2}>
         <Heading as={"h2"} fontSize={{ base: "3xl", sm: "4xl", md: "5xl" }}>
           <Box as={"span"} color={"green.400"}>
             Production-ready
