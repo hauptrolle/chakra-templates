@@ -2,7 +2,8 @@
   "moduleDirectories": ["node_modules", "src"],
   "moduleNameMapper": {
     "@/components/(.*)": "<rootDir>/src/components/$1",
-    "@/utils/(.*)": "<rootDir>/src/utils/$1"
+    "@/utils/(.*)": "<rootDir>/src/utils/$1",
+    "@/layout/(.*)": "<rootDir>/src/layout/$1"
   },
   "setupFilesAfterEnv": ["<rootDir>/setupTests.ts"],
   "collectCoverageFrom": ["./src/**/*.{js,jsx,ts,tsx}"],

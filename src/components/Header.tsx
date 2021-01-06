@@ -1,12 +1,4 @@
-import {
-  Box,
-  Button,
-  Container,
-  DarkMode,
-  Heading,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Button, Container, Heading, Stack, Text } from "@chakra-ui/react";
 import { ArrowDownIcon } from "@chakra-ui/icons";
 import Link from "next/link";
 import Head from "next/head";
@@ -15,7 +7,7 @@ import { HeaderBackground } from "./HeaderBackground";
 
 export const Header = () => {
   return (
-    <DarkMode>
+    <>
       <Head>
         <title>
           Chakra Templates - A collection of responsive Chakra UI Templates
@@ -27,6 +19,7 @@ export const Header = () => {
           }
         />
       </Head>
+
       <Box
         color={"white"}
         bgGradient="linear(to-r, gray.900, teal.900)"
@@ -100,6 +93,6 @@ export const Header = () => {
           </Box>
         </Stack>
       </Box>
-    </DarkMode>
+    </>
   );
 };
