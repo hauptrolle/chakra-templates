@@ -3,7 +3,6 @@ import { Container, Stack, Box, Flex, Text, Heading } from "@chakra-ui/react";
 import * as fs from "fs";
 import path from "path";
 
-import { Header } from "@/components/Header";
 import { Example } from "@/components/Example";
 import { TEMPLATE_DIR } from "../constants";
 import { data, Template, Category, SubCategory } from "data";
@@ -23,7 +22,6 @@ const Templates: NextPage<PageProps> = ({
 }) => {
   return (
     <>
-      <Header />
       <Stack maxW={"6xl"} py={12} px={8} as={Container} spacing={12}>
         <Box>
           <Text color={"gray.600"} fontSize={"sm"} mb={2}>
