@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { Box, Container, Heading, IconButton, Stack } from "@chakra-ui/react";
 import { IoLogoDiscord, IoLogoGithub, IoMoon } from "react-icons/io5";
+import { DISCORD_INVITE_LINK, GITHUB_LINK } from "../constants";
 
 export const HeaderBar = () => {
   return (
@@ -28,16 +29,25 @@ export const HeaderBar = () => {
         <Stack direction={"row"} spacing={4} color={"gray.500"}>
           <IconButton
             size={"sm"}
+            as={"a"}
+            href={GITHUB_LINK}
+            target={"_blank"}
+            variant={"ghost"}
             aria-label={"GitHub"}
             icon={<IoLogoGithub size={18} />}
           />
           <IconButton
             size={"sm"}
+            as={"a"}
+            href={DISCORD_INVITE_LINK}
+            target={"_blank"}
+            variant={"ghost"}
             aria-label={"Discord"}
             icon={<IoLogoDiscord size={18} />}
           />
           <IconButton
             size={"sm"}
+            variant={"ghost"}
             aria-label={"Toggle Dark Mode"}
             icon={<IoMoon size={18} />}
           />

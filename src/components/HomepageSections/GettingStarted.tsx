@@ -28,7 +28,7 @@ const STEPS = [
 
 export const GettingStarted = () => {
   return (
-    <Box bg={"gray.100"}>
+    <Box bg={"gray.50"}>
       <Container maxW={"7xl"} py={{ base: 14, sm: 20, md: 32 }}>
         <Heading
           as={"h3"}
@@ -41,9 +41,19 @@ export const GettingStarted = () => {
             3 easy steps
           </Box>
         </Heading>
-        <SimpleGrid columns={[1, 1, 3]} spacing={{ base: 10, sm: 20 }}>
+        <Flex
+          direction={["column", "column", "row"]}
+          justify={"space-between"}
+          align={["center", "center", "flex-start"]}
+        >
           {STEPS.map((step, index) => (
-            <Stack spacing={4} key={step.title}>
+            <Stack
+              spacing={4}
+              key={step.title}
+              maxW={["100%", "100%", 64]}
+              mt={[10, 10, 0]}
+              px={4}
+            >
               <Flex
                 w={8}
                 h={8}
@@ -57,11 +67,13 @@ export const GettingStarted = () => {
               >
                 0{index + 1}
               </Flex>
-              <Text fontWeight={700}>{step.title}</Text>
-              <Text>{step.text}</Text>
+              <Text fontFamily={"heading"} color={"gray.700"}>
+                {step.title}
+              </Text>
+              <Text color={"gray.500"}>{step.text}</Text>
             </Stack>
           ))}
-        </SimpleGrid>
+        </Flex>
       </Container>
     </Box>
   );

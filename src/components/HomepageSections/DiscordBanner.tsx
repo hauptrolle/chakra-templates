@@ -7,6 +7,7 @@ import {
   Icon,
   Flex,
 } from "@chakra-ui/react";
+import { DISCORD_INVITE_LINK } from "../../constants";
 import { IoLogoDiscord } from "react-icons/io5";
 
 export const DiscordBanner = () => {
@@ -27,17 +28,17 @@ export const DiscordBanner = () => {
         >
           <Icon as={IoLogoDiscord} w={10} h={10} />
           <Stack spacing={0}>
-            <Text fontWeight={700} fontSize={"lg"}>
+            <Text fontFamily={"heading"} fontSize={"lg"}>
               Talk with us
             </Text>
-            <Text>
+            <Text opacity={0.7} fontSize={"sm"}>
               We’ve setup a Discord server where you can ask questions, report
               bugs, or request templates!
             </Text>
           </Stack>
         </Stack>
         <Flex align={"center"}>
-          <chakra.button
+          <chakra.a
             bg={"white"}
             color={"gray.700"}
             rounded={"full"}
@@ -45,12 +46,14 @@ export const DiscordBanner = () => {
             px={6}
             fontWeight={700}
             transition={"all .3s ease"}
+            href={DISCORD_INVITE_LINK}
+            target={"_blank"}
             _hover={{
               boxShadow: "lg",
             }}
           >
             Join the Discord Server
-          </chakra.button>
+          </chakra.a>
         </Flex>
       </Container>
     </Box>

@@ -10,6 +10,7 @@ import {
   Wrap,
   WrapItem,
   Center,
+  Tooltip,
 } from "@chakra-ui/react";
 import {
   IoStar,
@@ -88,8 +89,8 @@ export const OpenSource = () => {
       </Stack>
 
       <SimpleGrid
-        columns={{ base: 1, sm: 2, md: 4 }}
-        spacing={{ base: 4, sm: 8, md: 14 }}
+        columns={{ base: 1, md: 2, lg: 4 }}
+        spacing={{ base: 4, md: 8, lg: 14 }}
       >
         {STATS.map((stat) => (
           <Stack
@@ -116,12 +117,14 @@ export const OpenSource = () => {
         <Wrap justify={"center"}>
           {CONTRIBUTERS.map((contributor) => (
             <WrapItem p={2} key={contributor.name}>
-              <Avatar
-                size={"xl"}
-                bg={"white"}
-                name={contributor.name}
-                src={contributor.avatarUrl}
-              />
+              <Tooltip label={contributor.name}>
+                <Avatar
+                  size={"xl"}
+                  bg={"white"}
+                  name={contributor.name}
+                  src={contributor.avatarUrl}
+                />
+              </Tooltip>
             </WrapItem>
           ))}
         </Wrap>

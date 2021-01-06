@@ -1,4 +1,3 @@
-import { DiscordToast } from "@/components/DiscordToast";
 import { AppLayout } from "@/layout/AppLayout";
 import { Hero } from "@/components/HomepageSections/Hero";
 import { GettingStarted } from "@/components/HomepageSections/GettingStarted";
@@ -8,7 +7,6 @@ import { DiscordBanner } from "@/components/HomepageSections/DiscordBanner";
 const Home = () => {
   return (
     <AppLayout>
-      {/*<DiscordToast />*/}
       <Hero />
       <GettingStarted />
       <OpenSource />

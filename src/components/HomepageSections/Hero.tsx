@@ -32,12 +32,21 @@ export const Hero = () => {
         <Stack direction={{ base: "column", sm: "row" }} spacing={4}>
           <Button
             colorScheme={"green"}
+            background={"green.400"}
             variant={"solid"}
+            size={"lg"}
+            rounded={"full"}
             rightIcon={<IoArrowForward />}
           >
             Browse Templates
           </Button>
-          <Button colorScheme={"green"} variant={"ghost"}>
+          <Button
+            colorScheme={"green"}
+            variant={"ghost"}
+            size={"lg"}
+            rounded={"full"}
+            color={"green.400"}
+          >
             Suggest Templates
           </Button>
         </Stack>

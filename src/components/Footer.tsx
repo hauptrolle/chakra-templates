@@ -1,6 +1,12 @@
 import { Container, Icon, Box, Stack, Text, Link } from "@chakra-ui/react";
 import { IoLogoVercel } from "react-icons/io5";
 import NextLink from "next/link";
+import {
+  ANALYTICS_LINK,
+  DISCORD_INVITE_LINK,
+  GITHUB_LINK,
+  TWITTER_LINK,
+} from "../constants";
 
 const NAVIGATION_ITEMS = [
   {
@@ -10,15 +16,15 @@ const NAVIGATION_ITEMS = [
   },
   {
     label: "Discord",
-    href: "https://discord.gg/CfUTeTw89G",
+    href: DISCORD_INVITE_LINK,
   },
   {
     label: "GitHub",
-    href: "https://github.com/hauptrolle/chakra-templates",
+    href: GITHUB_LINK,
   },
   {
     label: "Twitter",
-    href: "https://twitter.com/ChakraTemplates",
+    href: TWITTER_LINK,
   },
   {
     label: "Figma",
@@ -26,7 +32,7 @@ const NAVIGATION_ITEMS = [
   },
   {
     label: "Analytics",
-    href: "https://app.splitbee.io/public/chakra-templates.dev",
+    href: ANALYTICS_LINK,
   },
 ];
 
@@ -42,7 +48,7 @@ export const Footer = () => {
         >
           {NAVIGATION_ITEMS.map((navItem) => (
             <NextLink key={navItem.href} href={navItem.href} passHref>
-              <Link>{navItem.label}</Link>
+              <Link target={"_blank"}>{navItem.label}</Link>
             </NextLink>
           ))}
         </Stack>
@@ -51,13 +57,17 @@ export const Footer = () => {
           justify={"space-between"}
         >
           <Text>
-            Hosted on <Icon mt={-1} as={IoLogoVercel} />
-            Vercel
+            <a
+              href="https://vercel.com/?utm_source=chakra-templates.dev"
+              target={"_blank"}
+            >
+              Hosted on <Icon mt={-1} as={IoLogoVercel} /> Vercel
+            </a>
           </Text>
           <Text>
             Made on the Internet by{" "}
             <Link href={"https://www.hauptrolle.me"}>Achim Rolle</Link> and{" "}
-            <Link href={"https://nikolovlazar.com"}>Lazar Nikolov</Link>
+            <Link href={"https://twitter.com/NikolovLazar"}>Lazar Nikolov</Link>
           </Text>
         </Stack>
       </Container>
