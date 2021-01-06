@@ -22,7 +22,7 @@ const NAVIGATION_ITEMS = [
   },
   {
     label: "Figma",
-    href: "#", // TODO add link to figma file
+    href: "/#", // TODO add link to figma file
   },
   {
     label: "Analytics",
@@ -41,7 +41,7 @@ export const Footer = () => {
           spacing={3}
         >
           {NAVIGATION_ITEMS.map((navItem) => (
-            <NextLink href={navItem.href} passHref>
+            <NextLink key={navItem.href} href={navItem.href} passHref>
               <Link>{navItem.label}</Link>
             </NextLink>
           ))}

@@ -113,7 +113,7 @@ export const OpenSource = () => {
       </SimpleGrid>
 
       <Center pt={{ base: 14, sm: 20 }}>
-        <Wrap align={"center"}>
+        <Wrap justify={"center"}>
           {CONTRIBUTERS.map((contributor) => (
             <WrapItem p={2} key={contributor.name}>
               <Avatar
