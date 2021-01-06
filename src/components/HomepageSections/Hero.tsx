@@ -14,9 +14,11 @@ export const Hero = () => {
     <Stack
       as={Container}
       maxW={"7xl"}
+      h={["100%", "100%", "90vh"]}
       py={{ base: 14, sm: 20, md: 32 }}
       spacing={{ base: 10, md: 24 }}
-      direction={{ base: "column", md: "row" }}
+      direction={{ base: "column", lg: "row" }}
+      alignItems={"center"}
     >
       <Stack spacing={9} flex={2}>
         <Heading as={"h2"} fontSize={{ base: "3xl", sm: "4xl", md: "5xl" }}>
@@ -53,16 +55,64 @@ export const Hero = () => {
       </Stack>
 
       {/* START Placeholder for the components animation */}
-      <Flex
-        justify={"center"}
-        flex={1}
-        p={4}
-        bg={"white"}
-        rounded={"lg"}
-        boxShadow={"xl"}
-        minH={100}
-        minW={100}
-      />
+      <Stack position={"relative"} w={384} h={424}>
+        <Flex
+          position={"absolute"}
+          top={0}
+          left={0}
+          justify={"center"}
+          flex={1}
+          p={4}
+          bg={"white"}
+          rounded={"3xl"}
+          boxShadow={"xl"}
+          minH={332}
+          w={384}
+          zIndex={4}
+        />
+        <Flex
+          position={"absolute"}
+          top={"28px"}
+          left={"32px"}
+          justify={"center"}
+          flex={1}
+          p={4}
+          bg={"white"}
+          rounded={"3xl"}
+          boxShadow={"xl"}
+          minH={332}
+          w={320}
+          zIndex={3}
+        />
+        <Flex
+          position={"absolute"}
+          top={"60px"}
+          left={"48px"}
+          justify={"center"}
+          flex={1}
+          p={4}
+          bg={"white"}
+          rounded={"3xl"}
+          boxShadow={"xl"}
+          minH={332}
+          w={288}
+          zIndex={2}
+        />
+        <Flex
+          position={"absolute"}
+          top={"84px"}
+          left={"64px"}
+          justify={"center"}
+          flex={1}
+          p={4}
+          bg={"white"}
+          rounded={"3xl"}
+          boxShadow={"xl"}
+          minH={332}
+          w={256}
+          zIndex={1}
+        />
+      </Stack>
       {/* END Placeholder for the components animation */}
     </Stack>
   );
