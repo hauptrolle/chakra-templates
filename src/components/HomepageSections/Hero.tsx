@@ -1,14 +1,19 @@
 import {
   Container,
   Stack,
-  Box,
   Flex,
   Heading,
   Text,
   Button,
 } from '@chakra-ui/react';
 import { IoArrowForward } from 'react-icons/io5';
+import NextLink from 'next/link';
+
 import { TextUnderline } from '@/components/TextUnderline';
+import {
+  SPLITBEE_HERO_SUGGEST_TEMPLATE,
+  SUGGEST_TEMPLATE_LINK,
+} from '../../constants';
 
 export const Hero = () => {
   return (
@@ -30,17 +35,23 @@ export const Hero = () => {
           into your React project.
         </Text>
         <Stack direction={{ base: 'column', sm: 'row' }} spacing={4}>
+          <NextLink href={'/components'} passHref>
+            <Button
+              as={'a'}
+              colorScheme={'green'}
+              background={'green.400'}
+              _hover={{ bg: 'green.500' }}
+              variant={'solid'}
+              size={'lg'}
+              rounded={'full'}
+              rightIcon={<IoArrowForward />}>
+              Browse Templates
+            </Button>
+          </NextLink>
           <Button
-            colorScheme={'green'}
-            background={'green.400'}
-            _hover={{ bg: 'green.500' }}
-            variant={'solid'}
-            size={'lg'}
-            rounded={'full'}
-            rightIcon={<IoArrowForward />}>
-            Browse Templates
-          </Button>
-          <Button
+            data-splitbee-event={SPLITBEE_HERO_SUGGEST_TEMPLATE}
+            as={'a'}
+            href={SUGGEST_TEMPLATE_LINK}
             colorScheme={'green'}
             variant={'ghost'}
             size={'lg'}
