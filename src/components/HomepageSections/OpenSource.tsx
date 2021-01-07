@@ -20,6 +20,7 @@ import {
 
 import { CONTRIBUTORS_LINK } from '../../constants';
 import { TextUnderline } from '@/components/TextUnderline';
+import { Stargazers } from '../../api/stargazers';
 
 export interface Contributor {
   login: string;
@@ -31,14 +32,15 @@ export interface Contributor {
 
 interface OpenSourceProps {
   contributors: Contributor[];
+  stargazers: Stargazers;
 }
 
-export const OpenSource = ({ contributors }: OpenSourceProps) => {
+export const OpenSource = ({ contributors, stargazers }: OpenSourceProps) => {
   const STATS = [
     {
       icon: IoStar,
       label: 'GitHub Stars',
-      count: '10+',
+      count: stargazers.totalCount,
     },
     {
       icon: IoExtensionPuzzle,
