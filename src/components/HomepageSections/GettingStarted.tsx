@@ -39,7 +39,7 @@ export const GettingStarted = () => {
               spacing={4}
               key={step.title}
               maxW={{ base: 'full', md: 72 }}
-              mt={[10, 10, 0]}
+              mt={{ base: 10, md: 0 }}
               px={4}>
               <Flex
                 w={8}

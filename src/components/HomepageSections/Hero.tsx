@@ -15,7 +15,7 @@ export const Hero = () => {
     <Stack
       as={Container}
       maxW={'7xl'}
-      h={['100%', '100%', '90vh']}
+      h={{ base: '100%', md: '90vh' }}
       py={{ base: 14, sm: 20, md: 32 }}
       spacing={{ base: 10, md: 24 }}
       direction={{ base: 'column', lg: 'row' }}
