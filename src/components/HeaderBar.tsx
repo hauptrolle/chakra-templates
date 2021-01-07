@@ -20,10 +20,10 @@ export const HeaderBar = () => {
         as={Container}
         maxW={'7xl'}
         py={4}
-        direction={{ base: 'column', sm: 'row' }}
+        direction={'row'}
         spacing={4}
         justify={'space-between'}
-        align={{ base: 'start', sm: 'center' }}>
+        align={'center'}>
         <Link href={'/'} passHref>
           <Stack as={'a'} direction={'row'} alignItems={'center'} spacing={4}>
             <Icon as={Logo} w={8} h={8} />
@@ -32,7 +32,10 @@ export const HeaderBar = () => {
             </Heading>
           </Stack>
         </Link>
-        <Stack direction={'row'} spacing={4} color={'gray.500'}>
+        <Stack
+          direction={'row'}
+          spacing={{ base: 2, sm: 4 }}
+          color={'gray.500'}>
           <IconButton
             size={'sm'}
             as={'a'}
