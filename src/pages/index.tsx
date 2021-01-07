@@ -1,6 +1,7 @@
 import path from 'path';
 import * as fs from 'fs';
 import { GetStaticProps, NextPage } from 'next';
+import { NextSeo } from 'next-seo';
 
 import { AppLayout } from '@/layout/AppLayout';
 import { Hero } from '@/components/HomepageSections/Hero';
@@ -20,6 +21,10 @@ interface PageProps {
 const Home: NextPage<PageProps> = ({ contributors, stargazers }) => {
   return (
     <AppLayout>
+      <NextSeo
+        title="Chakra Templates - Production-ready Chakra UI Templates for developers"
+        description="Production-ready Chakra UI Templates for developers"
+      />
       <Hero />
       <GettingStarted />
       <OpenSource contributors={contributors} stargazers={stargazers} />
