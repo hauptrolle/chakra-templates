@@ -8,6 +8,7 @@ import {
   Button,
 } from '@chakra-ui/react';
 import { IoArrowForward } from 'react-icons/io5';
+import { TextUnderline } from '@/components/TextUnderline';
 
 export const Hero = () => {
   return (
@@ -21,10 +22,8 @@ export const Hero = () => {
       alignItems={'center'}>
       <Stack spacing={9} flex={2}>
         <Heading as={'h2'} fontSize={{ base: '3xl', sm: '4xl', md: '5xl' }}>
-          <Box as={'span'} color={'green.400'}>
-            Production-ready
-          </Box>{' '}
-          Chakra UI Templates for developers
+          <TextUnderline>Production-ready</TextUnderline> Chakra UI Templates
+          for developers
         </Heading>
         <Text color={'gray.500'} fontSize={{ md: 'lg' }}>
           A growing collection of hand-crafted Chakra UI templates ready to drop
@@ -34,6 +33,7 @@ export const Hero = () => {
           <Button
             colorScheme={'green'}
             background={'green.400'}
+            _hover={{ bg: 'green.500' }}
             variant={'solid'}
             size={'lg'}
             rounded={'full'}
@@ -45,7 +45,8 @@ export const Hero = () => {
             variant={'ghost'}
             size={'lg'}
             rounded={'full'}
-            color={'green.400'}>
+            color={'green.400'}
+            _hover={{ bg: 'green.100' }}>
             Suggest Templates
           </Button>
         </Stack>

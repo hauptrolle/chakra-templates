@@ -19,6 +19,8 @@ import {
   IoBookmarks,
 } from 'react-icons/io5';
 
+import { TextUnderline } from '@/components/TextUnderline';
+
 const STATS = [
   {
     icon: IoStar,
@@ -71,10 +73,7 @@ export const OpenSource = () => {
     <Container maxW={'7xl'} py={{ base: 14, sm: 20, md: 32 }}>
       <Stack spacing={4} mb={{ base: 14, sm: 20 }} align={'center'}>
         <Heading as={'h3'} textAlign={'center'} fontSize={'3xl'}>
-          We're{' '}
-          <Box as={'span'} color={'green.400'}>
-            open source
-          </Box>
+          We're <TextUnderline>open source</TextUnderline>
         </Heading>
         <Text
           textAlign={'center'}

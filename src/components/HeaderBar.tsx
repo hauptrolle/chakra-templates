@@ -1,8 +1,9 @@
 import Link from 'next/link';
-
 import { Box, Container, Heading, IconButton, Stack } from '@chakra-ui/react';
 import { IoLogoDiscord, IoLogoGithub, IoMoon } from 'react-icons/io5';
+
 import { DISCORD_INVITE_LINK, GITHUB_LINK } from '../constants';
+import { TextUnderline } from '@/components/TextUnderline';
 
 export const HeaderBar = () => {
   return (
@@ -18,10 +19,7 @@ export const HeaderBar = () => {
         <Link href={'/'} passHref>
           <Box as={'a'}>
             <Heading as={'h1'} size={'md'}>
-              <Box as={'span'} color={'green.400'}>
-                Chakra
-              </Box>{' '}
-              Templates
+              <TextUnderline>Chakra</TextUnderline> Templates
             </Heading>
           </Box>
         </Link>

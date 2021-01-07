@@ -1,12 +1,5 @@
-import {
-  Container,
-  Heading,
-  Text,
-  Box,
-  Stack,
-  Flex,
-  SimpleGrid,
-} from '@chakra-ui/react';
+import { Container, Heading, Text, Box, Stack, Flex } from '@chakra-ui/react';
+import { TextUnderline } from '@/components/TextUnderline';
 
 const STEPS = [
   {
@@ -35,20 +28,17 @@ export const GettingStarted = () => {
           textAlign={'center'}
           fontSize={'3xl'}
           mb={{ base: 14, sm: 20 }}>
-          Getting started in{' '}
-          <Box as={'span'} color={'green.400'}>
-            3 easy steps
-          </Box>
+          Getting started in <TextUnderline>3 easy steps</TextUnderline>
         </Heading>
         <Flex
-          direction={['column', 'column', 'row']}
+          direction={{ base: 'column', md: 'row' }}
           justify={'space-between'}
-          align={['center', 'center', 'flex-start']}>
+          align={{ base: 'center', md: 'flex-start' }}>
           {STEPS.map((step, index) => (
             <Stack
               spacing={4}
               key={step.title}
-              maxW={['100%', '100%', 64]}
+              maxW={{ base: 'full', md: 72 }}
               mt={[10, 10, 0]}
               px={4}>
               <Flex
