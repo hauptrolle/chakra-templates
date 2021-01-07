@@ -1,5 +1,4 @@
 import {
-  Box,
   Container,
   Heading,
   Text,
@@ -19,56 +18,45 @@ import {
   IoBookmarks,
 } from 'react-icons/io5';
 
+import { CONTRIBUTORS_LINK } from '../../constants';
 import { TextUnderline } from '@/components/TextUnderline';
 
-const STATS = [
-  {
-    icon: IoStar,
-    label: 'GitHub Stars',
-    count: '10+',
-  },
-  {
-    icon: IoExtensionPuzzle,
-    label: 'Templates',
-    count: '10+',
-  },
-  {
-    icon: IoMedal,
-    label: 'Contributers',
-    count: '10+',
-  },
-  {
-    icon: IoBookmarks,
-    label: 'Categories',
-    count: '3+',
-  },
-];
+export interface Contributor {
+  login: string;
+  name: string;
+  avatar_url: string;
+  profile: string;
+  contributions: string[];
+}
 
-// TODO fetch from github on build time
-const CONTRIBUTERS = [
-  {
-    name: 'Achim Rolle',
-    avatarUrl:
-      'https://avatars2.githubusercontent.com/u/1164541?s=460&u=bdb434dbac51993e61e79d103fadd24eeb9be73f&v=4',
-  },
-  {
-    name: 'Lazar Nikolov',
-    avatarUrl:
-      'https://avatars1.githubusercontent.com/u/5396211?s=460&u=e9b7489a1e9cf6b4ff4a09ce40a0f2a59c901d07&v=4',
-  },
-  {
-    name: 'Oscar Sirvent',
-    avatarUrl:
-      'https://avatars3.githubusercontent.com/u/5927133?s=460&u=5532d9e8d3fbebeb27632ca165bb46da966de0fb&v=4',
-  },
-  {
-    name: 'Ilija Boshkov',
-    avatarUrl:
-      'https://avatars3.githubusercontent.com/u/2392895?s=460&u=06f5bdb7c76ecb4018300eea4911aefca05008ee&v=4',
-  },
-];
+interface OpenSourceProps {
+  contributors: Contributor[];
+}
 
-export const OpenSource = () => {
+export const OpenSource = ({ contributors }: OpenSourceProps) => {
+  const STATS = [
+    {
+      icon: IoStar,
+      label: 'GitHub Stars',
+      count: '10+',
+    },
+    {
+      icon: IoExtensionPuzzle,
+      label: 'Templates',
+      count: '10+',
+    },
+    {
+      icon: IoMedal,
+      label: 'Contributors',
+      count: contributors.length,
+    },
+    {
+      icon: IoBookmarks,
+      label: 'Categories',
+      count: '3+',
+    },
+  ];
+
   return (
     <Container maxW={'7xl'} py={{ base: 14, sm: 20, md: 32 }}>
       <Stack spacing={4} mb={{ base: 14, sm: 20 }} align={'center'}>
@@ -111,14 +99,16 @@ export const OpenSource = () => {
 
       <Center pt={{ base: 14, sm: 20 }}>
         <Wrap justify={'center'}>
-          {CONTRIBUTERS.map((contributor) => (
+          {contributors.map((contributor) => (
             <WrapItem p={2} key={contributor.name}>
               <Tooltip label={contributor.name}>
                 <Avatar
+                  as={'a'}
+                  href={CONTRIBUTORS_LINK}
                   size={'xl'}
                   bg={'white'}
                   name={contributor.name}
-                  src={contributor.avatarUrl}
+                  src={contributor.avatar_url}
                 />
               </Tooltip>
             </WrapItem>
