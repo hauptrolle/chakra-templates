@@ -42,7 +42,7 @@ export const Hero = () => {
               colorScheme={'green'}
               background={'green.400'}
               _hover={{ bg: 'green.500' }}
-              color={useColorModeValue('inherit', 'white')}
+              color={'white'}
               variant={'solid'}
               size={'lg'}
               rounded={'full'}
