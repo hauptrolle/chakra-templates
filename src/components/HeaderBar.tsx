@@ -6,14 +6,17 @@ import {
   IconButton,
   Stack,
   Icon,
+  useColorMode,
 } from '@chakra-ui/react';
-import { IoLogoDiscord, IoLogoGithub, IoMoon } from 'react-icons/io5';
+import { IoLogoDiscord, IoLogoGithub, IoMoon, IoSunny } from 'react-icons/io5';
 
 import { DISCORD_INVITE_LINK, GITHUB_LINK } from '../constants';
 import { TextUnderline } from '@/components/TextUnderline';
 import { Logo } from '@/components/Logo';
 
 export const HeaderBar = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
+
   return (
     <Box>
       <Stack
@@ -57,8 +60,15 @@ export const HeaderBar = () => {
           <IconButton
             size={'sm'}
             variant={'ghost'}
-            aria-label={'Toggle Dark Mode'}
-            icon={<IoMoon size={18} />}
+            aria-label={'Toggle Color Mode'}
+            onClick={toggleColorMode}
+            icon={
+              colorMode == 'light' ? (
+                <IoMoon size={18} />
+              ) : (
+                <IoSunny size={18} />
+              )
+            }
           />
         </Stack>
       </Stack>
