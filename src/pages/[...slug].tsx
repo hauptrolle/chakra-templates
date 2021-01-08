@@ -27,7 +27,7 @@ const Templates: NextPage<PageProps> = ({
       <Stack maxW={"6xl"} py={12} px={8} as={Container} spacing={12}>
         <Box>
           <Text color={"gray.600"} fontSize={"sm"} mb={2}>
-            {subCategory.name}
+            {category.name}
           </Text>
           <Heading
             size={"lg"}
@@ -47,7 +47,7 @@ const Templates: NextPage<PageProps> = ({
               bgGradient: "linear(to-r, teal.200, blue.600)",
             }}
           >
-            {category.name}
+            {subCategory.name}
           </Heading>
         </Box>
 

@@ -11,16 +11,10 @@ import {
   Heading,
 } from "@chakra-ui/react";
 
-export default function SimpleLogin() {
+export default function SimpleCard() {
   return (
-    <Flex
-      w={"full"}
-      h={"100vh"}
-      align={"center"}
-      justify={"center"}
-      bg={"gray.100"}
-    >
-      <Stack spacing={8} mx={"auto"}>
+    <Flex minH={"100vh"} align={"center"} justify={"center"} bg={"gray.100"}>
+      <Stack spacing={8} mx={"auto"} w={"full"} maxW={"md"} py={12} px={6}>
         <Heading fontSize={"3xl"} textAlign={"center"}>
           Sign in to your account
         </Heading>
@@ -29,7 +23,6 @@ export default function SimpleLogin() {
           bg={"white"}
           boxShadow={"lg"}
           p={{ base: 4, md: 8 }}
-          minW={{ md: "md" }}
         >
           <Stack spacing={4}>
             <FormControl id="email">
@@ -43,6 +36,7 @@ export default function SimpleLogin() {
             <Stack spacing={6}>
               <Stack
                 direction={{ base: "column", sm: "row" }}
+                align={"start"}
                 justify={"space-between"}
               >
                 <Checkbox>Remember me</Checkbox>
