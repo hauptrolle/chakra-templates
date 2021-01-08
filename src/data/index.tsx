@@ -85,6 +85,17 @@ export const data: Category[] = [
   {
     name: "Forms",
     id: "forms",
-    children: [],
+    children: [
+      {
+        name: "Authentication",
+        id: "authentication",
+        children: [
+          {
+            name: "Simple Login",
+            filename: "simpleLogin",
+          },
+        ],
+      },
+    ],
   },
 ];
