@@ -5,6 +5,7 @@ import {
   Heading,
   Text,
   Button,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import { IoArrowForward } from 'react-icons/io5';
 import NextLink from 'next/link';
@@ -41,6 +42,7 @@ export const Hero = () => {
               colorScheme={'green'}
               background={'green.400'}
               _hover={{ bg: 'green.500' }}
+              color={useColorModeValue('inherit', 'white')}
               variant={'solid'}
               size={'lg'}
               rounded={'full'}
@@ -56,8 +58,8 @@ export const Hero = () => {
             variant={'ghost'}
             size={'lg'}
             rounded={'full'}
-            color={'green.400'}
-            _hover={{ bg: 'green.100' }}>
+            color={useColorModeValue('green.400', 'white')}
+            _hover={{ bg: useColorModeValue('green.100', 'green.800') }}>
             Suggest Templates
           </Button>
         </Stack>

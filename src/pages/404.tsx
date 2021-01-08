@@ -6,6 +6,7 @@ import {
   Heading,
   Text,
   Button,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import NextLink from 'next/link';
 
@@ -16,7 +17,8 @@ export const NotFound = () => {
     <Flex align={'center'} justify={'center'} h={'100vh'} w={'full'}>
       <Stack
         as={Container}
-        bg={'gray.50'}
+        bg={useColorModeValue('gray.50', 'gray.900')}
+        rounded={'xl'}
         p={8}
         spacing={6}
         maxW={'lg'}

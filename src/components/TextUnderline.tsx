@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { Box } from '@chakra-ui/react';
+import { Box, useColorModeValue } from '@chakra-ui/react';
 
 interface TextUnderlineProps {
   children: ReactNode;
@@ -9,7 +9,7 @@ export const TextUnderline = ({ children }: TextUnderlineProps) => {
   return (
     <Box
       as={'span'}
-      color={'green.400'}
+      color={useColorModeValue('green.400', 'green.300')}
       position={'relative'}
       zIndex={10}
       _after={{
@@ -19,7 +19,7 @@ export const TextUnderline = ({ children }: TextUnderlineProps) => {
         bottom: 0,
         w: 'full',
         h: '30%',
-        bg: 'green.100',
+        bg: useColorModeValue('green.100', 'green.900'),
         zIndex: -1,
       }}>
       {children}

@@ -1,4 +1,12 @@
-import { Container, Icon, Box, Stack, Text, Link } from '@chakra-ui/react';
+import {
+  Container,
+  Icon,
+  Box,
+  Stack,
+  Text,
+  Link,
+  useColorModeValue,
+} from '@chakra-ui/react';
 import { IoLogoVercel } from 'react-icons/io5';
 import NextLink from 'next/link';
 import {
@@ -38,7 +46,10 @@ const NAVIGATION_ITEMS = [
 
 export const Footer = () => {
   return (
-    <Box bg={'gray.50'} color={'gray.500'} py={{ base: 4, sm: 8 }}>
+    <Box
+      bg={useColorModeValue('gray.50', 'gray.900')}
+      color={'gray.500'}
+      py={{ base: 4, sm: 8 }}>
       <Container as={Stack} spacing={6} maxW={'7xl'}>
         <Stack
           direction={{ base: 'column', sm: 'row' }}

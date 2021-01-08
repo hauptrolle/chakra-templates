@@ -1,5 +1,6 @@
 import { createIcon } from '@chakra-ui/icon';
 
+// Todo adjust logo for darkmode. Maybe export as to paths instead of path with filter
 export const Logo = createIcon({
   displayName: 'Logo',
   viewBox: '0 0 128 127',

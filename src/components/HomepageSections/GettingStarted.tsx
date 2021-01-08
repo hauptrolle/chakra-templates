@@ -1,4 +1,12 @@
-import { Container, Heading, Text, Box, Stack, Flex } from '@chakra-ui/react';
+import {
+  Container,
+  Heading,
+  Text,
+  Box,
+  Stack,
+  Flex,
+  useColorModeValue,
+} from '@chakra-ui/react';
 import { TextUnderline } from '@/components/TextUnderline';
 
 const STEPS = [
@@ -21,7 +29,7 @@ const STEPS = [
 
 export const GettingStarted = () => {
   return (
-    <Box bg={'gray.50'}>
+    <Box bg={useColorModeValue('gray.50', 'gray.900')}>
       <Container maxW={'7xl'} py={{ base: 14, sm: 20, md: 32 }}>
         <Heading
           as={'h3'}
@@ -44,8 +52,8 @@ export const GettingStarted = () => {
               <Flex
                 w={8}
                 h={8}
-                bg={'green.100'}
-                color={'green.700'}
+                bg={useColorModeValue('green.100', 'green.900')}
+                color={useColorModeValue('green.700', 'green.300')}
                 fontWeight={700}
                 align={'center'}
                 justify={'center'}
@@ -53,7 +61,10 @@ export const GettingStarted = () => {
                 rounded={'md'}>
                 0{index + 1}
               </Flex>
-              <Text fontFamily={'heading'} color={'gray.700'}>
+              <Text
+                fontFamily={'heading'}
+                fontSize={'lg'}
+                color={useColorModeValue('gray.700', 'white')}>
                 {step.title}
               </Text>
               <Text color={'gray.500'}>{step.text}</Text>

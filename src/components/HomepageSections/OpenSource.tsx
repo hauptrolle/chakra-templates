@@ -10,6 +10,7 @@ import {
   WrapItem,
   Center,
   Tooltip,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import {
   IoStar,
@@ -82,7 +83,7 @@ export const OpenSource = ({ contributors, stargazers }: OpenSourceProps) => {
         {STATS.map((stat) => (
           <Stack
             key={stat.label}
-            bg={'gray.100'}
+            bg={useColorModeValue('gray.100', 'gray.900')}
             rounded={'xl'}
             px={4}
             py={3}
@@ -108,7 +109,7 @@ export const OpenSource = ({ contributors, stargazers }: OpenSourceProps) => {
                   as={'a'}
                   href={CONTRIBUTORS_LINK}
                   size={'xl'}
-                  bg={'white'}
+                  bg={useColorModeValue('white', 'gray.900')}
                   name={contributor.name}
                   src={contributor.avatar_url}
                 />
