@@ -36,7 +36,7 @@ export const Hero = () => {
           into your React project.
         </Text>
         <Stack direction={{ base: 'column', sm: 'row' }} spacing={4}>
-          <NextLink href={'/components'} passHref>
+          <NextLink href={'/templates'} passHref>
             <Button
               as={'a'}
               colorScheme={'green'}

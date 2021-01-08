@@ -13,6 +13,13 @@ export const theme = extendTheme({
   },
   styles: {
     global: {
+      'html, body, #__next': {
+        height: '100%',
+      },
+      '#__next': {
+        display: 'flex',
+        flexDirection: 'column',
+      },
       html: {
         scrollBehavior: 'smooth',
       },

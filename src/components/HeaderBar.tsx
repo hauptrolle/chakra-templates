@@ -14,11 +14,18 @@ import { DISCORD_INVITE_LINK, GITHUB_LINK } from '../constants';
 import { TextUnderline } from '@/components/TextUnderline';
 import { Logo } from '@/components/Logo';
 
-export const HeaderBar = () => {
+interface HeaderBarProps {
+  showBorder?: boolean;
+}
+
+export const HeaderBar = ({ showBorder = false }: HeaderBarProps) => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Box>
+    <Box
+      borderBottom={1}
+      borderStyle={'solid'}
+      borderColor={showBorder ? 'gray.100' : 'transparent'}>
       <Stack
         as={Container}
         maxW={'7xl'}
