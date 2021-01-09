@@ -2,9 +2,7 @@
 <p align="center">Production-ready Chakra UI Templates for developers</p>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
-
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 > A growing collection of hand-crafted Chakra UI templates ready to drop into your React project
@@ -39,6 +37,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/iboshkov"><img src="https://avatars0.githubusercontent.com/u/2392895?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ilija Boshkov</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=iboshkov" title="Code">💻</a></td>
     <td align="center"><a href="https://www.samba-ndiaye.com"><img src="https://avatars0.githubusercontent.com/u/24635496?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Samba Ndiaye</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=zcoderboy" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/osirvent"><img src="https://avatars2.githubusercontent.com/u/5927133?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Oscar Sirvent</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=osirvent" title="Code">💻</a></td>
+    <td align="center"><a href="http://dominik.sumer.dev"><img src="https://avatars3.githubusercontent.com/u/4418879?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dominik Sumer</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=dsumer" title="Code">💻</a></td>
   </tr>
 </table>
 
