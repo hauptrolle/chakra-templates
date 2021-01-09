@@ -31,16 +31,14 @@ export const ResizableFrame = ({ src }: IframeProps) => {
 
   return (
     <Box bg={'gray.500'}>
-      <Box>
-        <Resizable
-          bounds={'parent'}
-          minWidth={250}
-          minHeight={getHeight()}
-          maxHeight={getHeight()}
-          onResize={syncHeight}>
-          <iframe width={'100%'} height={getHeight()} src={src} ref={ref} />
-        </Resizable>
-      </Box>
+      <Resizable
+        bounds={'parent'}
+        minWidth={250}
+        minHeight={getHeight()}
+        maxHeight={getHeight()}
+        onResize={syncHeight}>
+        <iframe width={'100%'} height={getHeight()} src={src} ref={ref} />
+      </Resizable>
     </Box>
   );
 };

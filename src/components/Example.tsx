@@ -1,6 +1,6 @@
 import {
   Box,
-  Heading,
+  Text,
   HStack,
   IconButton,
   Tabs,
@@ -23,6 +23,8 @@ type ExampleProps = {
   subCategory: SubCategory;
 };
 
+const TABS = ['Preview', 'Code'];
+
 export const Example = ({
   template,
   code,
@@ -33,35 +35,45 @@ export const Example = ({
 
   return (
     <Box
-      bg={'gray.50'}
-      padding={4}
       rounded={'md'}
       borderWidth={1}
       id={template.filename}
+      height={'full'}
       style={{
         scrollMarginTop: '2rem',
       }}>
-      <Tabs variant="soft-rounded" colorScheme="teal" size={'sm'}>
+      <Tabs variant="soft-rounded" colorScheme="green" size={'sm'}>
         <TabList
           alignItems={'center'}
           justifyContent={'space-between'}
-          flexDirection={{ base: 'column', md: 'row' }}>
-          <Heading
-            as={'h3'}
-            color={'gray.700'}
-            size={'sm'}
-            mb={{ base: 4, md: 0 }}>
+          flexDirection={{ base: 'column', md: 'row' }}
+          py={2}
+          px={4}
+          borderBottomWidth={1}
+          borderBottomStyle={'solid'}>
+          <Text color={'gray.700'} fontSize={'sm'} mb={{ base: 4, md: 0 }}>
             {template.name}
-          </Heading>
-          <HStack spacing={4}>
-            <Tab>Preview</Tab>
-            <Tab>Code</Tab>
+          </Text>
+          <HStack spacing={4} color={'gray.500'}>
+            {TABS.map((tab) => (
+              <Tab
+                key={tab}
+                fontSize={'xs'}
+                fontWeight={400}
+                _selected={{
+                  bg: 'green.50',
+                  color: 'green.500',
+                }}>
+                {tab}
+              </Tab>
+            ))}
             <Link href={exampleLink} passHref>
               <IconButton
                 as={'a'}
                 cursor={'pointer'}
                 icon={<ExternalLinkIcon />}
                 size={'sm'}
+                variant={'ghost'}
                 aria-label={'Open in Fullscreen'}
                 title={'Open in Fullscreen'}
                 target="_blank"
@@ -70,12 +82,10 @@ export const Example = ({
           </HStack>
         </TabList>
         <TabPanels borderRadius="2xl">
-          <TabPanel px={0} pb={0}>
-            <Box boxShadow={'largeSoft'}>
-              <ResizableFrame src={exampleLink} />
-            </Box>
+          <TabPanel p={0}>
+            <ResizableFrame src={exampleLink} />
           </TabPanel>
-          <TabPanel px={0} pb={0}>
+          <TabPanel p={0}>
             <CodeSample code={code} />
           </TabPanel>
         </TabPanels>

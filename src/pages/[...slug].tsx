@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
-import { Container, Stack, Box, Flex, Text, Heading } from '@chakra-ui/react';
+import { Stack, Heading } from '@chakra-ui/react';
 import * as fs from 'fs';
 import path from 'path';
 
@@ -28,14 +28,13 @@ const Templates: NextPage<PageProps> = ({
       </Heading>
       <Stack spacing={12}>
         {templates?.map((template) => (
-          <div>{template.name}</div>
-          // <Example
-          //   key={template.filename}
-          //   template={template}
-          //   category={category}
-          //   subCategory={subCategory}
-          //   code={code![template.filename]}
-          // />
+          <Example
+            key={template.filename}
+            template={template}
+            category={category}
+            subCategory={subCategory}
+            code={code![template.filename]}
+          />
         ))}
       </Stack>
     </DocsLayout>

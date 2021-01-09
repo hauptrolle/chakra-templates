@@ -25,7 +25,7 @@ export const DocsLayout = ({ children }: DocsLayoutProps) => {
             w={'full'}
             flexShrink={0}>
             {data.map((category) => (
-              <Stack>
+              <Stack key={category.id}>
                 <Text
                   fontFamily={'heading'}
                   textTransform={'uppercase'}
@@ -38,7 +38,8 @@ export const DocsLayout = ({ children }: DocsLayoutProps) => {
                 <Stack>
                   {category.children?.map((subCategory) => (
                     <NextLink
-                      href={`${category.id}/${subCategory.id}`}
+                      key={subCategory.id}
+                      href={`/${category.id}/${subCategory.id}`}
                       passHref>
                       <Link fontWeight={500} color={'gray.700'} fontSize={'sm'}>
                         {subCategory.name}

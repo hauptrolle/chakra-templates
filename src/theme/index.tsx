@@ -13,7 +13,7 @@ export const theme = extendTheme({
   },
   styles: {
     global: {
-      'html, body, #__next': {
+      'html, #__next': {
         height: '100%',
       },
       '#__next': {
