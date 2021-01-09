@@ -5,8 +5,9 @@ import {
   Input,
   Button,
   useColorModeValue,
-  Flex,
+  Box,
   Text,
+  Container,
 } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
 
@@ -18,27 +19,26 @@ export default function EmailOnly() {
   const [error, setError] = useState(false);
 
   return (
-    <Flex w="100%" my={6} mx={2}>
-      <Flex
-        w={{ base: "100%", sm: "95%", md: "80%", lg: "70%" }}
+    <Box py={6} px={2}>
+      <Container
+        maxW={{ base: "100%", sm: "95%", md: "80%", lg: "70%" }}
         bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
-        m="auto"
-        borderRadius="lg"
+        rounded={"lg"}
         p={6}
-        direction="column"
+        direction={"column"}
       >
         <Text
-          as="h2"
+          as={"h2"}
           fontSize={{ base: "xl", sm: "2xl" }}
-          textAlign="center"
+          textAlign={"center"}
           mb={5}
         >
           Subscribe to our Newsletter.
         </Text>
         <Stack
           direction={{ base: "column", md: "row" }}
-          as="form"
-          spacing="12px"
+          as={"form"}
+          spacing={"12px"}
           onSubmit={(e: FormEvent) => {
             e.preventDefault();
             setError(false);
@@ -58,18 +58,18 @@ export default function EmailOnly() {
         >
           <FormControl>
             <Input
-              variant="solid"
-              borderWidth="1px"
-              color="gray.800"
+              variant={"solid"}
+              borderWidth={1}
+              color={"gray.800"}
               _placeholder={{
                 color: "gray.400",
               }}
               borderColor={useColorModeValue("gray.300", "gray.700")}
-              id="email"
-              type="email"
+              id={"email"}
+              type={"email"}
               required
-              placeholder="Your Email"
-              aria-label="Your Email"
+              placeholder={"Your Email"}
+              aria-label={"Your Email"}
               value={email}
               disabled={state !== "initial"}
               onChange={(e: ChangeEvent<HTMLInputElement>) =>
@@ -88,12 +88,16 @@ export default function EmailOnly() {
             </Button>
           </FormControl>
         </Stack>
-        <Text mt={2} textAlign="center" color={error ? "red.500" : "gray.500"}>
+        <Text
+          mt={2}
+          textAlign={"center"}
+          color={error ? "red.500" : "gray.500"}
+        >
           {error
             ? "Oh no an error occured! 😢 Please try again later."
             : "You won't receive any spam."}
         </Text>
-      </Flex>
-    </Flex>
+      </Container>
+    </Box>
   );
 }
