@@ -1,4 +1,5 @@
-# Chakra Templates
+<h1 align="center">Chakra Templates️</h1>
+<p align="center">Production-ready Chakra UI Templates for developers</p>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
@@ -6,8 +7,9 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-> A growing collection of responsive Chakra UI Templates ready to drop into your React project.
-> Don't waste your time, building the same templates over and over again. Just copy and paste the code, and you are ready to go
+> A growing collection of hand-crafted Chakra UI templates ready to drop into your React project
+
+Visit the website: https://chakra-templates.dev
 
 ### Find your template
 
@@ -22,6 +24,8 @@ Just click the code tab to see the actual source code of the template. Copy and 
 Your just saved yourself a bunch of time not building the same stuff over and over again. Enjoy your free time!
 
 ## Contributors ✨
+
+If you want to contribute to this project, make sure to read the [contribution guide](https://github.com/hauptrolle/chakra-templates/blob/main/CONTRIBUTING.md) first.
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
