@@ -20,18 +20,23 @@ export default function EmailOnly() {
   return (
     <Flex w="100%" my={6} mx={2}>
       <Flex
-        w={["100%", "95%", "80%", "70%"]}
+        w={{ base: "100%", sm: "95%", md: "80%", lg: "70%" }}
         bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
         m="auto"
         borderRadius="lg"
         p={6}
         direction="column"
       >
-        <Text as="h2" fontSize={["xl", "2xl"]} textAlign="center" mb={5}>
+        <Text
+          as="h2"
+          fontSize={{ base: "xl", sm: "2xl" }}
+          textAlign="center"
+          mb={5}
+        >
           Subscribe to our Newsletter.
         </Text>
         <Stack
-          direction={["column", "column", "row"]}
+          direction={{ base: "column", md: "row" }}
           as="form"
           spacing="12px"
           onSubmit={(e: FormEvent) => {
@@ -72,7 +77,7 @@ export default function EmailOnly() {
               }
             />
           </FormControl>
-          <FormControl w={["100%", "100%", "40%"]}>
+          <FormControl w={{ base: "100%", md: "40%" }}>
             <Button
               colorScheme={state === "success" ? "green" : "blue"}
               isLoading={state === "submitting"}
