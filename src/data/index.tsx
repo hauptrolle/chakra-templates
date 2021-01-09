@@ -63,6 +63,10 @@ export const data: Category[] = [
         id: "hero",
         children: [
           {
+            name: "Split Screen with Image",
+            filename: "splitScreen",
+          },
+          {
             name: "Download App Links",
             filename: "downloadAppLinks",
           },
