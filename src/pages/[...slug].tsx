@@ -3,6 +3,7 @@ import { Container, Stack, Box, Flex, Text, Heading } from '@chakra-ui/react';
 import * as fs from 'fs';
 import path from 'path';
 
+import { DocsLayout } from '@/layout/DocsLayout';
 import { Example } from '@/components/Example';
 import { TEMPLATE_DIR } from '../constants';
 import { data, Template, Category, SubCategory } from 'data';
@@ -21,44 +22,23 @@ const Templates: NextPage<PageProps> = ({
   code,
 }) => {
   return (
-    <>
-      <Stack maxW={'6xl'} py={12} px={8} as={Container} spacing={12}>
-        <Box>
-          <Text color={'gray.600'} fontSize={'sm'} mb={2}>
-            {category.name}
-          </Text>
-          <Heading
-            size={'lg'}
-            fontWeight={600}
-            as={Flex}
-            alignItems={'baseline'}
-            borderBottom={1}
-            borderStyle={'solid'}
-            borderColor={'gray.200'}
-            mb={5}
-            pb={5}
-            _after={{
-              ml: 3,
-              content: '""',
-              width: 4,
-              height: 1,
-              bgGradient: 'linear(to-r, teal.200, blue.600)',
-            }}>
-            {subCategory.name}
-          </Heading>
-        </Box>
-
+    <DocsLayout>
+      <Heading size={'lg'} mb={6}>
+        {subCategory.name}
+      </Heading>
+      <Stack spacing={12}>
         {templates?.map((template) => (
-          <Example
-            key={template.filename}
-            template={template}
-            category={category}
-            subCategory={subCategory}
-            code={code![template.filename]}
-          />
+          <div>{template.name}</div>
+          // <Example
+          //   key={template.filename}
+          //   template={template}
+          //   category={category}
+          //   subCategory={subCategory}
+          //   code={code![template.filename]}
+          // />
         ))}
       </Stack>
-    </>
+    </DocsLayout>
   );
 };
 

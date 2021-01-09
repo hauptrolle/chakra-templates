@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import NextLink from 'next/link';
 import { Container, Flex, Link, Stack, Text } from '@chakra-ui/react';
 
 import { HeaderBar } from '@/components/HeaderBar';
@@ -17,7 +18,12 @@ export const DocsLayout = ({ children }: DocsLayoutProps) => {
         <Stack
           direction={{ base: 'column', md: 'row' }}
           spacing={{ base: 4, md: 8 }}>
-          <Stack as={'nav'} w={'full'} maxW={{ md: '2xs' }} spacing={6}>
+          <Stack
+            as={'nav'}
+            spacing={6}
+            maxW={{ md: '3xs' }}
+            w={'full'}
+            flexShrink={0}>
             {data.map((category) => (
               <Stack>
                 <Text
@@ -31,15 +37,19 @@ export const DocsLayout = ({ children }: DocsLayoutProps) => {
                 </Text>
                 <Stack>
                   {category.children?.map((subCategory) => (
-                    <Link fontWeight={500} color={'gray.700'} fontSize={'sm'}>
-                      {subCategory.name}
-                    </Link>
+                    <NextLink
+                      href={`${category.id}/${subCategory.id}`}
+                      passHref>
+                      <Link fontWeight={500} color={'gray.700'} fontSize={'sm'}>
+                        {subCategory.name}
+                      </Link>
+                    </NextLink>
                   ))}
                 </Stack>
               </Stack>
             ))}
           </Stack>
-          <Flex w={'full'} bg={'green.100'}>
+          <Flex w={'full'} direction={'column'}>
             {children}
           </Flex>
         </Stack>
