@@ -1,61 +1,75 @@
-import { ReactNode } from 'react';
-import NextLink from 'next/link';
-import { Container, Flex, Link, Stack, Text } from '@chakra-ui/react';
+import { ReactNode, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import {
+  Container,
+  Flex,
+  Stack,
+  Icon,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  DrawerHeader,
+  DrawerBody,
+  useDisclosure,
+} from '@chakra-ui/react';
 
 import { HeaderBar } from '@/components/HeaderBar';
 import { Footer } from '@/components/Footer';
-import { data } from '../data';
+import { Navigation } from '@/components/Navigation';
+import { Logo } from '@/components/Logo';
 
 interface DocsLayoutProps {
   children: ReactNode;
 }
 
 export const DocsLayout = ({ children }: DocsLayoutProps) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const router = useRouter();
+
+  useEffect(() => {
+    router.events.on('routeChangeComplete', onClose);
+
+    return () => {
+      router.events.off('routeChangeComplete', onClose);
+    };
+  });
+
   return (
     <>
-      <HeaderBar showBorder={true} />
+      <HeaderBar
+        showBorder={true}
+        showNavButton={true}
+        onMenuButtonClick={onOpen}
+      />
       <Container maxW={'7xl'} flex={'1 0 auto'} py={8}>
         <Stack
-          direction={{ base: 'column', md: 'row' }}
-          spacing={{ base: 4, md: 8 }}>
-          <Stack
-            as={'nav'}
-            spacing={6}
-            maxW={{ md: '3xs' }}
+          direction={{ base: 'column', lg: 'row' }}
+          spacing={{ base: 0, lg: 8 }}>
+          <Navigation display={{ base: 'none', lg: 'block' }} />
+          <Flex
+            direction={'column'}
             w={'full'}
-            flexShrink={0}>
-            {data.map((category) => (
-              <Stack key={category.id}>
-                <Text
-                  fontFamily={'heading'}
-                  textTransform={'uppercase'}
-                  color={'gray.400'}
-                  fontWeight={700}
-                  fontSize={'sm'}
-                  letterSpacing={1.1}>
-                  {category.name}
-                </Text>
-                <Stack>
-                  {category.children?.map((subCategory) => (
-                    <NextLink
-                      key={subCategory.id}
-                      href={`/${category.id}/${subCategory.id}`}
-                      passHref>
-                      <Link fontWeight={500} color={'gray.700'} fontSize={'sm'}>
-                        {subCategory.name}
-                      </Link>
-                    </NextLink>
-                  ))}
-                </Stack>
-              </Stack>
-            ))}
-          </Stack>
-          <Flex w={'full'} direction={'column'}>
+            maxW={{ lg: 'calc(100% - 16rem)' }}>
             {children}
           </Flex>
         </Stack>
       </Container>
       <Footer />
+
+      <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
+        <DrawerOverlay>
+          <DrawerContent>
+            <DrawerCloseButton />
+            <DrawerHeader>
+              <Icon as={Logo} w={10} h={10} />
+            </DrawerHeader>
+            <DrawerBody>
+              <Navigation />
+            </DrawerBody>
+          </DrawerContent>
+        </DrawerOverlay>
+      </Drawer>
     </>
   );
 };

@@ -8,7 +8,13 @@ import {
   Icon,
   useColorMode,
 } from '@chakra-ui/react';
-import { IoLogoDiscord, IoLogoGithub, IoMoon, IoSunny } from 'react-icons/io5';
+import {
+  IoLogoDiscord,
+  IoLogoGithub,
+  IoMoon,
+  IoSunny,
+  IoMenu,
+} from 'react-icons/io5';
 
 import { DISCORD_INVITE_LINK, GITHUB_LINK } from '../constants';
 import { TextUnderline } from '@/components/TextUnderline';
@@ -16,9 +22,15 @@ import { Logo } from '@/components/Logo';
 
 interface HeaderBarProps {
   showBorder?: boolean;
+  showNavButton?: boolean;
+  onMenuButtonClick?: () => void;
 }
 
-export const HeaderBar = ({ showBorder = false }: HeaderBarProps) => {
+export const HeaderBar = ({
+  showBorder = false,
+  showNavButton = false,
+  onMenuButtonClick,
+}: HeaderBarProps) => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
@@ -77,6 +89,16 @@ export const HeaderBar = ({ showBorder = false }: HeaderBarProps) => {
               )
             }
           />
+          {showNavButton && (
+            <IconButton
+              display={{ base: 'inline-flex', lg: 'none' }}
+              size={'sm'}
+              variant={'ghost'}
+              aria-label={'Toggle Navigation'}
+              onClick={onMenuButtonClick}
+              icon={<IoMenu size={18} />}
+            />
+          )}
         </Stack>
       </Stack>
     </Box>
