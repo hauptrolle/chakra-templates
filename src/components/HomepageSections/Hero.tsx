@@ -14,6 +14,7 @@ import { HeroComponents } from '@/components/HomepageSections/HeroComponents';
 import {
   SPLITBEE_HERO_SUGGEST_TEMPLATE,
   SUGGEST_TEMPLATE_LINK,
+  TEMPLATES_LINK,
 } from '../../constants';
 
 export const Hero = () => {
@@ -36,7 +37,7 @@ export const Hero = () => {
           into your React project.
         </Text>
         <Stack direction={{ base: 'column', sm: 'row' }} spacing={4}>
-          <NextLink href={'/navigation/navbar'} passHref>
+          <NextLink href={TEMPLATES_LINK} passHref>
             <Button
               as={'a'}
               colorScheme={'green'}

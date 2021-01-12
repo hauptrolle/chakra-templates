@@ -3,6 +3,7 @@ export const TEMPLATE_DIR = 'src/pages/templates';
 /**
  * LINKS
  */
+export const TEMPLATES_LINK = '/page-sections/hero';
 export const DISCORD_INVITE_LINK = 'https://discord.gg/CfUTeTw89G';
 export const GITHUB_LINK = 'https://github.com/hauptrolle/chakra-templates';
 export const ANALYTICS_LINK =

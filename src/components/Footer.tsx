@@ -13,13 +13,14 @@ import {
   ANALYTICS_LINK,
   DISCORD_INVITE_LINK,
   GITHUB_LINK,
+  TEMPLATES_LINK,
   TWITTER_LINK,
 } from '../constants';
 
 const NAVIGATION_ITEMS = [
   {
     label: 'Templates',
-    href: '/templates',
+    href: TEMPLATES_LINK,
     internal: true,
   },
   {
