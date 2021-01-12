@@ -11,7 +11,9 @@ import {
   Center,
   Tooltip,
   useColorModeValue,
+  Box,
 } from '@chakra-ui/react';
+import NextImage from 'next/image';
 import {
   IoStar,
   IoExtensionPuzzle,
@@ -105,14 +107,20 @@ export const OpenSource = ({ contributors, stargazers }: OpenSourceProps) => {
           {contributors.map((contributor) => (
             <WrapItem p={2} key={contributor.name}>
               <Tooltip label={contributor.name}>
-                <Avatar
+                <Box
                   as={'a'}
                   href={CONTRIBUTORS_LINK}
-                  size={'xl'}
-                  bg={useColorModeValue('white', 'gray.900')}
-                  name={contributor.name}
-                  src={contributor.avatar_url}
-                />
+                  rounded={'full'}
+                  width={'96px'}
+                  height={'96px'}
+                  overflow={'hidden'}>
+                  <NextImage
+                    src={contributor.avatar_url}
+                    alt={`Avatar of ${contributor.name}`}
+                    width={96}
+                    height={96}
+                  />
+                </Box>
               </Tooltip>
             </WrapItem>
           ))}
