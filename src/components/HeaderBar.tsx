@@ -7,6 +7,7 @@ import {
   Stack,
   Icon,
   useColorMode,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import {
   IoLogoDiscord,
@@ -37,7 +38,9 @@ export const HeaderBar = ({
     <Box
       borderBottom={1}
       borderStyle={'solid'}
-      borderColor={showBorder ? 'gray.100' : 'transparent'}>
+      borderColor={
+        showBorder ? useColorModeValue('gray.100', 'gray.900') : 'transparent'
+      }>
       <Stack
         as={Container}
         maxW={'7xl'}

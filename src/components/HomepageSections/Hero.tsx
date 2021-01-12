@@ -1,7 +1,6 @@
 import {
   Container,
   Stack,
-  Flex,
   Heading,
   Text,
   Button,
@@ -11,6 +10,7 @@ import { IoArrowForward } from 'react-icons/io5';
 import NextLink from 'next/link';
 
 import { TextUnderline } from '@/components/TextUnderline';
+import { HeroComponents } from '@/components/HomepageSections/HeroComponents';
 import {
   SPLITBEE_HERO_SUGGEST_TEMPLATE,
   SUGGEST_TEMPLATE_LINK,
@@ -65,66 +65,7 @@ export const Hero = () => {
         </Stack>
       </Stack>
 
-      {/* START Placeholder for the components animation */}
-      <Stack position={'relative'} w={384} h={424}>
-        <Flex
-          position={'absolute'}
-          top={0}
-          left={0}
-          justify={'center'}
-          flex={1}
-          p={4}
-          bg={'white'}
-          rounded={'3xl'}
-          boxShadow={'xl'}
-          minH={332}
-          w={384}
-          zIndex={4}
-        />
-        <Flex
-          position={'absolute'}
-          top={'28px'}
-          left={'32px'}
-          justify={'center'}
-          flex={1}
-          p={4}
-          bg={'white'}
-          rounded={'3xl'}
-          boxShadow={'xl'}
-          minH={332}
-          w={320}
-          zIndex={3}
-        />
-        <Flex
-          position={'absolute'}
-          top={'60px'}
-          left={'48px'}
-          justify={'center'}
-          flex={1}
-          p={4}
-          bg={'white'}
-          rounded={'3xl'}
-          boxShadow={'xl'}
-          minH={332}
-          w={288}
-          zIndex={2}
-        />
-        <Flex
-          position={'absolute'}
-          top={'84px'}
-          left={'64px'}
-          justify={'center'}
-          flex={1}
-          p={4}
-          bg={'white'}
-          rounded={'3xl'}
-          boxShadow={'xl'}
-          minH={332}
-          w={256}
-          zIndex={1}
-        />
-      </Stack>
-      {/* END Placeholder for the components animation */}
+      <HeroComponents />
     </Stack>
   );
 };
