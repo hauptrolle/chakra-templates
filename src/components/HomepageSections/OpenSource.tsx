@@ -65,7 +65,7 @@ export const OpenSource = ({ contributors, stargazers }: OpenSourceProps) => {
   return (
     <Container maxW={'7xl'} py={{ base: 14, sm: 20, md: 32 }}>
       <Stack spacing={4} mb={{ base: 14, sm: 20 }} align={'center'}>
-        <Heading as={'h3'} textAlign={'center'} fontSize={'3xl'}>
+        <Heading as={'h3'} textAlign={'center'} fontSize={'3xl'} mb={2}>
           We're <TextUnderline>open source</TextUnderline>
         </Heading>
         <Text

@@ -22,9 +22,9 @@ export const Hero = () => {
     <Stack
       as={Container}
       maxW={'7xl'}
-      h={{ base: '100%', md: '90vh' }}
+      h={{ base: '100%', lg: '90vh' }}
       py={{ base: 14, sm: 20, md: 32 }}
-      spacing={{ base: 10, md: 24 }}
+      spacing={{ base: 10, lg: 24 }}
       direction={{ base: 'column', lg: 'row' }}
       alignItems={'center'}>
       <Stack spacing={9} flex={2}>

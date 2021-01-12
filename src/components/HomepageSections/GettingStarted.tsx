@@ -35,7 +35,7 @@ export const GettingStarted = () => {
           as={'h3'}
           textAlign={'center'}
           fontSize={'3xl'}
-          mb={{ base: 14, sm: 20 }}>
+          mb={{ base: 14, sm: 16 }}>
           Getting started in <TextUnderline>3 easy steps</TextUnderline>
         </Heading>
         <Flex
