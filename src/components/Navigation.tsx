@@ -1,7 +1,13 @@
 import { ReactNode } from 'react';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
-import { Link, Stack, Text, StackProps } from '@chakra-ui/react';
+import {
+  Link,
+  Stack,
+  Text,
+  StackProps,
+  useColorModeValue,
+} from '@chakra-ui/react';
 
 import { data } from '../data';
 
@@ -23,10 +29,16 @@ const NavigationLink = ({
         fontSize={'sm'}
         rounded={'md'}
         p={2}
-        bg={isActive ? 'green.50' : undefined}
-        color={isActive ? 'green.700' : 'gray.700'}
+        bg={isActive ? useColorModeValue('green.50', 'green.900') : undefined}
+        color={
+          isActive
+            ? useColorModeValue('green.700', 'green.400')
+            : useColorModeValue('gray.700', 'gray.300')
+        }
         _hover={{
-          bg: isActive ? 'green.50' : 'gray.100',
+          bg: isActive
+            ? useColorModeValue('green.50', 'green.900')
+            : useColorModeValue('gray.100', 'gray.900'),
         }}>
         {children}
       </Link>
@@ -48,7 +60,7 @@ export const Navigation = (props: StackProps) => {
           <Text
             fontFamily={'heading'}
             textTransform={'uppercase'}
-            color={'gray.400'}
+            color={useColorModeValue('gray.400', 'gray.200')}
             fontWeight={700}
             fontSize={'sm'}
             letterSpacing={1.1}>

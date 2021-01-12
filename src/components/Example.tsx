@@ -8,6 +8,7 @@ import {
   Tab,
   TabPanels,
   TabPanel,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import Link from 'next/link';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
@@ -37,6 +38,7 @@ export const Example = ({
     <Box
       rounded={'md'}
       borderWidth={1}
+      borderColor={useColorModeValue('gray.200', 'gray.900')}
       id={template.filename}
       height={'full'}
       style={{
@@ -51,18 +53,21 @@ export const Example = ({
           px={4}
           borderBottomWidth={1}
           borderBottomStyle={'solid'}>
-          <Text color={'gray.700'} fontSize={'sm'} mb={{ base: 4, md: 0 }}>
+          <Text
+            color={useColorModeValue('gray.700', 'gray.300')}
+            fontSize={'sm'}
+            mb={{ base: 4, md: 0 }}>
             {template.name}
           </Text>
-          <HStack spacing={4} color={'gray.500'}>
+          <HStack spacing={4} color={useColorModeValue('gray.500', 'gray.300')}>
             {TABS.map((tab) => (
               <Tab
                 key={tab}
                 fontSize={'xs'}
                 fontWeight={400}
                 _selected={{
-                  bg: 'green.50',
-                  color: 'green.500',
+                  bg: useColorModeValue('green.50', 'green.900'),
+                  color: useColorModeValue('green.500', 'green.400'),
                 }}>
                 {tab}
               </Tab>
