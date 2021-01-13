@@ -13,6 +13,7 @@ export interface SubCategory {
 export interface Template {
   name: string;
   filename: string;
+  tags?: string[];
 }
 
 export const data: Category[] = [
@@ -25,16 +26,17 @@ export const data: Category[] = [
         id: 'hero',
         children: [
           {
+            name: 'CTA with Annotation',
+            filename: 'callToActionWithAnnotation',
+            tags: ['new'],
+          },
+          {
             name: 'Split Screen with Image',
             filename: 'splitScreen',
           },
           {
             name: 'Download App Links',
             filename: 'downloadAppLinks',
-          },
-          {
-            name: 'With text & CTA',
-            filename: 'textWithCallToAction',
           },
           {
             name: 'With background image and gradient',
