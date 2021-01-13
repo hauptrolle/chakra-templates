@@ -1,5 +1,5 @@
 import {
-  chakra,
+  Button,
   Container,
   Text,
   Box,
@@ -24,7 +24,7 @@ export const DiscordBanner = () => {
           flex={1}
           direction={{ base: 'column', sm: 'row' }}
           align={{ sm: 'center' }}>
-          <Icon as={IoLogoDiscord} w={10} h={10} />
+          <Icon as={IoLogoDiscord} w={12} h={12} />
           <Stack spacing={0}>
             <Text fontFamily={'heading'} fontSize={'lg'}>
               Talk with us
@@ -36,12 +36,14 @@ export const DiscordBanner = () => {
           </Stack>
         </Stack>
         <Flex align={'center'}>
-          <chakra.a
+          <Button
+            as={'a'}
             bg={'white'}
             color={'gray.700'}
             rounded={'full'}
-            p={4}
-            px={6}
+            width={'full'}
+            p={6}
+            py={7}
             fontWeight={700}
             transition={'all .3s ease'}
             href={DISCORD_INVITE_LINK}
@@ -50,7 +52,7 @@ export const DiscordBanner = () => {
               boxShadow: 'lg',
             }}>
             Join the Discord Server
-          </chakra.a>
+          </Button>
         </Flex>
       </Container>
     </Box>
