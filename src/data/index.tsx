@@ -31,6 +31,11 @@ export const data: Category[] = [
             tags: ['new'],
           },
           {
+            name: 'CTA with Illustration',
+            filename: 'callToActionWithIllustration',
+            tags: ['new'],
+          },
+          {
             name: 'Split Screen with Image',
             filename: 'splitScreen',
           },
