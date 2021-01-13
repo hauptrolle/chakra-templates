@@ -70,11 +70,11 @@ export default function CallToActionWithAnnotation() {
                 top={'10px'}
               />
               <Text
-                fontSize={'sm'}
+                fontSize={'lg'}
                 fontFamily={'Caveat'}
                 position={'absolute'}
-                right={'-120px'}
-                top={'-10px'}
+                right={'-125px'}
+                top={'-15px'}
                 transform={'rotate(10deg)'}>
                 Starting at $15/mo
               </Text>
