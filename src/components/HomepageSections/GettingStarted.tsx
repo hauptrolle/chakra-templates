@@ -23,7 +23,7 @@ const STEPS = [
   {
     title: 'Enjoy your free time',
     text:
-      'Your just saved yourself a bunch of time not building the same stuff over and over again. Enjoy your free time!',
+      "You've just saved yourself a bunch of time not building the same stuff over and over again. Enjoy your free time!",
   },
 ];
 
