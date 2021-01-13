@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Box } from '@chakra-ui/react';
+import { Box, useColorMode } from '@chakra-ui/react';
 import { Resizable } from 're-resizable';
 
 type IframeProps = {
@@ -10,6 +10,7 @@ const MIN_HEIGHT = 222;
 
 export const ResizableFrame = ({ src }: IframeProps) => {
   const ref = useRef<HTMLIFrameElement>(null);
+  const { colorMode } = useColorMode();
   const [height, setHeight] = useState<number | undefined>(undefined);
 
   const syncHeight = () => {
@@ -18,13 +19,10 @@ export const ResizableFrame = ({ src }: IframeProps) => {
     setHeight(frameHeight);
   };
 
+  // Reload iframe content when colorMode changes
   useEffect(() => {
-    ref.current?.addEventListener('load', syncHeight);
-
-    return () => {
-      ref.current?.removeEventListener('load', syncHeight);
-    };
-  }, []);
+    ref.current?.contentWindow?.location.reload();
+  }, [colorMode]);
 
   const getHeight = () =>
     height !== undefined && height >= MIN_HEIGHT ? height : MIN_HEIGHT;
@@ -37,7 +35,13 @@ export const ResizableFrame = ({ src }: IframeProps) => {
         minHeight={getHeight()}
         maxHeight={getHeight()}
         onResize={syncHeight}>
-        <iframe width={'100%'} height={getHeight()} src={src} ref={ref} />
+        <iframe
+          width={'100%'}
+          height={getHeight()}
+          src={src}
+          onLoad={syncHeight}
+          ref={ref}
+        />
       </Resizable>
     </Box>
   );

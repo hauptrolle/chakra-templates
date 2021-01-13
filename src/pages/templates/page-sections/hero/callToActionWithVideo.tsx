@@ -11,6 +11,7 @@ import {
   IconButton,
   createIcon,
   IconProps,
+  useColorModeValue,
 } from '@chakra-ui/react';
 
 export default function CallToActionWithVideo() {
@@ -85,7 +86,7 @@ export default function CallToActionWithVideo() {
             top={'-20%'}
             left={0}
             zIndex={-1}
-            color={'red.50'}
+            color={useColorModeValue('red.50', 'red.400')}
           />
           <Box
             position={'relative'}

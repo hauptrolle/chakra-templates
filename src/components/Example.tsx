@@ -52,7 +52,8 @@ export const Example = ({
           py={2}
           px={4}
           borderBottomWidth={1}
-          borderBottomStyle={'solid'}>
+          borderBottomStyle={'solid'}
+          borderColor={useColorModeValue('gray.200', 'gray.900')}>
           <Text
             color={useColorModeValue('gray.700', 'gray.300')}
             fontSize={'sm'}
