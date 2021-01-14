@@ -26,7 +26,7 @@ export default function CallToActionWithVideo() {
           <Heading
             lineHeight={1.1}
             fontWeight={600}
-            fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}>
+            fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
             <Text
               as={'span'}
               position={'relative'}
@@ -52,7 +52,9 @@ export default function CallToActionWithVideo() {
             code snippets, categorize them, and even sync them in the cloud so
             you can use them anywhere. All that is free!
           </Text>
-          <Stack spacing={6} direction={'row'}>
+          <Stack
+            spacing={{ base: 4, sm: 6 }}
+            direction={{ base: 'column', sm: 'row' }}>
             <Button
               rounded={'full'}
               size={'lg'}
