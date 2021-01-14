@@ -42,7 +42,7 @@ export const DocsLayout = ({ children }: DocsLayoutProps) => {
         showNavButton={true}
         onMenuButtonClick={onOpen}
       />
-      <Container maxW={'7xl'} flex={'1 0 auto'} py={8}>
+      <Container maxW={'7xl'} flex={'1 0 auto'} py={8} mt={16}>
         <Stack
           direction={{ base: 'column', lg: 'row' }}
           spacing={{ base: 0, lg: 8 }}>

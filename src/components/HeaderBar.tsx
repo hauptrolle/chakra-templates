@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import {
   Box,
@@ -16,6 +17,7 @@ import {
   IoSunny,
   IoMenu,
 } from 'react-icons/io5';
+import { useViewportScroll } from 'framer-motion';
 
 import { DISCORD_INVITE_LINK, GITHUB_LINK } from '../constants';
 import { TextUnderline } from '@/components/TextUnderline';
@@ -33,14 +35,33 @@ export const HeaderBar = ({
   onMenuButtonClick,
 }: HeaderBarProps) => {
   const { colorMode, toggleColorMode } = useColorMode();
+  const { scrollY } = useViewportScroll();
+  const [y, setY] = useState(0);
+  const ref = useRef<HTMLHeadingElement>(null);
+  const { height = 0 } = ref.current?.getBoundingClientRect() ?? {};
+
+  useEffect(() => {
+    return scrollY.onChange(() => setY(scrollY.get()));
+  }, [scrollY]);
+
+  const borderColor = useColorModeValue('gray.100', 'gray.900');
 
   return (
     <Box
+      as={'header'}
+      ref={ref}
+      shadow={y > height ? 'lg' : undefined}
+      transition="box-shadow 0.2s"
+      pos="fixed"
+      top="0"
+      zIndex="999"
+      left="0"
+      right="0"
+      width="full"
+      bg={useColorModeValue('white', 'gray.800')}
       borderBottom={1}
       borderStyle={'solid'}
-      borderColor={
-        showBorder ? useColorModeValue('gray.100', 'gray.900') : 'transparent'
-      }>
+      borderColor={showBorder && y < height ? borderColor : 'transparent'}>
       <Stack
         as={Container}
         maxW={'7xl'}
