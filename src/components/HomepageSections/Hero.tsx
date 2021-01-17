@@ -24,10 +24,11 @@ export const Hero = () => {
       maxW={'7xl'}
       h={{ base: '100%', lg: '90vh' }}
       py={{ base: 14, sm: 20, md: 32 }}
+      mt={{ base: 10, sm: 0 }}
       spacing={{ base: 10, lg: 24 }}
       direction={{ base: 'column', lg: 'row' }}
       alignItems={'center'}>
-      <Stack spacing={9} flex={2}>
+      <Stack spacing={9} mb={{ base: 12, lg: 0 }} flex={2}>
         <Heading as={'h2'} fontSize={{ base: '3xl', sm: '4xl', md: '5xl' }}>
           <TextUnderline>Production-ready</TextUnderline> Chakra UI Templates
           for developers
