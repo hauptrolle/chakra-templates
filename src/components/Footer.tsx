@@ -15,6 +15,7 @@ import {
   GITHUB_LINK,
   TEMPLATES_LINK,
   TWITTER_LINK,
+  FIGMA_LINK,
 } from '../constants';
 
 const NAVIGATION_ITEMS = [
@@ -37,7 +38,7 @@ const NAVIGATION_ITEMS = [
   },
   {
     label: 'Figma',
-    href: '/#', // TODO add link to figma file
+    href: FIGMA_LINK,
   },
   {
     label: 'Analytics',

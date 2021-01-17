@@ -47,6 +47,7 @@ const NavigationLink = ({
 };
 
 export const Navigation = (props: StackProps) => {
+  const textColor = useColorModeValue('gray.400', 'gray.200');
   return (
     <Stack
       as={'nav'}
@@ -60,7 +61,7 @@ export const Navigation = (props: StackProps) => {
           <Text
             fontFamily={'heading'}
             textTransform={'uppercase'}
-            color={useColorModeValue('gray.400', 'gray.200')}
+            color={textColor}
             fontWeight={700}
             fontSize={'sm'}
             letterSpacing={1.1}>

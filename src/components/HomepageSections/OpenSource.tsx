@@ -33,12 +33,19 @@ export interface Contributor {
   contributions: string[];
 }
 
-interface OpenSourceProps {
+export type OpenSourceProps = {
   contributors: Contributor[];
   stargazers: Stargazers;
-}
+  categoriesNumber: number;
+  templatesNumber: number;
+};
 
-export const OpenSource = ({ contributors, stargazers }: OpenSourceProps) => {
+export const OpenSource = ({
+  contributors,
+  stargazers,
+  categoriesNumber,
+  templatesNumber,
+}: OpenSourceProps) => {
   const STATS = [
     {
       icon: IoStar,
@@ -48,7 +55,7 @@ export const OpenSource = ({ contributors, stargazers }: OpenSourceProps) => {
     {
       icon: IoExtensionPuzzle,
       label: 'Templates',
-      count: '10+',
+      count: templatesNumber,
     },
     {
       icon: IoMedal,
@@ -58,7 +65,7 @@ export const OpenSource = ({ contributors, stargazers }: OpenSourceProps) => {
     {
       icon: IoBookmarks,
       label: 'Categories',
-      count: '3+',
+      count: categoriesNumber,
     },
   ];
 
