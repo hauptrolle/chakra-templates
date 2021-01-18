@@ -1,6 +1,6 @@
 import {
   Box,
-  Heading,
+  Text,
   HStack,
   IconButton,
   Tabs,
@@ -8,13 +8,14 @@ import {
   Tab,
   TabPanels,
   TabPanel,
-} from "@chakra-ui/react";
-import Link from "next/link";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
+  useColorModeValue,
+} from '@chakra-ui/react';
+import Link from 'next/link';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 
-import { ResizableFrame } from "@/components/ResizableFrame";
-import { CodeSample } from "@/components/CodeSample";
-import { Template, Category, SubCategory } from "data";
+import { ResizableFrame } from '@/components/ResizableFrame';
+import { CodeSample } from '@/components/CodeSample';
+import { Template, Category, SubCategory } from 'data';
 
 type ExampleProps = {
   template: Template;
@@ -22,6 +23,8 @@ type ExampleProps = {
   category: Category;
   subCategory: SubCategory;
 };
+
+const TABS = ['Preview', 'Code'];
 
 export const Example = ({
   template,
@@ -33,52 +36,62 @@ export const Example = ({
 
   return (
     <Box
-      bg={"gray.50"}
-      padding={4}
-      rounded={"md"}
+      rounded={'md'}
       borderWidth={1}
+      borderColor={useColorModeValue('gray.200', 'gray.900')}
       id={template.filename}
+      height={'full'}
       style={{
-        scrollMarginTop: "2rem",
-      }}
-    >
-      <Tabs variant="soft-rounded" colorScheme="teal" size={"sm"}>
+        scrollMarginTop: '2rem',
+      }}>
+      <Tabs variant="soft-rounded" colorScheme="green" size={'sm'}>
         <TabList
-          alignItems={"center"}
-          justifyContent={"space-between"}
-          flexDirection={{ base: "column", md: "row" }}
-        >
-          <Heading
-            as={"h3"}
-            color={"gray.700"}
-            size={"sm"}
-            mb={{ base: 4, md: 0 }}
-          >
+          alignItems={'center'}
+          justifyContent={'space-between'}
+          flexDirection={{ base: 'column', md: 'row' }}
+          py={2}
+          px={4}
+          borderBottomWidth={1}
+          borderBottomStyle={'solid'}
+          borderColor={useColorModeValue('gray.200', 'gray.900')}>
+          <Text
+            color={useColorModeValue('gray.700', 'gray.300')}
+            fontSize={'sm'}
+            mb={{ base: 4, md: 0 }}>
             {template.name}
-          </Heading>
-          <HStack spacing={4}>
-            <Tab>Preview</Tab>
-            <Tab>Code</Tab>
+          </Text>
+          <HStack spacing={4} color={useColorModeValue('gray.500', 'gray.300')}>
+            {TABS.map((tab) => (
+              <Tab
+                key={tab}
+                fontSize={'xs'}
+                fontWeight={400}
+                _selected={{
+                  bg: useColorModeValue('green.50', 'green.900'),
+                  color: useColorModeValue('green.500', 'green.400'),
+                }}>
+                {tab}
+              </Tab>
+            ))}
             <Link href={exampleLink} passHref>
               <IconButton
-                as={"a"}
-                cursor={"pointer"}
+                as={'a'}
+                cursor={'pointer'}
                 icon={<ExternalLinkIcon />}
-                size={"sm"}
-                aria-label={"Open in Fullscreen"}
-                title={"Open in Fullscreen"}
+                size={'sm'}
+                variant={'ghost'}
+                aria-label={'Open in Fullscreen'}
+                title={'Open in Fullscreen'}
                 target="_blank"
               />
             </Link>
           </HStack>
         </TabList>
         <TabPanels borderRadius="2xl">
-          <TabPanel px={0} pb={0}>
-            <Box boxShadow={"largeSoft"}>
-              <ResizableFrame src={exampleLink} />
-            </Box>
+          <TabPanel p={0}>
+            <ResizableFrame src={exampleLink} />
           </TabPanel>
-          <TabPanel px={0} pb={0}>
+          <TabPanel p={0}>
             <CodeSample code={code} />
           </TabPanel>
         </TabPanels>

@@ -5,8 +5,7 @@ export default function PlayStoreBadge() {
       height={45}
       viewBox="0 0 150 45"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+      xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#prefix__clip0)">
         <path
           d="M144.444 44.452H5.556C2.444 44.452 0 42.008 0 38.897V5.563C0 2.453 2.444.008 5.556.008h138.888c3.112 0 5.556 2.444 5.556 5.555v33.334c0 3.11-2.444 5.555-5.556 5.555z"
@@ -59,8 +58,7 @@ export default function PlayStoreBadge() {
           y1={9.686}
           x2={5.574}
           y2={28.332}
-          gradientUnits="userSpaceOnUse"
-        >
+          gradientUnits="userSpaceOnUse">
           <stop stopColor="#00A0FF" />
           <stop offset={0.007} stopColor="#00A1FF" />
           <stop offset={0.26} stopColor="#00BEFF" />
@@ -74,8 +72,7 @@ export default function PlayStoreBadge() {
           y1={22.231}
           x2={10.708}
           y2={22.231}
-          gradientUnits="userSpaceOnUse"
-        >
+          gradientUnits="userSpaceOnUse">
           <stop stopColor="#FFE000" />
           <stop offset={0.409} stopColor="#FFBD00" />
           <stop offset={0.775} stopColor="orange" />
@@ -87,8 +84,7 @@ export default function PlayStoreBadge() {
           y1={24.781}
           x2={2.299}
           y2={50.068}
-          gradientUnits="userSpaceOnUse"
-        >
+          gradientUnits="userSpaceOnUse">
           <stop stopColor="#FF3A44" />
           <stop offset={1} stopColor="#C31162" />
         </linearGradient>
@@ -98,8 +94,7 @@ export default function PlayStoreBadge() {
           y1={0.203}
           x2={19.4}
           y2={11.496}
-          gradientUnits="userSpaceOnUse"
-        >
+          gradientUnits="userSpaceOnUse">
           <stop stopColor="#32A071" />
           <stop offset={0.069} stopColor="#2DA771" />
           <stop offset={0.476} stopColor="#15CF74" />

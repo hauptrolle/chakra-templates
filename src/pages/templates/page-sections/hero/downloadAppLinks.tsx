@@ -6,46 +6,43 @@ import {
   Stack,
   Image,
   useBreakpointValue,
-} from "@chakra-ui/react";
-import Link from "next/link";
+} from '@chakra-ui/react';
+import Link from 'next/link';
 
-import PlayStoreBadge from "@/components/PlayStoreBadge";
-import AppStoreBadge from "@/components/AppStoreBadge";
+import PlayStoreBadge from '@/components/PlayStoreBadge';
+import AppStoreBadge from '@/components/AppStoreBadge';
 
 export default function DownloadAppLinks() {
   return (
     <Container
-      maxW={"7xl"}
+      maxW={'7xl'}
       p={4}
-      display={"flex"}
-      alignItems={"center"}
-      flexDirection={["column", "column", "row"]}
-    >
+      display={'flex'}
+      alignItems={'center'}
+      flexDirection={['column', 'column', 'row']}>
       <Stack spacing={4}>
-        <Heading textAlign={["center", "center", "left"]} fontSize={"4xl"}>
+        <Heading textAlign={['center', 'center', 'left']} fontSize={'4xl'}>
           Download our app
         </Heading>
         <Text
-          textAlign={["center", "center", "left"]}
-          color={"gray.600"}
-          fontSize={"lg"}
-        >
+          textAlign={['center', 'center', 'left']}
+          color={'gray.600'}
+          fontSize={'lg'}>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
           sed diam voluptua.
         </Text>
         <Stack
-          justifyContent={["center", "center", "left"]}
-          direction={"row"}
-          pt={6}
-        >
-          <Link href={"/"} passHref>
-            <a target={"_blank"}>
+          justifyContent={['center', 'center', 'left']}
+          direction={'row'}
+          pt={6}>
+          <Link href={'/'} passHref>
+            <a target={'_blank'}>
               <AppStoreBadge />
             </a>
           </Link>
-          <Link href={"/"} passHref>
-            <a target={"_blank"}>
+          <Link href={'/'} passHref>
+            <a target={'_blank'}>
               <PlayStoreBadge />
             </a>
           </Link>
@@ -55,15 +52,15 @@ export default function DownloadAppLinks() {
         <Image
           style={{
             transform: useBreakpointValue([
-              "rotate(-45deg)",
-              "rotate(-45deg)",
-              "rotate(0deg)",
+              'rotate(-45deg)',
+              'rotate(-45deg)',
+              'rotate(0deg)',
             ]),
           }}
-          alt={"Device"}
-          w={"100%"}
-          fit={"contain"}
-          src={"/images/device.png"}
+          alt={'Device'}
+          w={'100%'}
+          fit={'contain'}
+          src={'/images/device.png'}
         />
       </Box>
     </Container>

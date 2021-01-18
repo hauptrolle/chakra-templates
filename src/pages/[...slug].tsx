@@ -1,12 +1,13 @@
-import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import { Container, Stack, Box, Flex, Text, Heading } from "@chakra-ui/react";
-import * as fs from "fs";
-import path from "path";
+import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
+import { Stack, Heading } from '@chakra-ui/react';
+import * as fs from 'fs';
+import path from 'path';
 
-import { Header } from "@/components/Header";
-import { Example } from "@/components/Example";
-import { TEMPLATE_DIR } from "../constants";
-import { data, Template, Category, SubCategory } from "data";
+import { DocsLayout } from '@/layout/DocsLayout';
+import { Example } from '@/components/Example';
+import { TEMPLATE_DIR } from '../constants';
+import { data, Template, Category, SubCategory } from 'data';
+import { NextSeo } from 'next-seo';
 
 type PageProps = {
   category: Category;
@@ -22,35 +23,15 @@ const Templates: NextPage<PageProps> = ({
   code,
 }) => {
   return (
-    <>
-      <Header />
-      <Stack maxW={"6xl"} py={12} px={8} as={Container} spacing={12}>
-        <Box>
-          <Text color={"gray.600"} fontSize={"sm"} mb={2}>
-            {category.name}
-          </Text>
-          <Heading
-            size={"lg"}
-            fontWeight={600}
-            as={Flex}
-            alignItems={"baseline"}
-            borderBottom={1}
-            borderStyle={"solid"}
-            borderColor={"gray.200"}
-            mb={5}
-            pb={5}
-            _after={{
-              ml: 3,
-              content: '""',
-              width: 4,
-              height: 1,
-              bgGradient: "linear(to-r, teal.200, blue.600)",
-            }}
-          >
-            {subCategory.name}
-          </Heading>
-        </Box>
-
+    <DocsLayout>
+      <NextSeo
+        title={`${category.name}/${subCategory.name} - Chakra Templates`}
+        description="Production-ready Chakra UI Templates for developers"
+      />
+      <Heading size={'lg'} mb={6}>
+        {subCategory.name}
+      </Heading>
+      <Stack spacing={12}>
         {templates?.map((template) => (
           <Example
             key={template.filename}
@@ -61,7 +42,7 @@ const Templates: NextPage<PageProps> = ({
           />
         ))}
       </Stack>
-    </>
+    </DocsLayout>
   );
 };
 
@@ -85,7 +66,7 @@ export const getStaticProps: GetStaticProps<
     );
     const content = fs.readFileSync(
       `${filePath}/${curr.filename}.tsx`,
-      "utf-8"
+      'utf-8'
     );
     return {
       ...prev,

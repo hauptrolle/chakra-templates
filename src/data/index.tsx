@@ -13,94 +13,106 @@ export interface SubCategory {
 export interface Template {
   name: string;
   filename: string;
+  tags?: string[];
 }
 
 export const data: Category[] = [
   {
-    name: "Navigation",
-    id: "navigation",
+    name: 'Page Sections',
+    id: 'page-sections',
     children: [
       {
-        name: "Navbar",
-        id: "navbar",
+        name: 'Hero',
+        id: 'hero',
         children: [
           {
-            name: "Simple with user dropdown",
-            filename: "simple",
+            name: 'CTA with Annotation',
+            filename: 'callToActionWithAnnotation',
+            tags: ['new'],
           },
           {
-            name: "With action button & user dropdown",
-            filename: "withAction",
+            name: 'CTA with Illustration',
+            filename: 'callToActionWithIllustration',
+            tags: ['new'],
+          },
+          {
+            name: 'CTA with Video/Image',
+            filename: 'callToActionWithVideo',
+            tags: ['new'],
+          },
+          {
+            name: 'Split Screen with Image',
+            filename: 'splitScreen',
+          },
+          {
+            name: 'Download App Links',
+            filename: 'downloadAppLinks',
+          },
+          {
+            name: 'With background image and gradient',
+            filename: 'withBackgroundImage',
+          },
+          {
+            name: 'With text, image & CTA',
+            filename: 'withImage',
+          },
+        ],
+      },
+      {
+        name: 'Features',
+        id: 'features',
+        children: [
+          {
+            name: 'Download App Links',
+            filename: 'downloadAppLinks',
+          },
+          {
+            name: 'Simple three column grid',
+            filename: 'simpleThreeColumns',
+          },
+          {
+            name: 'Grid list with heading',
+            filename: 'gridListWithHeading',
           },
         ],
       },
     ],
   },
   {
-    name: "Page Sections",
-    id: "page-sections",
+    name: 'Navigation',
+    id: 'navigation',
     children: [
       {
-        name: "Features",
-        id: "features",
+        name: 'Navbar',
+        id: 'navbar',
         children: [
           {
-            name: "Download App Links",
-            filename: "downloadAppLinks",
+            name: 'Simple with user dropdown',
+            filename: 'simple',
           },
           {
-            name: "Simple three column grid",
-            filename: "simpleThreeColumns",
-          },
-          {
-            name: "Grid list with heading",
-            filename: "gridListWithHeading",
-          },
-        ],
-      },
-      {
-        name: "Hero",
-        id: "hero",
-        children: [
-          {
-            name: "Split Screen with Image",
-            filename: "splitScreen",
-          },
-          {
-            name: "Download App Links",
-            filename: "downloadAppLinks",
-          },
-          {
-            name: "With text & CTA",
-            filename: "textWithCallToAction",
-          },
-          {
-            name: "With background image and gradient",
-            filename: "withBackgroundImage",
-          },
-          {
-            name: "With text, image & CTA",
-            filename: "withImage",
+            name: 'With action button & user dropdown',
+            filename: 'withAction',
           },
         ],
       },
     ],
   },
   {
-    name: "Forms",
-    id: "forms",
+    name: 'Forms',
+    id: 'forms',
     children: [
       {
-        name: "Authentication",
-        id: "authentication",
+        name: 'Authentication',
+        id: 'authentication',
         children: [
           {
-            name: "Simple Login Card",
-            filename: "simpleCard",
+            name: 'Simple Login Card',
+            filename: 'simpleCard',
           },
           {
-            name: "Split Screen with Image",
-            filename: "splitScreen",
+            name: 'Split Screen with Image',
+            filename: 'splitScreen',
           },
         ],
       },
