@@ -116,6 +116,16 @@ export const data: Category[] = [
           },
         ],
       },
+      {
+        name: "Newsletter",
+        id: "newsletter",
+        children: [
+          {
+            name: "Collect only the email address",
+            filename: "emailOnly",
+          },
+        ],
+      },
     ],
   },
 ];
