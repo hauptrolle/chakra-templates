@@ -63,6 +63,10 @@ export const data: Category[] = [
         id: 'features',
         children: [
           {
+            name: 'Stats Grid with Image',
+            filename: 'statsGridWithImage',
+          },
+          {
             name: 'Download App Links',
             filename: 'downloadAppLinks',
           },
@@ -117,12 +121,12 @@ export const data: Category[] = [
         ],
       },
       {
-        name: "Newsletter",
-        id: "newsletter",
+        name: 'Newsletter',
+        id: 'newsletter',
         children: [
           {
-            name: "Collect only the email address",
-            filename: "emailOnly",
+            name: 'Collect only the email address',
+            filename: 'emailOnly',
           },
         ],
       },
