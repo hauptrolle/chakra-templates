@@ -12,15 +12,17 @@ import {
 } from '@/components/HomepageSections/OpenSource';
 import { DiscordBanner } from '@/components/HomepageSections/DiscordBanner';
 import { fetchStargazers } from '../api/stargazers';
-import { templatesList, categoriesNumber } from '@/utils/templatesUtils';
+import { data } from '../data';
+import { getCategoriesCount } from '@/utils/getCategoriesCount';
+import { getTemplatesCount } from '@/utils/getTemplatesCount';
 
 type PageProps = OpenSourceProps & {};
 
 const Home: NextPage<PageProps> = ({
   contributors,
   stargazers,
-  categoriesNumber,
-  templatesNumber,
+  categoriesCount,
+  templatesCount,
 }: PageProps) => {
   return (
     <AppLayout>
@@ -33,8 +35,8 @@ const Home: NextPage<PageProps> = ({
       <OpenSource
         contributors={contributors}
         stargazers={stargazers}
-        categoriesNumber={categoriesNumber}
-        templatesNumber={templatesNumber}
+        categoriesCount={categoriesCount}
+        templatesCount={templatesCount}
       />
       <DiscordBanner />
     </AppLayout>
@@ -50,10 +52,13 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
 
   // Get stargazers from GitHub API
   const stargazers = await fetchStargazers();
-  const templatesNumber = templatesList.length;
+
+  // Counts
+  const templatesCount = getTemplatesCount(data);
+  const categoriesCount = getCategoriesCount(data);
 
   return {
-    props: { contributors, stargazers, categoriesNumber, templatesNumber },
+    props: { contributors, stargazers, categoriesCount, templatesCount },
   };
 };
 

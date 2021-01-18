@@ -36,15 +36,15 @@ export interface Contributor {
 export type OpenSourceProps = {
   contributors: Contributor[];
   stargazers: Stargazers;
-  categoriesNumber: number;
-  templatesNumber: number;
+  categoriesCount: number;
+  templatesCount?: number;
 };
 
 export const OpenSource = ({
   contributors,
   stargazers,
-  categoriesNumber,
-  templatesNumber,
+  categoriesCount,
+  templatesCount,
 }: OpenSourceProps) => {
   const STATS = [
     {
@@ -55,7 +55,7 @@ export const OpenSource = ({
     {
       icon: IoExtensionPuzzle,
       label: 'Templates',
-      count: templatesNumber,
+      count: templatesCount,
     },
     {
       icon: IoMedal,
@@ -65,7 +65,7 @@ export const OpenSource = ({
     {
       icon: IoBookmarks,
       label: 'Categories',
-      count: categoriesNumber,
+      count: categoriesCount,
     },
   ];
 
