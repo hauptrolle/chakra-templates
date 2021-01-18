@@ -1,4 +1,5 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
+import Head from 'next/head';
 import { Stack, Heading } from '@chakra-ui/react';
 import * as fs from 'fs';
 import path from 'path';
@@ -28,6 +29,12 @@ const Templates: NextPage<PageProps> = ({
         title={`${category.name}/${subCategory.name} - Chakra Templates`}
         description="Production-ready Chakra UI Templates for developers"
       />
+      <Head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
       <Heading size={'lg'} mb={6}>
         {subCategory.name}
       </Heading>

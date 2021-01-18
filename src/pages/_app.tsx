@@ -18,7 +18,7 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.png" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&family=Inter:wght@400;500;600;700&family=Fira+Code&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&family=Inter:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
         {process.env.NODE_ENV === 'production' && (
