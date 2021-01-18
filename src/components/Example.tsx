@@ -16,6 +16,7 @@ import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { ResizableFrame } from '@/components/ResizableFrame';
 import { CodeSample } from '@/components/CodeSample';
 import { Template, Category, SubCategory } from 'data';
+import { getExampleUrl } from '@/utils/getExampleUrl';
 
 type ExampleProps = {
   template: Template;
@@ -73,7 +74,9 @@ export const Example = ({
                 {tab}
               </Tab>
             ))}
-            <Link href={exampleLink} passHref>
+            <Link
+              href={getExampleUrl(category, subCategory, template)}
+              passHref>
               <IconButton
                 as={'a'}
                 cursor={'pointer'}
@@ -89,7 +92,11 @@ export const Example = ({
         </TabList>
         <TabPanels borderRadius="2xl">
           <TabPanel p={0}>
-            <ResizableFrame src={exampleLink} />
+            <ResizableFrame
+              category={category}
+              subCategory={subCategory}
+              template={template}
+            />
           </TabPanel>
           <TabPanel p={0}>
             <CodeSample code={code} />
