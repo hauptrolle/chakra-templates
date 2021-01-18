@@ -16,7 +16,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged",
+      "pre-commit": "pretty-quick --staged && yarn lint:ts",
       "pre-push": "yarn lint:ts && yarn test:ci"
     }
   },
