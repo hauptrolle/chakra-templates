@@ -60,7 +60,9 @@ export const Footer = () => {
           spacing={3}>
           {NAVIGATION_ITEMS.map((navItem) => (
             <NextLink key={navItem.href} href={navItem.href} passHref>
-              <Link target={'_blank'}>{navItem.label}</Link>
+              <Link target={navItem.internal ? undefined : '_blank'}>
+                {navItem.label}
+              </Link>
             </NextLink>
           ))}
         </Stack>
