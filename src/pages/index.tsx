@@ -1,7 +1,6 @@
 import path from 'path';
 import * as fs from 'fs';
 import { GetStaticProps, NextPage } from 'next';
-import { NextSeo } from 'next-seo';
 
 import { AppLayout } from '@/layout/AppLayout';
 import { Hero } from '@/components/HomepageSections/Hero';
@@ -11,6 +10,7 @@ import {
   OpenSourceProps,
 } from '@/components/HomepageSections/OpenSource';
 import { DiscordBanner } from '@/components/HomepageSections/DiscordBanner';
+import { SEO } from '@/components/SEO';
 import { fetchStargazers } from '../api/stargazers';
 import { data } from '../data';
 import { getCategoriesCount } from '@/utils/getCategoriesCount';
@@ -26,10 +26,7 @@ const Home: NextPage<PageProps> = ({
 }: PageProps) => {
   return (
     <AppLayout>
-      <NextSeo
-        title="Chakra Templates - Production-ready Chakra UI Templates for developers"
-        description="Production-ready Chakra UI Templates for developers"
-      />
+      <SEO />
       <Hero />
       <GettingStarted />
       <OpenSource
