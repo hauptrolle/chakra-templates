@@ -6,9 +6,8 @@ import path from 'path';
 
 import { DocsLayout } from '@/layout/DocsLayout';
 import { Example } from '@/components/Example';
-import { TEMPLATE_DIR } from '../constants';
+import { SEO_TITLE, TEMPLATE_DIR } from '../constants';
 import { data, Template, Category, SubCategory } from 'data';
-import { NextSeo } from 'next-seo';
 import { SEO } from '@/components/SEO';
 
 type PageProps = {
@@ -24,7 +23,7 @@ const Templates: NextPage<PageProps> = ({
   templates,
   code,
 }) => {
-  const seoTitle = `${category.name}/${subCategory.name} - Chakra Templates`;
+  const seoTitle = `${category.name}/${subCategory.name} - ${SEO_TITLE}`;
 
   return (
     <DocsLayout>

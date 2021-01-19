@@ -1,4 +1,5 @@
 export const TEMPLATE_DIR = 'src/pages/templates';
+export const PRODUCTION_URL = 'https://chakra-templates.dev';
 
 /**
  * LINKS
