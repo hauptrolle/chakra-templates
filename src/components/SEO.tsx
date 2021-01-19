@@ -4,14 +4,11 @@ import { useRouter } from 'next/router';
 import { title } from 'process';
 
 import {
+  SEO_TITLE,
   SEO_DESCRIPTION,
   SEO_KEYWORDS,
-  SEO_OG_DESCRIPTION,
   SEO_OG_IMAGE,
-  SEO_OG_TITLE,
-  SEO_TWITTER_DESCRIPTION,
   SEO_TWITTER_IMAGE,
-  SEO_TWITTER_TITLE,
 } from '../constants';
 
 export type SEOProps = {
@@ -34,26 +31,23 @@ export const SEO = (props: SEOProps) => {
     <Head>
       <meta name="description" content={props.description ?? SEO_DESCRIPTION} />
       <meta name="keywords" content={props.keywords ?? SEO_KEYWORDS} />
-      <title>{props.title ?? 'Chakra Templates'}</title>
-      <meta property="og:title" content={props.ogTitle ?? SEO_OG_TITLE} />
+      <title>{props.title ?? SEO_TITLE}</title>
+      <meta property="og:title" content={props.title ?? SEO_TITLE} />
       <meta
         property="og:description"
-        content={props.ogDescription ?? SEO_OG_DESCRIPTION}
+        content={props.description ?? SEO_DESCRIPTION}
       />
       <meta property="og:image" content={props.ogImage ?? SEO_OG_IMAGE} />
-      <meta property="og:site_name" content={'Chakra Templates'} />
+      <meta property="og:site_name" content={SEO_TITLE} />
       <meta
         property="og:url"
         content={props.ogUrl ?? `https://chakra-templates.dev${router.asPath}`}
       />
       <meta property="og:type" content={'website'} />
-      <meta
-        name="twitter:title"
-        content={props.twitterTitle ?? SEO_TWITTER_TITLE}
-      />
+      <meta name="twitter:title" content={props.title ?? SEO_TITLE} />
       <meta
         name="twitter:description"
-        content={props.twitterDescription ?? SEO_TWITTER_DESCRIPTION}
+        content={props.description ?? SEO_DESCRIPTION}
       />
       <meta
         name="twitter:image"
