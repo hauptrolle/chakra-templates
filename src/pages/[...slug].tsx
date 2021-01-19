@@ -9,6 +9,7 @@ import { Example } from '@/components/Example';
 import { TEMPLATE_DIR } from '../constants';
 import { data, Template, Category, SubCategory } from 'data';
 import { NextSeo } from 'next-seo';
+import { SEO } from '@/components/SEO';
 
 type PageProps = {
   category: Category;
@@ -23,12 +24,11 @@ const Templates: NextPage<PageProps> = ({
   templates,
   code,
 }) => {
+  const seoTitle = `${category.name}/${subCategory.name} - Chakra Templates`;
+
   return (
     <DocsLayout>
-      <NextSeo
-        title={`${category.name}/${subCategory.name} - Chakra Templates`}
-        description="Production-ready Chakra UI Templates for developers"
-      />
+      <SEO title={seoTitle} ogTitle={seoTitle} twitterTitle={seoTitle} />
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"

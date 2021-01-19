@@ -14,12 +14,12 @@ import { data } from '../data';
 const NavigationLink = ({
   href,
   children,
+  asPath,
 }: {
   href: string;
   children: ReactNode;
+  asPath: string;
 }) => {
-  const { asPath } = useRouter();
-
   const isActive = asPath === href;
 
   return (
@@ -47,7 +47,9 @@ const NavigationLink = ({
 };
 
 export const Navigation = (props: StackProps) => {
+  const { asPath } = useRouter();
   const textColor = useColorModeValue('gray.400', 'gray.200');
+
   return (
     <Stack
       as={'nav'}
@@ -70,6 +72,7 @@ export const Navigation = (props: StackProps) => {
           <Stack>
             {category.children?.map((subCategory) => (
               <NavigationLink
+                asPath={asPath}
                 key={subCategory.id}
                 href={`/${category.id}/${subCategory.id}`}>
                 {subCategory.name}

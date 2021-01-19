@@ -71,9 +71,13 @@ export const HeaderBar = ({
         justify={'space-between'}
         align={'center'}>
         <Link href={'/'} passHref>
-          <Stack as={'a'} direction={'row'} alignItems={'center'} spacing={4}>
-            <Icon as={Logo} w={8} h={8} />
-            <Heading as={'h1'} size={'md'}>
+          <Stack
+            as={'a'}
+            direction={'row'}
+            alignItems={'center'}
+            spacing={{ base: 2, sm: 4 }}>
+            <Icon as={Logo} w={{ base: 5, sm: 8 }} h={{ base: 5, sm: 8 }} />
+            <Heading as={'h1'} fontSize={{ base: 'xs', sm: 'sm', md: 'xl' }}>
               <TextUnderline>Chakra</TextUnderline> Templates
             </Heading>
           </Stack>
