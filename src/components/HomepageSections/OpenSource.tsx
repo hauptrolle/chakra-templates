@@ -5,11 +5,11 @@ import {
   Stack,
   Icon,
   SimpleGrid,
-  Avatar,
   Wrap,
   WrapItem,
-  Center,
+  Link,
   Tooltip,
+  Flex,
   useColorModeValue,
   Box,
 } from '@chakra-ui/react';
@@ -21,7 +21,7 @@ import {
   IoBookmarks,
 } from 'react-icons/io5';
 
-import { CONTRIBUTORS_LINK } from '../../constants';
+import { CONTRIBUTORS_LINK, GITHUB_LINK } from '../../constants';
 import { TextUnderline } from '@/components/TextUnderline';
 import { Stargazers } from '../../api/stargazers';
 
@@ -71,68 +71,75 @@ export const OpenSource = ({
 
   return (
     <Container maxW={'7xl'} py={{ base: 14, sm: 20, md: 32 }}>
-      <Stack spacing={4} mb={{ base: 14, sm: 20 }} align={'center'}>
-        <Heading as={'h3'} textAlign={'center'} fontSize={'3xl'} mb={2}>
-          We're <TextUnderline>open source</TextUnderline>
-        </Heading>
-        <Text
-          textAlign={'center'}
-          color={'gray.500'}
-          maxW={'4xl'}
-          fontSize={{ md: 'lg' }}>
-          And you can become a part of it. If you’re interested in contributing
-          visit our GitHub repository and take a peek at the Template
-          Development project. Those are pre-designed templates waiting for you!
-        </Text>
-      </Stack>
+      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+        <Stack spacing={4}>
+          <Heading as={'h3'} mb={2}>
+            We're <TextUnderline>open source</TextUnderline>
+          </Heading>
+          <Text color={'gray.500'} maxW={'4xl'} fontSize={{ md: 'lg' }}>
+            and you can become a part of it! If you’re interested in
+            contributing visit our{' '}
+            <Link href={GITHUB_LINK} color={'green.400'} target={'_blank'}>
+              GitHub repository
+            </Link>{' '}
+            and take a peek at the Template Development project. There are
+            pre-designed templates waiting for you to be implemented.
+          </Text>
 
-      <SimpleGrid
-        columns={{ base: 1, md: 2, lg: 4 }}
-        spacing={{ base: 4, md: 8, lg: 14 }}>
-        {STATS.map((stat) => (
-          <Stack
-            key={stat.label}
-            bg={useColorModeValue('gray.100', 'gray.900')}
-            rounded={'xl'}
-            px={4}
-            py={3}
-            direction={'row'}
-            align={'center'}
-            spacing={4}
-            justify={'space-between'}>
-            <Stack direction={'row'} align={'center'}>
-              <Icon color={'green.400'} as={stat.icon} />
-              <Text>{stat.label}</Text>
-            </Stack>
-            <Text fontWeight={700}>{stat.count}</Text>
-          </Stack>
-        ))}
+          <Text color={'gray.500'} maxW={'4xl'} fontSize={{ md: 'lg' }}>
+            Go ahead, and join these awesome list of contributors:
+          </Text>
+
+          <Wrap>
+            {contributors.map((contributor) => (
+              <WrapItem p={2} key={contributor.name}>
+                <Tooltip label={contributor.name}>
+                  <Box
+                    as={'a'}
+                    href={CONTRIBUTORS_LINK}
+                    rounded={'full'}
+                    width={'60px'}
+                    height={'60px'}
+                    overflow={'hidden'}>
+                    <NextImage
+                      src={contributor.avatar_url}
+                      alt={`Avatar of ${contributor.name}`}
+                      width={60}
+                      height={60}
+                    />
+                  </Box>
+                </Tooltip>
+              </WrapItem>
+            ))}
+          </Wrap>
+        </Stack>
+
+        <Flex justify={'center'} align={'center'}>
+          <SimpleGrid
+            columns={{ base: 1, lg: 2 }}
+            spacing={{ base: 4 }}
+            w={'full'}>
+            {STATS.map((stat) => (
+              <Stack
+                key={stat.label}
+                bg={useColorModeValue('gray.100', 'gray.900')}
+                rounded={'xl'}
+                px={4}
+                py={3}
+                direction={'row'}
+                align={'center'}
+                spacing={4}
+                justify={'space-between'}>
+                <Stack direction={'row'} align={'center'}>
+                  <Icon color={'green.400'} as={stat.icon} />
+                  <Text>{stat.label}</Text>
+                </Stack>
+                <Text fontWeight={700}>{stat.count}</Text>
+              </Stack>
+            ))}
+          </SimpleGrid>
+        </Flex>
       </SimpleGrid>
-
-      <Center pt={{ base: 14, sm: 20 }}>
-        <Wrap justify={'center'}>
-          {contributors.map((contributor) => (
-            <WrapItem p={2} key={contributor.name}>
-              <Tooltip label={contributor.name}>
-                <Box
-                  as={'a'}
-                  href={CONTRIBUTORS_LINK}
-                  rounded={'full'}
-                  width={'96px'}
-                  height={'96px'}
-                  overflow={'hidden'}>
-                  <NextImage
-                    src={contributor.avatar_url}
-                    alt={`Avatar of ${contributor.name}`}
-                    width={96}
-                    height={96}
-                  />
-                </Box>
-              </Tooltip>
-            </WrapItem>
-          ))}
-        </Wrap>
-      </Center>
     </Container>
   );
 };
