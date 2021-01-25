@@ -24,7 +24,7 @@ export const Hero = () => {
       maxW={'7xl'}
       h={{ base: '100%', lg: '90vh' }}
       py={{ base: 14, sm: 20, lg: 32 }}
-      mt={{ base: 10, sm: 0 }}
+      mt={{ base: 10 }}
       spacing={{ base: 10, lg: 24 }}
       direction={{ base: 'column', lg: 'row' }}
       alignItems={'center'}>
