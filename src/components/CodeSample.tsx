@@ -3,16 +3,21 @@ import { CodeBlock, a11yDark } from 'react-code-blocks';
 import { Box, Button } from '@chakra-ui/react';
 import copy from 'copy-to-clipboard';
 
+import { SPLITBEE_TEMPLATE_CLICK_COPY } from '../constants';
+import { Template } from '../data';
+
 type CodeSampleProps = {
   code: string;
+  template: Template;
 };
 
-export const CodeSample = ({ code }: CodeSampleProps) => {
+export const CodeSample = ({ code, template }: CodeSampleProps) => {
   const initialText = 'Copy';
   const [copyButtonText, setCopyButtonText] = useState(initialText);
 
   const copyCode = () => {
     copy(code);
+
     setCopyButtonText('Copied 👌');
     setTimeout(() => {
       setCopyButtonText(initialText);
@@ -26,7 +31,9 @@ export const CodeSample = ({ code }: CodeSampleProps) => {
         position="absolute"
         top={4}
         right={4}
-        onClick={copyCode}>
+        onClick={copyCode}
+        data-splitbee-event={SPLITBEE_TEMPLATE_CLICK_COPY}
+        data-splitbee-event-type={template.name}>
         {copyButtonText}
       </Button>
 

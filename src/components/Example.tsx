@@ -99,7 +99,7 @@ export const Example = ({
             />
           </TabPanel>
           <TabPanel p={0}>
-            <CodeSample code={code} />
+            <CodeSample code={code} template={template} />
           </TabPanel>
         </TabPanels>
       </Tabs>
