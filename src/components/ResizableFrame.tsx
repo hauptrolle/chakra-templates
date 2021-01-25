@@ -4,6 +4,7 @@ import { Resizable } from 're-resizable';
 
 import { Category, SubCategory, Template } from '../data';
 import { getExampleUrl } from '@/utils/getExampleUrl';
+import TestComponent from '../pages/templates/page-sections/hero/callToActionWithVideo';
 
 type IframeProps = {
   template: Template;
@@ -42,21 +43,22 @@ export const ResizableFrame = ({
     height !== undefined && height >= MIN_HEIGHT ? height : MIN_HEIGHT;
 
   return (
-    <Box bg={'gray.500'}>
+    <Box>
       <Resizable
         bounds={'parent'}
         minWidth={250}
-        minHeight={getHeight()}
-        maxHeight={getHeight()}
-        onResize={syncHeight}>
-        <iframe
-          loading={'lazy'}
-          width={'100%'}
-          height={getHeight()}
-          src={exampleUrl}
-          onLoad={syncHeight}
-          ref={ref}
-        />
+        // minHeight={getHeight()}
+        // maxHeight={getHeight()}
+      >
+        <TestComponent />
+        {/*<iframe*/}
+        {/*  loading={'lazy'}*/}
+        {/*  width={'100%'}*/}
+        {/*  height={getHeight()}*/}
+        {/*  src={exampleUrl}*/}
+        {/*  onLoad={syncHeight}*/}
+        {/*  ref={ref}*/}
+        {/*/>*/}
       </Resizable>
     </Box>
   );

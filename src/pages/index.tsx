@@ -15,6 +15,7 @@ import { fetchStargazers } from '../api/stargazers';
 import { data } from '../data';
 import { getCategoriesCount } from '@/utils/getCategoriesCount';
 import { getTemplatesCount } from '@/utils/getTemplatesCount';
+import { ExploreTemplates } from '@/components/HomepageSections/ExploreTemplates';
 
 type PageProps = OpenSourceProps & {};
 
@@ -35,6 +36,7 @@ const Home: NextPage<PageProps> = ({
         categoriesCount={categoriesCount}
         templatesCount={templatesCount}
       />
+      <ExploreTemplates templatesCount={templatesCount!} />
       <DiscordBanner />
     </AppLayout>
   );
