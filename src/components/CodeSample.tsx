@@ -1,33 +1,26 @@
-import { useState } from 'react';
 import { CodeBlock, a11yDark } from 'react-code-blocks';
-import { Box, Button } from '@chakra-ui/react';
-import copy from 'copy-to-clipboard';
+import { Box, Button, useClipboard } from '@chakra-ui/react';
+import { Category, SubCategory, Template } from '../data';
 
 type CodeSampleProps = {
-  code: string;
+  template: Template;
+  category: Category;
+  subCategory: SubCategory;
 };
 
-export const CodeSample = ({ code }: CodeSampleProps) => {
-  const initialText = 'Copy';
-  const [copyButtonText, setCopyButtonText] = useState(initialText);
-
-  const copyCode = () => {
-    copy(code);
-    setCopyButtonText('Copied 👌');
-    setTimeout(() => {
-      setCopyButtonText(initialText);
-    }, 2000);
-  };
+export const CodeSample = ({
+  template,
+  category,
+  subCategory,
+}: CodeSampleProps) => {
+  const code = require(`!!raw-loader!../pages/templates/${category.id}/${subCategory.id}/${template.filename}`)
+    .default;
+  const { hasCopied, onCopy } = useClipboard(code);
 
   return (
-    <Box fontFamily={"'Fira Code', monospace"} position="relative">
-      <Button
-        size="sm"
-        position="absolute"
-        top={4}
-        right={4}
-        onClick={copyCode}>
-        {copyButtonText}
+    <Box fontFamily={'mono'} fontSize={'sm'} position="relative">
+      <Button size="sm" position="absolute" top={4} right={4} onClick={onCopy}>
+        {hasCopied ? 'Copied 👌' : 'Copy'}
       </Button>
 
       <CodeBlock

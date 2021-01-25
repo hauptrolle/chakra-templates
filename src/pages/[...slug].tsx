@@ -1,12 +1,10 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
 import { Stack, Heading } from '@chakra-ui/react';
-import * as fs from 'fs';
-import path from 'path';
 
 import { DocsLayout } from '@/layout/DocsLayout';
 import { Example } from '@/components/Example';
-import { SEO_TITLE, TEMPLATE_DIR } from '../constants';
+import { SEO_TITLE } from '../constants';
 import { data, Template, Category, SubCategory } from 'data';
 import { SEO } from '@/components/SEO';
 
@@ -14,26 +12,18 @@ type PageProps = {
   category: Category;
   subCategory: SubCategory;
   templates?: Template[];
-  code?: Record<string, string>;
 };
 
 const Templates: NextPage<PageProps> = ({
   category,
   subCategory,
   templates,
-  code,
 }) => {
   const seoTitle = `${category.name}/${subCategory.name} - ${SEO_TITLE}`;
 
   return (
     <DocsLayout>
       <SEO title={seoTitle} ogTitle={seoTitle} twitterTitle={seoTitle} />
-      <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
       <Heading size={'lg'} mb={6}>
         {subCategory.name}
       </Heading>
@@ -44,7 +34,6 @@ const Templates: NextPage<PageProps> = ({
             template={template}
             category={category}
             subCategory={subCategory}
-            code={code![template.filename]}
           />
         ))}
       </Stack>
@@ -65,27 +54,11 @@ export const getStaticProps: GetStaticProps<
   )[0];
   const templates = subCategoryData.children;
 
-  const code = templates?.reduce((prev, curr) => {
-    const filePath = path.join(
-      process.cwd(),
-      `${TEMPLATE_DIR}/${category}/${subCategory}`
-    );
-    const content = fs.readFileSync(
-      `${filePath}/${curr.filename}.tsx`,
-      'utf-8'
-    );
-    return {
-      ...prev,
-      [curr.filename]: content,
-    };
-  }, {});
-
   return {
     props: {
       category: categoryData,
       subCategory: subCategoryData,
       templates,
-      code,
     },
   };
 };

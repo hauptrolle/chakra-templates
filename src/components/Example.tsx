@@ -20,21 +20,13 @@ import { getExampleUrl } from '@/utils/getExampleUrl';
 
 type ExampleProps = {
   template: Template;
-  code: string;
   category: Category;
   subCategory: SubCategory;
 };
 
 const TABS = ['Preview', 'Code'];
 
-export const Example = ({
-  template,
-  code,
-  category,
-  subCategory,
-}: ExampleProps) => {
-  const exampleLink = `/templates/${category.id}/${subCategory.id}/${template.filename}`;
-
+export const Example = ({ template, category, subCategory }: ExampleProps) => {
   return (
     <Box
       rounded={'md'}
@@ -99,7 +91,11 @@ export const Example = ({
             />
           </TabPanel>
           <TabPanel p={0}>
-            <CodeSample code={code} />
+            <CodeSample
+              category={category}
+              subCategory={subCategory}
+              template={template}
+            />
           </TabPanel>
         </TabPanels>
       </Tabs>
