@@ -22,6 +22,7 @@ export const SUGGEST_TEMPLATE_LINK =
  */
 export const SPLITBEE_HERO_SUGGEST_TEMPLATE = 'hero_click_suggest_template';
 export const SPLITBEE_TEMPLATE_CLICK_COPY = 'template_click_copy_button';
+export const SPLITBEE_TEMPLATE_MANUAL_COPY = 'template_manual_copy';
 
 /**
  * SEO constants

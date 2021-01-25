@@ -125,7 +125,7 @@ export const data: Category[] = [
         id: 'newsletter',
         children: [
           {
-            name: 'Collect only the email address',
+            name: 'Email address only Form',
             filename: 'emailOnly',
           },
         ],
