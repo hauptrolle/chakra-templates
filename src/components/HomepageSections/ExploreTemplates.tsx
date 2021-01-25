@@ -25,7 +25,8 @@ export const ExploreTemplates = ({ templatesCount }: ExploreTemplatesProps) => {
           bg={useColorModeValue('green.400', 'green.500')}
           rounded={'xl'}
           color={useColorModeValue('white', 'gray.100')}
-          p={10}>
+          px={{ base: 4, md: 10 }}
+          py={10}>
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
             <Box>
               <Heading as={'h3'} mb={2}>
