@@ -47,8 +47,7 @@ export const ResizableFrame = ({
         bounds={'parent'}
         minWidth={250}
         minHeight={getHeight()}
-        maxHeight={getHeight()}
-        onResize={syncHeight}>
+        maxHeight={getHeight()}>
         <iframe
           loading={'lazy'}
           width={'100%'}

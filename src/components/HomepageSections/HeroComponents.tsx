@@ -1,5 +1,5 @@
 import { useTransform, useViewportScroll } from 'framer-motion';
-import { useBreakpointValue, Image } from '@chakra-ui/react';
+import { useBreakpointValue, Image, useColorModeValue } from '@chakra-ui/react';
 
 import MotionBox from '@/components/motion/MotionBox';
 
@@ -51,9 +51,10 @@ export const HeroComponents = () => {
           mb={3 - i * 20}
           variants={cardAnimationVariants}
           justify={'center'}
+          align={'center'}
           flex={1}
-          p={12}
-          bg={'white'}
+          p={8}
+          bg={useColorModeValue('white', 'gray.800')}
           rounded={'3xl'}
           boxShadow={'xl'}
           w={{ base: `${100 - i * 10}%`, sm: widths[i] }}

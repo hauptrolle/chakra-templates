@@ -6,6 +6,7 @@ import {
   Stack,
   Icon,
   Flex,
+  useBreakpointValue,
 } from '@chakra-ui/react';
 import { DISCORD_INVITE_LINK } from '../../constants';
 import { IoLogoDiscord } from 'react-icons/io5';
@@ -16,7 +17,7 @@ export const DiscordBanner = () => {
       <Container
         as={Stack}
         maxW={'7xl'}
-        py={{ base: 4, sm: 8 }}
+        py={{ base: 6, sm: 10 }}
         spacing={8}
         direction={{ base: 'column', md: 'row' }}>
         <Stack
@@ -26,10 +27,10 @@ export const DiscordBanner = () => {
           align={{ sm: 'center' }}>
           <Icon as={IoLogoDiscord} w={12} h={12} />
           <Stack spacing={0}>
-            <Text fontFamily={'heading'} fontSize={'lg'}>
+            <Text fontFamily={'heading'} fontSize={'xl'}>
               Talk with us
             </Text>
-            <Text opacity={0.7} fontSize={'sm'}>
+            <Text opacity={0.8} fontSize={'md'}>
               We’ve setup a Discord server where you can ask questions, report
               bugs, or request templates!
             </Text>
@@ -37,19 +38,18 @@ export const DiscordBanner = () => {
         </Stack>
         <Flex align={'center'}>
           <Button
+            w={useBreakpointValue({ base: 'full', md: 'inherit' })}
             as={'a'}
             bg={'white'}
-            color={'gray.700'}
-            rounded={'full'}
-            width={'full'}
-            p={6}
+            color={'discord'}
+            px={8}
             py={7}
-            fontWeight={700}
-            transition={'all .3s ease'}
+            fontSize={'lg'}
+            rounded={'full'}
             href={DISCORD_INVITE_LINK}
             target={'_blank'}
             _hover={{
-              boxShadow: 'lg',
+              boxShadow: 'xl',
             }}>
             Join the Discord Server
           </Button>
