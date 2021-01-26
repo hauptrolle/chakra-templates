@@ -1,32 +1,28 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { CodeBlock, a11yDark } from 'react-code-blocks';
-import { Box, Button } from '@chakra-ui/react';
-import copy from 'copy-to-clipboard';
+import { Box, Button, useClipboard } from '@chakra-ui/react';
+import { Category, SubCategory, Template } from '../data';
 
 import {
   SPLITBEE_TEMPLATE_CLICK_COPY,
   SPLITBEE_TEMPLATE_MANUAL_COPY,
 } from '../constants';
-import { Template } from '../data';
 
 type CodeSampleProps = {
-  code: string;
   template: Template;
+  category: Category;
+  subCategory: SubCategory;
 };
 
-export const CodeSample = ({ code, template }: CodeSampleProps) => {
-  const initialText = 'Copy';
-  const [copyButtonText, setCopyButtonText] = useState(initialText);
+export const CodeSample = ({
+  template,
+  category,
+  subCategory,
+}: CodeSampleProps) => {
+  const code = require(`!!raw-loader!../pages/templates/${category.id}/${subCategory.id}/${template.filename}`)
+    .default;
+  const { hasCopied, onCopy } = useClipboard(code);
   const codeRef = useRef<HTMLDivElement>(null);
-
-  const copyCode = () => {
-    copy(code);
-
-    setCopyButtonText('Copied 👌');
-    setTimeout(() => {
-      setCopyButtonText(initialText);
-    }, 2000);
-  };
 
   const handleManualCopy = (event: ClipboardEvent) => {
     if (codeRef?.current?.contains(event.target as Node)) {
@@ -46,19 +42,16 @@ export const CodeSample = ({ code, template }: CodeSampleProps) => {
   }, []);
 
   return (
-    <Box
-      fontFamily={"'Fira Code', monospace"}
-      position="relative"
-      ref={codeRef}>
+    <Box fontFamily={'mono'} fontSize={'sm'} position="relative" ref={codeRef}>
       <Button
         size="sm"
         position="absolute"
         top={4}
         right={4}
-        onClick={copyCode}
+        onClick={onCopy}
         data-splitbee-event={SPLITBEE_TEMPLATE_CLICK_COPY}
         data-splitbee-event-template={template.name}>
-        {copyButtonText}
+        {hasCopied ? 'Copied 👌' : 'Copy'}
       </Button>
 
       <CodeBlock
