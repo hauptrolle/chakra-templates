@@ -20,6 +20,10 @@ export const theme = extendTheme({
         display: 'flex',
         flexDirection: 'column',
       },
+      '.body': {
+        height: '100%', // Push footer to bottom
+        'overflow-y': 'scroll', // Always show scrollbar to avoid flickering
+      },
       html: {
         scrollBehavior: 'smooth',
       },

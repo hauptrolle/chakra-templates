@@ -10,6 +10,7 @@ import {
 } from '@chakra-ui/react';
 
 import { data } from '../data';
+import { GITHUB_LINK } from '../constants';
 
 const NavigationLink = ({
   href,
@@ -22,23 +23,25 @@ const NavigationLink = ({
 }) => {
   const isActive = asPath === href;
 
+  const activeBg = useColorModeValue('green.50', 'green.900');
+
   return (
     <NextLink href={href} passHref>
       <Link
-        fontWeight={500}
         fontSize={'sm'}
         rounded={'md'}
-        p={2}
-        bg={isActive ? useColorModeValue('green.50', 'green.900') : undefined}
+        px={3}
+        py={2}
+        ml={'-12px!important'}
+        bg={isActive ? activeBg : undefined}
+        fontWeight={isActive ? 600 : 400}
         color={
           isActive
             ? useColorModeValue('green.700', 'green.400')
             : useColorModeValue('gray.700', 'gray.300')
         }
         _hover={{
-          bg: isActive
-            ? useColorModeValue('green.50', 'green.900')
-            : useColorModeValue('gray.100', 'gray.900'),
+          bg: isActive ? activeBg : useColorModeValue('gray.100', 'gray.900'),
         }}>
         {children}
       </Link>
@@ -48,7 +51,7 @@ const NavigationLink = ({
 
 export const Navigation = (props: StackProps) => {
   const { asPath } = useRouter();
-  const textColor = useColorModeValue('gray.400', 'gray.200');
+  const categoryColor = useColorModeValue('gray.800', 'gray.200');
 
   return (
     <Stack
@@ -61,15 +64,14 @@ export const Navigation = (props: StackProps) => {
       {data.map((category) => (
         <Stack key={category.id}>
           <Text
-            fontFamily={'heading'}
             textTransform={'uppercase'}
-            color={textColor}
+            color={categoryColor}
             fontWeight={700}
             fontSize={'sm'}
-            letterSpacing={1.1}>
+            letterSpacing={1}>
             {category.name}
           </Text>
-          <Stack>
+          <Stack spacing={1}>
             {category.children?.map((subCategory) => (
               <NavigationLink
                 asPath={asPath}
@@ -81,6 +83,22 @@ export const Navigation = (props: StackProps) => {
           </Stack>
         </Stack>
       ))}
+      <Stack
+        spacing={2}
+        bg={useColorModeValue('gray.50', 'gray.900')}
+        rounded={'md'}
+        p={{ base: 4 }}>
+        <Text fontWeight={700} fontSize={'sm'}>
+          These are not the templates you are looking for?
+        </Text>
+        <Text fontSize={'sm'}>
+          Feel free to contribute your own template in our{' '}
+          <Link href={GITHUB_LINK} target={'_blank'} color={'green.400'}>
+            Github
+          </Link>{' '}
+          Repository.
+        </Text>
+      </Stack>
     </Stack>
   );
 };

@@ -7,6 +7,7 @@ export interface Category {
 export interface SubCategory {
   name: string;
   id: string;
+  description?: string;
   children?: Template[];
 }
 
