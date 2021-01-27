@@ -61,7 +61,7 @@ export default function JoinOurTeam() {
             Full-Stack Developers
           </Heading>
           <Stack direction={'row'} spacing={4} align={'center'}>
-            <AvatarGroup showBorder={true}>
+            <AvatarGroup>
               {avatars.map((avatar) => (
                 <Avatar
                   key={avatar.name}
@@ -168,7 +168,7 @@ export default function JoinOurTeam() {
                   color: 'gray.500',
                 }}
               />
-              <Button fontFamily={'heading'} bg={'gray.200'}>
+              <Button fontFamily={'heading'} bg={'gray.200'} color={'gray.800'}>
                 Upload CV
               </Button>
             </Stack>
