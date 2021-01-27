@@ -112,6 +112,10 @@ export const data: Category[] = [
         id: 'authentication',
         children: [
           {
+            name: 'Join our Team',
+            filename: 'joinOurTeam',
+          },
+          {
             name: 'Simple Login Card',
             filename: 'simpleCard',
           },
