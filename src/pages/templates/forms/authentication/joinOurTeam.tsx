@@ -64,6 +64,7 @@ export default function JoinOurTeam() {
             <AvatarGroup showBorder={true}>
               {avatars.map((avatar) => (
                 <Avatar
+                  key={avatar.name}
                   name={avatar.name}
                   src={avatar.url}
                   size={useBreakpointValue({ base: 'md', md: 'lg' })}
@@ -122,6 +123,7 @@ export default function JoinOurTeam() {
           maxW={{ lg: 'lg' }}>
           <Stack spacing={4}>
             <Heading
+              color={'gray.800'}
               lineHeight={1.1}
               fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}>
               Join our team
