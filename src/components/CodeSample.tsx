@@ -34,7 +34,9 @@ export const CodeSample = ({
   };
 
   useEffect(() => {
-    document.addEventListener('copy', handleManualCopy);
+    if (process.env.NODE_ENV === 'production') {
+      document.addEventListener('copy', handleManualCopy);
+    }
 
     return () => {
       document.removeEventListener('copy', handleManualCopy);
