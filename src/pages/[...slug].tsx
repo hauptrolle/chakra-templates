@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
-import { Stack, Heading } from '@chakra-ui/react';
+import { Stack, Heading, Text } from '@chakra-ui/react';
 
 import { DocsLayout } from '@/layout/DocsLayout';
 import { Example } from '@/components/Example';
@@ -23,9 +23,13 @@ const Templates: NextPage<PageProps> = ({
   return (
     <DocsLayout>
       <SEO title={seoTitle} ogTitle={seoTitle} twitterTitle={seoTitle} />
-      <Heading size={'lg'} mb={6}>
-        {subCategory.name}
-      </Heading>
+      <Stack mb={10}>
+        <Heading size={'xl'}>{subCategory.name}</Heading>
+        {subCategory.description ? (
+          <Text color={'gray.600'}>{subCategory.description}</Text>
+        ) : null}
+      </Stack>
+
       <Stack spacing={12}>
         {templates?.map((template) => (
           <Example

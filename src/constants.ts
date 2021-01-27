@@ -11,7 +11,7 @@ export const ANALYTICS_LINK =
   'https://app.splitbee.io/public/chakra-templates.dev';
 export const TWITTER_LINK = 'https://twitter.com/ChakraTemplates';
 export const FIGMA_LINK =
-  'https://www.figma.com/file/38QSKUw6cx1R0ulzE87Sqg/Templates?node-id=106%3A8562';
+  'https://www.figma.com/community/file/935959613109017886/Chakra-Templates-UI-Kit';
 export const CONTRIBUTORS_LINK =
   'https://github.com/hauptrolle/chakra-templates/graphs/contributors';
 export const SUGGEST_TEMPLATE_LINK =

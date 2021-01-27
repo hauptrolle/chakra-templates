@@ -7,6 +7,7 @@ export interface Category {
 export interface SubCategory {
   name: string;
   id: string;
+  description?: string;
   children?: Template[];
 }
 
@@ -110,6 +111,10 @@ export const data: Category[] = [
         name: 'Authentication',
         id: 'authentication',
         children: [
+          {
+            name: 'Join our Team',
+            filename: 'joinOurTeam',
+          },
           {
             name: 'Simple Login Card',
             filename: 'simpleCard',

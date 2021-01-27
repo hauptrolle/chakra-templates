@@ -6,6 +6,7 @@ import NProgress from 'nprogress';
 
 import { theme } from '../theme';
 import { SEO } from '@/components/SEO';
+import { useEffect } from 'react';
 
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
@@ -13,6 +14,11 @@ Router.events.on('routeChangeError', () => NProgress.done());
 
 function App({ Component, pageProps, router }: AppProps) {
   const isTemplate = router.asPath.startsWith('/templates/');
+
+  useEffect(() => {
+    // Necessary because otherwise 100% body height will break the template preview
+    document.body.classList.add(isTemplate ? 'template' : 'body');
+  }, []);
 
   return (
     <ChakraProvider theme={theme}>
