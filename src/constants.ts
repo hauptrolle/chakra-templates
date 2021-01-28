@@ -21,6 +21,8 @@ export const SUGGEST_TEMPLATE_LINK =
  * Splitbee events
  */
 export const SPLITBEE_HERO_SUGGEST_TEMPLATE = 'hero_click_suggest_template';
+export const SPLITBEE_TEMPLATE_CLICK_COPY = 'template_copy_button';
+export const SPLITBEE_TEMPLATE_MANUAL_COPY = 'template_copy_manual';
 
 /**
  * SEO constants
