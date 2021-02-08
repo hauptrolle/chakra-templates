@@ -1,5 +1,6 @@
 export interface Category {
   name: string;
+  subLabel: string;
   id: string;
   children?: SubCategory[];
 }
@@ -20,6 +21,7 @@ export interface Template {
 export const data: Category[] = [
   {
     name: 'Page Sections',
+    subLabel: 'Heros,  Features ...',
     id: 'page-sections',
     children: [
       {
@@ -86,6 +88,7 @@ export const data: Category[] = [
   {
     name: 'Navigation',
     id: 'navigation',
+    subLabel: 'Header Navigation, User Navigation ...',
     children: [
       {
         name: 'Navbar',
@@ -110,6 +113,7 @@ export const data: Category[] = [
   {
     name: 'Forms',
     id: 'forms',
+    subLabel: 'Authentication, Newsletter, ...',
     children: [
       {
         name: 'Authentication',

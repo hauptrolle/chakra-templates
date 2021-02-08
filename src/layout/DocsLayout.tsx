@@ -14,7 +14,7 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 
-import { HeaderBar } from '@/components/HeaderBar';
+import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Navigation } from '@/components/Navigation';
 import { Logo } from '@/components/Logo';
@@ -37,11 +37,7 @@ export const DocsLayout = ({ children }: DocsLayoutProps) => {
 
   return (
     <>
-      <HeaderBar
-        showBorder={true}
-        showNavButton={true}
-        onMenuButtonClick={onOpen}
-      />
+      <Header />
       <Container maxW={'7xl'} flex={'1 0 auto'} py={8} mt={20}>
         <Stack
           direction={{ base: 'column', lg: 'row' }}

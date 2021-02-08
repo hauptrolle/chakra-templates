@@ -5,6 +5,7 @@ import { getTemplatesCount } from '@/utils/getTemplatesCount';
 const testData: Category[] = [
   {
     name: 'Page Sections',
+    subLabel: 'Test',
     id: 'page-sections',
     children: [
       {
@@ -41,6 +42,7 @@ const testData: Category[] = [
   },
   {
     name: 'Navigation',
+    subLabel: 'Test',
     id: 'navigation',
     children: [
       {

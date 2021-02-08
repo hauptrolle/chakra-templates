@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { HeaderBar } from '@/components/HeaderBar';
+import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 
 interface AppLayoutProps {
@@ -10,7 +10,7 @@ interface AppLayoutProps {
 export const AppLayout = ({ children }: AppLayoutProps) => {
   return (
     <>
-      <HeaderBar />
+      <Header />
       {children}
       <Footer />
     </>
