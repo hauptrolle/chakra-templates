@@ -12,7 +12,9 @@ import {
   DrawerHeader,
   DrawerBody,
   useDisclosure,
+  IconButton,
 } from '@chakra-ui/react';
+import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -53,7 +55,26 @@ export const DocsLayout = ({ children }: DocsLayoutProps) => {
       </Container>
       <Footer />
 
-      <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
+      <IconButton
+        display={{ base: 'block', lg: 'none' }}
+        position={'fixed'}
+        bottom={4}
+        right={6}
+        size={'md'}
+        isRound={true}
+        onClick={onOpen}
+        aria-label={'Toggle Docs Menu'}
+        bg={'white'}
+        css={{
+          boxShadow:
+            '0px 3px 5px -1px rgb(0 0 0 / 20%), 0px 6px 10px 0px rgb(0 0 0 / 14%), 0px 1px 18px 0px rgb(0 0 0 / 12%)',
+        }}
+        icon={
+          isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
+        }
+      />
+
+      <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
         <DrawerOverlay>
           <DrawerContent>
             <DrawerCloseButton />
