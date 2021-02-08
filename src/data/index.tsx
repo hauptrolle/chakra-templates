@@ -92,6 +92,10 @@ export const data: Category[] = [
         id: 'navbar',
         children: [
           {
+            name: 'With Sub-Navigation & CTA',
+            filename: 'withSubnavigation',
+          },
+          {
             name: 'Simple with user dropdown',
             filename: 'simple',
           },
