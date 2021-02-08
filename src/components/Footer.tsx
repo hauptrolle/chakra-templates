@@ -5,7 +5,9 @@ import {
   Stack,
   Text,
   Link,
+  SimpleGrid,
   useColorModeValue,
+  Flex,
 } from '@chakra-ui/react';
 import { IoLogoVercel } from 'react-icons/io5';
 import NextLink from 'next/link';
@@ -16,23 +18,25 @@ import {
   GITHUB_LINK,
   TWITTER_LINK,
   FIGMA_LINK,
+  CONTRIBUTORS_LINK,
 } from '../constants';
+import { Logo } from '@/components/Logo';
 
 const SOCIAL_LINKS = [
   {
-    label: 'Discord',
+    label: 'Discord Community',
     href: DISCORD_INVITE_LINK,
   },
   {
-    label: 'GitHub',
+    label: 'GitHub Repository',
     href: GITHUB_LINK,
   },
   {
-    label: 'Twitter',
+    label: 'Twitter Account',
     href: TWITTER_LINK,
   },
   {
-    label: 'Figma',
+    label: 'Figma Design Ressources',
     href: FIGMA_LINK,
   },
 ];
@@ -40,18 +44,22 @@ const SOCIAL_LINKS = [
 export const Footer = () => {
   return (
     <Box
-      bg={useColorModeValue('gray.200', 'gray.900')}
+      bg={useColorModeValue('gray.100', 'gray.900')}
       color={useColorModeValue('gray.600', 'gray.500')}
       py={{ base: 4, sm: 8 }}>
-      <Container as={Stack} spacing={6} maxW={'7xl'} direction={'column'}>
-        <Stack
-          direction={{ base: 'column', md: 'row' }}
-          spacing={{ base: 8, md: 32 }}>
+      <Container maxW={'7xl'}>
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} mb={6} spacing={6}>
+          <Flex justify={'center'} align={'center'}>
+            <Link href={'/'} passHref>
+              <Icon as={Logo} w={{ base: 12 }} h={{ base: 12 }} />
+            </Link>
+          </Flex>
+
           <Stack spacing={4}>
             <Text fontFamily={'heading'} fontSize={'lg'}>
               Social
             </Text>
-            <Stack>
+            <Stack align={'start'}>
               {SOCIAL_LINKS.map((link) => (
                 <Link href={link.href}>{link.label}</Link>
               ))}
@@ -62,7 +70,7 @@ export const Footer = () => {
             <Text fontFamily={'heading'} fontSize={'lg'}>
               Templates
             </Text>
-            <Stack>
+            <Stack align={'start'}>
               {data.map((category) => (
                 <NextLink
                   passHref
@@ -77,7 +85,7 @@ export const Footer = () => {
             <Text fontFamily={'heading'} fontSize={'lg'}>
               Analytics
             </Text>
-            <Stack>
+            <Stack align={'start'}>
               <Link href={ANALYTICS_LINK}>Public Statistics</Link>
               <Link href="https://splitbee.io?ref=chakratemplates">
                 <img
@@ -90,7 +98,7 @@ export const Footer = () => {
               </Link>
             </Stack>
           </Stack>
-        </Stack>
+        </SimpleGrid>
 
         <Stack
           textAlign={'center'}
@@ -108,8 +116,7 @@ export const Footer = () => {
           <Text>
             Made on the Internet by{' '}
             <Link href={'https://twitter.com/hauptrolle_'}>Achim Rolle</Link>{' '}
-            and{' '}
-            <Link href={'https://twitter.com/NikolovLazar'}>Lazar Nikolov</Link>
+            and <Link href={CONTRIBUTORS_LINK}>Contributors</Link>
           </Text>
         </Stack>
       </Container>
