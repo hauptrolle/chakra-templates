@@ -5,8 +5,6 @@ import {
   Stack,
   useDisclosure,
   IconButton,
-  Text,
-  useBreakpointValue,
   useColorModeValue,
   Icon,
   useColorMode,
@@ -76,7 +74,7 @@ export const Header = () => {
                 <Heading
                   as={'h1'}
                   fontSize={'xl'}
-                  display={{ base: 'none', md: 'flex' }}>
+                  display={{ base: 'none', md: 'block' }}>
                   <TextUnderline>Chakra</TextUnderline> Templates
                 </Heading>
               </Stack>

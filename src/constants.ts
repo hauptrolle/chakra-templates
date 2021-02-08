@@ -5,7 +5,7 @@ export const PRODUCTION_URL = 'https://chakra-templates.dev';
  * LINKS
  */
 export const TEMPLATES_LINK = '/page-sections/hero';
-export const DISCORD_INVITE_LINK = 'https://discord.gg/CfUTeTw89G';
+export const DISCORD_INVITE_LINK = 'https://discord.gg/4Y3bQk6sTb';
 export const GITHUB_LINK = 'https://github.com/hauptrolle/chakra-templates';
 export const ANALYTICS_LINK =
   'https://app.splitbee.io/public/chakra-templates.dev';
