@@ -1,12 +1,12 @@
 import { useEffect, useRef } from 'react';
 import { CodeBlock, a11yDark } from 'react-code-blocks';
 import { Box, Button, useClipboard } from '@chakra-ui/react';
-import { Category, SubCategory, Template } from '../data';
 
 import {
   SPLITBEE_TEMPLATE_CLICK_COPY,
   SPLITBEE_TEMPLATE_MANUAL_COPY,
 } from '../constants';
+import { Category, SubCategory, Template } from '../data/types';
 
 type CodeSampleProps = {
   template: Template;

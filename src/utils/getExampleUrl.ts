@@ -1,4 +1,4 @@
-import { Category, SubCategory, Template } from '../data';
+import { Category, SubCategory, Template } from '../data/types';
 
 export const getExampleUrl = (
   category: Category,

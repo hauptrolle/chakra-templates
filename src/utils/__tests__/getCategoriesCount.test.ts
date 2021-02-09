@@ -1,6 +1,5 @@
-import { Category } from '../../data';
-
 import { getCategoriesCount } from '@/utils/getCategoriesCount';
+import { Category } from '../../data/types';
 
 const testData: Category[] = [
   {
