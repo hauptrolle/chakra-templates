@@ -1,0 +1,20 @@
+import { SubCategory } from '../types';
+
+export const navbar: SubCategory = {
+  name: 'Navbar',
+  id: 'navbar',
+  children: [
+    {
+      name: 'With Sub-Navigation & CTA',
+      filename: 'withSubnavigation',
+    },
+    {
+      name: 'Simple with user dropdown',
+      filename: 'simple',
+    },
+    {
+      name: 'With action button & user dropdown',
+      filename: 'withAction',
+    },
+  ],
+};

@@ -15,8 +15,8 @@ import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 import { ResizableFrame } from '@/components/ResizableFrame';
 import { CodeSample } from '@/components/CodeSample';
-import { Template, Category, SubCategory } from 'data';
 import { getExampleUrl } from '@/utils/getExampleUrl';
+import { Category, SubCategory, Template } from '../data/types';
 
 type ExampleProps = {
   template: Template;

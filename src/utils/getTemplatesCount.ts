@@ -1,4 +1,4 @@
-import { Category } from '../data';
+import { Category } from '../data/types';
 
 export const getTemplatesCount = (data: Category[]) => {
   return data

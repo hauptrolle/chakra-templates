@@ -4,8 +4,9 @@ import { Stack, Heading, Text } from '@chakra-ui/react';
 import { DocsLayout } from '@/layout/DocsLayout';
 import { Example } from '@/components/Example';
 import { SEO_TITLE } from '../constants';
-import { data, Template, Category, SubCategory } from 'data';
+import { data } from 'data';
 import { SEO } from '@/components/SEO';
+import { Category, SubCategory, Template } from '../data/types';
 
 type PageProps = {
   category: Category;

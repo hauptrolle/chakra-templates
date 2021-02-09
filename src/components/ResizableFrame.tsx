@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import { Box, useColorMode } from '@chakra-ui/react';
 import { Resizable } from 're-resizable';
 
-import { Category, SubCategory, Template } from '../data';
 import { getExampleUrl } from '@/utils/getExampleUrl';
+import { Category, SubCategory, Template } from '../data/types';
 
 type IframeProps = {
   template: Template;
