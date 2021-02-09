@@ -6,16 +6,24 @@
 
 1. Fork this repository
 1. Clone your fork to your local machine
+
    ```bash
    git clone https://github.com/<your_github_username>/chakra-templates.git
    cd chakra-templates
    ```
+
 1. Install all dependencies by running `yarn install` in your terminal
 
 To fetch the current github stargazers count during development it is necessary to create a `.env.development.local` file with a [GitHub
 access token](https://github.com/settings/tokens/new?description=Chakra+Tempaltes+Development) inside.
 
-```
+Make sure the token permissions look like this
+
+![Demo](./docs/screenshots/token_perms_screenshot.png)
+
+In other words ✅ in the **repo** checkbox and then click on **Generate Token**
+
+```txt
 GITHUB_TOKEN=YOUR_TOKEN_HERE
 ```
 
@@ -23,7 +31,7 @@ GITHUB_TOKEN=YOUR_TOKEN_HERE
 
 ### Commands
 
-`yarn dev`: run the Next.js dev command. Visit http://localhost:3000/ to see the local environment
+`yarn dev`: run the Next.js dev command. Visit [http://localhost:3000/](http://localhost:3000/) to see the local environment
 
 `yarn build`: run the Next.js build command
 
@@ -49,7 +57,7 @@ Adding a new template can be archived within 2 simple steps.
 ### Miscellaneous
 
 - All templates are build mobile first. So keep this in mind for your template.
-- Use the object syntax for responsive props. Learn more about this here: https://chakra-ui.com/docs/features/responsive-styles#the-object-syntax
+- Use the object syntax for responsive props. Learn more about this here: [https://chakra-ui.com/docs/features/responsive-styles#the-object-syntax](https://chakra-ui.com/docs/features/responsive-styles#the-object-syntax)
 
 ## Commit convention
 
