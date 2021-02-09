@@ -5,6 +5,14 @@ export const cards: SubCategory = {
   id: 'cards',
   children: [
     {
+      name: 'Social User Profile with Image',
+      filename: 'socialProfileWithImage',
+    },
+    {
+      name: 'Social User Profile Simple',
+      filename: 'socialProfileSimple',
+    },
+    {
       name: 'Product Simple',
       filename: 'productSimple',
     },
