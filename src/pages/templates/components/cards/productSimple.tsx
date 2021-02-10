@@ -35,16 +35,15 @@ export default function ProductSimple() {
             w: 'full',
             h: 'full',
             pos: 'absolute',
-            top: 25 / 2,
+            top: 5,
             left: 0,
             backgroundImage: `url(${IMAGE})`,
-            filter: 'blur(25px)',
+            filter: 'blur(15px)',
             zIndex: -1,
           }}
           _groupHover={{
             _after: {
-              top: 0,
-              filter: 'blur(35px)',
+              filter: 'blur(20px)',
             },
           }}>
           <Image
