@@ -1,51 +1,54 @@
 import {
-  Box,
+  Stack,
+  Flex,
   Button,
-  Image,
   Text,
   VStack,
   useBreakpointValue,
 } from '@chakra-ui/react';
 
 export default function WithBackgroundImage() {
-  const heroHeight = useBreakpointValue({ base: '250px', md: '400px' });
-  const ctaSize = useBreakpointValue({ base: 'md', md: 'lg' });
-  const heroTextSize = useBreakpointValue({ base: '2xl', md: '4xl' });
-  const heroTextPaddingX = useBreakpointValue({ base: '1rem', md: '3.5rem' });
-
   return (
-    <Box w={'full'} pos={'relative'} h={heroHeight}>
-      <Image
-        src={'https://placeimg.com/1000/480/tech/grayscale'}
-        alt={'hero image'}
-        w={'100%'}
-        h={'100%'}
-        objectFit={'cover'}
-      />
+    <Flex
+      w={'full'}
+      h={'100vh'}
+      backgroundImage={
+        'url(https://images.unsplash.com/photo-1600267175161-cfaa711b4a81?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)'
+      }
+      backgroundSize={'cover'}
+      backgroundPosition={'center center'}>
       <VStack
-        align={'start'}
-        pos={'absolute'}
-        top={'0'}
-        h={'100%'}
-        justifyContent={'center'}
-        spacing={6}
-        px={heroTextPaddingX}
-        bg={
-          'linear-gradient(0.25turn, rgba(49, 130, 206, 0.7),rgba(49, 130, 206, 0.6), rgba(0,0,0,0))'
-        }
-        maxW={{ base: 'sm', sm: 'md', md: 'lg' }}>
-        <Text
-          color={'white'}
-          fontWeight={700}
-          lineHeight={1.2}
-          fontSize={heroTextSize}>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod
-          tempor
-        </Text>
-        <Button colorScheme={'orange'} size={ctaSize}>
-          Call to action text
-        </Button>
+        w={'full'}
+        justify={'center'}
+        px={useBreakpointValue({ base: 4, md: 8 })}
+        bgGradient={'linear(to-r, blackAlpha.600, transparent)'}>
+        <Stack maxW={'2xl'} align={'flex-start'} spacing={6}>
+          <Text
+            color={'white'}
+            fontWeight={700}
+            lineHeight={1.2}
+            fontSize={useBreakpointValue({ base: '3xl', md: '4xl' })}>
+            Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
+            eiusmod tempor
+          </Text>
+          <Stack direction={'row'}>
+            <Button
+              bg={'blue.400'}
+              rounded={'full'}
+              color={'white'}
+              _hover={{ bg: 'blue.500' }}>
+              Show me more
+            </Button>
+            <Button
+              bg={'whiteAlpha.300'}
+              rounded={'full'}
+              color={'white'}
+              _hover={{ bg: 'whiteAlpha.500' }}>
+              Show me more
+            </Button>
+          </Stack>
+        </Stack>
       </VStack>
-    </Box>
+    </Flex>
   );
 }

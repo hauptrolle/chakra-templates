@@ -5,16 +5,16 @@ export const features: SubCategory = {
   id: 'features',
   children: [
     {
-      name: 'Stats Grid with Image',
-      filename: 'statsGridWithImage',
-    },
-    {
-      name: 'Download App Links',
-      filename: 'downloadAppLinks',
+      name: '2 columns with Image',
+      filename: 'splitWithImage',
     },
     {
       name: 'Simple three column grid',
       filename: 'simpleThreeColumns',
+    },
+    {
+      name: 'Stats Grid with Image',
+      filename: 'statsGridWithImage',
     },
     {
       name: 'Grid list with heading',

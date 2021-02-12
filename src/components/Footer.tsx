@@ -61,7 +61,9 @@ export const Footer = () => {
             </Text>
             <Stack align={'start'}>
               {SOCIAL_LINKS.map((link) => (
-                <Link href={link.href}>{link.label}</Link>
+                <Link key={link.label} href={link.href}>
+                  {link.label}
+                </Link>
               ))}
             </Stack>
           </Stack>

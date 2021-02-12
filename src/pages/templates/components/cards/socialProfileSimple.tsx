@@ -3,8 +3,6 @@ import {
   Avatar,
   Box,
   Center,
-  Image,
-  Flex,
   Text,
   Stack,
   Button,
@@ -19,7 +17,7 @@ export default function SocialProfileSimple() {
       <Box
         maxW={'320px'}
         w={'full'}
-        bg={useColorModeValue('white', 'gray.800')}
+        bg={useColorModeValue('white', 'gray.900')}
         boxShadow={'2xl'}
         rounded={'lg'}
         p={6}
@@ -50,7 +48,10 @@ export default function SocialProfileSimple() {
         <Text fontWeight={600} color={'gray.500'} mb={4}>
           @lindsey_jam3s
         </Text>
-        <Text textAlign={'center'} color={'gray.700'} px={3}>
+        <Text
+          textAlign={'center'}
+          color={useColorModeValue('gray.700', 'gray.400')}
+          px={3}>
           Actress, musician, songwriter and artist. PM for work inquires or{' '}
           <Link href={'#'} color={'blue.400'}>
             #tag
@@ -59,13 +60,25 @@ export default function SocialProfileSimple() {
         </Text>
 
         <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
-          <Badge px={2} py={1} bg={'gray.50'} fontWeight={'400'}>
+          <Badge
+            px={2}
+            py={1}
+            bg={useColorModeValue('gray.50', 'gray.800')}
+            fontWeight={'400'}>
             #art
           </Badge>
-          <Badge px={2} py={1} bg={'gray.50'} fontWeight={'400'}>
+          <Badge
+            px={2}
+            py={1}
+            bg={useColorModeValue('gray.50', 'gray.800')}
+            fontWeight={'400'}>
             #photography
           </Badge>
-          <Badge px={2} py={1} bg={'gray.50'} fontWeight={'400'}>
+          <Badge
+            px={2}
+            py={1}
+            bg={useColorModeValue('gray.50', 'gray.800')}
+            fontWeight={'400'}>
             #music
           </Badge>
         </Stack>
@@ -87,7 +100,7 @@ export default function SocialProfileSimple() {
             bg={'blue.400'}
             color={'white'}
             boxShadow={
-              '0 20px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
+              '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
             }
             _hover={{
               bg: 'blue.500',

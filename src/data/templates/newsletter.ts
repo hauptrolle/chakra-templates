@@ -5,8 +5,12 @@ export const newsletter: SubCategory = {
   id: 'newsletter',
   children: [
     {
-      name: 'Email address only Form',
-      filename: 'emailOnly',
+      name: 'Card with Illustration',
+      filename: 'cardWithIllustration',
+    },
+    {
+      name: 'Simple',
+      filename: 'simple',
     },
   ],
 };
