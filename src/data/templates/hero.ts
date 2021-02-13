@@ -24,16 +24,8 @@ export const hero: SubCategory = {
       filename: 'splitScreen',
     },
     {
-      name: 'Download App Links',
-      filename: 'downloadAppLinks',
-    },
-    {
       name: 'With background image and gradient',
       filename: 'withBackgroundImage',
-    },
-    {
-      name: 'With text, image & CTA',
-      filename: 'withImage',
     },
   ],
 };

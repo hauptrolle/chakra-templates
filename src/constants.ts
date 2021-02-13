@@ -4,6 +4,7 @@ export const PRODUCTION_URL = 'https://chakra-templates.dev';
 /**
  * LINKS
  */
+export const TWITTER_LINK_ACHIM = 'https://twitter.com/hauptrolle_';
 export const TEMPLATES_LINK = '/page-sections/hero';
 export const DISCORD_INVITE_LINK = 'https://discord.gg/4Y3bQk6sTb';
 export const GITHUB_LINK = 'https://github.com/hauptrolle/chakra-templates';

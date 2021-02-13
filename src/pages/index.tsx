@@ -58,6 +58,7 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
 
   return {
     props: { contributors, stargazers, categoriesCount, templatesCount },
+    revalidate: 3600,
   };
 };
 

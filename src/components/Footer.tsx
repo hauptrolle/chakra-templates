@@ -19,6 +19,7 @@ import {
   TWITTER_LINK,
   FIGMA_LINK,
   CONTRIBUTORS_LINK,
+  TWITTER_LINK_ACHIM,
 } from '../constants';
 import { Logo } from '@/components/Logo';
 
@@ -50,9 +51,11 @@ export const Footer = () => {
       <Container maxW={'7xl'}>
         <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} mb={6} spacing={6}>
           <Flex justify={'center'} align={'center'}>
-            <Link href={'/'} passHref>
-              <Icon as={Logo} w={{ base: 12 }} h={{ base: 12 }} />
-            </Link>
+            <NextLink href={'/'} passHref>
+              <Link>
+                <Icon as={Logo} w={{ base: 12 }} h={{ base: 12 }} />
+              </Link>
+            </NextLink>
           </Flex>
 
           <Stack spacing={4}>
@@ -61,7 +64,9 @@ export const Footer = () => {
             </Text>
             <Stack align={'start'}>
               {SOCIAL_LINKS.map((link) => (
-                <Link href={link.href}>{link.label}</Link>
+                <Link key={link.label} href={link.href}>
+                  {link.label}
+                </Link>
               ))}
             </Stack>
           </Stack>
@@ -73,6 +78,7 @@ export const Footer = () => {
             <Stack align={'start'}>
               {data.map((category) => (
                 <NextLink
+                  key={category.id}
                   passHref
                   href={`/${category.id}/${category.children?.[0].id}`}>
                   <Link>{category.name}</Link>
@@ -115,8 +121,8 @@ export const Footer = () => {
           </Text>
           <Text>
             Made on the Internet by{' '}
-            <Link href={'https://twitter.com/hauptrolle_'}>Achim Rolle</Link>{' '}
-            and <Link href={CONTRIBUTORS_LINK}>Contributors</Link>
+            <Link href={TWITTER_LINK_ACHIM}>Achim Rolle</Link> and{' '}
+            <Link href={CONTRIBUTORS_LINK}>Contributors</Link>
           </Text>
         </Stack>
       </Container>

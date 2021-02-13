@@ -50,6 +50,7 @@ export const Example = ({ template, category, subCategory }: ExampleProps) => {
           <Text
             color={useColorModeValue('gray.700', 'gray.300')}
             fontSize={'sm'}
+            fontWeight={600}
             mb={{ base: 4, md: 0 }}>
             {template.name}
           </Text>
