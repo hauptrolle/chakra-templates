@@ -26,6 +26,7 @@
     "@chakra-ui/react": "^1.1.5",
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
+    "@splitbee/web": "^0.2.4",
     "directory-tree": "^2.2.5",
     "framer-motion": "^3.2.1",
     "next": "10.0.5",
