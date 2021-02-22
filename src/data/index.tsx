@@ -4,6 +4,8 @@ import { features } from './templates/features';
 import { navbar } from './templates/navbar';
 import { authentication } from './templates/authentication';
 import { newsletter } from './templates/newsletter';
+import { footer } from './templates/footer';
+import { testimonials } from './templates/testimonials';
 
 import { Category } from './types';
 
@@ -12,7 +14,7 @@ export const data: Category[] = [
     name: 'Page Sections',
     subLabel: 'Large Page Sections like Hero, Features ...',
     id: 'page-sections',
-    children: [hero, features],
+    children: [hero, features, footer, testimonials],
   },
   {
     name: 'Navigation',

@@ -42,14 +42,14 @@ export const Example = ({ template, category, subCategory }: ExampleProps) => {
           alignItems={'center'}
           justifyContent={'space-between'}
           flexDirection={{ base: 'column', md: 'row' }}
-          py={2}
+          py={3}
           px={4}
           borderBottomWidth={1}
           borderBottomStyle={'solid'}
           borderColor={useColorModeValue('gray.200', 'gray.900')}>
           <Text
-            color={useColorModeValue('gray.700', 'gray.300')}
-            fontSize={'sm'}
+            color={useColorModeValue('gray.800', 'gray.300')}
+            fontSize={'md'}
             fontWeight={600}
             mb={{ base: 4, md: 0 }}>
             {template.name}

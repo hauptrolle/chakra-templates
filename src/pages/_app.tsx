@@ -1,12 +1,13 @@
+import { useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import Router from 'next/router';
 import Head from 'next/head';
 import { ChakraProvider } from '@chakra-ui/react';
 import NProgress from 'nprogress';
+import splitbee from '@splitbee/web';
 
 import { theme } from '../theme';
 import { SEO } from '@/components/SEO';
-import { useEffect } from 'react';
 
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
@@ -16,6 +17,10 @@ function App({ Component, pageProps, router }: AppProps) {
   const isTemplate = router.asPath.startsWith('/templates/');
 
   useEffect(() => {
+    if (process.env.NODE_ENV === 'production') {
+      splitbee.init();
+    }
+
     // Necessary because otherwise 100% body height will break the template preview
     document.body.classList.add(isTemplate ? 'template' : 'body');
   }, []);
@@ -31,9 +36,6 @@ function App({ Component, pageProps, router }: AppProps) {
           href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&family=Inter:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
-        {process.env.NODE_ENV === 'production' && (
-          <script async src="https://cdn.splitbee.io/sb.js" />
-        )}
       </Head>
       <Component {...pageProps} />
     </ChakraProvider>
