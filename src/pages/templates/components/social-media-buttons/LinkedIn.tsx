@@ -3,7 +3,7 @@ import { Button, Center, Text } from '@chakra-ui/react';
 
 export default function LinkedinButton() {
   return (
-    <Center>
+    <Center p={20}>
       <Button w={'md'} colorScheme={'messenger'} leftIcon={<SiLinkedin />}>
         <Center>
           <Text>Send to Messenger</Text>

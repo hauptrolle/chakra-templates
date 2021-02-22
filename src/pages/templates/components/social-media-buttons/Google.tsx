@@ -3,7 +3,7 @@ import { Button, Center, Text } from '@chakra-ui/react';
 
 export default function GoogleButton() {
   return (
-    <Center>
+    <Center p={20}>
       <Button w={'md'} variant={'outline'} leftIcon={<FcGoogle />}>
         <Center>
           <Text>Sign in with Google</Text>
