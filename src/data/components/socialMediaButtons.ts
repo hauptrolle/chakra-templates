@@ -6,23 +6,23 @@ export const buttons: SubCategory = {
   children: [
     {
       name: 'All Buttons',
-      filename: 'All',
+      filename: 'all',
     },
     {
       name: 'Messenger Button',
-      filename: 'Messenger',
+      filename: 'messenger',
     },
     {
       name: 'Facebook Button',
-      filename: 'Facebook',
+      filename: 'facebook',
     },
     {
       name: 'LinkedIn Button',
-      filename: 'LinkedIn',
+      filename: 'linkedIn',
     },
     {
       name: 'Google Button',
-      filename: 'Google',
+      filename: 'google',
     },
   ],
 };
