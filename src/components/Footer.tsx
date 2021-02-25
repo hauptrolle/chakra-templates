@@ -9,8 +9,8 @@ import {
   useColorModeValue,
   Flex,
 } from '@chakra-ui/react';
-import { IoLogoVercel } from 'react-icons/io5';
 import NextLink from 'next/link';
+import NextImage from 'next/image';
 import { data } from '../data';
 import {
   ANALYTICS_LINK,
@@ -39,7 +39,7 @@ const SOCIAL_LINKS = [
     href: TWITTER_LINK,
   },
   {
-    label: 'Figma Design Ressources',
+    label: 'Figma Design Resources',
     href: FIGMA_LINK,
   },
 ];
@@ -84,11 +84,13 @@ export const Footer = () => {
             <ListHeader>Analytics</ListHeader>
             <Link href={ANALYTICS_LINK}>Public Statistics</Link>
             <Link href="https://splitbee.io?ref=chakratemplates">
-              <img
+              <NextImage
                 src={useColorModeValue(
                   'https://splitbee.io/splitbee-badge.svg',
                   'https://splitbee.io/splitbee-badge-dark.svg'
                 )}
+                width={114}
+                height={45}
                 alt="Splitbee Analytics"
               />
             </Link>
@@ -97,10 +99,11 @@ export const Footer = () => {
           <Stack align={'flex-start'}>
             <ListHeader>Support us</ListHeader>
             <Link href={BUY_ME_A_COFFEE_LINK}>
-              <img
+              <NextImage
                 src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
                 alt="Buy Me A Coffee"
-                style={{ height: '40px' }}
+                height={40}
+                width={142.47}
               />
             </Link>
           </Stack>

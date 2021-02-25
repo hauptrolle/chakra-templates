@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { CodeBlock, a11yDark } from 'react-code-blocks';
 import { Box, Button, useClipboard } from '@chakra-ui/react';
+import splitbee from '@splitbee/web';
 
 import {
   SPLITBEE_TEMPLATE_CLICK_COPY,
@@ -26,8 +27,7 @@ export const CodeSample = ({
 
   const handleManualCopy = (event: ClipboardEvent) => {
     if (codeRef?.current?.contains(event.target as Node)) {
-      // @ts-ignore TODO add type to window or use new splitbee/web package
-      window.splitbee.track(SPLITBEE_TEMPLATE_MANUAL_COPY, {
+      splitbee.track(SPLITBEE_TEMPLATE_MANUAL_COPY, {
         template: template.name,
       });
     }

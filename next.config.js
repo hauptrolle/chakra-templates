@@ -1,6 +1,8 @@
 module.exports = {
   images: {
     domains: [
+      'splitbee.io',
+      'cdn.buymeacoffee.com',
       'images.unsplash.com',
       'avatars.githubusercontent.com',
       'avatars0.githubusercontent.com',
