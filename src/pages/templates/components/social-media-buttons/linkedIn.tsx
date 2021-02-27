@@ -10,7 +10,7 @@ export default function LinkedinButton() {
         colorScheme={'messenger'}
         leftIcon={<SiLinkedin />}>
         <Center>
-          <Text>Send to Messenger</Text>
+          <Text>Send to Linkedin</Text>
         </Center>
       </Button>
     </Center>
