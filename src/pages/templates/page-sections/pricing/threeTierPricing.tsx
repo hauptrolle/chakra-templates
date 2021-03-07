@@ -1,202 +1,197 @@
 import {
   Box,
-  Flex,
+  Stack,
+  HStack,
   Heading,
-  List,
-  ListIcon,
-  ListItem,
   Text,
   VStack,
-  Button,
-  Badge,
   useColorModeValue,
+  List,
+  ListItem,
+  ListIcon,
+  Button,
 } from '@chakra-ui/react';
-import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
+import { ReactChild } from 'react';
+import { FaCheckCircle } from 'react-icons/fa';
 
-export default function PricingTable() {
-  const borderBg = useColorModeValue('gray.200', 'gray.500');
-  const pricingItemStyles = {
-    py: 16,
-    px: 8,
-    mb: 4,
-    mt: { base: 12, lg: 24 },
-    mx: { base: 'auto', lg: 4 },
-    borderColor: borderBg,
-    borderRadius: 10,
-    borderWidth: '2px',
-    maxW: '350px',
-  };
-  const priceProps = {
-    fontSize: '5xl',
-    fontWeight: 'bold',
-    my: 3,
-  };
-  const priceTypeProps = {
-    fontSize: '2xl',
-    fontWeight: 'semibold',
-    color: 'gray.500',
-  };
+function PriceWrapper({ children }: any, props: any) {
   return (
-    <Box m="0 auto" bg={useColorModeValue('gray.50', 'gray.800')}>
-      <Box textAlign="center" mt="1rem">
-        <Heading
-          fontSize="3rem"
-          fontWeight="700"
-          letterSpacing="-0.1rem"
-          mb={8}>
-          Plans that fit your needs.
+    <Box
+      mb={4}
+      shadow="base"
+      borderWidth="1px"
+      alignSelf={{ base: 'center', md: 'center', lg: 'flex-start' }}
+      borderColor={useColorModeValue('gray.200', 'gray.500')}
+      borderRadius="10px"
+      {...props}>
+      {children}
+    </Box>
+  );
+}
+
+export default function ThreeTierPricing() {
+  return (
+    <Box py={12}>
+      <VStack spacing={4} textAlign="center">
+        <Heading as="h1" fontSize="4xl">
+          Plans that fit your need
         </Heading>
         <Text fontSize="lg">
           Start with 14-day free trial. No credit card needed. Cancel at
           anytime.
         </Text>
+      </VStack>
+      <Box mx="auto" my={8}>
+        <Stack
+          direction={{ base: 'column', md: 'column', lg: 'row' }}
+          textAlign="center"
+          justify="center">
+          <PriceWrapper>
+            <Box py={4} px={12}>
+              <Text fontWeight="500" fontSize="2xl">
+                Hobby
+              </Text>
+              <HStack justifyContent="center">
+                <Text fontSize="3xl" fontWeight="600">
+                  $
+                </Text>
+                <Text fontSize="5xl" fontWeight="900">
+                  79
+                </Text>
+                <Text fontSize="3xl" color="gray.500">
+                  /month
+                </Text>
+              </HStack>
+            </Box>
+            <VStack bg={useColorModeValue('gray.50', 'gray.700')} py={4}>
+              <List spacing={3} textAlign="start" px={12}>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  unlimited build minutes
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  Lorem, ipsum dolor.
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  5TB Lorem, ipsum dolor.
+                </ListItem>
+              </List>
+              <Box w="80%" pt={7}>
+                <Button w="full" colorScheme="red" variant="outline">
+                  Start trial
+                </Button>
+              </Box>
+            </VStack>
+          </PriceWrapper>
+
+          <PriceWrapper>
+            <Box position="relative">
+              <Box
+                position="absolute"
+                top="-10px"
+                left="50%"
+                style={{ transform: 'translate(-50%)' }}>
+                <Text
+                  textTransform="uppercase"
+                  bg={useColorModeValue('red.300', 'red.700')}
+                  px={2}
+                  color={useColorModeValue('gray.900', 'gray.300')}
+                  fontSize="sm"
+                  fontWeight="600"
+                  rounded="xl">
+                  Most Popular
+                </Text>
+              </Box>
+              <Box py={4} px={12}>
+                <Text fontWeight="500" fontSize="2xl">
+                  Growth
+                </Text>
+                <HStack justifyContent="center">
+                  <Text fontSize="3xl" fontWeight="600">
+                    $
+                  </Text>
+                  <Text fontSize="5xl" fontWeight="900">
+                    149
+                  </Text>
+                  <Text fontSize="3xl" color="gray.500">
+                    /month
+                  </Text>
+                </HStack>
+              </Box>
+              <VStack bg={useColorModeValue('gray.50', 'gray.700')} py={4}>
+                <List spacing={3} textAlign="start" px={12}>
+                  <ListItem>
+                    <ListIcon as={FaCheckCircle} color="green.500" />
+                    unlimited build minutes
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon as={FaCheckCircle} color="green.500" />
+                    Lorem, ipsum dolor.
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon as={FaCheckCircle} color="green.500" />
+                    5TB Lorem, ipsum dolor.
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon as={FaCheckCircle} color="green.500" />
+                    5TB Lorem, ipsum dolor.
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon as={FaCheckCircle} color="green.500" />
+                    5TB Lorem, ipsum dolor.
+                  </ListItem>
+                </List>
+                <Box w="80%" pt={7}>
+                  <Button w="full" colorScheme="red">
+                    Start trial
+                  </Button>
+                </Box>
+              </VStack>
+            </Box>
+          </PriceWrapper>
+          <PriceWrapper>
+            <Box py={4} px={12}>
+              <Text fontWeight="500" fontSize="2xl">
+                Scale
+              </Text>
+              <HStack justifyContent="center">
+                <Text fontSize="3xl" fontWeight="600">
+                  $
+                </Text>
+                <Text fontSize="5xl" fontWeight="900">
+                  349
+                </Text>
+                <Text fontSize="3xl" color="gray.500">
+                  /month
+                </Text>
+              </HStack>
+            </Box>
+            <VStack bg={useColorModeValue('gray.50', 'gray.700')} py={4}>
+              <List spacing={3} textAlign="start" px={12}>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  unlimited build minutes
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  Lorem, ipsum dolor.
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={FaCheckCircle} color="green.500" />
+                  5TB Lorem, ipsum dolor.
+                </ListItem>
+              </List>
+              <Box w="80%" pt={7}>
+                <Button w="full" colorScheme="red" variant="outline">
+                  Start trial
+                </Button>
+              </Box>
+            </VStack>
+          </PriceWrapper>
+        </Stack>
       </Box>
-
-      <Flex
-        maxW={['100%', '90%']}
-        m="0 auto"
-        direction={['column', 'column', 'row']}
-        textAlign="center">
-        <VStack flex="1" mx={['0.3rem', '1rem']}>
-          <VStack
-            {...pricingItemStyles}
-            bg={useColorModeValue('white', 'gray.800')}>
-            <Badge fontSize="sm">Lite</Badge>
-            <Text {...priceProps}>
-              79
-              <Text as="span" {...priceTypeProps}>
-                $/month
-              </Text>
-            </Text>
-            <Text minH={24}>
-              Best for small scale projects. Only crucial features included.
-            </Text>
-            <Box>
-              <Button colorScheme="green" variant="outline">
-                Start Trial
-              </Button>
-            </Box>
-          </VStack>
-          <VStack>
-            <List spacing={3} textAlign="start">
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                100 build minutes
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />1 concurrent
-                builds
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaTimesCircle} color="red.500" />
-                150GB Transfer
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaTimesCircle} color="red.500" />
-                Email support
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaTimesCircle} color="red.500" />
-                Phone support
-              </ListItem>
-            </List>
-          </VStack>
-        </VStack>
-
-        <VStack flex="1" w={['95%', '100%']} m="0 auto">
-          <VStack
-            {...pricingItemStyles}
-            bg="green.900"
-            color="white"
-            shadow="lg">
-            <Badge fontSize="md">Ultra</Badge>
-            <Text {...priceProps}>
-              149
-              <Text as="span" {...priceTypeProps}>
-                $/month
-              </Text>
-            </Text>
-            <Text minH={24}>
-              Best for high traffic websites. Comes with email support.
-            </Text>
-            <Box>
-              <Button size="lg" colorScheme="green" variant="solid">
-                Start Trial
-              </Button>
-            </Box>
-          </VStack>
-          <VStack>
-            <List spacing={3} textAlign="start">
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                Lorem ipsum dolor sit.
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                Lorem, ipsum dolor.
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                Lorem, ipsum dolor.
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                Email support
-              </ListItem>
-              <ListItem>
-                <ListIcon color="red.500" as={FaTimesCircle} />
-                Phone support
-              </ListItem>
-            </List>
-          </VStack>
-        </VStack>
-
-        <VStack flex="1" mx={['0.3rem', '1rem']}>
-          <VStack
-            {...pricingItemStyles}
-            bg={useColorModeValue('white', 'gray.800')}>
-            <Badge>Ultra Max</Badge>
-            <Text {...priceProps}>
-              349
-              <Text as="span" {...priceTypeProps}>
-                $/month
-              </Text>
-            </Text>
-            <Text minH={24}>
-              Highly scalable plan. Best suitable for enterprise applications.
-            </Text>
-            <Box>
-              <Button colorScheme="green" variant="outline">
-                Start Trial
-              </Button>
-            </Box>
-          </VStack>
-          <VStack>
-            <List spacing={3} textAlign="start">
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                unlimited build minutes
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                Lorem, ipsum dolor.
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                5TB Lorem, ipsum dolor.
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                Email support
-              </ListItem>
-              <ListItem>
-                <ListIcon as={FaCheckCircle} color="green.500" />
-                Phone support
-              </ListItem>
-            </List>
-          </VStack>
-        </VStack>
-      </Flex>
     </Box>
   );
 }
