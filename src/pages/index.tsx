@@ -28,7 +28,7 @@ const Home: NextPage<PageProps> = ({
   return (
     <AppLayout>
       <SEO />
-      <Hero />
+      <Hero categoriesCount={categoriesCount} templatesCount={templatesCount} />
       <GettingStarted />
       <OpenSource
         contributors={contributors}

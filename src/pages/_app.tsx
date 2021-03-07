@@ -13,11 +13,14 @@ Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
 
+const inIframe = () => window.location !== window.parent.location;
+
 function App({ Component, pageProps, router }: AppProps) {
   const isTemplate = router.asPath.startsWith('/templates/');
 
   useEffect(() => {
-    if (process.env.NODE_ENV === 'production') {
+    // Do not initialize splitbee for iframe previews
+    if (!inIframe()) {
       splitbee.init();
     }
 

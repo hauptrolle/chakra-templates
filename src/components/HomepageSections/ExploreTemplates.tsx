@@ -43,13 +43,12 @@ export const ExploreTemplates = ({ templatesCount }: ExploreTemplatesProps) => {
                   bg={'green.600'}
                   color={'white'}
                   px={8}
-                  py={7}
-                  fontSize={'lg'}
-                  rounded={'full'}
+                  size={'lg'}
+                  fontSize={'md'}
+                  rounded={'md'}
                   rightIcon={<IoArrowForward />}
                   _hover={{
                     bg: 'green.700',
-                    boxShadow: 'xl',
                   }}>
                   Browse Templates
                 </Button>
