@@ -83,6 +83,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "shunkakinoki",
+      "name": "Shun Kakinoki",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39187513?v=4",
+      "profile": "https://www.shunkakinoki.com",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
