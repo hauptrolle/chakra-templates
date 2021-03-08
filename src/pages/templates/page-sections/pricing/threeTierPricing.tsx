@@ -41,10 +41,10 @@ export default function ThreeTierPricing() {
         </Text>
       </VStack>
       <Stack
-        direction={{ base: 'column', md: 'column', lg: 'row' }}
+        direction={{ base: 'column', md: 'row' }}
         textAlign="center"
         justify="center"
-        spacing={8}
+        spacing={{ base: 4, lg: 10 }}
         py={10}>
         <PriceWrapper>
           <Box py={4} px={12}>
