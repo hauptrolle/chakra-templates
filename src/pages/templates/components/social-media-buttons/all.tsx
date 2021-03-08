@@ -24,7 +24,7 @@ export default function All() {
         {/* LinkedIn */}
         <Button w={'full'} colorScheme={'messenger'} leftIcon={<SiLinkedin />}>
           <Center>
-            <Text>Send to Messenger</Text>
+            <Text>Send to Linkedin</Text>
           </Center>
         </Button>
 
