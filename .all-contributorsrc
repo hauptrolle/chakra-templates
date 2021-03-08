@@ -74,6 +74,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "OmkarK45",
+      "name": "Omkar Kulkarni",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45557594?v=4",
+      "profile": "http://omkarkulkarni.netlify.app",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
