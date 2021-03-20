@@ -10,29 +10,33 @@ import {
   TabPanel,
   useColorModeValue,
 } from '@chakra-ui/react';
+import { ReactNode } from 'react';
 import Link from 'next/link';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 
-import { ResizableFrame } from '@/components/ResizableFrame';
 import { CodeSample } from '@/components/CodeSample';
 import { getExampleUrl } from '@/utils/getExampleUrl';
-import { Category, SubCategory, Template } from '../data/types';
+import { Frame } from '@/components/Frame';
 
-type ExampleProps = {
-  template: Template;
-  category: Category;
-  subCategory: SubCategory;
+type PreviewProps = {
+  template: {
+    component: ReactNode;
+    name: string;
+  };
 };
 
 const TABS = ['Preview', 'Code'];
 
-export const Example = ({ template, category, subCategory }: ExampleProps) => {
+// Todo: add breakpoints selector
+// Todo: show component source code
+
+export const Preview = ({ template }: PreviewProps) => {
   return (
     <Box
       rounded={'md'}
       borderWidth={1}
       borderColor={useColorModeValue('gray.200', 'gray.900')}
-      id={template.filename}
+      id={template.name}
       height={'full'}
       style={{
         scrollMarginTop: '2rem',
@@ -58,45 +62,39 @@ export const Example = ({ template, category, subCategory }: ExampleProps) => {
             {TABS.map((tab) => (
               <Tab
                 key={tab}
+                py={2}
                 fontSize={'xs'}
-                fontWeight={400}
+                fontWeight={600}
                 _selected={{
-                  bg: useColorModeValue('green.50', 'green.900'),
+                  bg: useColorModeValue('green.100', 'green.900'),
                   color: useColorModeValue('green.500', 'green.400'),
                 }}>
                 {tab}
               </Tab>
             ))}
-            <Link
-              href={getExampleUrl(category, subCategory, template)}
-              passHref>
-              <IconButton
-                as={'a'}
-                cursor={'pointer'}
-                icon={<ExternalLinkIcon />}
-                size={'sm'}
-                variant={'ghost'}
-                aria-label={'Open in Fullscreen'}
-                title={'Open in Fullscreen'}
-                target="_blank"
-              />
-            </Link>
+            {/*<Link*/}
+            {/*  href={getExampleUrl(category, subCategory, template)}*/}
+            {/*  passHref>*/}
+            {/*  <IconButton*/}
+            {/*    as={'a'}*/}
+            {/*    cursor={'pointer'}*/}
+            {/*    icon={<ExternalLinkIcon />}*/}
+            {/*    size={'sm'}*/}
+            {/*    variant={'ghost'}*/}
+            {/*    aria-label={'Open in Fullscreen'}*/}
+            {/*    title={'Open in Fullscreen'}*/}
+            {/*    target="_blank"*/}
+            {/*  />*/}
+            {/*</Link>*/}
           </HStack>
         </TabList>
         <TabPanels borderRadius="2xl">
           <TabPanel p={0}>
-            <ResizableFrame
-              category={category}
-              subCategory={subCategory}
-              template={template}
-            />
+            <Frame key={template.name}>{template.component}</Frame>
           </TabPanel>
           <TabPanel p={0}>
-            <CodeSample
-              category={category}
-              subCategory={subCategory}
-              template={template}
-            />
+            {/*<CodeSample name={template.name} code={template.code} />*/}
+            Code coming soon.
           </TabPanel>
         </TabPanels>
       </Tabs>

@@ -61,23 +61,23 @@ export const Navigation = (props: StackProps) => {
       w={'full'}
       flexShrink={0}
       {...props}>
-      {data.map((category) => (
-        <Stack key={category.id}>
+      {Object.keys(data).map((category) => (
+        <Stack key={category}>
           <Text
             textTransform={'uppercase'}
             color={categoryColor}
             fontWeight={700}
             fontSize={'sm'}
             letterSpacing={1}>
-            {category.name}
+            {data[category].name}
           </Text>
           <Stack spacing={1}>
-            {category.children?.map((subCategory) => (
+            {Object.keys(data[category].children).map((subCategory) => (
               <NavigationLink
                 asPath={asPath}
-                key={subCategory.id}
-                href={`/${category.id}/${subCategory.id}`}>
-                {subCategory.name}
+                key={subCategory}
+                href={`/${category}/${subCategory}`}>
+                {data[category].children[subCategory].name}
               </NavigationLink>
             ))}
           </Stack>

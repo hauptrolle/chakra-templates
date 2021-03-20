@@ -9,7 +9,6 @@ import {
   OpenSource,
   OpenSourceProps,
 } from '@/components/HomepageSections/OpenSource';
-import { DiscordBanner } from '@/components/HomepageSections/DiscordBanner';
 import { SEO } from '@/components/SEO';
 import { fetchStargazers } from '../api/stargazers';
 import { data } from '../data';
@@ -37,7 +36,6 @@ const Home: NextPage<PageProps> = ({
         templatesCount={templatesCount}
       />
       <ExploreTemplates templatesCount={templatesCount!} />
-      {/*<DiscordBanner />*/}
     </AppLayout>
   );
 };

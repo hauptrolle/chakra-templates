@@ -15,10 +15,10 @@ export interface NavItem {
 export const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'Templates',
-    children: data.map((category) => ({
-      label: category.name,
-      subLabel: category.subLabel,
-      href: `/${category.id}/${category.children?.[0].id}`,
+    children: Object.keys(data).map((category) => ({
+      label: data[category].name,
+      subLabel: data[category].subLabel,
+      href: `/${category}/${Object.keys(data[category].children)[0]}`,
     })),
   },
   {

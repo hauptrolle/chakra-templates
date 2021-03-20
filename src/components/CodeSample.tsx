@@ -10,25 +10,20 @@ import {
 import { Category, SubCategory, Template } from '../data/types';
 
 type CodeSampleProps = {
-  template: Template;
-  category: Category;
-  subCategory: SubCategory;
+  code: string;
+  name: string;
 };
 
-export const CodeSample = ({
-  template,
-  category,
-  subCategory,
-}: CodeSampleProps) => {
-  const code = require(`!!raw-loader!../pages/templates/${category.id}/${subCategory.id}/${template.filename}`)
-    .default;
+export const CodeSample = ({ code, name }: CodeSampleProps) => {
+  // const code = require(`!!raw-loader!../pages/templates/${category.id}/${subCategory.id}/${template.filename}`)
+  //   .default;
   const { hasCopied, onCopy } = useClipboard(code);
   const codeRef = useRef<HTMLDivElement>(null);
 
   const handleManualCopy = (event: ClipboardEvent) => {
     if (codeRef?.current?.contains(event.target as Node)) {
       splitbee.track(SPLITBEE_TEMPLATE_MANUAL_COPY, {
-        template: template.name,
+        template: name,
       });
     }
   };
@@ -52,7 +47,7 @@ export const CodeSample = ({
         right={4}
         onClick={onCopy}
         data-splitbee-event={SPLITBEE_TEMPLATE_CLICK_COPY}
-        data-splitbee-event-template={template.name}>
+        data-splitbee-event-template={name}>
         {hasCopied ? 'Copied 👌' : 'Copy'}
       </Button>
 

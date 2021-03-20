@@ -11,29 +11,33 @@ import { pricing } from './templates/pricing';
 
 import { Category } from './types';
 
-export const data: Category[] = [
-  {
+export const data: Record<string, Category> = {
+  'page-sections': {
     name: 'Page Sections',
     subLabel: 'Large Page Sections like Hero, Features ...',
-    id: 'page-sections',
-    children: [hero, features, footer, testimonials, pricing],
+    children: {
+      hero,
+      features,
+      footer,
+      testimonials,
+      pricing,
+    },
   },
-  {
+  navigation: {
     name: 'Navigation',
-    id: 'navigation',
     subLabel: 'Header Navigation for Websites & Apps',
-    children: [navbar],
+    children: {
+      navbar,
+    },
   },
-  {
+  forms: {
     name: 'Forms',
-    id: 'forms',
     subLabel: 'User Login & Newsletter Forms',
-    children: [authentication, newsletter],
+    children: { authentication, newsletter },
   },
-  {
+  components: {
     name: 'Components',
-    id: 'components',
     subLabel: 'Smaller buildings blocks like Cards, Buttons ...',
-    children: [cards, buttons],
+    children: { cards, buttons },
   },
-];
+};
