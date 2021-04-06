@@ -12,6 +12,8 @@ import {
   WrapItem,
   SpaceProps,
   useColorModeValue,
+  Container,
+  Stack,
 } from '@chakra-ui/react';
 
 interface IBlogTags {
@@ -58,7 +60,7 @@ export const BlogAuthor: React.FC<BlogAuthorProps> = (props) => {
 
 const ArticleList = () => {
   return (
-    <Box p="12">
+    <Container maxW={'7xl'} p="12">
       <Heading as="h1">Stories by Chakra Templates</Heading>
       <Box
         marginTop={['1', '5']}
@@ -189,7 +191,7 @@ const ArticleList = () => {
           tortor, mattis nec lacus non, placerat congue elit.
         </Text>
       </Box>
-    </Box>
+    </Container>
   );
 };
 
