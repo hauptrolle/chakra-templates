@@ -56,7 +56,7 @@ export const BlogAuthor: React.FC<BlogAuthorProps> = (props) => {
   );
 };
 
-export default () => {
+const ArticleList = () => {
   return (
     <Box p="12">
       <Heading as="h1">Stories by Chakra Templates</Heading>
@@ -192,3 +192,5 @@ export default () => {
     </Box>
   );
 };
+
+export default ArticleList;
