@@ -8,6 +8,7 @@ import { newsletter } from './templates/newsletter';
 import { footer } from './templates/footer';
 import { testimonials } from './templates/testimonials';
 import { pricing } from './templates/pricing';
+import { statistics } from './templates/statistics';
 
 import { Category } from './types';
 
@@ -16,7 +17,7 @@ export const data: Category[] = [
     name: 'Page Sections',
     subLabel: 'Large Page Sections like Hero, Features ...',
     id: 'page-sections',
-    children: [hero, features, footer, testimonials, pricing],
+    children: [hero, features, footer, testimonials, pricing, statistics],
   },
   {
     name: 'Navigation',
