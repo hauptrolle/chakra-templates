@@ -13,6 +13,7 @@ import {
   SpaceProps,
   useColorModeValue,
   Container,
+  VStack,
 } from '@chakra-ui/react';
 
 interface IBlogTags {
@@ -41,19 +42,17 @@ interface BlogAuthorProps {
 
 export const BlogAuthor: React.FC<BlogAuthorProps> = (props) => {
   return (
-    <Box marginTop="2" display="flex" alignItems="center">
+    <HStack marginTop="2" spacing="2" display="flex" alignItems="center">
       <Image
         borderRadius="full"
         boxSize="40px"
         src="https://100k-faces.glitch.me/random-image"
         alt={`Avatar of ${props.name}`}
       />
-      <Text marginLeft="2" fontWeight="medium">
-        {props.name}
-      </Text>
-      <Text marginLeft="2">—</Text>
-      <Text marginLeft="2">{props.date.toLocaleDateString()}</Text>
-    </Box>
+      <Text fontWeight="medium">{props.name}</Text>
+      <Text>—</Text>
+      <Text>{props.date.toLocaleDateString()}</Text>
+    </HStack>
   );
 };
 
@@ -62,15 +61,20 @@ const ArticleList = () => {
     <Container maxW={'7xl'} p="12">
       <Heading as="h1">Stories by Chakra Templates</Heading>
       <Box
-        marginTop={['1', '5']}
+        marginTop={{ base: '1', sm: '5' }}
         display="flex"
-        flexDirection={['column', 'row']}
+        flexDirection={{ base: 'column', sm: 'row' }}
         justifyContent="space-between">
-        <Box display="flex" flex="1" marginRight="3" position="relative">
+        <Box
+          display="flex"
+          flex="1"
+          marginRight="3"
+          position="relative"
+          alignItems="center">
           <Box
-            width={['100%', '85%']}
+            width={{ base: '100%', sm: '85%' }}
             zIndex="2"
-            marginLeft={['0', '5%']}
+            marginLeft={{ base: '0', sm: '5%' }}
             marginTop="5%">
             <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
               <Image
@@ -100,7 +104,7 @@ const ArticleList = () => {
           flex="1"
           flexDirection="column"
           justifyContent="center"
-          marginTop={['3', '0']}>
+          marginTop={{ base: '3', sm: '0' }}>
           <BlogTags tags={['Engineering', 'Product']} />
           <Heading marginTop="1">
             <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
@@ -125,7 +129,7 @@ const ArticleList = () => {
       </Heading>
       <Divider marginTop="5" />
       <Wrap spacing="30px" marginTop="5">
-        <WrapItem width={['100%', '45%', '45%', '30%']}>
+        <WrapItem width={{ base: '100%', sm: '45%', md: '45%', lg: '30%' }}>
           <Box w="100%">
             <Box borderRadius="lg" overflow="hidden">
               <Link textDecoration="none" _hover={{ textDecoration: 'none' }}>
@@ -163,9 +167,9 @@ const ArticleList = () => {
           </Box>
         </WrapItem>
       </Wrap>
-      <Box paddingTop="40px">
+      <VStack paddingTop="40px" spacing="2" alignItems="flex-start">
         <Heading as="h2">What we write about</Heading>
-        <Text as="p" fontSize="lg" marginTop="2">
+        <Text as="p" fontSize="lg">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
           condimentum quam arcu, eu tempus tortor molestie at. Vestibulum
           pretium condimentum dignissim. Vestibulum ultrices vitae nisi sed
@@ -173,7 +177,7 @@ const ArticleList = () => {
           sapien. Suspendisse placerat vulputate posuere. Curabitur neque
           tortor, mattis nec lacus non, placerat congue elit.
         </Text>
-        <Text as="p" fontSize="lg" marginTop="2">
+        <Text as="p" fontSize="lg">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
           condimentum quam arcu, eu tempus tortor molestie at. Vestibulum
           pretium condimentum dignissim. Vestibulum ultrices vitae nisi sed
@@ -181,7 +185,7 @@ const ArticleList = () => {
           sapien. Suspendisse placerat vulputate posuere. Curabitur neque
           tortor, mattis nec lacus non, placerat congue elit.
         </Text>
-        <Text as="p" fontSize="lg" marginTop="2">
+        <Text as="p" fontSize="lg">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
           condimentum quam arcu, eu tempus tortor molestie at. Vestibulum
           pretium condimentum dignissim. Vestibulum ultrices vitae nisi sed
@@ -189,7 +193,7 @@ const ArticleList = () => {
           sapien. Suspendisse placerat vulputate posuere. Curabitur neque
           tortor, mattis nec lacus non, placerat congue elit.
         </Text>
-      </Box>
+      </VStack>
     </Container>
   );
 };
