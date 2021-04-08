@@ -2,7 +2,7 @@
 <p align="center">Production-ready Chakra UI Templates for developers</p>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 > A growing collection of hand-crafted Chakra UI templates ready to drop into your React project
@@ -43,6 +43,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="http://omkarkulkarni.netlify.app"><img src="https://avatars.githubusercontent.com/u/45557594?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Omkar Kulkarni</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=OmkarK45" title="Code">💻</a></td>
     <td align="center"><a href="https://www.shunkakinoki.com"><img src="https://avatars.githubusercontent.com/u/39187513?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Shun Kakinoki</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=shunkakinoki" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://www.kevinpeters.net/about/"><img src="https://avatars.githubusercontent.com/u/12736734?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kevin Peters</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=igeligel" title="Code">💻</a></td>
   </tr>
 </table>
 
