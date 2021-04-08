@@ -64,8 +64,11 @@ function TestmonialCard(props: TestimonialCardProps) {
   return (
     <Flex
       boxShadow={'lg'}
-      width={'640px'}
+      maxW={'640px'}
+      direction={{ base: 'column-reverse', md: 'row' }}
+      width={'full'}
       rounded={'xl'}
+      p={10}
       justifyContent={'space-between'}
       position={'relative'}
       bg={useColorModeValue('white', 'gray.800')}
@@ -83,20 +86,20 @@ function TestmonialCard(props: TestimonialCardProps) {
         content: '""',
         position: 'absolute',
         zIndex: '-1',
-        height: '130px',
-        width: '640px',
+        height: 'full',
+        maxW: '640px',
+        width: 'full',
         filter: 'blur(40px)',
-        transform: 'scale(1.03)',
+        transform: 'scale(0.98)',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        top: 8,
+        top: 0,
         left: 0,
         backgroundImage: backgrounds[index % 4],
       }}>
       <Flex
         direction={'column'}
         textAlign={'left'}
-        p={10}
         justifyContent={'space-between'}>
         <chakra.p
           fontFamily={'Inter'}
@@ -121,7 +124,7 @@ function TestmonialCard(props: TestimonialCardProps) {
         height={'80px'}
         width={'80px'}
         alignSelf={'center'}
-        mx={'10'}
+        m={{ base: '0 0 35px 0', md: '0 0 0 50px' }}
       />
     </Flex>
   );
@@ -133,8 +136,9 @@ export default function GridBlurredBackdrop() {
       textAlign={'center'}
       pt={10}
       justifyContent={'center'}
-      direction={'column'}>
-      <Box width={{ base: 'sm', sm: 'lg', lg: 'xl' }} margin={'auto'}>
+      direction={'column'}
+      width={'full'}>
+      <Box width={{ base: 'full', sm: 'lg', lg: 'xl' }} margin={'auto'}>
         <chakra.h3
           fontFamily={'Work Sans'}
           fontWeight={'bold'}
