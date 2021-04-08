@@ -12,5 +12,9 @@ export const testimonials: SubCategory = {
       name: 'With large Quote',
       filename: 'withLargeQuote',
     },
+    {
+      name: 'Grid With Blurred Backdrop',
+      filename: 'gridBlurredBackdrop',
+    },
   ],
 };
