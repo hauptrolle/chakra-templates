@@ -17,6 +17,10 @@ export const cards: SubCategory = {
       filename: 'productSimple',
     },
     {
+      name: 'Product with Add to Cart',
+      filename: 'productAddToCart',
+    },
+    {
       name: 'Pricing',
       filename: 'pricing',
     },
