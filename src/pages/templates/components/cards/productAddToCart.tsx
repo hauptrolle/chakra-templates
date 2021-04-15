@@ -44,9 +44,9 @@ function Rating({ rating, numReviews }: RatingProps) {
             );
           }
           if (roundedRating - i === 0.5) {
-            return <BsStarHalf style={{ marginLeft: '1' }} />;
+            return <BsStarHalf key={i} style={{ marginLeft: '1' }} />;
           }
-          return <BsStar style={{ marginLeft: '1' }} />;
+          return <BsStar key={i} style={{ marginLeft: '1' }} />;
         })}
       <Box as="span" ml="2" color="gray.600" fontSize="sm">
         {numReviews} review{numReviews > 1 && 's'}
