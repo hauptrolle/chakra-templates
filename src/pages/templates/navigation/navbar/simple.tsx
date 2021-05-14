@@ -45,7 +45,7 @@ export default function Simple() {
             size={'md'}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={'Open Menu'}
-            display={{ md: !isOpen ? 'none' : 'inherit' }}
+            display={{ md: 'none' }}
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
@@ -84,7 +84,7 @@ export default function Simple() {
         </Flex>
 
         {isOpen ? (
-          <Box pb={4}>
+          <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
               {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
