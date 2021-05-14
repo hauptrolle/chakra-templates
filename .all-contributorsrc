@@ -111,6 +111,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "fossegrim",
+      "name": "Olav Fosse",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24797093?v=4",
+      "profile": "http://olavfosse.no",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
