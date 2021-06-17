@@ -120,6 +120,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "aaronzhongg",
+      "name": "Aaron Zhong",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14045995?v=4",
+      "profile": "https://github.com/aaronzhongg",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
