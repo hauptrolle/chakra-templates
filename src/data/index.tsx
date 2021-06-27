@@ -3,6 +3,7 @@ import { cards } from './components/cards';
 import { hero } from './templates/hero';
 import { features } from './templates/features';
 import { navbar } from './templates/navbar';
+import { sidebar } from './templates/sidebar';
 import { authentication } from './templates/authentication';
 import { newsletter } from './templates/newsletter';
 import { footer } from './templates/footer';
@@ -30,7 +31,7 @@ export const data: Category[] = [
     name: 'Navigation',
     id: 'navigation',
     subLabel: 'Header Navigation for Websites & Apps',
-    children: [navbar],
+    children: [navbar, sidebar],
   },
   {
     name: 'Forms',
