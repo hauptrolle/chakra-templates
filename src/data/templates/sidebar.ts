@@ -8,5 +8,9 @@ export const sidebar: SubCategory = {
       name: 'Simple sidebar',
       filename: 'simpleSidebar',
     },
+    {
+      name: 'Sidebar with Header',
+      filename: 'sidebarWithHeader',
+    },
   ],
 };
