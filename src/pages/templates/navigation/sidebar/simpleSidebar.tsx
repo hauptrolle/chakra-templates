@@ -46,6 +46,7 @@ export default function SimpleSidebar({ children }: { children: ReactNode }) {
         display={{ base: 'none', md: 'block' }}
       />
       <Drawer
+        autoFocus={false}
         isOpen={isOpen}
         placement="left"
         onClose={onClose}
@@ -72,7 +73,7 @@ interface SidebarProps extends BoxProps {
 const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
   return (
     <Box
-      bg={useColorModeValue('white', 'gray.800')}
+      bg={useColorModeValue('white', 'gray.900')}
       borderRight="1px"
       borderRightColor={useColorModeValue('gray.200', 'gray.700')}
       w={{ base: 'full', md: 60 }}
@@ -145,7 +146,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
       justifyContent="flex-start"
       {...rest}>
       <IconButton
-        variant="ghost"
+        variant="outline"
         onClick={onOpen}
         aria-label="open menu"
         icon={<FiMenu />}
