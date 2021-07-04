@@ -2,7 +2,7 @@
 <p align="center">Production-ready Chakra UI Templates for developers</p>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 > A growing collection of hand-crafted Chakra UI templates ready to drop into your React project
@@ -47,6 +47,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/mah51"><img src="https://avatars.githubusercontent.com/u/47287285?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mikerophone</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=mah51" title="Code">💻</a></td>
     <td align="center"><a href="http://olavfosse.no"><img src="https://avatars.githubusercontent.com/u/24797093?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Olav Fosse</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=fossegrim" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/aaronzhongg"><img src="https://avatars.githubusercontent.com/u/14045995?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aaron Zhong</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=aaronzhongg" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/sudoDeznit"><img src="https://avatars.githubusercontent.com/u/26044934?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anoop Nair</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=sudoDeznit" title="Code">💻</a></td>
   </tr>
 </table>
 
