@@ -206,13 +206,9 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
                     Admin
                   </Text>
                 </VStack>
-                <IconButton
-                  display={{ base: 'none', md: 'flex' }}
-                  size="sm"
-                  variant="ghost"
-                  aria-label="open menu"
-                  icon={<FiChevronDown />}
-                />
+                <Box display={{ base: 'none', md: 'flex' }}>
+                  <FiChevronDown />
+                </Box>
               </HStack>
             </MenuButton>
             <MenuList
