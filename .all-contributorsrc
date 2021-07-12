@@ -138,6 +138,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "faheempatel",
+      "name": "Faheem Patel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/458311?v=4",
+      "profile": "http://faheempatel.com",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
