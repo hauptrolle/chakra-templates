@@ -2,7 +2,7 @@
 <p align="center">Production-ready Chakra UI Templates for developers</p>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-16-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 > A growing collection of hand-crafted Chakra UI templates ready to drop into your React project
@@ -51,6 +51,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="http://faheempatel.com"><img src="https://avatars.githubusercontent.com/u/458311?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Faheem Patel</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=faheempatel" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/k-utsumi"><img src="https://avatars.githubusercontent.com/u/13148112?v=4?s=100" width="100px;" alt=""/><br /><sub><b>k-utsumi</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=k-utsumi" title="Code">💻</a></td>
   </tr>
 </table>
 
