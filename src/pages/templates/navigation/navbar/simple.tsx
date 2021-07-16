@@ -65,7 +65,8 @@ export default function Simple() {
                 as={Button}
                 rounded={'full'}
                 variant={'link'}
-                cursor={'pointer'}>
+                cursor={'pointer'}
+                minW={0}>
                 <Avatar
                   size={'sm'}
                   src={
