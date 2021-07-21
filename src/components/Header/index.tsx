@@ -18,6 +18,7 @@ import { Logo } from '@/components/Logo';
 import { TextUnderline } from '@/components/TextUnderline';
 import { MobileNav } from '@/components/Header/MobileNav';
 import { DesktopNav } from '@/components/Header/DesktopNav';
+import { ThemeEditorDrawerButton } from '@hypertheme-editor/chakra-ui';
 
 export const Header = () => {
   const { isOpen: isMobileNavOpen, onToggle } = useDisclosure();
@@ -101,6 +102,8 @@ export const Header = () => {
                 )
               }
             />
+
+            <ThemeEditorDrawerButton />
           </Stack>
         </Container>
       </Flex>
