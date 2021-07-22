@@ -35,15 +35,10 @@ export const ResizableFrame = ({
     setHeight(frameHeight);
   };
 
-  // Reload iframe content when colorMode changes
+  // Reload iframe content when theme and colorMode changes
   useEffect(() => {
     ref.current?.contentWindow?.location.reload();
-  }, [colorMode]);
-
-  // Reload iframe content when themeEditorState changes
-  useEffect(() => {
-    ref.current?.contentWindow?.location.reload();
-  }, [theme]);
+  }, [theme, colorMode]);
 
   const getHeight = () =>
     height !== undefined && height >= MIN_HEIGHT ? height : MIN_HEIGHT;
