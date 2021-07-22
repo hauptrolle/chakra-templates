@@ -1099,10 +1099,10 @@
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.1.1.tgz#9daf5745156fd84b8e9889a2dc721f0c58e894aa"
   integrity sha512-CAEbWH7OIur6jEOzaai83jq3FmKmv4PmX1JYfs9IrYcGEVI/lyL1EXJGCj7eFVJ0bg5QR8LMxBlEtA+xKiLpFw==
 
-"@hypertheme-editor/chakra-ui@^0.0.22":
-  version "0.0.22"
-  resolved "https://registry.yarnpkg.com/@hypertheme-editor/chakra-ui/-/chakra-ui-0.0.22.tgz#a86a3c0aa3beb32b64d156af5626a40562a7b193"
-  integrity sha512-jOiMnhALzxpWTmbT3e+LoWs3/05qOiV8nHdCd27cwLTxAH2eHrwQ+JP6wwNChXwqmVdMlsXdre/s9QPh0sHa9w==
+"@hypertheme-editor/chakra-ui@^0.0.25":
+  version "0.0.25"
+  resolved "https://registry.yarnpkg.com/@hypertheme-editor/chakra-ui/-/chakra-ui-0.0.25.tgz#17af23daa58655e48a876e32dbf7ec125f22b4ba"
+  integrity sha512-/h2TP7avCaW2vAmZcAdMDrabbirf4saAbGLoH1KISzE5RXRv3moZYfIpzyVG2NiwvTtP9YjF/e70c3hClpFyUg==
   dependencies:
     "@fontsource/sora" "^4.5.0"
     colord "^2.1.0"
@@ -1113,7 +1113,6 @@
     react-input-number "^5.0.19"
     recoil "^0.3.1"
     use-debouncy "^4.2.0"
-    use-local-storage-state "^10.0.0"
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
@@ -6419,11 +6418,6 @@ use-debouncy@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/use-debouncy/-/use-debouncy-4.2.0.tgz#d85a593a9ec7fd1310e79246132389f04bcc5e3a"
   integrity sha512-v8X/yyi+IDiBiJ1pVNJBluxlhN3s2jsj6X7oeHWwMUliYfiPhbkUKoWefr8tG0/a1o9+J2klv+lHsjGz4U/C8A==
-
-use-local-storage-state@^10.0.0:
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/use-local-storage-state/-/use-local-storage-state-10.0.0.tgz#862d142e5d1fff30820102f0cd871e96e5527342"
-  integrity sha512-NCab0oYOMZA8oT9y4OE7tMT6JS21SiyPsTjZdapnyvHe7bVFlIMSp6LaiuHBdS1OvduuLtG+pX/duFIBkd0PCA==
 
 use-sidecar@^1.0.1:
   version "1.0.4"
