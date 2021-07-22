@@ -1099,10 +1099,10 @@
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.1.1.tgz#9daf5745156fd84b8e9889a2dc721f0c58e894aa"
   integrity sha512-CAEbWH7OIur6jEOzaai83jq3FmKmv4PmX1JYfs9IrYcGEVI/lyL1EXJGCj7eFVJ0bg5QR8LMxBlEtA+xKiLpFw==
 
-"@hypertheme-editor/chakra-ui@^0.0.26":
-  version "0.0.26"
-  resolved "https://registry.yarnpkg.com/@hypertheme-editor/chakra-ui/-/chakra-ui-0.0.26.tgz#da16f434eecdf782b72cc9c9d07e2fc433b08b8f"
-  integrity sha512-QaTIVNubFLTGKWjHFlDiKqHV5EX8UkkHp30rR/mx6ng3EJdkez+aJeOAWTYbWGQw7W6tAFiq8rXOH6Px0Xh3CQ==
+"@hypertheme-editor/chakra-ui@^0.0.27":
+  version "0.0.27"
+  resolved "https://registry.yarnpkg.com/@hypertheme-editor/chakra-ui/-/chakra-ui-0.0.27.tgz#b6e77f1cea3924ed51d3b9bae78c3c90a818ccc8"
+  integrity sha512-mUWepeVdNLgxlPF0uA/bPFGqtU93YY2mAJVeKk6nBX6NPbikOkGJmr0tJPL9QWoagdn4RtmadvV80j5pp5mvbg==
   dependencies:
     "@fontsource/sora" "^4.5.0"
     colord "^2.1.0"
