@@ -103,7 +103,7 @@ export const Header = () => {
               }
             />
 
-            <ThemeEditorDrawerButton />
+            <ThemeEditorDrawerButton hideUpgradeToPro />
           </Stack>
         </Container>
       </Flex>
