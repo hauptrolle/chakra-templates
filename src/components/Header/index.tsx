@@ -56,8 +56,9 @@ export const Header = () => {
         }}>
         <Container as={Flex} maxW={'7xl'} align={'center'}>
           <Flex
-            flex={{ base: 1, md: 'auto' }}
+            flex={{ base: '0', md: 'auto' }}
             ml={{ base: -2 }}
+            mr={{ base: 6, md: 0 }}
             display={{ base: 'flex', md: 'none' }}>
             <IconButton
               onClick={onToggle}
@@ -76,7 +77,7 @@ export const Header = () => {
 
           <Flex
             flex={{ base: 1, md: 'auto' }}
-            justify={{ base: 'center', md: 'start' }}>
+            justify={{ base: 'start', md: 'start' }}>
             <Link href={'/'} passHref>
               <Stack
                 as={'a'}
@@ -97,7 +98,7 @@ export const Header = () => {
           <Stack
             direction={'row'}
             align={'center'}
-            spacing={8}
+            spacing={{ base: 6, md: 8 }}
             flex={{ base: 1, md: 'auto' }}
             justify={'flex-end'}>
             <DesktopNav display={{ base: 'none', md: 'flex' }} />
