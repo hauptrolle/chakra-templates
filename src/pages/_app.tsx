@@ -8,6 +8,7 @@ import splitbee from '@splitbee/web';
 
 import { theme } from '../theme';
 import { SEO } from '@/components/SEO';
+import { ThemeEditorProvider } from '@hypertheme-editor/chakra-ui';
 
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
@@ -30,17 +31,19 @@ function App({ Component, pageProps, router }: AppProps) {
 
   return (
     <ChakraProvider theme={theme}>
-      {isTemplate && <SEO />}
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon.png" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&family=Inter:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
-      <Component {...pageProps} />
+      <ThemeEditorProvider>
+        {isTemplate && <SEO />}
+        <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="shortcut icon" type="image/x-icon" href="/favicon.png" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
+        </Head>
+        <Component {...pageProps} />
+      </ThemeEditorProvider>
     </ChakraProvider>
   );
 }

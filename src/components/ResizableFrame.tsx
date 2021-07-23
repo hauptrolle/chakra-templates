@@ -4,6 +4,7 @@ import { Resizable } from 're-resizable';
 
 import { getExampleUrl } from '@/utils/getExampleUrl';
 import { Category, SubCategory, Template } from '../data/types';
+import { useThemeEditorState } from '@hypertheme-editor/chakra-ui';
 
 type IframeProps = {
   template: Template;
@@ -20,6 +21,7 @@ export const ResizableFrame = ({
 }: IframeProps) => {
   const ref = useRef<HTMLIFrameElement>(null);
   const { colorMode } = useColorMode();
+  const { theme } = useThemeEditorState();
   const [height, setHeight] = useState<number | undefined>(undefined);
   const [exampleUrl, setExampleUrl] = useState('');
 
@@ -33,10 +35,10 @@ export const ResizableFrame = ({
     setHeight(frameHeight);
   };
 
-  // Reload iframe content when colorMode changes
+  // Reload iframe content when theme and colorMode changes
   useEffect(() => {
     ref.current?.contentWindow?.location.reload();
-  }, [colorMode]);
+  }, [theme, colorMode]);
 
   const getHeight = () =>
     height !== undefined && height >= MIN_HEIGHT ? height : MIN_HEIGHT;
