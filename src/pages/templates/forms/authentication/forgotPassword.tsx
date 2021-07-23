@@ -27,7 +27,8 @@ export default function ForgotPasswordForm(): JSX.Element {
         bg={useColorModeValue('white', 'gray.700')}
         rounded={'xl'}
         boxShadow={'lg'}
-        p={6}>
+        p={6}
+        my={12}>
         <Heading lineHeight={1.1} fontSize={{ base: '2xl', md: '3xl' }}>
           Forgot your password?
         </Heading>
