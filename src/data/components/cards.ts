@@ -25,6 +25,10 @@ export const cards: SubCategory = {
       filename: 'pricing',
     },
     {
+      name: 'Social User Profile Horizontal',
+      filename: 'socialUserProfileHorizontal',
+    },
+    {
       name: 'Blog Post with Image',
       filename: 'blogPostWithImage',
     },
