@@ -165,6 +165,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "Arithmetics",
+      "name": "Brock Tillotson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25254098?v=4",
+      "profile": "https://github.com/Arithmetics",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
