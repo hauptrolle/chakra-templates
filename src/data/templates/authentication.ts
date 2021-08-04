@@ -16,5 +16,13 @@ export const authentication: SubCategory = {
       name: 'Split Screen with Image',
       filename: 'splitScreen',
     },
+    {
+      name: 'Forgot Password Card',
+      filename: 'forgotPassword',
+    },
+    {
+      name: 'Reset Password Card',
+      filename: 'resetPassword',
+    },
   ],
 };
