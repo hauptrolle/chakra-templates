@@ -30,7 +30,7 @@
     "@splitbee/web": "^0.2.4",
     "directory-tree": "^2.2.5",
     "framer-motion": "^4.1.17",
-    "next": "10.0.8",
+    "next": "11.1.0",
     "next-seo": "^4.17.0",
     "nprogress": "^0.2.0",
     "raw-loader": "^4.0.2",
