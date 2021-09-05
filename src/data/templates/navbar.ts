@@ -16,5 +16,9 @@ export const navbar: SubCategory = {
       name: 'With action button & user dropdown',
       filename: 'withAction',
     },
+    {
+      name: 'With user dropdown and Dark theme switcher',
+      filename: 'withDarkModeSwitcher',
+    },
   ],
 };
