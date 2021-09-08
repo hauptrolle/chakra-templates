@@ -45,6 +45,7 @@ export default function Nav() {
             <Button onClick={toggleColorMode}>
               {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
             </Button>
+            {/* Spacing Between Theme Switcher and user icon */}
             &nbsp; &nbsp; &nbsp; &nbsp;
             <Menu>
               <MenuButton
@@ -72,19 +73,13 @@ export default function Nav() {
                 </Center>
                 <br />
                 <MenuDivider />
-                <MenuItem>&nbsp;&nbsp;Your Servers</MenuItem>
-                <MenuItem>&nbsp;&nbsp;Account Settings</MenuItem>
-                <MenuItem>&nbsp;&nbsp;Logout</MenuItem>
+                <MenuItem>Your Servers</MenuItem>
+                <MenuItem>Account Settings</MenuItem>
+                <MenuItem>Logout</MenuItem>
               </MenuList>
             </Menu>
           </Flex>
         </Flex>
-
-        {isOpen ? (
-          <Box pb={4} display={{ md: 'none' }}>
-            <Stack as={'nav'} spacing={4}></Stack>
-          </Box>
-        ) : null}
       </Box>
     </>
   );
