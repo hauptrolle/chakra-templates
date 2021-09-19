@@ -28,5 +28,9 @@ export const cards: SubCategory = {
       name: 'Blog Post with Image',
       filename: 'blogPostWithImage',
     },
+    {
+      name: 'Simple Cookies prefrence',
+      filename: 'simpleCookiePreference',
+    },
   ],
 };
