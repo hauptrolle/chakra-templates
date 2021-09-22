@@ -18,19 +18,7 @@ import { Logo } from '@/components/Logo';
 import { TextUnderline } from '@/components/TextUnderline';
 import { MobileNav } from '@/components/Header/MobileNav';
 import { DesktopNav } from '@/components/Header/DesktopNav';
-import { ThemeEditorDrawerButton as HyperThemeEditorDrawerButton } from '@hypertheme-editor/chakra-ui';
-
-const ThemeEditorDrawerButton = () => {
-  const bgColor = useColorModeValue('white', 'gray.800');
-
-  return (
-    <HyperThemeEditorDrawerButton
-      size="sm"
-      bgColor={bgColor}
-      hideUpgradeToPro
-    />
-  );
-};
+import { CTThemeEditor } from '@/components/Header/CTThemeEditor';
 
 export const Header = () => {
   const { isOpen: isMobileNavOpen, onToggle } = useDisclosure();
@@ -116,7 +104,7 @@ export const Header = () => {
               }
             />
 
-            <ThemeEditorDrawerButton />
+            <CTThemeEditor />
           </Stack>
         </Container>
       </Flex>
