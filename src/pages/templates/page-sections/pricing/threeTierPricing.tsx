@@ -22,13 +22,14 @@ function PriceWrapper({ children }: { children: ReactNode }) {
       borderWidth="1px"
       alignSelf={{ base: 'center', lg: 'flex-start' }}
       borderColor={useColorModeValue('gray.200', 'gray.500')}
-      borderRadius={'xl'}>
+      borderRadius={'xl'}
+      w="xs">
       {children}
     </Box>
   );
 }
 
-export default function ThreeTierPricing() {
+export default function ThreeTierPricingWithToggle() {
   return (
     <Box py={12}>
       <VStack spacing={2} textAlign="center">
@@ -41,10 +42,10 @@ export default function ThreeTierPricing() {
         </Text>
       </VStack>
       <Stack
-        direction={{ base: 'column', md: 'row' }}
+        direction={{ base: 'column', lg: 'row' }}
         textAlign="center"
         justify="center"
-        spacing={{ base: 4, lg: 10 }}
+        spacing={5}
         py={10}>
         <PriceWrapper>
           <Box py={4} px={12}>
