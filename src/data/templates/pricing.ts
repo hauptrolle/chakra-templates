@@ -8,5 +8,9 @@ export const pricing: SubCategory = {
       name: 'Three tiers with emphasized tier',
       filename: 'threeTierPricing',
     },
+    {
+      name: 'Three tiers with emphasized tier with toggle',
+      filename: 'threeTierPricingWithToggle',
+    },
   ],
 };
