@@ -5,8 +5,7 @@ export default function AppStoreBadge() {
       height={45}
       viewBox="0 0 150 45"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+      xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#prefix__clip0)">
         <path
           d="M144.663 44.444H5.254C2.358 44.444 0 42.08 0 39.186V5.25A5.26 5.26 0 015.254 0h139.409C147.559 0 150 2.356 150 5.251v33.935c0 2.894-2.441 5.258-5.337 5.258z"
