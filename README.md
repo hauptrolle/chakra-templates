@@ -3,7 +3,7 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-17-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-19-orange.svg?style=flat-square)](#contributors-)
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
@@ -56,6 +56,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/k-utsumi"><img src="https://avatars.githubusercontent.com/u/13148112?v=4?s=100" width="100px;" alt=""/><br /><sub><b>k-utsumi</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=k-utsumi" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/it-nalon"><img src="https://avatars.githubusercontent.com/u/8491676?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Marco Nalon</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=it-nalon" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Arithmetics"><img src="https://avatars.githubusercontent.com/u/25254098?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Brock Tillotson</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=Arithmetics" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/chenchunaidu"><img src="https://avatars.githubusercontent.com/u/38114196?v=4?s=100" width="100px;" alt=""/><br /><sub><b>chenchunaidu</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=chenchunaidu" title="Code">💻</a></td>
   </tr>
 </table>
 
