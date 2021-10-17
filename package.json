@@ -40,6 +40,7 @@
     "react-code-blocks": "^0.0.8",
     "react-dom": "17.0.1",
     "react-icons": "^4.1.0",
+    "react-slick": "^0.28.1",
     "yarn": "^1.22.10"
   },
   "devDependencies": {
@@ -48,6 +49,7 @@
     "@types/node": "^14.14.32",
     "@types/nprogress": "^0.2.0",
     "@types/react": "^17.0.3",
+    "@types/react-slick": "^0.23.6",
     "babel-jest": "^26.6.3",
     "husky": "^4.3.8",
     "jest": "^26.6.3",
