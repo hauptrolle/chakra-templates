@@ -39,7 +39,7 @@
     "react": "17.0.1",
     "react-code-blocks": "^0.0.8",
     "react-dom": "17.0.1",
-    "react-icons": "^4.1.0",
+    "react-icons": "^4.3.1",
     "yarn": "^1.22.10"
   },
   "devDependencies": {
