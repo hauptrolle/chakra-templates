@@ -34,17 +34,17 @@ export default function contact() {
           bg="#02054B"
           color="white"
           borderRadius="lg"
-          m={[5, 5, 16]}
-          p={[3, 5, 16]}>
-          <Box>
-            <Wrap spacing={[10, 0, 10]}>
+          m={{ sm: 4, md: 16, lg: 10 }}
+          p={{ sm: 5, md: 5, lg: 16 }}>
+          <Box p={4}>
+            <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
               <WrapItem>
                 <Box>
                   <Heading>Contact</Heading>
-                  <Text mt={[3, 5, 5]} color="gray.500">
+                  <Text mt={{ sm: 3, md: 3, lg: 5 }} color="gray.500">
                     Fill up the form below to contact
                   </Text>
-                  <Box mt={[0, 0, 10]} py={[5, 8, 10]}>
+                  <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
                     <VStack pl={0} spacing={3} alignItems="flex-start">
                       <Button
                         size="md"
@@ -79,7 +79,7 @@ export default function contact() {
                     </VStack>
                   </Box>
                   <HStack
-                    mt={[0, 0, 10]}
+                    mt={{ lg: 10, md: 10 }}
                     spacing={5}
                     px={5}
                     alignItems="flex-start">
