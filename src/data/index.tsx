@@ -12,6 +12,7 @@ import { pricing } from './templates/pricing';
 import { statistics } from './templates/statistics';
 import { blog } from './templates/blog';
 import { contact } from './templates/contact';
+import { carousel } from './templates/carousel';
 
 import { Category } from './types';
 
@@ -20,7 +21,15 @@ export const data: Category[] = [
     name: 'Page Sections',
     subLabel: 'Large Page Sections like Hero, Features ...',
     id: 'page-sections',
-    children: [hero, features, footer, testimonials, pricing, statistics],
+    children: [
+      hero,
+      features,
+      footer,
+      testimonials,
+      pricing,
+      statistics,
+      carousel,
+    ],
   },
   {
     name: 'Blog',
