@@ -201,6 +201,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "ronakonline",
+      "name": "Ronak",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32793372?v=4",
+      "profile": "https://github.com/ronakonline",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,

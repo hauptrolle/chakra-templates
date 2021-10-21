@@ -2,7 +2,7 @@
 <p align="center">Production-ready Chakra UI Templates for developers</p>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-21-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-22-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 > A growing collection of hand-crafted Chakra UI templates ready to drop into your React project
@@ -57,6 +57,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/chenchunaidu"><img src="https://avatars.githubusercontent.com/u/38114196?v=4?s=100" width="100px;" alt=""/><br /><sub><b>chenchunaidu</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=chenchunaidu" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/rithulkamesh"><img src="https://avatars.githubusercontent.com/u/45348760?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rithul Kamesh</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=rithulkamesh" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/MathurAditya724"><img src="https://avatars.githubusercontent.com/u/57684218?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aditya Mathur</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=MathurAditya724" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/ronakonline"><img src="https://avatars.githubusercontent.com/u/32793372?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ronak</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=ronakonline" title="Code">💻</a></td>
   </tr>
 </table>
 
