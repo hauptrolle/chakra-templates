@@ -11,6 +11,7 @@ import { testimonials } from './templates/testimonials';
 import { pricing } from './templates/pricing';
 import { statistics } from './templates/statistics';
 import { blog } from './templates/blog';
+import { contact } from './templates/contact';
 import { carousel } from './templates/carousel';
 
 import { Category } from './types';
@@ -46,7 +47,7 @@ export const data: Category[] = [
     name: 'Forms',
     id: 'forms',
     subLabel: 'User Login & Newsletter Forms',
-    children: [authentication, newsletter],
+    children: [authentication, newsletter, contact],
   },
   {
     name: 'Components',
