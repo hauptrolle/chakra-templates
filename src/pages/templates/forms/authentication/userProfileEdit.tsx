@@ -7,6 +7,7 @@ import {
   Input,
   Stack,
   useColorModeValue,
+  HStack,
 } from '@chakra-ui/react';
 
 export default function UserProfileEdit(): JSX.Element {
@@ -46,18 +47,32 @@ export default function UserProfileEdit(): JSX.Element {
         </FormControl>
         <FormControl id="password" isRequired>
           <FormLabel>Password</FormLabel>
-          <Input type="password" />
+          <Input
+            placeholder="password"
+            _placeholder={{ color: 'gray.500' }}
+            type="password"
+          />
         </FormControl>
-        <Stack spacing={6}>
+        <HStack spacing={6}>
+          <Button
+            bg={'red.400'}
+            color={'white'}
+            w="full"
+            _hover={{
+              bg: 'red.500',
+            }}>
+            Cancel
+          </Button>
           <Button
             bg={'blue.400'}
             color={'white'}
+            w="full"
             _hover={{
               bg: 'blue.500',
             }}>
             Submit
           </Button>
-        </Stack>
+        </HStack>
       </Stack>
     </Flex>
   );
