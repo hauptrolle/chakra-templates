@@ -15,7 +15,7 @@ Every template is embedded within an iframe on the page, so you can easily check
 
 ### Copy the code
 
-Just click the code tab to see the actual source code of the template. Copy and paste it into your project and your are ready to go!
+Just click the code tab to see the actual source code of the template. Copy and paste it into your project and you are ready to go!
 
 ### Enjoy your free time
 
