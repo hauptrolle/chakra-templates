@@ -20,5 +20,9 @@ export const result: SubCategory = {
       name: 'Error result',
       filename: 'error',
     },
+    {
+      name: '404 result',
+      filename: '404',
+    },
   ],
 };
