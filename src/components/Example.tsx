@@ -9,6 +9,8 @@ import {
   TabPanels,
   TabPanel,
   useColorModeValue,
+  Heading,
+  Center,
 } from '@chakra-ui/react';
 import Link from 'next/link';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
@@ -85,11 +87,15 @@ export const Example = ({ template, category, subCategory }: ExampleProps) => {
         </TabList>
         <TabPanels borderRadius="2xl">
           <TabPanel p={0}>
-            <ResizableFrame
-              category={category}
-              subCategory={subCategory}
-              template={template}
-            />
+            <Center w="full">
+              <Box w="full">
+                <ResizableFrame
+                  category={category}
+                  subCategory={subCategory}
+                  template={template}
+                />
+              </Box>
+            </Center>
           </TabPanel>
           <TabPanel p={0}>
             <CodeSample
