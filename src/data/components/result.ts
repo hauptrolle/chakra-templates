@@ -16,5 +16,9 @@ export const result: SubCategory = {
       name: 'Warning result',
       filename: 'warning',
     },
+    {
+      name: 'Error result',
+      filename: 'error',
+    },
   ],
 };
