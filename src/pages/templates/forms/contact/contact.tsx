@@ -136,7 +136,13 @@ export default function contact() {
                       </FormControl>
                       <FormControl id="name">
                         <FormLabel>Message</FormLabel>
-                        <Textarea></Textarea>
+                        <Textarea
+                          borderColor="gray.300"
+                          _hover={{
+                            borderRadius: 'gray.300',
+                          }}
+                          placeholder="message"
+                        />
                       </FormControl>
                       <FormControl id="name" float="right">
                         <Button
