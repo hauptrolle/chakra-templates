@@ -8,5 +8,9 @@ export const carousel: SubCategory = {
       name: 'Simple Carousel',
       filename: 'simpleCarousel',
     },
+    {
+      name: 'Carousel with Caption',
+      filename: 'captionCarousel',
+    },
   ],
 };
