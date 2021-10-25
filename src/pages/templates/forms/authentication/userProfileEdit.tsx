@@ -11,6 +11,7 @@ import {
   Avatar,
   AvatarBadge,
   IconButton,
+  Center,
 } from '@chakra-ui/react';
 import { SmallCloseIcon } from '@chakra-ui/icons';
 
@@ -30,25 +31,29 @@ export default function UserProfileEdit(): JSX.Element {
         boxShadow={'lg'}
         p={6}
         my={12}>
-        <Heading lineHeight={1.1} fontSize={{ base: '2xl', md: '3xl' }}>
+        <Heading lineHeight={1.1} fontSize={{ base: '2xl', sm: '3xl' }}>
           User Profile Edit
         </Heading>
         <FormControl id="userName">
           <FormLabel>User Icon</FormLabel>
-          <HStack spacing={6}>
-            <Avatar size="xl" src="https://bit.ly/sage-adebayo">
-              <AvatarBadge
-                as={IconButton}
-                size="sm"
-                rounded="full"
-                top="-10px"
-                colorScheme="red"
-                aria-label="remove Image"
-                icon={<SmallCloseIcon />}
-              />
-            </Avatar>
-            <Button w="full">Change Icon</Button>
-          </HStack>
+          <Stack direction={['column', 'row']} spacing={6}>
+            <Center>
+              <Avatar size="xl" src="https://bit.ly/sage-adebayo">
+                <AvatarBadge
+                  as={IconButton}
+                  size="sm"
+                  rounded="full"
+                  top="-10px"
+                  colorScheme="red"
+                  aria-label="remove Image"
+                  icon={<SmallCloseIcon />}
+                />
+              </Avatar>
+            </Center>
+            <Center w="full">
+              <Button w="full">Change Icon</Button>
+            </Center>
+          </Stack>
         </FormControl>
         <FormControl id="userName" isRequired>
           <FormLabel>User name</FormLabel>
@@ -74,7 +79,7 @@ export default function UserProfileEdit(): JSX.Element {
             type="password"
           />
         </FormControl>
-        <HStack spacing={6}>
+        <Stack spacing={6} direction={['column', 'row']}>
           <Button
             bg={'red.400'}
             color={'white'}
@@ -93,7 +98,7 @@ export default function UserProfileEdit(): JSX.Element {
             }}>
             Submit
           </Button>
-        </HStack>
+        </Stack>
       </Stack>
     </Flex>
   );
