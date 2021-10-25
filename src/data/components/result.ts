@@ -8,5 +8,9 @@ export const result: SubCategory = {
       name: 'Success result',
       filename: 'success',
     },
+    {
+      name: 'Info result',
+      filename: 'info',
+    },
   ],
 };
