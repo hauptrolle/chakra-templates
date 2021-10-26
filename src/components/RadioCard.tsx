@@ -1,5 +1,10 @@
 import React from 'react';
-import { Box, useRadio, UseRadioProps } from '@chakra-ui/react';
+import {
+  Box,
+  useRadio,
+  UseRadioProps,
+  useColorModeValue,
+} from '@chakra-ui/react';
 
 type RadioCardProps = {
   children: React.ReactNode;
@@ -21,15 +26,14 @@ const RadioCard: React.VFC<RadioCardProps> = (props) => {
         borderRadius="md"
         boxShadow="md"
         _checked={{
-          bg: 'teal.600',
+          bg: useColorModeValue('green.500', 'green.900'),
           color: 'white',
-          borderColor: 'teal.600',
+          borderColor: useColorModeValue('green.500', 'green.900'),
         }}
         _focus={{
           boxShadow: 'outline',
         }}
-        px={2}
-        py={2}>
+        p={2}>
         {props.children}
       </Box>
     </Box>
