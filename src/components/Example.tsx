@@ -34,7 +34,7 @@ type ExampleProps = {
 const TABS = ['Preview', 'Code'];
 
 export const Example = ({ template, category, subCategory }: ExampleProps) => {
-  const [isMobileView, setIsMobileView] = useState(false);
+  const IsNotSmartPhoneWidth = useBreakpointValue([false, true]);
   const [viewWidth, setviewWidth] = useState('full');
   const [tabIndex, setTabIndex] = React.useState(0);
   const options = [
@@ -98,7 +98,7 @@ export const Example = ({ template, category, subCategory }: ExampleProps) => {
           <HStack spacing={4} color={useColorModeValue('gray.500', 'gray.300')}>
             <SlideFade
               unmountOnExit={true}
-              in={tabIndex === 0 && useBreakpointValue([false, true])}>
+              in={tabIndex === 0 && IsNotSmartPhoneWidth}>
               <HStack>
                 {options.map((value) => {
                   const label = value.width;
