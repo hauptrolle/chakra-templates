@@ -2,7 +2,7 @@
 <p align="center">Production-ready Chakra UI Templates for developers</p>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-22-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-23-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 > A growing collection of hand-crafted Chakra UI templates ready to drop into your React project
@@ -15,7 +15,7 @@ Every template is embedded within an iframe on the page, so you can easily check
 
 ### Copy the code
 
-Just click the code tab to see the actual source code of the template. Copy and paste it into your project and your are ready to go!
+Just click the code tab to see the actual source code of the template. Copy and paste it into your project and you are ready to go!
 
 ### Enjoy your free time
 
@@ -60,6 +60,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/ronakonline"><img src="https://avatars.githubusercontent.com/u/32793372?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ronak</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=ronakonline" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/mochi-sann"><img src="https://avatars.githubusercontent.com/u/44772513?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Moyuru</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=mochi-sann" title="Code">💻</a></td>
   </tr>
 </table>
 
