@@ -11,9 +11,11 @@ import {
   useColorModeValue,
   Heading,
   Center,
+  Checkbox,
 } from '@chakra-ui/react';
 import Link from 'next/link';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
+import React, { useState } from 'react';
 
 import { ResizableFrame } from '@/components/ResizableFrame';
 import { CodeSample } from '@/components/CodeSample';
@@ -29,6 +31,7 @@ type ExampleProps = {
 const TABS = ['Preview', 'Code'];
 
 export const Example = ({ template, category, subCategory }: ExampleProps) => {
+  const [isMobileView, setIsMobileView] = useState(false);
   return (
     <Box
       rounded={'md'}
@@ -57,6 +60,11 @@ export const Example = ({ template, category, subCategory }: ExampleProps) => {
             {template.name}
           </Text>
           <HStack spacing={4} color={useColorModeValue('gray.500', 'gray.300')}>
+            <Checkbox
+              isChecked={isMobileView}
+              onChange={(e) => setIsMobileView(e.target.checked)}>
+              mobile
+            </Checkbox>
             {TABS.map((tab) => (
               <Tab
                 key={tab}
@@ -87,8 +95,8 @@ export const Example = ({ template, category, subCategory }: ExampleProps) => {
         </TabList>
         <TabPanels borderRadius="2xl">
           <TabPanel p={0}>
-            <Center w="full">
-              <Box w="full">
+            <Center w="full" bg="red.300">
+              <Box w={isMobileView ? '375px' : 'full'}>
                 <ResizableFrame
                   category={category}
                   subCategory={subCategory}
