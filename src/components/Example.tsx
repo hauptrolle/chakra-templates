@@ -12,15 +12,21 @@ import {
   Heading,
   Center,
   Checkbox,
+  SlideFade,
+  useRadioGroup,
+  useRadio,
+  Icon,
 } from '@chakra-ui/react';
 import Link from 'next/link';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import React, { useState } from 'react';
+import { MdDesktopMac, MdOutlineSmartphone, MdTabletMac } from 'react-icons/md';
 
 import { ResizableFrame } from '@/components/ResizableFrame';
 import { CodeSample } from '@/components/CodeSample';
 import { getExampleUrl } from '@/utils/getExampleUrl';
 import { Category, SubCategory, Template } from '../data/types';
+import RadioCard from './RadioCard';
 
 type ExampleProps = {
   template: Template;
@@ -32,6 +38,32 @@ const TABS = ['Preview', 'Code'];
 
 export const Example = ({ template, category, subCategory }: ExampleProps) => {
   const [isMobileView, setIsMobileView] = useState(false);
+  const [viewWidth, setviewWidth] = useState('full');
+  const [tabIndex, setTabIndex] = React.useState(0);
+  const options = [
+    {
+      label: 'smart phone',
+      width: '380px',
+      icon: <MdOutlineSmartphone />,
+    },
+    {
+      label: 'Tablet',
+      width: '600px',
+      icon: <MdTabletMac />,
+    },
+    {
+      label: 'PC',
+      width: 'full',
+      icon: <MdDesktopMac />,
+    },
+  ];
+
+  const { getRootProps, getRadioProps } = useRadioGroup({
+    name: 'displaySize',
+    defaultValue: '2',
+    onChange: setviewWidth,
+  });
+
   return (
     <Box
       rounded={'md'}
@@ -42,7 +74,14 @@ export const Example = ({ template, category, subCategory }: ExampleProps) => {
       style={{
         scrollMarginTop: '2rem',
       }}>
-      <Tabs variant="soft-rounded" colorScheme="green" size={'sm'}>
+      <Tabs
+        variant="soft-rounded"
+        colorScheme="green"
+        size={'sm'}
+        onChange={(index) => {
+          setTabIndex(index);
+          console.log(tabIndex);
+        }}>
         <TabList
           alignItems={'center'}
           justifyContent={'space-between'}
@@ -60,11 +99,20 @@ export const Example = ({ template, category, subCategory }: ExampleProps) => {
             {template.name}
           </Text>
           <HStack spacing={4} color={useColorModeValue('gray.500', 'gray.300')}>
-            <Checkbox
-              isChecked={isMobileView}
-              onChange={(e) => setIsMobileView(e.target.checked)}>
-              mobile
-            </Checkbox>
+            <SlideFade in={tabIndex === 0}>
+              <HStack>
+                {options.map((value) => {
+                  const label = value.width;
+                  const radio = getRadioProps({ value: label });
+                  return (
+                    <RadioCard key={value.label} {...radio}>
+                      {value.icon}
+                    </RadioCard>
+                  );
+                })}
+              </HStack>
+            </SlideFade>
+
             {TABS.map((tab) => (
               <Tab
                 key={tab}
@@ -95,8 +143,8 @@ export const Example = ({ template, category, subCategory }: ExampleProps) => {
         </TabList>
         <TabPanels borderRadius="2xl">
           <TabPanel p={0}>
-            <Center w="full" bg="red.300">
-              <Box w={isMobileView ? '375px' : 'full'}>
+            <Center w="full" bg={useColorModeValue('gray.100', 'gray.900')}>
+              <Box w={viewWidth}>
                 <ResizableFrame
                   category={category}
                   subCategory={subCategory}
