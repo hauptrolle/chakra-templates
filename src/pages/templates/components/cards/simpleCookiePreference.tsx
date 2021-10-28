@@ -6,7 +6,7 @@ export default function SimpleCookiePreference() {
   return (
     <Stack p="4" boxShadow="lg" m="4" borderRadius="sm">
       <Stack direction="row" alignItems="center">
-        <Text fontWeight="semibold">Your Privary</Text>
+        <Text fontWeight="semibold">Your Privacy</Text>
         <FcLock />
       </Stack>
 
