@@ -10,6 +10,7 @@ import {
   TabPanel,
   useColorModeValue,
   Center,
+  SlideFade,
   useRadioGroup,
   useBreakpointValue,
 } from '@chakra-ui/react';
@@ -23,6 +24,7 @@ import { CodeSample } from '@/components/CodeSample';
 import { getExampleUrl } from '@/utils/getExampleUrl';
 import { Category, SubCategory, Template } from '../data/types';
 import RadioCard from './RadioCard';
+import ExampleViewerRadio from './motion/ExampleViewerRadio';
 
 type ExampleProps = {
   template: Template;
@@ -33,7 +35,7 @@ type ExampleProps = {
 const TABS = ['Preview', 'Code'];
 
 export const Example = ({ template, category, subCategory }: ExampleProps) => {
-  const IsNotSmartPhoneWidth = useBreakpointValue([false, true]);
+  const IsNotSmartPhoneWidth = useBreakpointValue<boolean>([false, true]);
   const [viewWidth, setviewWidth] = useState('full');
   const [tabIndex, setTabIndex] = React.useState(0);
   const options = [
@@ -95,7 +97,7 @@ export const Example = ({ template, category, subCategory }: ExampleProps) => {
             {template.name}
           </Text>
           <HStack spacing={4} color={useColorModeValue('gray.500', 'gray.300')}>
-            {tabIndex === 0 && IsNotSmartPhoneWidth && (
+            <ExampleViewerRadio isOpen={tabIndex === 0 && IsNotSmartPhoneWidth}>
               <HStack>
                 {options.map((value) => {
                   const label = value.width;
@@ -107,7 +109,7 @@ export const Example = ({ template, category, subCategory }: ExampleProps) => {
                   );
                 })}
               </HStack>
-            )}
+            </ExampleViewerRadio>
 
             {TABS.map((tab) => (
               <Tab
