@@ -10,7 +10,6 @@ import {
   TabPanel,
   useColorModeValue,
   Center,
-  SlideFade,
   useRadioGroup,
   useBreakpointValue,
 } from '@chakra-ui/react';
@@ -96,9 +95,7 @@ export const Example = ({ template, category, subCategory }: ExampleProps) => {
             {template.name}
           </Text>
           <HStack spacing={4} color={useColorModeValue('gray.500', 'gray.300')}>
-            <SlideFade
-              unmountOnExit={true}
-              in={tabIndex === 0 && IsNotSmartPhoneWidth}>
+            {tabIndex === 0 && IsNotSmartPhoneWidth && (
               <HStack>
                 {options.map((value) => {
                   const label = value.width;
@@ -110,7 +107,7 @@ export const Example = ({ template, category, subCategory }: ExampleProps) => {
                   );
                 })}
               </HStack>
-            </SlideFade>
+            )}
 
             {TABS.map((tab) => (
               <Tab
