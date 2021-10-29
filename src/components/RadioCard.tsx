@@ -33,7 +33,7 @@ const RadioCard: React.VFC<RadioCardProps> = (props) => {
         _focus={{
           boxShadow: 'outline',
         }}
-        p={2}>
+        p={1.5}>
         {props.children}
       </Box>
     </Box>
