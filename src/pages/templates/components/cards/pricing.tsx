@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react';
 import { CheckIcon } from '@chakra-ui/icons';
 
-export default function blogPostWithImage() {
+export default function Pricing() {
   return (
     <Center py={6}>
       <Box
