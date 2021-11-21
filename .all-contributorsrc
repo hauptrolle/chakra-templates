@@ -228,6 +228,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "pranshudobhal",
+      "name": "Pranshu Dobhal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26481473?v=4",
+      "profile": "https://pranshudobhal.netlify.app/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
