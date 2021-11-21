@@ -13,6 +13,10 @@ export const authentication: SubCategory = {
       filename: 'simpleCard',
     },
     {
+      name: 'Simple Signup Card',
+      filename: 'simpleSignupCard',
+    },
+    {
       name: 'Split Screen with Image',
       filename: 'splitScreen',
     },
