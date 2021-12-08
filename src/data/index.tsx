@@ -14,6 +14,7 @@ import { statistics } from './templates/statistics';
 import { blog } from './templates/blog';
 import { contact } from './templates/contact';
 import { carousel } from './templates/carousel';
+import { product } from './templates/product';
 
 import { Category } from './types';
 
@@ -30,6 +31,7 @@ export const data: Category[] = [
       pricing,
       statistics,
       carousel,
+      product
     ],
   },
   {
