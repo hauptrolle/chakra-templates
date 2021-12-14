@@ -8,5 +8,9 @@ export const contact: SubCategory = {
       name: 'Contact',
       filename: 'contact',
     },
+    {
+      name: 'Contact Form with Social Buttons',
+      filename: 'contactFormWithSocialButtons',
+    },
   ],
 };
