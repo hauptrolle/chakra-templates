@@ -32,5 +32,9 @@ export const cards: SubCategory = {
       name: 'Simple Cookies prefrence',
       filename: 'simpleCookiePreference',
     },
+    {
+      name: 'Social User Profile Horizontal',
+      filename: 'socialUserProfileHorizontal',
+    },
   ],
 };
