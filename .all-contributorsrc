@@ -243,7 +243,7 @@
       "name": "Edwin Lunandy",
       "avatar_url": "https://avatars.githubusercontent.com/u/1444575?v=4",
       "profile": "https://github.com/populationtwo",
-       "contributions": [
+      "contributions": [
         "code"
       ]
     },
@@ -261,6 +261,15 @@
       "name": "Fernando Salas",
       "avatar_url": "https://avatars.githubusercontent.com/u/41311861?v=4",
       "profile": "https://github.com/NanddoSalas",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Berrones-Edwin",
+      "name": "Berrones Edwin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44040730?v=4",
+      "profile": "https://portfolio-jade-iota-35.vercel.app",
       "contributions": [
         "code"
       ]

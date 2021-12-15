@@ -2,7 +2,7 @@
 <p align="center">Production-ready Chakra UI Templates for developers</p>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-28-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-29-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 > A growing collection of hand-crafted Chakra UI templates ready to drop into your React project
@@ -66,6 +66,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/populationtwo"><img src="https://avatars.githubusercontent.com/u/1444575?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Edwin Lunandy</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=populationtwo" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/edizyurdakul"><img src="https://avatars.githubusercontent.com/u/53665610?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ediz</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=edizyurdakul" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/NanddoSalas"><img src="https://avatars.githubusercontent.com/u/41311861?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Fernando Salas</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=NanddoSalas" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://portfolio-jade-iota-35.vercel.app"><img src="https://avatars.githubusercontent.com/u/44040730?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Berrones Edwin</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=Berrones-Edwin" title="Code">💻</a></td>
   </tr>
 </table>
 
