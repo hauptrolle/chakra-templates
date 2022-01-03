@@ -273,6 +273,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "danish17",
+      "name": "Danish Shakeel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24435748?v=4",
+      "profile": "https://danishshakeel.me",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
