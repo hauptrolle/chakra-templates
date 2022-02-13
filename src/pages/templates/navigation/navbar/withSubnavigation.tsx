@@ -145,37 +145,50 @@ const DesktopNav = () => {
   );
 };
 
-const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
+const DesktopSubNav = ({ label, href, subLabel, children }: NavItem) => {
   return (
-    <Link
-      href={href}
-      role={'group'}
-      display={'block'}
-      p={2}
-      rounded={'md'}
-      _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
-      <Stack direction={'row'} align={'center'}>
-        <Box>
-          <Text
-            transition={'all .3s ease'}
-            _groupHover={{ color: 'pink.400' }}
-            fontWeight={500}>
-            {label}
-          </Text>
-          <Text fontSize={'sm'}>{subLabel}</Text>
-        </Box>
-        <Flex
-          transition={'all .3s ease'}
-          transform={'translateX(-10px)'}
-          opacity={0}
-          _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
-          justify={'flex-end'}
-          align={'center'}
-          flex={1}>
-          <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
-        </Flex>
-      </Stack>
-    </Link>
+    <Popover trigger={'hover'} placement={'right-start'}>
+      <PopoverTrigger>
+        <Link
+          href={href ?? '#'}
+          role={'group'}
+          display={'block'}
+          p={2}
+          rounded={'md'}
+          _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
+          <Stack direction={'row'} align={'center'}>
+            <Box>
+              <Text
+                transition={'all .3s ease'}
+                _groupHover={{ color: 'pink.400' }}
+                fontWeight={500}>
+                {label}
+              </Text>
+              <Text fontSize={'sm'}>{subLabel ?? ''}</Text>
+            </Box>
+            <Flex
+              transition={'all .3s ease'}
+              transform={'translateX(-10px)'}
+              opacity={0}
+              _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
+              justify={'flex-end'}
+              align={'center'}
+              flex={1}>
+              <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
+            </Flex>
+          </Stack>
+        </Link>
+      </PopoverTrigger>
+      {children && (
+        <PopoverContent>
+          <Stack>
+            {children.map((child, id) => (
+              <DesktopSubNav key={id} {...child} />
+            ))}
+          </Stack>
+        </PopoverContent>
+      )}
+    </Popover>
   );
 };
 
@@ -196,8 +209,9 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Stack spacing={4} onClick={children && onToggle}>
+    <Stack spacing={4}>
       <Flex
+        onClick={children && onToggle}
         py={2}
         as={Link}
         href={href ?? '#'}
@@ -231,10 +245,11 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
           borderColor={useColorModeValue('gray.200', 'gray.700')}
           align={'start'}>
           {children &&
-            children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
-                {child.label}
-              </Link>
+            children.map((child, id) => (
+              // <Link key={child.label} py={2} href={child.href}>
+              //   {child.label}
+              // </Link>
+              <MobileNavItem key={id} {...child} />
             ))}
         </Stack>
       </Collapse>
@@ -256,7 +271,16 @@ const NAV_ITEMS: Array<NavItem> = [
       {
         label: 'Explore Design Work',
         subLabel: 'Trending Design to inspire you',
-        href: '#',
+        children: [
+          {
+            label: 'Flat Design',
+            subLabel: 'Best design for decade',
+          },
+          {
+            label: 'Retro Design',
+            subLabel: 'back to the past',
+          },
+        ],
       },
       {
         label: 'New & Noteworthy',
