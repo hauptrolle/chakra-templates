@@ -75,7 +75,7 @@ export const Hero = ({ categoriesCount, templatesCount }: HeroProps) => {
               <Stack spacing={4}>
                 <Feature>Responsive Demos</Feature>
                 <Feature>Easy Customizable</Feature>
-                <Feature>Written in Typescript</Feature>
+                <Feature>Written in TypeScript</Feature>
               </Stack>
               <Stack spacing={4}>
                 <Feature>100% Open Source</Feature>
