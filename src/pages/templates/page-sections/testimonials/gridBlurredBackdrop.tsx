@@ -59,7 +59,7 @@ interface TestimonialCardProps {
   index: number;
 }
 
-function TestmonialCard(props: TestimonialCardProps) {
+function TestimonialCard(props: TestimonialCardProps) {
   const { name, role, content, avatar, index } = props;
   return (
     <Flex
@@ -174,7 +174,7 @@ export default function GridBlurredBackdrop() {
         mt={16}
         mx={'auto'}>
         {testimonials.map((cardInfo, index) => (
-          <TestmonialCard {...cardInfo} index={index} />
+          <TestimonialCard {...cardInfo} index={index} />
         ))}
       </SimpleGrid>
       <Box>
