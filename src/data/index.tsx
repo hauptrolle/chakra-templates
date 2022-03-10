@@ -1,4 +1,5 @@
-import { buttons } from './components/socialMediaButtons';
+import { socialButtons } from './components/socialMediaButtons';
+import { buttons } from './components/buttons';
 import { cards } from './components/cards';
 import { result } from './components/result';
 import { hero } from './templates/hero';
@@ -31,7 +32,7 @@ export const data: Category[] = [
       pricing,
       statistics,
       carousel,
-      product
+      product,
     ],
   },
   {
@@ -56,6 +57,6 @@ export const data: Category[] = [
     name: 'Components',
     id: 'components',
     subLabel: 'Smaller buildings blocks like Cards, Buttons, Result ...',
-    children: [cards, buttons, result],
+    children: [cards, buttons, socialButtons, result],
   },
 ];

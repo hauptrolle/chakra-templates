@@ -1,6 +1,6 @@
 import { SubCategory } from '../types';
 
-export const buttons: SubCategory = {
+export const socialButtons: SubCategory = {
   name: 'Social Media Buttons',
   id: 'social-media-buttons',
   children: [
