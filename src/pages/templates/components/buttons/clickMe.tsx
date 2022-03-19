@@ -1,19 +1,27 @@
 import { Button, ButtonProps, Flex, useColorModeValue } from '@chakra-ui/react';
 import { useState } from 'react';
 
-function randomColorNumber(min: number = 0, max: number = 256) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+function randomColor() {
+  return Math.floor(Math.random() * 5);
 }
 
+const colorList: string[] = [
+  '#E53E3E',
+  '#38A169',
+  '#00B5D8',
+  '#44337A',
+  '#ED64A6',
+];
+
 export default function ClickMe(props: ButtonProps) {
-  const [colorCode, setColorCode] = useState(randomColorNumber());
+  const [colorCode, setColorCode] = useState(colorList[randomColor()]);
 
   return (
     <Flex
       h="100vh"
       justifyContent="center"
       alignItems="center"
-      bgColor={`rgb(${colorCode}, ${colorCode}, ${colorCode})`}>
+      bgColor={`${colorCode}`}>
       <Button
         {...props}
         px={8}
@@ -24,8 +32,8 @@ export default function ClickMe(props: ButtonProps) {
           transform: 'translateY(-2px)',
           boxShadow: 'lg',
         }}
-        onClick={() => setColorCode(randomColorNumber())}>
-        Follow
+        onClick={() => setColorCode(colorList[randomColor()])}>
+        Click Me
       </Button>
     </Flex>
   );
