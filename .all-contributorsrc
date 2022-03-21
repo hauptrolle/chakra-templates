@@ -282,6 +282,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "TawalMc",
+      "name": "TawalMc",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32386564?v=4",
+      "profile": "https://tawaldevuniverse.vercel.app/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
