@@ -18,6 +18,7 @@ import { carousel } from './templates/carousel';
 import { product } from './templates/product';
 
 import { Category } from './types';
+import { imagesAndIcons } from './components/imagesAndIcons';
 
 export const data: Category[] = [
   {
@@ -57,6 +58,6 @@ export const data: Category[] = [
     name: 'Components',
     id: 'components',
     subLabel: 'Smaller buildings blocks like Cards, Buttons, Result ...',
-    children: [cards, buttons, socialButtons, result],
+    children: [cards, buttons, socialButtons, result, imagesAndIcons],
   },
 ];
