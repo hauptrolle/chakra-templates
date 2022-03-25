@@ -1,4 +1,4 @@
-import { Box, ColorProps, Flex, keyframes, Tooltip } from '@chakra-ui/react';
+import { Box, Flex, keyframes, Tooltip } from '@chakra-ui/react';
 import React from 'react';
 
 export default function StatusIndicator() {
