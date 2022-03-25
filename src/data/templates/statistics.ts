@@ -12,5 +12,9 @@ export const statistics: SubCategory = {
       name: 'Stats with icon',
       filename: 'iconStatistics',
     },
+    {
+      name: 'Statistics with title and description',
+      filename: 'statsTitleDescription',
+    },
   ],
 };

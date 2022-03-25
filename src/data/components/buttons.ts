@@ -16,5 +16,13 @@ export const buttons: SubCategory = {
       name: 'Button with Tabbed Popover',
       filename: 'buttonTabbedPopover',
     },
+    {
+      name: 'Follow Button with Shadow',
+      filename: 'followButtonWithShadow',
+    },
+    {
+      name: 'Click Me',
+      filename: 'clickMe',
+    },
   ],
 };
