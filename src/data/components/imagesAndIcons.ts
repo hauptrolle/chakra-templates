@@ -8,5 +8,9 @@ export const imagesAndIcons: SubCategory = {
       name: 'Avatar with ripple effect',
       filename: 'avatarRipple',
     },
+    {
+      name: 'Status indicator',
+      filename: 'statusIndicator',
+    },
   ],
 };
