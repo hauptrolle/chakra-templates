@@ -26,7 +26,7 @@ export default function SmallWithNavigation() {
           <Link href={'#'}>Blog</Link>
           <Link href={'#'}>Contact</Link>
         </Stack>
-        <Text>© 2020 Chakra Templates. All rights reserved</Text>
+        <Text>© 2022 Chakra Templates. All rights reserved</Text>
       </Container>
     </Box>
   );
