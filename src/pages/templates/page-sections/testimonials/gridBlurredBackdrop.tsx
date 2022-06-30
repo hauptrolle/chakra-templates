@@ -137,7 +137,8 @@ export default function GridBlurredBackdrop() {
       pt={10}
       justifyContent={'center'}
       direction={'column'}
-      width={'full'}>
+      width={'full'}
+      overflow={'hidden'}>
       <Box width={{ base: 'full', sm: 'lg', lg: 'xl' }} margin={'auto'}>
         <chakra.h3
           fontFamily={'Work Sans'}
@@ -172,6 +173,7 @@ export default function GridBlurredBackdrop() {
         columns={{ base: 1, xl: 2 }}
         spacing={'20'}
         mt={16}
+        mb={16}
         mx={'auto'}>
         {testimonials.map((cardInfo, index) => (
           <TestimonialCard {...cardInfo} index={index} />
