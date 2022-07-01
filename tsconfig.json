@@ -20,6 +20,6 @@
       "@/layout/*": ["layout/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/templates/forms/multi-step/multiStep.js"],
   "exclude": ["node_modules"]
 }
