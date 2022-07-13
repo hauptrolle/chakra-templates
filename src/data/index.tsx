@@ -16,6 +16,7 @@ import { blog } from './templates/blog';
 import { contact } from './templates/contact';
 import { carousel } from './templates/carousel';
 import { product } from './templates/product';
+import {multistep} from './templates/multistep';
 
 import { Category } from './types';
 import { imagesAndIcons } from './components/imagesAndIcons';
@@ -51,8 +52,8 @@ export const data: Category[] = [
   {
     name: 'Forms',
     id: 'forms',
-    subLabel: 'User Login & Newsletter Forms',
-    children: [authentication, newsletter, contact],
+    subLabel: 'User Login, Newsletter & Multi-Step Forms',
+    children: [authentication, newsletter, contact, multistep],
   },
   {
     name: 'Components',
