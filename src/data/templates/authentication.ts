@@ -5,6 +5,10 @@ export const authentication: SubCategory = {
   id: 'authentication',
   children: [
     {
+      name: 'Login Page',
+      filename: 'loginPage',
+    },
+    {
       name: 'Join our Team',
       filename: 'joinOurTeam',
     },
