@@ -29,6 +29,10 @@ export const authentication: SubCategory = {
       filename: 'resetPassword',
     },
     {
+      name: 'Verify Email Card',
+      filename: 'verifyEmail',
+    },
+    {
       name: 'User Profile Edit',
       filename: 'userProfileEdit',
     },
