@@ -96,8 +96,8 @@ export default function JoinOurTeam() {
               bg={'gray.800'}
               color={'white'}
               rounded={'full'}
-              width={useBreakpointValue({ base: '44px', md: '60px' })}
-              height={useBreakpointValue({ base: '44px', md: '60px' })}
+              minWidth={useBreakpointValue({ base: '44px', md: '60px' })}
+              minHeight={useBreakpointValue({ base: '44px', md: '60px' })}
               position={'relative'}
               _before={{
                 content: '""',
