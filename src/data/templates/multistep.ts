@@ -1,6 +1,6 @@
 import { SubCategory } from '../types';
 
-export const navbar: SubCategory = {
+export const multistep: SubCategory = {
   name: 'Multi Step Form',
   id: 'multiStep',
   children: [
