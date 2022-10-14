@@ -8,14 +8,9 @@ import {
   useColorModeValue,
   HStack,
 } from '@chakra-ui/react';
+import { PinInput, PinInputField } from '@chakra-ui/react';
 
 export default function VerifyEmailForm(): JSX.Element {
-  const handleFocus = (e: any) => {
-    if (e.target.value.length >= 1 && e.target.nextSibling) {
-      e.target.nextSibling.focus();
-    }
-  };
-
   return (
     <Flex
       minH={'100vh'}
@@ -49,11 +44,13 @@ export default function VerifyEmailForm(): JSX.Element {
         </Center>
         <FormControl>
           <Center>
-            <HStack onChange={handleFocus} autoFocus={true} spacing={4}>
-              <Input maxLength={1} height="10" width="12" />
-              <Input maxLength={1} height="10" width="12" />
-              <Input maxLength={1} height="10" width="12" />
-              <Input maxLength={1} height="10" width="12" />
+            <HStack>
+              <PinInput>
+                <PinInputField />
+                <PinInputField />
+                <PinInputField />
+                <PinInputField />
+              </PinInput>
             </HStack>
           </Center>
         </FormControl>
