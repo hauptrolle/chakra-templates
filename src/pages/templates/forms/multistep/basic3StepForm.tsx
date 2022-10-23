@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   Progress,
   Box,
@@ -17,35 +17,35 @@ import {
   Textarea,
   FormHelperText,
   InputRightElement,
-} from "@chakra-ui/react";
+} from '@chakra-ui/react';
 
-import { useToast } from "@chakra-ui/react";
+import { useToast } from '@chakra-ui/react';
 
 const Form1 = () => {
   const [show, setShow] = React.useState(false);
   const handleClick = () => setShow(!show);
   return (
     <>
-      <Heading w="100%" textAlign={"center"} fontWeight="normal" mb="2%">
+      <Heading w="100%" textAlign={'center'} fontWeight="normal" mb="2%">
         User Registation
       </Heading>
       <Flex>
         <FormControl mr="5%">
-          <FormLabel htmlFor="first-name" fontWeight={"normal"}>
+          <FormLabel htmlFor="first-name" fontWeight={'normal'}>
             First name
           </FormLabel>
           <Input id="first-name" placeholder="First name" />
         </FormControl>
 
         <FormControl>
-          <FormLabel htmlFor="last-name" fontWeight={"normal"}>
+          <FormLabel htmlFor="last-name" fontWeight={'normal'}>
             Last name
           </FormLabel>
           <Input id="last-name" placeholder="First name" />
         </FormControl>
       </Flex>
       <FormControl mt="2%">
-        <FormLabel htmlFor="email" fontWeight={"normal"}>
+        <FormLabel htmlFor="email" fontWeight={'normal'}>
           Email address
         </FormLabel>
         <Input id="email" type="email" />
@@ -53,18 +53,18 @@ const Form1 = () => {
       </FormControl>
 
       <FormControl>
-        <FormLabel htmlFor="password" fontWeight={"normal"} mt="2%">
+        <FormLabel htmlFor="password" fontWeight={'normal'} mt="2%">
           Password
         </FormLabel>
         <InputGroup size="md">
           <Input
             pr="4.5rem"
-            type={show ? "text" : "password"}
+            type={show ? 'text' : 'password'}
             placeholder="Enter password"
           />
           <InputRightElement width="4.5rem">
             <Button h="1.75rem" size="sm" onClick={handleClick}>
-              {show ? "Hide" : "Show"}
+              {show ? 'Hide' : 'Show'}
             </Button>
           </InputRightElement>
         </InputGroup>
@@ -76,7 +76,7 @@ const Form1 = () => {
 const Form2 = () => {
   return (
     <>
-      <Heading w="100%" textAlign={"center"} fontWeight="normal" mb="2%">
+      <Heading w="100%" textAlign={'center'} fontWeight="normal" mb="2%">
         User Details
       </Heading>
       <FormControl as={GridItem} colSpan={[6, 3]}>
@@ -86,9 +86,8 @@ const Form2 = () => {
           fontWeight="md"
           color="gray.700"
           _dark={{
-            color: "gray.50",
-          }}
-        >
+            color: 'gray.50',
+          }}>
           Country / Region
         </FormLabel>
         <Select
@@ -100,8 +99,7 @@ const Form2 = () => {
           shadow="sm"
           size="sm"
           w="full"
-          rounded="md"
-        >
+          rounded="md">
           <option>United States</option>
           <option>Canada</option>
           <option>Mexico</option>
@@ -115,10 +113,9 @@ const Form2 = () => {
           fontWeight="md"
           color="gray.700"
           _dark={{
-            color: "gray.50",
+            color: 'gray.50',
           }}
-          mt="2%"
-        >
+          mt="2%">
           Street address
         </FormLabel>
         <Input
@@ -141,10 +138,9 @@ const Form2 = () => {
           fontWeight="md"
           color="gray.700"
           _dark={{
-            color: "gray.50",
+            color: 'gray.50',
           }}
-          mt="2%"
-        >
+          mt="2%">
           City
         </FormLabel>
         <Input
@@ -167,10 +163,9 @@ const Form2 = () => {
           fontWeight="md"
           color="gray.700"
           _dark={{
-            color: "gray.50",
+            color: 'gray.50',
           }}
-          mt="2%"
-        >
+          mt="2%">
           State / Province
         </FormLabel>
         <Input
@@ -193,10 +188,9 @@ const Form2 = () => {
           fontWeight="md"
           color="gray.700"
           _dark={{
-            color: "gray.50",
+            color: 'gray.50',
           }}
-          mt="2%"
-        >
+          mt="2%">
           ZIP / Postal
         </FormLabel>
         <Input
@@ -218,7 +212,7 @@ const Form2 = () => {
 const Form3 = () => {
   return (
     <>
-      <Heading w="100%" textAlign={"center"} fontWeight="normal">
+      <Heading w="100%" textAlign={'center'} fontWeight="normal">
         Social Handles
       </Heading>
       <SimpleGrid columns={1} spacing={6}>
@@ -228,20 +222,18 @@ const Form3 = () => {
             fontWeight="md"
             color="gray.700"
             _dark={{
-              color: "gray.50",
-            }}
-          >
+              color: 'gray.50',
+            }}>
             Website
           </FormLabel>
           <InputGroup size="sm">
             <InputLeftAddon
               bg="gray.50"
               _dark={{
-                bg: "gray.800",
+                bg: 'gray.800',
               }}
               color="gray.500"
-              rounded="md"
-            >
+              rounded="md">
               http://
             </InputLeftAddon>
             <Input
@@ -259,9 +251,8 @@ const Form3 = () => {
             fontWeight="md"
             color="gray.700"
             _dark={{
-              color: "gray.50",
-            }}
-          >
+              color: 'gray.50',
+            }}>
             About
           </FormLabel>
           <Textarea
@@ -270,7 +261,7 @@ const Form3 = () => {
             shadow="sm"
             focusBorderColor="brand.400"
             fontSize={{
-              sm: "sm",
+              sm: 'sm',
             }}
           />
           <FormHelperText>
@@ -282,7 +273,7 @@ const Form3 = () => {
   );
 };
 
-export default function MultiStep() {
+export default function multistep() {
   const toast = useToast();
   const [step, setStep] = useState(1);
   const [progress, setProgress] = useState(33.33);
@@ -295,15 +286,13 @@ export default function MultiStep() {
         maxWidth={800}
         p={6}
         m="10px auto"
-        as="form"
-      >
+        as="form">
         <Progress
           hasStripe
           value={progress}
           mb="5%"
           mx="5%"
-          isAnimated
-        ></Progress>
+          isAnimated></Progress>
         {step === 1 ? <Form1 /> : step === 2 ? <Form2 /> : <Form3 />}
         <ButtonGroup mt="5%" w="100%">
           <Flex w="100%" justifyContent="space-between">
@@ -317,8 +306,7 @@ export default function MultiStep() {
                 colorScheme="teal"
                 variant="solid"
                 w="7rem"
-                mr="5%"
-              >
+                mr="5%">
                 Back
               </Button>
               <Button
@@ -333,8 +321,7 @@ export default function MultiStep() {
                   }
                 }}
                 colorScheme="teal"
-                variant="outline"
-              >
+                variant="outline">
                 Next
               </Button>
             </Flex>
@@ -344,23 +331,19 @@ export default function MultiStep() {
                 colorScheme="red"
                 variant="solid"
                 onClick={() => {
-                 
                   toast({
-                    title: "Account created.",
+                    title: 'Account created.',
                     description: "We've created your account for you.",
-                    status: "success",
+                    status: 'success',
                     duration: 3000,
                     isClosable: true,
                   });
-                }}
-              >
+                }}>
                 Submit
               </Button>
             ) : null}
           </Flex>
         </ButtonGroup>
-
-        
       </Box>
     </>
   );
