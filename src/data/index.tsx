@@ -16,7 +16,7 @@ import { blog } from './templates/blog';
 import { contact } from './templates/contact';
 import { carousel } from './templates/carousel';
 import { product } from './templates/product';
-import {multistep} from './templates/basic3stepForm';
+import { multistep } from './templates/basic3StepForm';
 
 import { Category } from './types';
 import { imagesAndIcons } from './components/imagesAndIcons';

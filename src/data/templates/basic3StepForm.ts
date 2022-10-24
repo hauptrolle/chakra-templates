@@ -8,6 +8,5 @@ export const multistep: SubCategory = {
       name: 'Basic 3 Step Form',
       filename: 'basic3StepForm',
     },
-
   ],
 };
