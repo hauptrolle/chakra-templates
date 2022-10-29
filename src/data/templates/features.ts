@@ -24,5 +24,9 @@ export const features: SubCategory = {
       name: 'Grid List With CTA',
       filename: 'gridListWithCTA',
     },
+    {
+      name: 'Grid List With Heading, Subtitle and icon',
+      filename: 'gridListWithHeadingSubtitleIcon',
+    },
   ],
 };
