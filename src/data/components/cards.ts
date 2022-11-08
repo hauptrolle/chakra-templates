@@ -29,7 +29,7 @@ export const cards: SubCategory = {
       filename: 'blogPostWithImage',
     },
     {
-      name: 'Simple Cookies prefrence',
+      name: 'Simple Cookies preference',
       filename: 'simpleCookiePreference',
     },
     {
