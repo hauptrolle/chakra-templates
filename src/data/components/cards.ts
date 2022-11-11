@@ -36,5 +36,9 @@ export const cards: SubCategory = {
       name: 'Social User Profile Horizontal',
       filename: 'socialUserProfileHorizontal',
     },
+    {
+      name: 'Post with Like',
+      filename: 'postwithLike',
+    },
   ],
 };
