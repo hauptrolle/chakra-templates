@@ -2,7 +2,7 @@
 <p align="center">Production-ready Chakra UI Templates for developers</p>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-41-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-42-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 > A growing collection of hand-crafted Chakra UI templates ready to drop into your React project
@@ -84,6 +84,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://jakovglavac.from.hr/"><img src="https://avatars.githubusercontent.com/u/34971091?v=4?s=100" width="100px;" alt="Jakov Glavač"/><br /><sub><b>Jakov Glavač</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=JakovGlavac" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/1129-tame"><img src="https://avatars.githubusercontent.com/u/78590091?v=4?s=100" width="100px;" alt="haruka-tm"/><br /><sub><b>haruka-tm</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=1129-tame" title="Documentation">📖</a></td>
       <td align="center"><a href="http://www.deviantdev.com"><img src="https://avatars.githubusercontent.com/u/1813071?v=4?s=100" width="100px;" alt="deh3nne"/><br /><sub><b>deh3nne</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=devdev-dev" title="Documentation">📖</a></td>
+      <td align="center"><a href="https://benyou.me"><img src="https://avatars.githubusercontent.com/u/31636863?v=4?s=100" width="100px;" alt="Mansour benyoucef"/><br /><sub><b>Mansour benyoucef</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=benyou1969" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
