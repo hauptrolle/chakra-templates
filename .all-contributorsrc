@@ -354,6 +354,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "JakovGlavac",
+      "name": "Jakov Glavač",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34971091?v=4",
+      "profile": "https://jakovglavac.from.hr/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
