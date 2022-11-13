@@ -318,6 +318,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "Utkarshn10",
+      "name": "Utkarsh Nagar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58587256?v=4",
+      "profile": "https://utkarsh-nagar.vercel.app/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
