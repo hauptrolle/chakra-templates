@@ -363,6 +363,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "1129-tame",
+      "name": "haruka-tm",
+      "avatar_url": "https://avatars.githubusercontent.com/u/78590091?v=4",
+      "profile": "https://github.com/1129-tame",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
