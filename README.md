@@ -2,7 +2,7 @@
 <p align="center">Production-ready Chakra UI Templates for developers</p>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-35-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-36-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 > A growing collection of hand-crafted Chakra UI templates ready to drop into your React project
@@ -76,6 +76,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://mohamedsamara.com"><img src="https://avatars.githubusercontent.com/u/45723974?v=4?s=100" width="100px;" alt="Mohamed Samara"/><br /><sub><b>Mohamed Samara</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=mohamedsamara" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/Prasanna0908"><img src="https://avatars.githubusercontent.com/u/65851817?v=4?s=100" width="100px;" alt="Prasanna Sridharan"/><br /><sub><b>Prasanna Sridharan</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=Prasanna0908" title="Code">💻</a></td>
       <td align="center"><a href="https://utkarsh-nagar.vercel.app/"><img src="https://avatars.githubusercontent.com/u/58587256?v=4?s=100" width="100px;" alt="Utkarsh Nagar"/><br /><sub><b>Utkarsh Nagar</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=Utkarshn10" title="Documentation">📖</a></td>
+    </tr>
+    <tr>
+      <td align="center"><a href="https://momerit.id"><img src="https://avatars.githubusercontent.com/u/26665218?v=4?s=100" width="100px;" alt="ekhiw"/><br /><sub><b>ekhiw</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=ekhiw" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
