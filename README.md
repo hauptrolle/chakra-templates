@@ -2,7 +2,7 @@
 <p align="center">Production-ready Chakra UI Templates for developers</p>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-32-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-33-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 > A growing collection of hand-crafted Chakra UI templates ready to drop into your React project
@@ -73,6 +73,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://danishshakeel.me"><img src="https://avatars.githubusercontent.com/u/24435748?v=4?s=100" width="100px;" alt="Danish Shakeel"/><br /><sub><b>Danish Shakeel</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=danish17" title="Code">💻</a></td>
       <td align="center"><a href="https://tawaldevuniverse.vercel.app/"><img src="https://avatars.githubusercontent.com/u/32386564?v=4?s=100" width="100px;" alt="TawalMc"/><br /><sub><b>TawalMc</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=TawalMc" title="Code">💻</a></td>
       <td align="center"><a href="https://bhupeshpradhan.vercel.app/"><img src="https://avatars.githubusercontent.com/u/76522149?v=4?s=100" width="100px;" alt="Bhupesh Pradhan"/><br /><sub><b>Bhupesh Pradhan</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=bhupeshpr25" title="Code">💻</a></td>
+      <td align="center"><a href="https://mohamedsamara.com"><img src="https://avatars.githubusercontent.com/u/45723974?v=4?s=100" width="100px;" alt="Mohamed Samara"/><br /><sub><b>Mohamed Samara</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=mohamedsamara" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
