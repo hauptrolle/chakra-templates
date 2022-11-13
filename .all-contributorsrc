@@ -300,6 +300,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "mohamedsamara",
+      "name": "Mohamed Samara",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45723974?v=4",
+      "profile": "https://mohamedsamara.com",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
