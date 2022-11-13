@@ -336,6 +336,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "PatelN123",
+      "name": "Nayan Patel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/79650289?v=4",
+      "profile": "http://nayanpatel.net",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
