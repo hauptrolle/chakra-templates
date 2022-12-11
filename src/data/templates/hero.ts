@@ -27,5 +27,9 @@ export const hero: SubCategory = {
       name: 'With background image and gradient',
       filename: 'withBackgroundImage',
     },
+    {
+      name: 'With background video and gradient',
+      filename: 'withBackgroundVideo',
+    },
   ],
 };
