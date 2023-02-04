@@ -399,6 +399,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "dev-phantom",
+      "name": "Elimihele God's favour",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72051159?v=4",
+      "profile": "http://dev-phantom.netlify.app",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
