@@ -24,5 +24,9 @@ export const features: SubCategory = {
       name: 'Grid List With CTA',
       filename: 'gridListWithCTA',
     },
+    {
+      name: 'Simple Card Wrapper',
+      filename: 'simpleCardWrapper',
+    },
   ],
 };
