@@ -64,7 +64,7 @@ export default function SimpleAccordion() {
               justifyContent="space-between"
               p={4}
               _hover={{ bg: 'gray.100' }}>
-              <Text fontSize="md">How to start using Chackra UI?</Text>
+              <Text fontSize="md">How to start using Chakra UI?</Text>
               <ChevronDownIcon fontSize="24px" />
             </AccordionButton>
             <AccordionPanel pb={4}>
