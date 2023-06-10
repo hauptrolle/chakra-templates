@@ -2,7 +2,7 @@
 <p align="center">Production-ready Chakra UI Templates for developers</p>
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-46-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-47-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 > A growing collection of hand-crafted Chakra UI templates ready to drop into your React project
@@ -91,6 +91,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="http://dev-phantom.netlify.app"><img src="https://avatars.githubusercontent.com/u/72051159?v=4?s=100" width="100px;" alt="Elimihele God's favour"/><br /><sub><b>Elimihele God's favour</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=dev-phantom" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://geethg.com"><img src="https://avatars.githubusercontent.com/u/47117192?v=4?s=100" width="100px;" alt="Geeth Gunnampalli"/><br /><sub><b>Geeth Gunnampalli</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=thetechie7" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/zMarques"><img src="https://avatars.githubusercontent.com/u/85084918?v=4?s=100" width="100px;" alt="Thiago Marques"/><br /><sub><b>Thiago Marques</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=zMarques" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/fernandounger"><img src="https://avatars.githubusercontent.com/u/87918106?v=4?s=100" width="100px;" alt="Fernando Unger"/><br /><sub><b>Fernando Unger</b></sub></a><br /><a href="https://github.com/hauptrolle/chakra-templates/commits?author=fernandounger" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
