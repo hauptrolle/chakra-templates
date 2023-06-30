@@ -12,5 +12,9 @@ export const sidebar: SubCategory = {
       name: 'Sidebar with Header',
       filename: 'sidebarWithHeader',
     },
+    {
+      name: 'Sidebar Icons',
+      filename: 'sidebarIcons',
+    },
   ],
 };
