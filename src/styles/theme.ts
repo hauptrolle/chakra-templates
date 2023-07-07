@@ -13,20 +13,16 @@ export const theme = extendTheme({
   },
   styles: {
     global: {
-      'html, #__next': {
-        height: '100%',
+      html: {
+        scrollBehavior: 'smooth',
       },
-      '#__next': {
-        display: 'flex',
-        flexDirection: 'column',
+      body: {
+        minHeight: '100vh',
       },
       '.body': {
         // todo check how to do this without breaking the site
         // height: '100%', // Push footer to bottom
         overflowY: 'scroll', // Always show scrollbar to avoid flickering
-      },
-      html: {
-        scrollBehavior: 'smooth',
       },
       '#nprogress': {
         pointerEvents: 'none',
