@@ -29,7 +29,7 @@ interface RatingProps {
 
 function Rating({ rating, numReviews }: RatingProps) {
   return (
-    <Box d="flex" alignItems="center">
+    <Box display="flex" alignItems="center">
       {Array(5)
         .fill('')
         .map((_, i) => {
@@ -82,7 +82,7 @@ function ProductAddToCart() {
         />
 
         <Box p="6">
-          <Box d="flex" alignItems="baseline">
+          <Box display="flex" alignItems="baseline">
             {data.isNew && (
               <Badge rounded="full" px="2" fontSize="0.8em" colorScheme="red">
                 New

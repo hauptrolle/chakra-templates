@@ -71,7 +71,7 @@ const PackageTier = ({
 };
 const ThreeTierPricingHorizontal = () => {
   return (
-    <Box py={6} px={5} min={'100vh'}>
+    <Box py={6} px={5} width="full">
       <Stack spacing={4} width={'100%'} direction={'column'}>
         <Stack
           p={5}
