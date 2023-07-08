@@ -13,12 +13,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "baseUrl": "./src/",
+    "baseUrl": ".",
     "paths": {
-      "@/components/*": ["components/*"],
-      "@/utils/*": ["utils/*"],
-      "@/layout/*": ["layout/*"],
-      "@/styles/*": ["styles/*"]
+      "#/*": ["./src/*"]
     },
     "plugins": [
       {
