@@ -1,5 +1,5 @@
-import { getTemplatesCount } from '@/utils/getTemplatesCount';
-import { Category } from '../../data/types';
+import { getTemplatesCount } from '#/utils/getTemplatesCount'
+import { Category } from '../../data/types'
 
 const testData: Category[] = [
   {
@@ -14,14 +14,14 @@ const testData: Category[] = [
           {
             name: 'CTA with Annotation',
             filename: 'callToActionWithAnnotation',
-            tags: ['new'],
+            tags: ['new']
           },
           {
             name: 'CTA with Illustration',
             filename: 'callToActionWithIllustration',
-            tags: ['new'],
-          },
-        ],
+            tags: ['new']
+          }
+        ]
       },
       {
         name: 'Features',
@@ -29,15 +29,15 @@ const testData: Category[] = [
         children: [
           {
             name: 'Download App Links',
-            filename: 'downloadAppLinks',
+            filename: 'downloadAppLinks'
           },
           {
             name: 'Simple three column grid',
-            filename: 'simpleThreeColumns',
-          },
-        ],
-      },
-    ],
+            filename: 'simpleThreeColumns'
+          }
+        ]
+      }
+    ]
   },
   {
     name: 'Navigation',
@@ -50,16 +50,16 @@ const testData: Category[] = [
         children: [
           {
             name: 'Simple with user dropdown',
-            filename: 'simple',
-          },
-        ],
-      },
-    ],
-  },
-];
+            filename: 'simple'
+          }
+        ]
+      }
+    ]
+  }
+]
 
 describe('getCategoryCount', () => {
   it('should return the templates count', () => {
-    expect(getTemplatesCount(testData)).toEqual(5);
-  });
-});
+    expect(getTemplatesCount(testData)).toEqual(5)
+  })
+})

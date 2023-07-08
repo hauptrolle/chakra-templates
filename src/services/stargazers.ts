@@ -1,15 +1,15 @@
-import { fetchData } from './github';
+import { fetchData } from './github'
 
 export interface Stargazers {
-  totalCount: number;
+  totalCount: number
 }
 
 interface Response {
   user: {
     repository: {
-      stargazers: Stargazers;
-    };
-  };
+      stargazers: Stargazers
+    }
+  }
 }
 
 export const fetchStargazers = async () => {
@@ -23,9 +23,9 @@ export const fetchStargazers = async () => {
         }
       }
     }
-  `;
+  `
 
-  const data = await fetchData<Response>(query);
+  const data = await fetchData<Response>(query)
 
-  return data.user.repository.stargazers;
-};
+  return data.user.repository.stargazers
+}
