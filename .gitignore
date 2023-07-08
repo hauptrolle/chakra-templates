@@ -30,13 +30,8 @@ yarn-error.log*
 yarn.lock
 
 # local env files
-.env.local
-.env.development.local
-.env.development
-.env.test.local
-.env.test
-.env.production.local
-.env.production
+.env*
+!.env.example
 
 # vercel
 .vercel
