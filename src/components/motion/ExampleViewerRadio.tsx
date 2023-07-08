@@ -1,25 +1,25 @@
-import React from 'react';
-import MotionBox from './MotionBox';
+import React from 'react'
+import MotionBox from './MotionBox'
 
 export type Props = {
-  isOpen: boolean | undefined;
-  children: React.ReactNode;
-};
+  isOpen: boolean | undefined
+  children: React.ReactNode
+}
 
 const variants = {
   open: {
     opacity: 1,
     y: 0,
-    display: 'block',
+    display: 'block'
   },
   closed: {
     opacity: 0,
     y: 20,
     transitionEnd: {
-      display: 'none',
-    },
-  },
-};
+      display: 'none'
+    }
+  }
+}
 
 const ExampleViewerRadio: React.VFC<Props> = (props) => {
   return (
@@ -31,7 +31,7 @@ const ExampleViewerRadio: React.VFC<Props> = (props) => {
       variants={variants}>
       {props.children}
     </MotionBox>
-  );
-};
+  )
+}
 
-export default ExampleViewerRadio;
+export default ExampleViewerRadio

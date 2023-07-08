@@ -1,26 +1,25 @@
-import { SyntheticEvent } from 'react';
+import { SyntheticEvent } from 'react'
 import {
   Box,
   Collapse,
   Flex,
   Icon,
-  Link,
   Stack,
   Text,
   useColorModeValue,
-  useDisclosure,
-} from '@chakra-ui/react';
-import { ChevronDownIcon } from '@chakra-ui/icons';
-import NextLink from 'next/link';
+  useDisclosure
+} from '@chakra-ui/react'
+import { ChevronDownIcon } from '@chakra-ui/icons'
+import Link from 'next/link'
 
-import { NAV_ITEMS, NavItem } from '@/components/Header/navData';
+import { NAV_ITEMS, NavItem } from '#/components/Header/navData'
 
 interface MobileNavProps {
-  isOpen: boolean;
+  isOpen: boolean
 }
 
 export const MobileNav = ({ isOpen }: MobileNavProps) => {
-  if (!isOpen) return null;
+  if (!isOpen) return null
 
   return (
     <Stack
@@ -34,27 +33,28 @@ export const MobileNav = ({ isOpen }: MobileNavProps) => {
       minH={'calc(100vh - 60px)'}
       css={{
         backdropFilter: 'saturate(180%) blur(5px)',
+        // eslint-disable-next-line react-hooks/rules-of-hooks
         backgroundColor: useColorModeValue(
           'rgba(255, 255, 255, 0.8)',
           'rgba(26, 32, 44, 0.8)'
-        ),
+        )
       }}>
       {NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
       ))}
     </Stack>
-  );
-};
+  )
+}
 
 const MobileNavItem = ({ href, children, label }: NavItem) => {
-  const { isOpen, onToggle } = useDisclosure();
+  const { isOpen, onToggle } = useDisclosure()
 
   const handleToggle = (e: SyntheticEvent) => {
     if (children) {
-      e.preventDefault();
-      onToggle();
+      e.preventDefault()
+      onToggle()
     }
-  };
+  }
 
   return (
     <Stack spacing={4} onClick={handleToggle}>
@@ -65,11 +65,9 @@ const MobileNavItem = ({ href, children, label }: NavItem) => {
         justify={'space-between'}
         align={'center'}
         _hover={{
-          textDecoration: 'none',
+          textDecoration: 'none'
         }}>
-        <Text
-          fontWeight={600}
-          color={useColorModeValue('gray.600', 'gray.200')}>
+        <Text fontWeight={600} color={useColorModeValue('gray.600', 'gray.200')}>
           {label}
         </Text>
         {children && (
@@ -93,14 +91,12 @@ const MobileNavItem = ({ href, children, label }: NavItem) => {
           align={'start'}>
           {children &&
             children.map((child) => (
-              <NextLink href={child.href!} passHref={true}>
-                <Link key={child.label} py={2}>
-                  {child.label}
-                </Link>
-              </NextLink>
+              <Box href={child.href!} key={child.label} py={2} as={Link}>
+                {child.label}
+              </Box>
             ))}
         </Stack>
       </Collapse>
     </Stack>
-  );
-};
+  )
+}
