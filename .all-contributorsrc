@@ -435,6 +435,13 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "luas10c",
+      "name": "Luciano Alves",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66514698?v=4",
+      "profile": "https://github.com/luas10c",
+      "contributions": ["code", "bug"]
     }
   ],
   "contributorsPerLine": 7,
