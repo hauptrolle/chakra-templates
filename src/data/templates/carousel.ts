@@ -12,5 +12,9 @@ export const carousel: SubCategory = {
       name: 'Carousel with Caption',
       filename: 'captionCarousel',
     },
+    {
+      name: 'Carousel with Indicator Dots',
+      filename: 'dotsCarousel',
+    },
   ],
 };
