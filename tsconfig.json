@@ -17,7 +17,8 @@
     "paths": {
       "@/components/*": ["components/*"],
       "@/utils/*": ["utils/*"],
-      "@/layout/*": ["layout/*"]
+      "@/layout/*": ["layout/*"],
+      "@/styles/*": ["styles/*"]
     },
     "plugins": [
       {

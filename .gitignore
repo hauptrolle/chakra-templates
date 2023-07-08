@@ -21,6 +21,8 @@
 .idea
 .history
 
+tsconfig.tsbuildinfo
+
 # debug
 npm-debug.log*
 yarn-debug.log*
