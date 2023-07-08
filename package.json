@@ -32,7 +32,8 @@
     "react-code-blocks": "^0.1.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
-    "react-slick": "^0.29.0"
+    "react-slick": "^0.29.0",
+    "sharp": "^0.32.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.6",
