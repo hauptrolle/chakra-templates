@@ -112,11 +112,12 @@ export default function DotsCarousel() {
         <HStack>
           {cards.map((card, cardIndex) => (
             <Icon
-              as={FaCircle}
-              boxSize={'0.75rem'}
               key={`dot-${cardIndex}`}
               aria-label={`dot-${cardIndex}`}
+              as={FaCircle}
+              boxSize={'0.75rem'}
               color={cardIndex === currentSlide ? 'messenger' : 'gray.200'}
+              cursor={'pointer'}
               transitionDuration={'200ms'}
               onClick={() => slider?.slickGoTo(cardIndex)}
             />
