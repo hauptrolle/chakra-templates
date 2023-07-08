@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npx typecheck && yarn test:ci
+npm run typecheck && npm run test:ci
