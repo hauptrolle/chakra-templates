@@ -1,4 +1,4 @@
-import { SubCategory } from '../types';
+import { SubCategory } from '../types'
 
 export const accordion: SubCategory = {
   name: 'Accordion',
@@ -6,7 +6,7 @@ export const accordion: SubCategory = {
   children: [
     {
       name: 'Simple Accordion',
-      filename: 'simpleAccordion',
-    },
-  ],
-};
+      filename: 'simpleAccordion'
+    }
+  ]
+}

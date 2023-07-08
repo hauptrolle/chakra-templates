@@ -1,4 +1,4 @@
-import { SubCategory } from '../types';
+import { SubCategory } from '../types'
 
 export const hero: SubCategory = {
   name: 'Hero',
@@ -7,25 +7,25 @@ export const hero: SubCategory = {
     {
       name: 'CTA with Annotation',
       filename: 'callToActionWithAnnotation',
-      tags: ['new'],
+      tags: ['new']
     },
     {
       name: 'CTA with Illustration',
       filename: 'callToActionWithIllustration',
-      tags: ['new'],
+      tags: ['new']
     },
     {
       name: 'CTA with Video/Image',
       filename: 'callToActionWithVideo',
-      tags: ['new'],
+      tags: ['new']
     },
     {
       name: 'Split Screen with Image',
-      filename: 'splitScreen',
+      filename: 'splitScreen'
     },
     {
       name: 'With background image and gradient',
-      filename: 'withBackgroundImage',
-    },
-  ],
-};
+      filename: 'withBackgroundImage'
+    }
+  ]
+}

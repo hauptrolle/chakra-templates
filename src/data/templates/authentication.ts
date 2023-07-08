@@ -1,4 +1,4 @@
-import { SubCategory } from '../types';
+import { SubCategory } from '../types'
 
 export const authentication: SubCategory = {
   name: 'Authentication',
@@ -6,35 +6,35 @@ export const authentication: SubCategory = {
   children: [
     {
       name: 'Join our Team',
-      filename: 'joinOurTeam',
+      filename: 'joinOurTeam'
     },
     {
       name: 'Simple Login Card',
-      filename: 'simpleCard',
+      filename: 'simpleCard'
     },
     {
       name: 'Simple Signup Card',
-      filename: 'simpleSignupCard',
+      filename: 'simpleSignupCard'
     },
     {
       name: 'Split Screen with Image',
-      filename: 'splitScreen',
+      filename: 'splitScreen'
     },
     {
       name: 'Forgot Password Card',
-      filename: 'forgotPassword',
+      filename: 'forgotPassword'
     },
     {
       name: 'Reset Password Card',
-      filename: 'resetPassword',
+      filename: 'resetPassword'
     },
     {
       name: 'Verify Email Card',
-      filename: 'verifyEmail',
+      filename: 'verifyEmail'
     },
     {
       name: 'User Profile Edit',
-      filename: 'userProfileEdit',
-    },
-  ],
-};
+      filename: 'userProfileEdit'
+    }
+  ]
+}

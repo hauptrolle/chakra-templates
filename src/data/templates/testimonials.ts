@@ -1,4 +1,4 @@
-import { SubCategory } from '../types';
+import { SubCategory } from '../types'
 
 export const testimonials: SubCategory = {
   name: 'Testimonials',
@@ -6,15 +6,15 @@ export const testimonials: SubCategory = {
   children: [
     {
       name: 'With Speech Bubbles',
-      filename: 'withSpeechBubbles',
+      filename: 'withSpeechBubbles'
     },
     {
       name: 'With large Quote',
-      filename: 'withLargeQuote',
+      filename: 'withLargeQuote'
     },
     {
       name: 'Grid With Blurred Backdrop',
-      filename: 'gridBlurredBackdrop',
-    },
-  ],
-};
+      filename: 'gridBlurredBackdrop'
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import { SubCategory } from '../types';
+import { SubCategory } from '../types'
 
 export const pricing: SubCategory = {
   name: 'Pricing',
@@ -6,11 +6,11 @@ export const pricing: SubCategory = {
   children: [
     {
       name: 'Three tiers with emphasized tier',
-      filename: 'threeTierPricing',
+      filename: 'threeTierPricing'
     },
     {
       name: 'Three tiers with emphasized tier horizontal',
-      filename: 'threeTierPricingHorizontal',
-    },
-  ],
-};
+      filename: 'threeTierPricingHorizontal'
+    }
+  ]
+}

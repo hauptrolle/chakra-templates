@@ -1,4 +1,4 @@
-import { SubCategory } from '../types';
+import { SubCategory } from '../types'
 
 export const navbar: SubCategory = {
   name: 'Navbar',
@@ -6,19 +6,19 @@ export const navbar: SubCategory = {
   children: [
     {
       name: 'With Sub-Navigation & CTA',
-      filename: 'withSubnavigation',
+      filename: 'withSubnavigation'
     },
     {
       name: 'Simple with user dropdown',
-      filename: 'simple',
+      filename: 'simple'
     },
     {
       name: 'With action button & user dropdown',
-      filename: 'withAction',
+      filename: 'withAction'
     },
     {
       name: 'With user dropdown and Dark theme switcher',
-      filename: 'withDarkModeSwitcher',
-    },
-  ],
-};
+      filename: 'withDarkModeSwitcher'
+    }
+  ]
+}

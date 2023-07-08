@@ -1,4 +1,4 @@
-import { SubCategory } from '../types';
+import { SubCategory } from '../types'
 
 export const footer: SubCategory = {
   name: 'Footer',
@@ -6,35 +6,35 @@ export const footer: SubCategory = {
   children: [
     {
       name: 'Large with App and Social Links',
-      filename: 'largeWithAppLinksAndSocial',
+      filename: 'largeWithAppLinksAndSocial'
     },
     {
       name: 'Large with Logo Left',
-      filename: 'largeWithLogoLeft',
+      filename: 'largeWithLogoLeft'
     },
     {
       name: 'Large with Newsletter Form',
-      filename: 'largeWithNewsletter',
+      filename: 'largeWithNewsletter'
     },
     {
       name: 'Large with Logo Centered',
-      filename: 'largeWithLogoCentered',
+      filename: 'largeWithLogoCentered'
     },
     {
       name: 'Small with Social Links',
-      filename: 'smallWithSocial',
+      filename: 'smallWithSocial'
     },
     {
       name: 'Small with Logo',
-      filename: 'smallWithLogoLeft',
+      filename: 'smallWithLogoLeft'
     },
     {
       name: 'Small with Navigation',
-      filename: 'smallWithNavigation',
+      filename: 'smallWithNavigation'
     },
     {
       name: 'Small centered',
-      filename: 'smallCentered',
-    },
-  ],
-};
+      filename: 'smallCentered'
+    }
+  ]
+}

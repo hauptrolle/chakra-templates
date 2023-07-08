@@ -1,4 +1,4 @@
-import { SubCategory } from '../types';
+import { SubCategory } from '../types'
 
 export const sidebar: SubCategory = {
   name: 'Sidebar',
@@ -6,11 +6,11 @@ export const sidebar: SubCategory = {
   children: [
     {
       name: 'Simple sidebar',
-      filename: 'simpleSidebar',
+      filename: 'simpleSidebar'
     },
     {
       name: 'Sidebar with Header',
-      filename: 'sidebarWithHeader',
-    },
-  ],
-};
+      filename: 'sidebarWithHeader'
+    }
+  ]
+}
