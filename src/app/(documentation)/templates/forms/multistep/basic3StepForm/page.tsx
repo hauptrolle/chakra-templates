@@ -18,7 +18,7 @@ import {
   InputGroup,
   Textarea,
   FormHelperText,
-  InputRightElement
+  InputRightElement,
 } from '@chakra-ui/react'
 
 import { useToast } from '@chakra-ui/react'
@@ -88,7 +88,7 @@ const Form2 = () => {
           fontWeight="md"
           color="gray.700"
           _dark={{
-            color: 'gray.50'
+            color: 'gray.50',
           }}>
           Country / Region
         </FormLabel>
@@ -115,7 +115,7 @@ const Form2 = () => {
           fontWeight="md"
           color="gray.700"
           _dark={{
-            color: 'gray.50'
+            color: 'gray.50',
           }}
           mt="2%">
           Street address
@@ -140,7 +140,7 @@ const Form2 = () => {
           fontWeight="md"
           color="gray.700"
           _dark={{
-            color: 'gray.50'
+            color: 'gray.50',
           }}
           mt="2%">
           City
@@ -165,7 +165,7 @@ const Form2 = () => {
           fontWeight="md"
           color="gray.700"
           _dark={{
-            color: 'gray.50'
+            color: 'gray.50',
           }}
           mt="2%">
           State / Province
@@ -190,7 +190,7 @@ const Form2 = () => {
           fontWeight="md"
           color="gray.700"
           _dark={{
-            color: 'gray.50'
+            color: 'gray.50',
           }}
           mt="2%">
           ZIP / Postal
@@ -224,7 +224,7 @@ const Form3 = () => {
             fontWeight="md"
             color="gray.700"
             _dark={{
-              color: 'gray.50'
+              color: 'gray.50',
             }}>
             Website
           </FormLabel>
@@ -232,7 +232,7 @@ const Form3 = () => {
             <InputLeftAddon
               bg="gray.50"
               _dark={{
-                bg: 'gray.800'
+                bg: 'gray.800',
               }}
               color="gray.500"
               rounded="md">
@@ -253,7 +253,7 @@ const Form3 = () => {
             fontWeight="md"
             color="gray.700"
             _dark={{
-              color: 'gray.50'
+              color: 'gray.50',
             }}>
             About
           </FormLabel>
@@ -263,7 +263,7 @@ const Form3 = () => {
             shadow="sm"
             focusBorderColor="brand.400"
             fontSize={{
-              sm: 'sm'
+              sm: 'sm',
             }}
           />
           <FormHelperText>
@@ -334,7 +334,7 @@ export default function Multistep() {
                     description: "We've created your account for you.",
                     status: 'success',
                     duration: 3000,
-                    isClosable: true
+                    isClosable: true,
                   })
                 }}>
                 Submit

@@ -8,7 +8,7 @@ import {
   Stack,
   Container,
   Avatar,
-  useColorModeValue
+  useColorModeValue,
 } from '@chakra-ui/react'
 
 interface Props {
@@ -46,7 +46,7 @@ const TestimonialContent = (props: Props) => {
         pos: 'absolute',
         bottom: '-16px',
         left: '50%',
-        transform: 'translateX(-50%)'
+        transform: 'translateX(-50%)',
       }}>
       {children}
     </Stack>
@@ -79,7 +79,7 @@ const TestimonialText = (props: Props) => {
 const TestimonialAvatar = ({
   src,
   name,
-  title
+  title,
 }: {
   src: string
   name: string

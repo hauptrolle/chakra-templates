@@ -85,7 +85,7 @@ const stats = [
         <StatsText>Software modules</StatsText> for detailed monitoring and real-time
         analytics
       </>
-    )
+    ),
   },
   {
     title: '24/7',
@@ -94,7 +94,7 @@ const stats = [
         <StatsText>Analytics</StatsText> enabled right in your dashboard without history
         limitations
       </>
-    )
+    ),
   },
   {
     title: '13%',
@@ -103,7 +103,7 @@ const stats = [
         <StatsText>Farms</StatsText> in North America has chosen NewLife™ as their
         management solution
       </>
-    )
+    ),
   },
   {
     title: '250M+',
@@ -112,6 +112,6 @@ const stats = [
         <StatsText>Plants</StatsText> currently connected and monitored by the NewLife™
         software
       </>
-    )
-  }
+    ),
+  },
 ]

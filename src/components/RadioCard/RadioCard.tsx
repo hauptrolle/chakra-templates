@@ -23,10 +23,10 @@ export const RadioCard: React.VFC<RadioCardProps> = (props) => {
         _checked={{
           bg: useColorModeValue('green.500', 'green.900'),
           color: 'white',
-          borderColor: useColorModeValue('green.500', 'green.900')
+          borderColor: useColorModeValue('green.500', 'green.900'),
         }}
         _focus={{
-          boxShadow: 'outline'
+          boxShadow: 'outline',
         }}
         p={1.5}>
         {props.children}

@@ -6,23 +6,23 @@ export const buttons: SubCategory = {
   children: [
     {
       name: 'Color Mode Toggle',
-      filename: 'colorModeToggle'
+      filename: 'colorModeToggle',
     },
     {
       name: 'Secondary Options with Menu',
-      filename: 'secondaryOptions'
+      filename: 'secondaryOptions',
     },
     {
       name: 'Button with Tabbed Popover',
-      filename: 'buttonTabbedPopover'
+      filename: 'buttonTabbedPopover',
     },
     {
       name: 'Follow Button with Shadow',
-      filename: 'followButtonWithShadow'
+      filename: 'followButtonWithShadow',
     },
     {
       name: 'Click Me',
-      filename: 'clickMe'
-    }
-  ]
+      filename: 'clickMe',
+    },
+  ],
 }

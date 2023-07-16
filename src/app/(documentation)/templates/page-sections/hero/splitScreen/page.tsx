@@ -7,7 +7,7 @@ import {
   Image,
   Stack,
   Text,
-  useBreakpointValue
+  useBreakpointValue,
 } from '@chakra-ui/react'
 
 export default function SplitScreen() {
@@ -27,7 +27,7 @@ export default function SplitScreen() {
                 bottom: 1,
                 left: 0,
                 bg: 'blue.400',
-                zIndex: -1
+                zIndex: -1,
               }}>
               Freelance
             </Text>
@@ -46,7 +46,7 @@ export default function SplitScreen() {
               bg={'blue.400'}
               color={'white'}
               _hover={{
-                bg: 'blue.500'
+                bg: 'blue.500',
               }}>
               Create Project
             </Button>

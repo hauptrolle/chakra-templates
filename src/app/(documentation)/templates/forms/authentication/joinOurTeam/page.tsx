@@ -14,30 +14,30 @@ import {
   AvatarGroup,
   useBreakpointValue,
   IconProps,
-  Icon
+  Icon,
 } from '@chakra-ui/react'
 
 const avatars = [
   {
     name: 'Ryan Florence',
-    url: 'https://bit.ly/ryan-florence'
+    url: 'https://bit.ly/ryan-florence',
   },
   {
     name: 'Segun Adebayo',
-    url: 'https://bit.ly/sage-adebayo'
+    url: 'https://bit.ly/sage-adebayo',
   },
   {
     name: 'Kent Dodds',
-    url: 'https://bit.ly/kent-c-dodds'
+    url: 'https://bit.ly/kent-c-dodds',
   },
   {
     name: 'Prosper Otemuyiwa',
-    url: 'https://bit.ly/prosper-baba'
+    url: 'https://bit.ly/prosper-baba',
   },
   {
     name: 'Christian Nwamba',
-    url: 'https://bit.ly/code-beast'
-  }
+    url: 'https://bit.ly/code-beast',
+  },
 ]
 
 const Blur = (props: IconProps) => {
@@ -101,7 +101,7 @@ export default function JoinOurTeam() {
                     position: 'absolute',
                     zIndex: -1,
                     top: 0,
-                    left: 0
+                    left: 0,
                   }}
                 />
               ))}
@@ -130,7 +130,7 @@ export default function JoinOurTeam() {
                 position: 'absolute',
                 zIndex: -1,
                 top: 0,
-                left: 0
+                left: 0,
               }}>
               YOU
             </Flex>
@@ -165,7 +165,7 @@ export default function JoinOurTeam() {
                 border={0}
                 color={'gray.500'}
                 _placeholder={{
-                  color: 'gray.500'
+                  color: 'gray.500',
                 }}
               />
               <Input
@@ -174,7 +174,7 @@ export default function JoinOurTeam() {
                 border={0}
                 color={'gray.500'}
                 _placeholder={{
-                  color: 'gray.500'
+                  color: 'gray.500',
                 }}
               />
               <Input
@@ -183,7 +183,7 @@ export default function JoinOurTeam() {
                 border={0}
                 color={'gray.500'}
                 _placeholder={{
-                  color: 'gray.500'
+                  color: 'gray.500',
                 }}
               />
               <Button fontFamily={'heading'} bg={'gray.200'} color={'gray.800'}>
@@ -198,7 +198,7 @@ export default function JoinOurTeam() {
               color={'white'}
               _hover={{
                 bgGradient: 'linear(to-r, red.400,pink.400)',
-                boxShadow: 'xl'
+                boxShadow: 'xl',
               }}>
               Submit
             </Button>

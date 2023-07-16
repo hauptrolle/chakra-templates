@@ -6,7 +6,7 @@ export const multistep: SubCategory = {
   children: [
     {
       name: 'Basic 3 Step Form',
-      filename: 'basic3StepForm'
-    }
-  ]
+      filename: 'basic3StepForm',
+    },
+  ],
 }

@@ -7,7 +7,7 @@ import {
   Stat,
   StatLabel,
   StatNumber,
-  useColorModeValue
+  useColorModeValue,
 } from '@chakra-ui/react'
 
 interface StatsCardProps {

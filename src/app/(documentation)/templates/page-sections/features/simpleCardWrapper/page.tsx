@@ -9,7 +9,7 @@ import {
   Icon,
   Stack,
   Text,
-  useColorModeValue
+  useColorModeValue,
 } from '@chakra-ui/react'
 import { ReactElement } from 'react'
 import {
@@ -17,7 +17,7 @@ import {
   FcAssistant,
   FcCollaboration,
   FcDonate,
-  FcManager
+  FcManager,
 } from 'react-icons/fc'
 
 interface CardProps {

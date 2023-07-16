@@ -8,7 +8,7 @@ import {
   Heading,
   Input,
   Stack,
-  useColorModeValue
+  useColorModeValue,
 } from '@chakra-ui/react'
 
 export default function ResetPasswordForm() {
@@ -47,7 +47,7 @@ export default function ResetPasswordForm() {
             bg={'blue.400'}
             color={'white'}
             _hover={{
-              bg: 'blue.500'
+              bg: 'blue.500',
             }}>
             Submit
           </Button>

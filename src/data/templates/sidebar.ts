@@ -6,11 +6,11 @@ export const sidebar: SubCategory = {
   children: [
     {
       name: 'Simple sidebar',
-      filename: 'simpleSidebar'
+      filename: 'simpleSidebar',
     },
     {
       name: 'Sidebar with Header',
-      filename: 'sidebarWithHeader'
-    }
-  ]
+      filename: 'sidebarWithHeader',
+    },
+  ],
 }

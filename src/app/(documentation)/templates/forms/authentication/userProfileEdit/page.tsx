@@ -13,7 +13,7 @@ import {
   Avatar,
   AvatarBadge,
   IconButton,
-  Center
+  Center,
 } from '@chakra-ui/react'
 import { SmallCloseIcon } from '@chakra-ui/icons'
 
@@ -87,7 +87,7 @@ export default function UserProfileEdit() {
             color={'white'}
             w="full"
             _hover={{
-              bg: 'red.500'
+              bg: 'red.500',
             }}>
             Cancel
           </Button>
@@ -96,7 +96,7 @@ export default function UserProfileEdit() {
             color={'white'}
             w="full"
             _hover={{
-              bg: 'blue.500'
+              bg: 'blue.500',
             }}>
             Submit
           </Button>

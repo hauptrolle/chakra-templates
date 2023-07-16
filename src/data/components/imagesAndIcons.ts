@@ -6,11 +6,11 @@ export const imagesAndIcons: SubCategory = {
   children: [
     {
       name: 'Avatar with ripple effect',
-      filename: 'avatarRipple'
+      filename: 'avatarRipple',
     },
     {
       name: 'Status indicator',
-      filename: 'statusIndicator'
-    }
-  ]
+      filename: 'statusIndicator',
+    },
+  ],
 }

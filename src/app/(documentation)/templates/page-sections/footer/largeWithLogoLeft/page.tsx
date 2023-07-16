@@ -8,7 +8,7 @@ import {
   SimpleGrid,
   Stack,
   Text,
-  useColorModeValue
+  useColorModeValue,
 } from '@chakra-ui/react'
 
 const Logo = (props: any) => {

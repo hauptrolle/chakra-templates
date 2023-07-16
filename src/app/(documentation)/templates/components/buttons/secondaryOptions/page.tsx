@@ -9,7 +9,7 @@ import {
   IconButton,
   Button,
   Stack,
-  Flex
+  Flex,
 } from '@chakra-ui/react'
 
 import { BsThreeDotsVertical, BsChatSquareQuote } from 'react-icons/bs'

@@ -10,7 +10,7 @@ import {
   Text,
   Stack,
   Button,
-  useColorModeValue
+  useColorModeValue,
 } from '@chakra-ui/react'
 
 export default function SocialProfileWithImage() {
@@ -39,7 +39,7 @@ export default function SocialProfileWithImage() {
               'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ'
             }
             css={{
-              border: '2px solid white'
+              border: '2px solid white',
             }}
           />
         </Flex>
@@ -75,7 +75,7 @@ export default function SocialProfileWithImage() {
             rounded={'md'}
             _hover={{
               transform: 'translateY(-2px)',
-              boxShadow: 'lg'
+              boxShadow: 'lg',
             }}>
             Follow
           </Button>

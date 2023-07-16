@@ -7,7 +7,7 @@ import splitbee from '@splitbee/web'
 
 import {
   SPLITBEE_TEMPLATE_CLICK_COPY,
-  SPLITBEE_TEMPLATE_MANUAL_COPY
+  SPLITBEE_TEMPLATE_MANUAL_COPY,
 } from '#/config/constants'
 import { Category, SubCategory, Template } from '#/data/types'
 
@@ -28,11 +28,11 @@ export const CodeSample = (props: Props) => {
     (event: ClipboardEvent) => {
       if (codeRef?.current?.contains(event.target as Node)) {
         splitbee.track(SPLITBEE_TEMPLATE_MANUAL_COPY, {
-          template: template.name
+          template: template.name,
         })
       }
     },
-    [template.name]
+    [template.name],
   )
 
   useEffect(() => {

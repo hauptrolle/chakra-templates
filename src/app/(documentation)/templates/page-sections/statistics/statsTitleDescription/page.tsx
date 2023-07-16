@@ -9,7 +9,7 @@ function statsTitleDescription() {
         templateColumns={{
           base: 'repeat(1, 1fr)',
           sm: 'repeat(2, 1fr)',
-          md: 'repeat(4, 1fr)'
+          md: 'repeat(4, 1fr)',
         }}
         gap={6}>
         <GridItem w="100%" colSpan={{ base: 1, sm: 2, md: 2 }}>

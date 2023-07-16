@@ -38,7 +38,7 @@ const NavigationLink = (props: Props) => {
       }
       _hover={{
         // eslint-disable-next-line react-hooks/rules-of-hooks
-        bg: isActive ? activeBg : useColorModeValue('gray.100', 'gray.900')
+        bg: isActive ? activeBg : useColorModeValue('gray.100', 'gray.900'),
       }}
       as={Link}>
       {children}

@@ -6,23 +6,23 @@ export const socialButtons: SubCategory = {
   children: [
     {
       name: 'All Buttons',
-      filename: 'all'
+      filename: 'all',
     },
     {
       name: 'Messenger Button',
-      filename: 'messenger'
+      filename: 'messenger',
     },
     {
       name: 'Facebook Button',
-      filename: 'facebook'
+      filename: 'facebook',
     },
     {
       name: 'LinkedIn Button',
-      filename: 'linkedIn'
+      filename: 'linkedIn',
     },
     {
       name: 'Google Button',
-      filename: 'google'
-    }
-  ]
+      filename: 'google',
+    },
+  ],
 }

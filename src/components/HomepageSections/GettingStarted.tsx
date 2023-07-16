@@ -7,23 +7,23 @@ import {
   Box,
   Stack,
   Flex,
-  useColorModeValue
+  useColorModeValue,
 } from '@chakra-ui/react'
 import { TextUnderline } from '../TextUnderline'
 
 const STEPS = [
   {
     title: 'Find your template',
-    text: 'Every template is embedded within an iframe, so you can easily check what they look like and test the responsive behaviour.'
+    text: 'Every template is embedded within an iframe, so you can easily check what they look like and test the responsive behaviour.',
   },
   {
     title: 'Copy the code',
-    text: 'Click the code tab to see the actual source code of the template. Copy and paste it into your project and adjust it to your needs.'
+    text: 'Click the code tab to see the actual source code of the template. Copy and paste it into your project and adjust it to your needs.',
   },
   {
     title: 'Enjoy your free time',
-    text: "You've just saved yourself a bunch of time not building the same stuff over and over again. Enjoy your free time, and build business features"
-  }
+    text: "You've just saved yourself a bunch of time not building the same stuff over and over again. Enjoy your free time, and build business features",
+  },
 ]
 
 export const GettingStarted = () => {
@@ -46,7 +46,7 @@ export const GettingStarted = () => {
               maxW={{ base: 'full', md: 'xs' }}
               mt={{ base: 10, md: 0 }}
               _first={{
-                mt: 0
+                mt: 0,
               }}
               px={4}>
               <Flex

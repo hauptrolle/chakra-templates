@@ -13,7 +13,7 @@ import {
   SpaceProps,
   useColorModeValue,
   Container,
-  VStack
+  VStack,
 } from '@chakra-ui/react'
 
 interface IBlogTags {
@@ -98,7 +98,7 @@ const ArticleList = () => {
             <Box
               bgGradient={useColorModeValue(
                 'radial(orange.600 1px, transparent 1px)',
-                'radial(orange.300 1px, transparent 1px)'
+                'radial(orange.300 1px, transparent 1px)',
               )}
               backgroundSize="20px 20px"
               opacity="0.4"
@@ -150,7 +150,7 @@ const ArticleList = () => {
                   width="100%"
                   transition="0.3s ease-in-out"
                   _hover={{
-                    transform: 'scale(1.05)'
+                    transform: 'scale(1.05)',
                   }}
                 />
               </Box>

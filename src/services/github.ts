@@ -15,9 +15,9 @@ export const fetchData = async <R extends any>(query: any) => {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`
+      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
     },
-    body: JSON.stringify({ query })
+    body: JSON.stringify({ query }),
   })
 
   const { data }: { data: R } = await res.json()

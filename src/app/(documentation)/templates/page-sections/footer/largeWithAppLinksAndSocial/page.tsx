@@ -9,7 +9,7 @@ import {
   Text,
   VisuallyHidden,
   chakra,
-  useColorModeValue
+  useColorModeValue,
 } from '@chakra-ui/react'
 import { FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa'
 
@@ -27,7 +27,7 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
 const SocialButton = ({
   children,
   label,
-  href
+  href,
 }: {
   children: ReactNode
   label: string
@@ -47,7 +47,7 @@ const SocialButton = ({
       justifyContent={'center'}
       transition={'background 0.3s ease'}
       _hover={{
-        bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200')
+        bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
       }}>
       <VisuallyHidden>{label}</VisuallyHidden>
       {children}

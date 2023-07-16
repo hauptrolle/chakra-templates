@@ -21,7 +21,7 @@ export default function ClickMe() {
         rounded={'md'}
         _hover={{
           transform: 'translateY(-2px)',
-          boxShadow: 'lg'
+          boxShadow: 'lg',
         }}
         onClick={() => setColorCode(colorList[randomColor()])}>
         Click Me

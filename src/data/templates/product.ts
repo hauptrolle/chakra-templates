@@ -6,7 +6,7 @@ export const product: SubCategory = {
   children: [
     {
       name: 'Simple',
-      filename: 'simple'
-    }
-  ]
+      filename: 'simple',
+    },
+  ],
 }

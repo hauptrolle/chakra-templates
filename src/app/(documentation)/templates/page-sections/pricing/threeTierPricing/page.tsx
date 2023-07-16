@@ -11,7 +11,7 @@ import {
   List,
   ListItem,
   ListIcon,
-  Button
+  Button,
 } from '@chakra-ui/react'
 import { FaCheckCircle } from 'react-icons/fa'
 

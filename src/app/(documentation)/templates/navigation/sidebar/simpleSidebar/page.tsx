@@ -13,7 +13,7 @@ import {
   DrawerContent,
   useDisclosure,
   BoxProps,
-  FlexProps
+  FlexProps,
 } from '@chakra-ui/react'
 import {
   FiHome,
@@ -21,7 +21,7 @@ import {
   FiCompass,
   FiStar,
   FiSettings,
-  FiMenu
+  FiMenu,
 } from 'react-icons/fi'
 import { IconType } from 'react-icons'
 import { ReactText } from 'react'
@@ -35,7 +35,7 @@ const LinkItems: Array<LinkItemProps> = [
   { name: 'Trending', icon: FiTrendingUp },
   { name: 'Explore', icon: FiCompass },
   { name: 'Favourites', icon: FiStar },
-  { name: 'Settings', icon: FiSettings }
+  { name: 'Settings', icon: FiSettings },
 ]
 
 export default function SimpleSidebar() {
@@ -112,7 +112,7 @@ const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
         cursor="pointer"
         _hover={{
           bg: 'cyan.400',
-          color: 'white'
+          color: 'white',
         }}
         {...rest}>
         {icon && (
@@ -120,7 +120,7 @@ const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
             mr="4"
             fontSize="16"
             _groupHover={{
-              color: 'white'
+              color: 'white',
             }}
             as={icon}
           />

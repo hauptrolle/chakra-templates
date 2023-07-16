@@ -11,7 +11,7 @@ import {
   Button,
   Heading,
   Text,
-  useColorModeValue
+  useColorModeValue,
 } from '@chakra-ui/react'
 
 export default function SimpleCard() {
@@ -54,7 +54,7 @@ export default function SimpleCard() {
                 bg={'blue.400'}
                 color={'white'}
                 _hover={{
-                  bg: 'blue.500'
+                  bg: 'blue.500',
                 }}>
                 Sign in
               </Button>

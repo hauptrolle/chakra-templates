@@ -10,7 +10,7 @@ import {
   Stack,
   StackDivider,
   Icon,
-  useColorModeValue
+  useColorModeValue,
 } from '@chakra-ui/react'
 import { IoAnalyticsSharp, IoLogoBitcoin, IoSearchSharp } from 'react-icons/io5'
 import { ReactElement } from 'react'

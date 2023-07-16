@@ -7,7 +7,7 @@ import {
   Heading,
   Text,
   Stack,
-  Image
+  Image,
 } from '@chakra-ui/react'
 
 const IMAGE =
@@ -41,12 +41,12 @@ export default function ProductSimple() {
             left: 0,
             backgroundImage: `url(${IMAGE})`,
             filter: 'blur(15px)',
-            zIndex: -1
+            zIndex: -1,
           }}
           _groupHover={{
             _after: {
-              filter: 'blur(20px)'
-            }
+              filter: 'blur(20px)',
+            },
           }}>
           <Image
             rounded={'lg'}

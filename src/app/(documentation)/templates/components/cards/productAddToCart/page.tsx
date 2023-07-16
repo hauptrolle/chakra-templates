@@ -9,7 +9,7 @@ import {
   useColorModeValue,
   Icon,
   chakra,
-  Tooltip
+  Tooltip,
 } from '@chakra-ui/react'
 import { BsStar, BsStarFill, BsStarHalf } from 'react-icons/bs'
 import { FiShoppingCart } from 'react-icons/fi'
@@ -21,7 +21,7 @@ const data = {
   name: 'Wayfarer Classic',
   price: 4.5,
   rating: 4.2,
-  numReviews: 34
+  numReviews: 34,
 }
 
 interface RatingProps {

@@ -10,15 +10,15 @@ const variants = {
   open: {
     opacity: 1,
     y: 0,
-    display: 'block'
+    display: 'block',
   },
   closed: {
     opacity: 0,
     y: 20,
     transitionEnd: {
-      display: 'none'
-    }
-  }
+      display: 'none',
+    },
+  },
 }
 
 const ExampleViewerRadio: React.VFC<Props> = (props) => {

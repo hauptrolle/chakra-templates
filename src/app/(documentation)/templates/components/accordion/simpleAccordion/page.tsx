@@ -8,7 +8,7 @@ import {
   Flex,
   useColorModeValue,
   Text,
-  Container
+  Container,
 } from '@chakra-ui/react'
 
 import { ChevronDownIcon } from '@chakra-ui/icons'

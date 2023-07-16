@@ -68,10 +68,10 @@ export default function StatusIndicator() {
             marginTop: '-100%',
             borderRadius: '50%',
             bgColor: activeColor,
-            animation: `2.25s ${pulseRing} cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite`
+            animation: `2.25s ${pulseRing} cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite`,
           }}
           _after={{
-            animation: `2.25s ${pulseDot} cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite`
+            animation: `2.25s ${pulseDot} cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite`,
           }}
         />
       </Tooltip>

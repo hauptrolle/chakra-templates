@@ -8,7 +8,7 @@ import {
   Text,
   Button,
   Icon,
-  IconProps
+  IconProps,
 } from '@chakra-ui/react'
 
 const Illustration = (props: IconProps) => {

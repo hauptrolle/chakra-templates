@@ -22,15 +22,15 @@ export const metadata: Metadata = {
       'A growing open-source collection of hand-crafted Chakra UI templates ready to drop into your React project.',
     images: 'https://chakra-templates.dev/favicon.png',
     siteName: 'Chakra Templates',
-    url: 'https://chakra-templates.dev/'
+    url: 'https://chakra-templates.dev/',
   },
   twitter: {
     title: 'Chakra Templates',
     description:
       'A growing open-source collection of hand-crafted Chakra UI templates ready to drop into your React project.',
     images: 'https://chakra-templates.dev/favicon.png',
-    card: 'summary_large_image'
-  }
+    card: 'summary_large_image',
+  },
 }
 
 const AppLayout = (props: Props) => {

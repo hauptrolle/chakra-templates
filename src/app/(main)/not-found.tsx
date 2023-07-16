@@ -8,7 +8,7 @@ import {
   Heading,
   Text,
   Button,
-  useColorModeValue
+  useColorModeValue,
 } from '@chakra-ui/react'
 import Link from 'next/link'
 

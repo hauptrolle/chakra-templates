@@ -8,7 +8,7 @@ import {
   Input,
   Stack,
   Text,
-  useColorModeValue
+  useColorModeValue,
 } from '@chakra-ui/react'
 
 type ForgotPasswordFormInputs = {
@@ -51,7 +51,7 @@ export default function ForgotPasswordForm() {
             bg={'blue.400'}
             color={'white'}
             _hover={{
-              bg: 'blue.500'
+              bg: 'blue.500',
             }}>
             Request Reset
           </Button>

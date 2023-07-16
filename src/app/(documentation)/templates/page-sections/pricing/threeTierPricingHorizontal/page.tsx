@@ -10,14 +10,14 @@ import {
   ListItem,
   Stack,
   Text,
-  useColorModeValue
+  useColorModeValue,
 } from '@chakra-ui/react'
 import { FaCheckCircle } from 'react-icons/fa'
 
 const options = [
   { id: 1, desc: '1 lorem ipsum' },
   { id: 2, desc: 'Lorem, ipsum dolor.' },
-  { id: 3, desc: 'Monthly Updates' }
+  { id: 3, desc: 'Monthly Updates' },
 ]
 interface PackageTierProps {
   title: string
@@ -38,11 +38,11 @@ const PackageTier = ({ title, options, typePlan, checked = false }: PackageTierP
       py={3}
       justifyContent={{
         base: 'flex-start',
-        md: 'space-around'
+        md: 'space-around',
       }}
       direction={{
         base: 'column',
-        md: 'row'
+        md: 'row',
       }}
       alignItems={{ md: 'center' }}>
       <Heading size={'md'}>{title}</Heading>
@@ -75,16 +75,16 @@ const ThreeTierPricingHorizontal = () => {
           alignItems={'center'}
           justifyContent={{
             base: 'flex-start',
-            md: 'space-around'
+            md: 'space-around',
           }}
           direction={{
             base: 'column',
-            md: 'row'
+            md: 'row',
           }}>
           <Stack
             width={{
               base: '100%',
-              md: '40%'
+              md: '40%',
             }}
             textAlign={'center'}>
             <Heading size={'lg'}>
@@ -94,7 +94,7 @@ const ThreeTierPricingHorizontal = () => {
           <Stack
             width={{
               base: '100%',
-              md: '60%'
+              md: '60%',
             }}>
             <Text textAlign={'center'}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam quod in

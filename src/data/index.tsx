@@ -35,31 +35,31 @@ export const data: Category[] = [
       pricing,
       statistics,
       carousel,
-      product
-    ]
+      product,
+    ],
   },
   {
     name: 'Blog',
     subLabel: 'A section regarding all blog elements',
     id: 'blog',
-    children: [blog]
+    children: [blog],
   },
   {
     name: 'Navigation',
     id: 'navigation',
     subLabel: 'Header Navigation for Websites & Apps',
-    children: [navbar, sidebar]
+    children: [navbar, sidebar],
   },
   {
     name: 'Forms',
     id: 'forms',
     subLabel: 'User Login, Newsletter & Multi-Step Forms',
-    children: [authentication, newsletter, contact, multistep]
+    children: [authentication, newsletter, contact, multistep],
   },
   {
     name: 'Components',
     id: 'components',
     subLabel: 'Smaller buildings blocks like Cards, Buttons, Result ...',
-    children: [cards, buttons, socialButtons, result, imagesAndIcons, accordion]
-  }
+    children: [cards, buttons, socialButtons, result, imagesAndIcons, accordion],
+  },
 ]

@@ -6,7 +6,7 @@ export const accordion: SubCategory = {
   children: [
     {
       name: 'Simple Accordion',
-      filename: 'simpleAccordion'
-    }
-  ]
+      filename: 'simpleAccordion',
+    },
+  ],
 }

@@ -14,13 +14,13 @@ import {
   PopoverContent,
   useColorModeValue,
   useBreakpointValue,
-  useDisclosure
+  useDisclosure,
 } from '@chakra-ui/react'
 import {
   HamburgerIcon,
   CloseIcon,
   ChevronDownIcon,
-  ChevronRightIcon
+  ChevronRightIcon,
 } from '@chakra-ui/icons'
 
 export default function WithSubnavigation() {
@@ -79,7 +79,7 @@ export default function WithSubnavigation() {
             bg={'pink.400'}
             href={'#'}
             _hover={{
-              bg: 'pink.300'
+              bg: 'pink.300',
             }}>
             Sign Up
           </Button>
@@ -113,7 +113,7 @@ const DesktopNav = () => {
                 color={linkColor}
                 _hover={{
                   textDecoration: 'none',
-                  color: linkHoverColor
+                  color: linkHoverColor,
                 }}>
                 {navItem.label}
               </Box>
@@ -198,7 +198,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         justifyContent="space-between"
         alignItems="center"
         _hover={{
-          textDecoration: 'none'
+          textDecoration: 'none',
         }}>
         <Text fontWeight={600} color={useColorModeValue('gray.600', 'gray.200')}>
           {label}
@@ -248,14 +248,14 @@ const NAV_ITEMS: Array<NavItem> = [
       {
         label: 'Explore Design Work',
         subLabel: 'Trending Design to inspire you',
-        href: '#'
+        href: '#',
       },
       {
         label: 'New & Noteworthy',
         subLabel: 'Up-and-coming Designers',
-        href: '#'
-      }
-    ]
+        href: '#',
+      },
+    ],
   },
   {
     label: 'Find Work',
@@ -263,21 +263,21 @@ const NAV_ITEMS: Array<NavItem> = [
       {
         label: 'Job Board',
         subLabel: 'Find your dream design job',
-        href: '#'
+        href: '#',
       },
       {
         label: 'Freelance Projects',
         subLabel: 'An exclusive list for contract work',
-        href: '#'
-      }
-    ]
+        href: '#',
+      },
+    ],
   },
   {
     label: 'Learn Design',
-    href: '#'
+    href: '#',
   },
   {
     label: 'Hire Designers',
-    href: '#'
-  }
+    href: '#',
+  },
 ]

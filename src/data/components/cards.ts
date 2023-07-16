@@ -6,39 +6,39 @@ export const cards: SubCategory = {
   children: [
     {
       name: 'Social User Profile with Image',
-      filename: 'socialProfileWithImage'
+      filename: 'socialProfileWithImage',
     },
     {
       name: 'Social User Profile Simple',
-      filename: 'socialProfileSimple'
+      filename: 'socialProfileSimple',
     },
     {
       name: 'Product Simple',
-      filename: 'productSimple'
+      filename: 'productSimple',
     },
     {
       name: 'Product with Add to Cart',
-      filename: 'productAddToCart'
+      filename: 'productAddToCart',
     },
     {
       name: 'Pricing',
-      filename: 'pricing'
+      filename: 'pricing',
     },
     {
       name: 'Blog Post with Image',
-      filename: 'blogPostWithImage'
+      filename: 'blogPostWithImage',
     },
     {
       name: 'Simple Cookies preference',
-      filename: 'simpleCookiePreference'
+      filename: 'simpleCookiePreference',
     },
     {
       name: 'Social User Profile Horizontal',
-      filename: 'socialUserProfileHorizontal'
+      filename: 'socialUserProfileHorizontal',
     },
     {
       name: 'Post with Like',
-      filename: 'postwithLike'
-    }
-  ]
+      filename: 'postwithLike',
+    },
+  ],
 }

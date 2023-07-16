@@ -6,11 +6,11 @@ export const newsletter: SubCategory = {
   children: [
     {
       name: 'Card with Illustration',
-      filename: 'cardWithIllustration'
+      filename: 'cardWithIllustration',
     },
     {
       name: 'Simple',
-      filename: 'simple'
-    }
-  ]
+      filename: 'simple',
+    },
+  ],
 }

@@ -14,7 +14,7 @@ import {
   Heading,
   Text,
   useColorModeValue,
-  Link
+  Link,
 } from '@chakra-ui/react'
 import { useState } from 'react'
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons'
@@ -81,7 +81,7 @@ export default function SignupCard() {
                 bg={'blue.400'}
                 color={'white'}
                 _hover={{
-                  bg: 'blue.500'
+                  bg: 'blue.500',
                 }}>
                 Sign up
               </Button>

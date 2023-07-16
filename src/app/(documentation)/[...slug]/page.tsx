@@ -39,7 +39,7 @@ const fetchTemplate = async (ctx: Context) => {
   return {
     templates,
     category,
-    subCategory
+    subCategory,
   }
 }
 
@@ -59,11 +59,11 @@ export const generateMetadata = async (ctx: Context): Promise<Metadata> => {
   return {
     title,
     openGraph: {
-      title
+      title,
     },
     twitter: {
-      title
-    }
+      title,
+    },
   }
 }
 

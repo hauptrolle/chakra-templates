@@ -8,7 +8,7 @@ import {
   PopoverContent,
   Text,
   Flex,
-  Icon
+  Icon,
 } from '@chakra-ui/react'
 import Link from 'next/link'
 
@@ -32,7 +32,7 @@ export const DesktopNav = (props: BoxProps) => {
                 _hover={{
                   textDecoration: 'none',
                   // eslint-disable-next-line react-hooks/rules-of-hooks
-                  color: useColorModeValue('gray.800', 'white')
+                  color: useColorModeValue('gray.800', 'white'),
                 }}
                 as={Link}>
                 {navItem.label}

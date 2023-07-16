@@ -9,7 +9,7 @@ import {
   Flex,
   Center,
   useColorModeValue,
-  HStack
+  HStack,
 } from '@chakra-ui/react'
 import { BsArrowUpRight, BsHeartFill, BsHeart } from 'react-icons/bs'
 

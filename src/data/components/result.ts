@@ -6,23 +6,23 @@ export const result: SubCategory = {
   children: [
     {
       name: 'Success result',
-      filename: 'success'
+      filename: 'success',
     },
     {
       name: 'Info result',
-      filename: 'info'
+      filename: 'info',
     },
     {
       name: 'Warning result',
-      filename: 'warning'
+      filename: 'warning',
     },
     {
       name: 'Error result',
-      filename: 'error'
+      filename: 'error',
     },
     {
       name: '404 result',
-      filename: '404'
-    }
-  ]
+      filename: '404',
+    },
+  ],
 }

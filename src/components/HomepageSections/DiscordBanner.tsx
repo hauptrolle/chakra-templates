@@ -8,7 +8,7 @@ import {
   Stack,
   Icon,
   Flex,
-  useBreakpointValue
+  useBreakpointValue,
 } from '@chakra-ui/react'
 import { DISCORD_INVITE_LINK } from '../../config/constants'
 import { IoLogoDiscord } from 'react-icons/io5'
@@ -51,7 +51,7 @@ export const DiscordBanner = () => {
             href={DISCORD_INVITE_LINK}
             target={'_blank'}
             _hover={{
-              boxShadow: 'xl'
+              boxShadow: 'xl',
             }}>
             Join the Discord Server
           </Button>

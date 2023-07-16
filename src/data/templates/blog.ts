@@ -7,7 +7,7 @@ export const blog: SubCategory = {
     {
       tags: ['new'],
       name: 'Basic layout #1',
-      filename: 'articleList'
-    }
-  ]
+      filename: 'articleList',
+    },
+  ],
 }

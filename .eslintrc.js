@@ -4,43 +4,43 @@ module.exports = {
   env: {
     browser: true,
     es2024: true,
-    jest: true
+    jest: true,
   },
   globals: {
-    React: true
+    React: true,
   },
   extends: ['next', 'prettier'],
   plugins: ['prettier'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
-    ecmaVersion: 15
+    ecmaVersion: 15,
   },
   overrides: [
     {
       files: ['**/*.[ts?(x)'],
       extends: ['plugin:@typescript-eslint/recommended'],
-      plugins: ['@typescript-eslint']
+      plugins: ['@typescript-eslint'],
     },
     {
       files: ['**/*.[jt]s?(x)'],
       extends: [
         'plugin:react/recommended',
         'plugin:react/jsx-runtime',
-        'plugin:jsx-a11y/recommended'
+        'plugin:jsx-a11y/recommended',
       ],
-      plugins: ['jsx-a11y', 'chakra-ui']
+      plugins: ['jsx-a11y', 'chakra-ui'],
     },
     {
       // Only uses Testing Library lint rules in test files
       files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
       extends: ['plugin:jest/recommended', 'plugin:testing-library/react'],
-      plugins: ['jest', 'testing-library']
-    }
+      plugins: ['jest', 'testing-library'],
+    },
   ],
   rules: {
-    'prettier/prettier': 'error'
-  }
+    'prettier/prettier': 'error',
+  },
 }

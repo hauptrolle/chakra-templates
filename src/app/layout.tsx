@@ -7,8 +7,7 @@ const AppLayout = (props: Props) => {
 
   return (
     <html lang="en">
-      {/* eslint-disable-next-line react/no-unknown-property */}
-      <body cz-shortcut-listen="true">{children}</body>
+      <body>{children}</body>
     </html>
   )
 }

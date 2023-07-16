@@ -8,7 +8,7 @@ import {
   Input,
   Stack,
   useColorModeValue,
-  HStack
+  HStack,
 } from '@chakra-ui/react'
 import { PinInput, PinInputField } from '@chakra-ui/react'
 
@@ -61,7 +61,7 @@ export default function VerifyEmailForm() {
             bg={'blue.400'}
             color={'white'}
             _hover={{
-              bg: 'blue.500'
+              bg: 'blue.500',
             }}>
             Verify
           </Button>

@@ -14,7 +14,7 @@ import {
   useColorModeValue,
   Center,
   useRadioGroup,
-  useBreakpointValue
+  useBreakpointValue,
 } from '@chakra-ui/react'
 import Link from 'next/link'
 import { ExternalLinkIcon } from '@chakra-ui/icons'
@@ -44,24 +44,24 @@ export const Example = ({ template, category, subCategory }: ExampleProps) => {
     {
       label: 'smart phone',
       width: '380px',
-      icon: <MdOutlineSmartphone />
+      icon: <MdOutlineSmartphone />,
     },
     {
       label: 'Tablet',
       width: '600px',
-      icon: <MdTabletMac />
+      icon: <MdTabletMac />,
     },
     {
       label: 'PC',
       width: 'full',
-      icon: <MdDesktopMac />
-    }
+      icon: <MdDesktopMac />,
+    },
   ]
 
   const { getRootProps, getRadioProps } = useRadioGroup({
     name: 'displaySize',
     defaultValue: options[2].width,
-    onChange: setviewWidth
+    onChange: setviewWidth,
   })
 
   return (
@@ -72,7 +72,7 @@ export const Example = ({ template, category, subCategory }: ExampleProps) => {
       id={template.filename}
       height="full"
       style={{
-        scrollMarginTop: '2rem'
+        scrollMarginTop: '2rem',
       }}>
       <Tabs
         variant="soft-rounded"
@@ -122,7 +122,7 @@ export const Example = ({ template, category, subCategory }: ExampleProps) => {
                   // eslint-disable-next-line react-hooks/rules-of-hooks
                   bg: useColorModeValue('green.50', 'green.900'),
                   // eslint-disable-next-line react-hooks/rules-of-hooks
-                  color: useColorModeValue('green.500', 'green.400')
+                  color: useColorModeValue('green.500', 'green.400'),
                 }}>
                 {tab}
               </Tab>

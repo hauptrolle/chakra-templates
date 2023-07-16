@@ -10,7 +10,7 @@ import {
   useColorModeValue,
   Icon,
   useColorMode,
-  Heading
+  Heading,
 } from '@chakra-ui/react'
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons'
 import { IoMoon, IoSunny } from 'react-icons/io5'
@@ -40,8 +40,8 @@ export const Header = () => {
           backdropFilter: 'saturate(180%) blur(5px)',
           backgroundColor: useColorModeValue(
             'rgba(255, 255, 255, 0.8)',
-            'rgba(26, 32, 44, 0.8)'
-          )
+            'rgba(26, 32, 44, 0.8)',
+          ),
         }}>
         <Container as={Flex} maxW={'7xl'} align={'center'}>
           <Flex

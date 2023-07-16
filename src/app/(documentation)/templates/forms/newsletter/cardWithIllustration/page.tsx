@@ -9,7 +9,7 @@ import {
   Button,
   Icon,
   useColorModeValue,
-  createIcon
+  createIcon,
 } from '@chakra-ui/react'
 
 export default function CardWithIllustration() {
@@ -49,7 +49,7 @@ export default function CardWithIllustration() {
             border={0}
             _focus={{
               bg: useColorModeValue('gray.200', 'gray.800'),
-              outline: 'none'
+              outline: 'none',
             }}
           />
           <Button
@@ -147,5 +147,5 @@ const NotificationIcon = createIcon({
         d="M74,59H36a3,3,0,0,1,0-6H74a3,3,0,0,1,0,6Z"
       />
     </g>
-  )
+  ),
 })

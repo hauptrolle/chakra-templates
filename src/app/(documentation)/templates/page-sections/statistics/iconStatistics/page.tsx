@@ -8,7 +8,7 @@ import {
   Stat,
   StatLabel,
   StatNumber,
-  useColorModeValue
+  useColorModeValue,
 } from '@chakra-ui/react'
 import { ReactNode } from 'react'
 import { BsPerson } from 'react-icons/bs'

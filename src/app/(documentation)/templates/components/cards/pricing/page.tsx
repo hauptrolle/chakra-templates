@@ -9,7 +9,7 @@ import {
   ListItem,
   ListIcon,
   Button,
-  useColorModeValue
+  useColorModeValue,
 } from '@chakra-ui/react'
 import { CheckIcon } from '@chakra-ui/icons'
 
@@ -75,10 +75,10 @@ export default function Pricing() {
             rounded={'xl'}
             boxShadow={'0 5px 20px 0px rgb(72 187 120 / 43%)'}
             _hover={{
-              bg: 'green.500'
+              bg: 'green.500',
             }}
             _focus={{
-              bg: 'green.500'
+              bg: 'green.500',
             }}>
             Start your trial
           </Button>

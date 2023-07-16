@@ -6,27 +6,27 @@ export const features: SubCategory = {
   children: [
     {
       name: '2 columns with Image',
-      filename: 'splitWithImage'
+      filename: 'splitWithImage',
     },
     {
       name: 'Simple three column grid',
-      filename: 'simpleThreeColumns'
+      filename: 'simpleThreeColumns',
     },
     {
       name: 'Stats Grid with Image',
-      filename: 'statsGridWithImage'
+      filename: 'statsGridWithImage',
     },
     {
       name: 'Grid list with heading',
-      filename: 'gridListWithHeading'
+      filename: 'gridListWithHeading',
     },
     {
       name: 'Grid List With CTA',
-      filename: 'gridListWithCTA'
+      filename: 'gridListWithCTA',
     },
     {
       name: 'Simple Card Wrapper',
-      filename: 'simpleCardWrapper'
-    }
-  ]
+      filename: 'simpleCardWrapper',
+    },
+  ],
 }

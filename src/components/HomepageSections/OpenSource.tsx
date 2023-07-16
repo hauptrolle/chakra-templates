@@ -13,7 +13,7 @@ import {
   Tooltip,
   Flex,
   useColorModeValue,
-  Box
+  Box,
 } from '@chakra-ui/react'
 import Image from 'next/image'
 import { IoStar, IoExtensionPuzzle, IoMedal, IoBookmarks } from 'react-icons/io5'
@@ -41,29 +41,29 @@ export const OpenSource = ({
   contributors,
   stargazers,
   categoriesCount,
-  templatesCount
+  templatesCount,
 }: OpenSourceProps) => {
   const STATS = [
     {
       icon: IoStar,
       label: 'GitHub Stars',
-      count: stargazers.totalCount
+      count: stargazers.totalCount,
     },
     {
       icon: IoExtensionPuzzle,
       label: 'Templates',
-      count: templatesCount
+      count: templatesCount,
     },
     {
       icon: IoMedal,
       label: 'Contributors',
-      count: contributors.length
+      count: contributors.length,
     },
     {
       icon: IoBookmarks,
       label: 'Categories',
-      count: categoriesCount
-    }
+      count: categoriesCount,
+    },
   ]
 
   return (

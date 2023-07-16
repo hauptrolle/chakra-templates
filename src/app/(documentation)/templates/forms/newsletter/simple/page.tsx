@@ -10,7 +10,7 @@ import {
   Heading,
   Text,
   Container,
-  Flex
+  Flex,
 } from '@chakra-ui/react'
 import { CheckIcon } from '@chakra-ui/icons'
 
@@ -64,7 +64,7 @@ export default function Simple() {
               borderWidth={1}
               color={'gray.800'}
               _placeholder={{
-                color: 'gray.400'
+                color: 'gray.400',
               }}
               borderColor={useColorModeValue('gray.300', 'gray.700')}
               id={'email'}

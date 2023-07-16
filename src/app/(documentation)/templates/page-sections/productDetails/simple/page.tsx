@@ -16,7 +16,7 @@ import {
   useColorModeValue,
   VisuallyHidden,
   List,
-  ListItem
+  ListItem,
 } from '@chakra-ui/react'
 import { MdLocalShipping } from 'react-icons/md'
 
@@ -168,7 +168,7 @@ export default function Simple() {
             textTransform={'uppercase'}
             _hover={{
               transform: 'translateY(2px)',
-              boxShadow: 'lg'
+              boxShadow: 'lg',
             }}>
             Add to cart
           </Button>

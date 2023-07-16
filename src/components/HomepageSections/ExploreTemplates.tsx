@@ -8,7 +8,7 @@ import {
   SimpleGrid,
   Flex,
   Button,
-  useColorModeValue
+  useColorModeValue,
 } from '@chakra-ui/react'
 import Link from 'next/link'
 import { IoArrowForward } from 'react-icons/io5'
@@ -50,7 +50,7 @@ export const ExploreTemplates = ({ templatesCount }: ExploreTemplatesProps) => {
                 rounded="md"
                 rightIcon={<IoArrowForward />}
                 _hover={{
-                  bg: 'green.700'
+                  bg: 'green.700',
                 }}>
                 Browse Templates
               </Button>

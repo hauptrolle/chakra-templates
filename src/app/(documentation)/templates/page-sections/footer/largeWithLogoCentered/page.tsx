@@ -8,7 +8,7 @@ import {
   Text,
   Flex,
   Tag,
-  useColorModeValue
+  useColorModeValue,
 } from '@chakra-ui/react'
 import { ReactNode } from 'react'
 
@@ -133,14 +133,14 @@ export default function LargeWithLogoCentered() {
             borderBottom: '1px solid',
             borderColor: useColorModeValue('gray.200', 'gray.700'),
             flexGrow: 1,
-            mr: 8
+            mr: 8,
           }}
           _after={{
             content: '""',
             borderBottom: '1px solid',
             borderColor: useColorModeValue('gray.200', 'gray.700'),
             flexGrow: 1,
-            ml: 8
+            ml: 8,
           }}>
           <Logo />
         </Flex>

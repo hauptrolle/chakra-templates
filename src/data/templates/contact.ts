@@ -6,11 +6,11 @@ export const contact: SubCategory = {
   children: [
     {
       name: 'Contact',
-      filename: 'contact'
+      filename: 'contact',
     },
     {
       name: 'Contact Form with Social Buttons',
-      filename: 'contactFormWithSocialButtons'
-    }
-  ]
+      filename: 'contactFormWithSocialButtons',
+    },
+  ],
 }

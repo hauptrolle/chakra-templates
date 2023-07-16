@@ -15,7 +15,7 @@ import {
   MenuDivider,
   useDisclosure,
   useColorModeValue,
-  Stack
+  Stack,
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons'
 
@@ -35,7 +35,7 @@ const NavLink = (props: Props) => {
       rounded={'md'}
       _hover={{
         textDecoration: 'none',
-        bg: useColorModeValue('gray.200', 'gray.700')
+        bg: useColorModeValue('gray.200', 'gray.700'),
       }}
       href={'#'}>
       {children}

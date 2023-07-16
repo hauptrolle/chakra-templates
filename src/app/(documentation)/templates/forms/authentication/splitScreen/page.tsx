@@ -10,7 +10,7 @@ import {
   Heading,
   Input,
   Stack,
-  Image
+  Image,
 } from '@chakra-ui/react'
 
 export default function SplitScreen() {

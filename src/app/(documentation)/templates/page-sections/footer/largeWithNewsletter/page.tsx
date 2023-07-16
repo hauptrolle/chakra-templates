@@ -10,7 +10,7 @@ import {
   VisuallyHidden,
   Input,
   IconButton,
-  useColorModeValue
+  useColorModeValue,
 } from '@chakra-ui/react'
 import { ReactNode } from 'react'
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
@@ -34,7 +34,7 @@ const Logo = (props: any) => {
 const SocialButton = ({
   children,
   label,
-  href
+  href,
 }: {
   children: ReactNode
   label: string
@@ -54,7 +54,7 @@ const SocialButton = ({
       justifyContent={'center'}
       transition={'background 0.3s ease'}
       _hover={{
-        bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200')
+        bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
       }}>
       <VisuallyHidden>{label}</VisuallyHidden>
       {children}
@@ -140,14 +140,14 @@ export default function LargeWithNewsletter() {
                 bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
                 border={0}
                 _focus={{
-                  bg: 'whiteAlpha.300'
+                  bg: 'whiteAlpha.300',
                 }}
               />
               <IconButton
                 bg={useColorModeValue('green.400', 'green.800')}
                 color={useColorModeValue('white', 'gray.800')}
                 _hover={{
-                  bg: 'green.600'
+                  bg: 'green.600',
                 }}
                 aria-label="Subscribe"
                 icon={<BiMailSend />}

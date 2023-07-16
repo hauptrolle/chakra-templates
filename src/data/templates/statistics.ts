@@ -6,15 +6,15 @@ export const statistics: SubCategory = {
   children: [
     {
       name: 'Basic stats',
-      filename: 'basicStatistics'
+      filename: 'basicStatistics',
     },
     {
       name: 'Stats with icon',
-      filename: 'iconStatistics'
+      filename: 'iconStatistics',
     },
     {
       name: 'Statistics with title and description',
-      filename: 'statsTitleDescription'
-    }
-  ]
+      filename: 'statsTitleDescription',
+    },
+  ],
 }

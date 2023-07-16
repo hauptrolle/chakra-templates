@@ -17,14 +17,14 @@ import {
   Input,
   InputGroup,
   InputLeftElement,
-  Textarea
+  Textarea,
 } from '@chakra-ui/react'
 import {
   MdPhone,
   MdEmail,
   MdLocationOn,
   MdFacebook,
-  MdOutlineEmail
+  MdOutlineEmail,
 } from 'react-icons/md'
 import { BsGithub, BsDiscord, BsPerson } from 'react-icons/bs'
 
@@ -139,7 +139,7 @@ export default function Contact() {
                         <Textarea
                           borderColor="gray.300"
                           _hover={{
-                            borderRadius: 'gray.300'
+                            borderRadius: 'gray.300',
                           }}
                           placeholder="message"
                         />

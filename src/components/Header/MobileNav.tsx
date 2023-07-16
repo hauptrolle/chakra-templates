@@ -7,7 +7,7 @@ import {
   Stack,
   Text,
   useColorModeValue,
-  useDisclosure
+  useDisclosure,
 } from '@chakra-ui/react'
 import { ChevronDownIcon } from '@chakra-ui/icons'
 import Link from 'next/link'
@@ -36,8 +36,8 @@ export const MobileNav = ({ isOpen }: MobileNavProps) => {
         // eslint-disable-next-line react-hooks/rules-of-hooks
         backgroundColor: useColorModeValue(
           'rgba(255, 255, 255, 0.8)',
-          'rgba(26, 32, 44, 0.8)'
-        )
+          'rgba(26, 32, 44, 0.8)',
+        ),
       }}>
       {NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
@@ -65,7 +65,7 @@ const MobileNavItem = ({ href, children, label }: NavItem) => {
         justify={'space-between'}
         align={'center'}
         _hover={{
-          textDecoration: 'none'
+          textDecoration: 'none',
         }}>
         <Text fontWeight={600} color={useColorModeValue('gray.600', 'gray.200')}>
           {label}

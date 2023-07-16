@@ -20,15 +20,15 @@ export const HeroComponents = () => {
   const cardAnimationVariants = {
     initial: {
       opacity: 0,
-      y: 30
+      y: 30,
     },
     show: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.4
-      }
-    }
+        duration: 0.4,
+      },
+    },
   }
 
   return (

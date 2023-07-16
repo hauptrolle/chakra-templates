@@ -8,7 +8,7 @@ import {
   Text,
   Stack,
   Avatar,
-  useColorModeValue
+  useColorModeValue,
 } from '@chakra-ui/react'
 
 export default function blogPostWithImage() {

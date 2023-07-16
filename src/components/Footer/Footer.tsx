@@ -8,7 +8,7 @@ import {
   Text,
   SimpleGrid,
   useColorModeValue,
-  Flex
+  Flex,
 } from '@chakra-ui/react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -21,7 +21,7 @@ import {
   FIGMA_LINK,
   CONTRIBUTORS_LINK,
   TWITTER_LINK_ACHIM,
-  BUY_ME_A_COFFEE_LINK
+  BUY_ME_A_COFFEE_LINK,
 } from '../../config/constants'
 import { Logo } from '#/components/Logo'
 import { ReactNode } from 'react'
@@ -29,20 +29,20 @@ import { ReactNode } from 'react'
 const SOCIAL_LINKS = [
   {
     label: 'Discord Community',
-    href: DISCORD_INVITE_LINK
+    href: DISCORD_INVITE_LINK,
   },
   {
     label: 'GitHub Repository',
-    href: GITHUB_LINK
+    href: GITHUB_LINK,
   },
   {
     label: 'Twitter Account',
-    href: TWITTER_LINK
+    href: TWITTER_LINK,
   },
   {
     label: 'Figma Design Resources',
-    href: FIGMA_LINK
-  }
+    href: FIGMA_LINK,
+  },
 ]
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
@@ -122,14 +122,14 @@ export const Footer = () => {
             borderBottom: '1px solid',
             borderColor: useColorModeValue('gray.200', 'gray.700'),
             flexGrow: 1,
-            mr: 8
+            mr: 8,
           }}
           _after={{
             content: '""',
             borderBottom: '1px solid',
             borderColor: useColorModeValue('gray.200', 'gray.700'),
             flexGrow: 1,
-            ml: 8
+            ml: 8,
           }}>
           <Box href={'/'} as={Link}>
             <Icon as={Logo} w={{ base: 12 }} h={{ base: 12 }} />

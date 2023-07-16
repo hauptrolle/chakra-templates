@@ -14,7 +14,7 @@ import {
   Tab,
   TabPanels,
   TabPanel,
-  Flex
+  Flex,
 } from '@chakra-ui/react'
 import { ChevronDownIcon } from '@chakra-ui/icons'
 
