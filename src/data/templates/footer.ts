@@ -1,4 +1,4 @@
-import { SubCategory } from '../types';
+import { SubCategory } from '../types'
 
 export const footer: SubCategory = {
   name: 'Footer',
@@ -37,4 +37,4 @@ export const footer: SubCategory = {
       filename: 'smallCentered',
     },
   ],
-};
+}

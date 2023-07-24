@@ -1,5 +1,5 @@
-import { getCategoriesCount } from '@/utils/getCategoriesCount';
-import { Category } from '../../data/types';
+import { getCategoriesCount } from '#/utils/getCategoriesCount'
+import { Category } from '../../data/types'
 
 const testData: Category[] = [
   {
@@ -56,10 +56,10 @@ const testData: Category[] = [
       },
     ],
   },
-];
+]
 
 describe('getCategoriesCount', () => {
   it('should return the category count', () => {
-    expect(getCategoriesCount(testData)).toEqual(5);
-  });
-});
+    expect(getCategoriesCount(testData)).toEqual(5)
+  })
+})

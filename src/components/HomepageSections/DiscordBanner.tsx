@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Button,
   Container,
@@ -7,9 +9,9 @@ import {
   Icon,
   Flex,
   useBreakpointValue,
-} from '@chakra-ui/react';
-import { DISCORD_INVITE_LINK } from '../../constants';
-import { IoLogoDiscord } from 'react-icons/io5';
+} from '@chakra-ui/react'
+import { DISCORD_INVITE_LINK } from '../../config/constants'
+import { IoLogoDiscord } from 'react-icons/io5'
 
 export const DiscordBanner = () => {
   return (
@@ -31,8 +33,8 @@ export const DiscordBanner = () => {
               Talk with us
             </Text>
             <Text opacity={0.8} fontSize={'md'}>
-              We’ve setup a Discord server where you can ask questions, report
-              bugs, or request templates!
+              We’ve setup a Discord server where you can ask questions, report bugs, or
+              request templates!
             </Text>
           </Stack>
         </Stack>
@@ -56,5 +58,5 @@ export const DiscordBanner = () => {
         </Flex>
       </Container>
     </Box>
-  );
-};
+  )
+}

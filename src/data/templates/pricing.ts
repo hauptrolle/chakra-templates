@@ -1,4 +1,4 @@
-import { SubCategory } from '../types';
+import { SubCategory } from '../types'
 
 export const pricing: SubCategory = {
   name: 'Pricing',
@@ -13,4 +13,4 @@ export const pricing: SubCategory = {
       filename: 'threeTierPricingHorizontal',
     },
   ],
-};
+}

@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Box,
   Container,
@@ -7,15 +9,15 @@ import {
   Flex,
   Button,
   useColorModeValue,
-} from '@chakra-ui/react';
-import NextLink from 'next/link';
-import { IoArrowForward } from 'react-icons/io5';
+} from '@chakra-ui/react'
+import Link from 'next/link'
+import { IoArrowForward } from 'react-icons/io5'
 
-import { TEMPLATES_LINK } from '../../constants';
+import { TEMPLATES_LINK } from '../../config/constants'
 
 type ExploreTemplatesProps = {
-  templatesCount: number;
-};
+  templatesCount: number
+}
 
 export const ExploreTemplates = ({ templatesCount }: ExploreTemplatesProps) => {
   return (
@@ -37,26 +39,25 @@ export const ExploreTemplates = ({ templatesCount }: ExploreTemplatesProps) => {
               </Text>
             </Box>
             <Flex w={'full'} align={'center'} justify={'center'}>
-              <NextLink href={TEMPLATES_LINK} passHref>
-                <Button
-                  as={'a'}
-                  bg={'green.600'}
-                  color={'white'}
-                  px={8}
-                  size={'lg'}
-                  fontSize={'md'}
-                  rounded={'md'}
-                  rightIcon={<IoArrowForward />}
-                  _hover={{
-                    bg: 'green.700',
-                  }}>
-                  Browse Templates
-                </Button>
-              </NextLink>
+              <Button
+                as={Link}
+                href={TEMPLATES_LINK}
+                bg="green.600"
+                color={'white'}
+                px={8}
+                size="lg"
+                fontSize="md"
+                rounded="md"
+                rightIcon={<IoArrowForward />}
+                _hover={{
+                  bg: 'green.700',
+                }}>
+                Browse Templates
+              </Button>
             </Flex>
           </SimpleGrid>
         </Box>
       </Container>
     </Box>
-  );
-};
+  )
+}

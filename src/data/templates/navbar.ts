@@ -1,4 +1,4 @@
-import { SubCategory } from '../types';
+import { SubCategory } from '../types'
 
 export const navbar: SubCategory = {
   name: 'Navbar',
@@ -21,4 +21,4 @@ export const navbar: SubCategory = {
       filename: 'withDarkModeSwitcher',
     },
   ],
-};
+}

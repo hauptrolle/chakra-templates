@@ -1,4 +1,4 @@
-import { SubCategory } from '../types';
+import { SubCategory } from '../types'
 
 export const buttons: SubCategory = {
   name: 'Buttons',
@@ -25,4 +25,4 @@ export const buttons: SubCategory = {
       filename: 'clickMe',
     },
   ],
-};
+}

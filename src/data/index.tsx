@@ -1,26 +1,26 @@
-import { socialButtons } from './components/socialMediaButtons';
-import { buttons } from './components/buttons';
-import { cards } from './components/cards';
-import { result } from './components/result';
-import { hero } from './templates/hero';
-import { features } from './templates/features';
-import { navbar } from './templates/navbar';
-import { sidebar } from './templates/sidebar';
-import { authentication } from './templates/authentication';
-import { newsletter } from './templates/newsletter';
-import { footer } from './templates/footer';
-import { testimonials } from './templates/testimonials';
-import { pricing } from './templates/pricing';
-import { statistics } from './templates/statistics';
-import { blog } from './templates/blog';
-import { contact } from './templates/contact';
-import { carousel } from './templates/carousel';
-import { product } from './templates/product';
-import { multistep } from './templates/basic3StepForm';
+import { socialButtons } from './components/socialMediaButtons'
+import { buttons } from './components/buttons'
+import { cards } from './components/cards'
+import { result } from './components/result'
+import { hero } from './templates/hero'
+import { features } from './templates/features'
+import { navbar } from './templates/navbar'
+import { sidebar } from './templates/sidebar'
+import { authentication } from './templates/authentication'
+import { newsletter } from './templates/newsletter'
+import { footer } from './templates/footer'
+import { testimonials } from './templates/testimonials'
+import { pricing } from './templates/pricing'
+import { statistics } from './templates/statistics'
+import { blog } from './templates/blog'
+import { contact } from './templates/contact'
+import { carousel } from './templates/carousel'
+import { product } from './templates/product'
+import { multistep } from './templates/basic3StepForm'
 
-import { Category } from './types';
-import { imagesAndIcons } from './components/imagesAndIcons';
-import { accordion } from './components/accordion';
+import { Category } from './types'
+import { imagesAndIcons } from './components/imagesAndIcons'
+import { accordion } from './components/accordion'
 
 export const data: Category[] = [
   {
@@ -60,13 +60,6 @@ export const data: Category[] = [
     name: 'Components',
     id: 'components',
     subLabel: 'Smaller buildings blocks like Cards, Buttons, Result ...',
-    children: [
-      cards,
-      buttons,
-      socialButtons,
-      result,
-      imagesAndIcons,
-      accordion,
-    ],
+    children: [cards, buttons, socialButtons, result, imagesAndIcons, accordion],
   },
-];
+]

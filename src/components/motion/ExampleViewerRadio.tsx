@@ -1,10 +1,10 @@
-import React from 'react';
-import MotionBox from './MotionBox';
+import React from 'react'
+import MotionBox from './MotionBox'
 
 export type Props = {
-  isOpen: boolean | undefined;
-  children: React.ReactNode;
-};
+  isOpen: boolean | undefined
+  children: React.ReactNode
+}
 
 const variants = {
   open: {
@@ -19,7 +19,7 @@ const variants = {
       display: 'none',
     },
   },
-};
+}
 
 const ExampleViewerRadio: React.VFC<Props> = (props) => {
   return (
@@ -31,7 +31,7 @@ const ExampleViewerRadio: React.VFC<Props> = (props) => {
       variants={variants}>
       {props.children}
     </MotionBox>
-  );
-};
+  )
+}
 
-export default ExampleViewerRadio;
+export default ExampleViewerRadio

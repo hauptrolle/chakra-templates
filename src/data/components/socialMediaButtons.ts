@@ -1,4 +1,4 @@
-import { SubCategory } from '../types';
+import { SubCategory } from '../types'
 
 export const socialButtons: SubCategory = {
   name: 'Social Media Buttons',
@@ -25,4 +25,4 @@ export const socialButtons: SubCategory = {
       filename: 'google',
     },
   ],
-};
+}

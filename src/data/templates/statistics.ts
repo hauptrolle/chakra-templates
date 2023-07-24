@@ -1,4 +1,4 @@
-import { SubCategory } from '../types';
+import { SubCategory } from '../types'
 
 export const statistics: SubCategory = {
   name: 'Statistics',
@@ -17,4 +17,4 @@ export const statistics: SubCategory = {
       filename: 'statsTitleDescription',
     },
   ],
-};
+}

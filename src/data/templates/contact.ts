@@ -1,4 +1,4 @@
-import { SubCategory } from '../types';
+import { SubCategory } from '../types'
 
 export const contact: SubCategory = {
   name: 'Contact',
@@ -13,4 +13,4 @@ export const contact: SubCategory = {
       filename: 'contactFormWithSocialButtons',
     },
   ],
-};
+}

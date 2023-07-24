@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Container,
   Heading,
@@ -12,33 +14,28 @@ import {
   Flex,
   useColorModeValue,
   Box,
-} from '@chakra-ui/react';
-import NextImage from 'next/image';
-import {
-  IoStar,
-  IoExtensionPuzzle,
-  IoMedal,
-  IoBookmarks,
-} from 'react-icons/io5';
+} from '@chakra-ui/react'
+import Image from 'next/image'
+import { IoStar, IoExtensionPuzzle, IoMedal, IoBookmarks } from 'react-icons/io5'
 
-import { CONTRIBUTORS_LINK, GITHUB_LINK } from '../../constants';
-import { TextUnderline } from '@/components/TextUnderline';
-import { Stargazers } from '../../api/stargazers';
+import { CONTRIBUTORS_LINK, GITHUB_LINK } from '../../config/constants'
+import { TextUnderline } from '../TextUnderline'
+import { Stargazers } from '../../services/stargazers'
 
 export interface Contributor {
-  login: string;
-  name: string;
-  avatar_url: string;
-  profile: string;
-  contributions: string[];
+  login: string
+  name: string
+  avatar_url: string
+  profile: string
+  contributions: string[]
 }
 
 export type OpenSourceProps = {
-  contributors: Contributor[];
-  stargazers: Stargazers;
-  categoriesCount: number;
-  templatesCount?: number;
-};
+  contributors: Contributor[]
+  stargazers: Stargazers
+  categoriesCount: number
+  templatesCount?: number
+}
 
 export const OpenSource = ({
   contributors,
@@ -67,23 +64,23 @@ export const OpenSource = ({
       label: 'Categories',
       count: categoriesCount,
     },
-  ];
+  ]
 
   return (
     <Container maxW={'7xl'} py={{ base: 14, sm: 20, md: 32 }}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
         <Stack spacing={4}>
           <Heading as={'h3'} mb={2}>
-            We're <TextUnderline>open source</TextUnderline>
+            We&apos;re <TextUnderline>open source</TextUnderline>
           </Heading>
           <Text color={'gray.500'} maxW={'4xl'} fontSize={{ md: 'lg' }}>
-            and you can become a part of it! If you’re interested in
-            contributing visit our{' '}
+            and you can become a part of it! If you’re interested in contributing visit
+            our{' '}
             <Link href={GITHUB_LINK} color={'green.400'} target={'_blank'}>
               GitHub repository
             </Link>{' '}
-            and take a peek at the Template Development project. There are
-            pre-designed templates waiting for you to be implemented.
+            and take a peek at the Template Development project. There are pre-designed
+            templates waiting for you to be implemented.
           </Text>
 
           <Text color={'gray.500'} maxW={'4xl'} fontSize={{ md: 'lg' }}>
@@ -95,13 +92,13 @@ export const OpenSource = ({
               <WrapItem p={2} key={contributor.name}>
                 <Tooltip label={contributor.name}>
                   <Box
-                    as={'a'}
+                    as="a"
                     href={CONTRIBUTORS_LINK}
                     rounded={'full'}
                     width={'60px'}
                     height={'60px'}
                     overflow={'hidden'}>
-                    <NextImage
+                    <Image
                       src={contributor.avatar_url}
                       alt={`Avatar of ${contributor.name}`}
                       width={60}
@@ -115,13 +112,11 @@ export const OpenSource = ({
         </Stack>
 
         <Flex justify={'center'} align={'center'}>
-          <SimpleGrid
-            columns={{ base: 1, lg: 2 }}
-            spacing={{ base: 4 }}
-            w={'full'}>
+          <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={{ base: 4 }} w={'full'}>
             {STATS.map((stat) => (
               <Stack
                 key={stat.label}
+                // eslint-disable-next-line react-hooks/rules-of-hooks
                 bg={useColorModeValue('gray.100', 'gray.900')}
                 rounded={'xl'}
                 px={4}
@@ -141,5 +136,5 @@ export const OpenSource = ({
         </Flex>
       </SimpleGrid>
     </Container>
-  );
-};
+  )
+}

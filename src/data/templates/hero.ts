@@ -1,4 +1,4 @@
-import { SubCategory } from '../types';
+import { SubCategory } from '../types'
 
 export const hero: SubCategory = {
   name: 'Hero',
@@ -28,4 +28,4 @@ export const hero: SubCategory = {
       filename: 'withBackgroundImage',
     },
   ],
-};
+}

@@ -1,4 +1,4 @@
-import { SubCategory } from '../types';
+import { SubCategory } from '../types'
 
 export const multistep: SubCategory = {
   name: 'Multi Step Forms',
@@ -9,4 +9,4 @@ export const multistep: SubCategory = {
       filename: 'basic3StepForm',
     },
   ],
-};
+}

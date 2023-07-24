@@ -1,4 +1,4 @@
-import { SubCategory } from '../types';
+import { SubCategory } from '../types'
 
 export const result: SubCategory = {
   name: 'Result',
@@ -25,4 +25,4 @@ export const result: SubCategory = {
       filename: '404',
     },
   ],
-};
+}

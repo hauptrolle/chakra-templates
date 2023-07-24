@@ -1,5 +1,5 @@
-import { getTemplatesCount } from '@/utils/getTemplatesCount';
-import { Category } from '../../data/types';
+import { getTemplatesCount } from '#/utils/getTemplatesCount'
+import { Category } from '../../data/types'
 
 const testData: Category[] = [
   {
@@ -56,10 +56,10 @@ const testData: Category[] = [
       },
     ],
   },
-];
+]
 
 describe('getCategoryCount', () => {
   it('should return the templates count', () => {
-    expect(getTemplatesCount(testData)).toEqual(5);
-  });
-});
+    expect(getTemplatesCount(testData)).toEqual(5)
+  })
+})

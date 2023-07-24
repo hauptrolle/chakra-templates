@@ -1,4 +1,4 @@
-import { SubCategory } from '../types';
+import { SubCategory } from '../types'
 
 export const testimonials: SubCategory = {
   name: 'Testimonials',
@@ -17,4 +17,4 @@ export const testimonials: SubCategory = {
       filename: 'gridBlurredBackdrop',
     },
   ],
-};
+}

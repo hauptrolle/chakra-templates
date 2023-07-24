@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Container,
   Heading,
@@ -6,26 +8,23 @@ import {
   Stack,
   Flex,
   useColorModeValue,
-} from '@chakra-ui/react';
-import { TextUnderline } from '@/components/TextUnderline';
+} from '@chakra-ui/react'
+import { TextUnderline } from '../TextUnderline'
 
 const STEPS = [
   {
     title: 'Find your template',
-    text:
-      'Every template is embedded within an iframe, so you can easily check what they look like and test the responsive behaviour.',
+    text: 'Every template is embedded within an iframe, so you can easily check what they look like and test the responsive behaviour.',
   },
   {
     title: 'Copy the code',
-    text:
-      'Click the code tab to see the actual source code of the template. Copy and paste it into your project and adjust it to your needs.',
+    text: 'Click the code tab to see the actual source code of the template. Copy and paste it into your project and adjust it to your needs.',
   },
   {
     title: 'Enjoy your free time',
-    text:
-      "You've just saved yourself a bunch of time not building the same stuff over and over again. Enjoy your free time, and build business features",
+    text: "You've just saved yourself a bunch of time not building the same stuff over and over again. Enjoy your free time, and build business features",
   },
-];
+]
 
 export const GettingStarted = () => {
   return (
@@ -53,7 +52,9 @@ export const GettingStarted = () => {
               <Flex
                 w={10}
                 h={10}
+                // eslint-disable-next-line react-hooks/rules-of-hooks
                 bg={useColorModeValue('green.100', 'green.900')}
+                // eslint-disable-next-line react-hooks/rules-of-hooks
                 color={useColorModeValue('green.700', 'green.300')}
                 fontWeight={700}
                 align={'center'}
@@ -65,6 +66,7 @@ export const GettingStarted = () => {
               <Text
                 fontFamily={'heading'}
                 fontSize={'xl'}
+                // eslint-disable-next-line react-hooks/rules-of-hooks
                 color={useColorModeValue('gray.700', 'white')}>
                 {step.title}
               </Text>
@@ -74,5 +76,5 @@ export const GettingStarted = () => {
         </Flex>
       </Container>
     </Box>
-  );
-};
+  )
+}

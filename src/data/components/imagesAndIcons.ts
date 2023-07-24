@@ -1,4 +1,4 @@
-import { SubCategory } from '../types';
+import { SubCategory } from '../types'
 
 export const imagesAndIcons: SubCategory = {
   name: 'Images & Icons',
@@ -13,4 +13,4 @@ export const imagesAndIcons: SubCategory = {
       filename: 'statusIndicator',
     },
   ],
-};
+}

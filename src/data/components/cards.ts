@@ -1,4 +1,4 @@
-import { SubCategory } from '../types';
+import { SubCategory } from '../types'
 
 export const cards: SubCategory = {
   name: 'Cards',
@@ -41,4 +41,4 @@ export const cards: SubCategory = {
       filename: 'postwithLike',
     },
   ],
-};
+}

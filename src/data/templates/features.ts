@@ -1,4 +1,4 @@
-import { SubCategory } from '../types';
+import { SubCategory } from '../types'
 
 export const features: SubCategory = {
   name: 'Features',
@@ -29,4 +29,4 @@ export const features: SubCategory = {
       filename: 'simpleCardWrapper',
     },
   ],
-};
+}

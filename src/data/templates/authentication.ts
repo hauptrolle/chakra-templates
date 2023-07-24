@@ -1,4 +1,4 @@
-import { SubCategory } from '../types';
+import { SubCategory } from '../types'
 
 export const authentication: SubCategory = {
   name: 'Authentication',
@@ -37,4 +37,4 @@ export const authentication: SubCategory = {
       filename: 'userProfileEdit',
     },
   ],
-};
+}

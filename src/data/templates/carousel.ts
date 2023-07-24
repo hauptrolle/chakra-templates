@@ -1,4 +1,4 @@
-import { SubCategory } from '../types';
+import { SubCategory } from '../types'
 
 export const carousel: SubCategory = {
   name: 'Carousels',
@@ -13,4 +13,4 @@ export const carousel: SubCategory = {
       filename: 'captionCarousel',
     },
   ],
-};
+}
