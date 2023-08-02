@@ -21,6 +21,7 @@ import { multistep } from './templates/basic3StepForm';
 import { Category } from './types';
 import { imagesAndIcons } from './components/imagesAndIcons';
 import { accordion } from './components/accordion';
+import { tables } from './components/tables';
 
 export const data: Category[] = [
   {
@@ -67,6 +68,7 @@ export const data: Category[] = [
       result,
       imagesAndIcons,
       accordion,
+      tables,
     ],
   },
 ];
