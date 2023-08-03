@@ -62,6 +62,7 @@ export const CodeSample = (props: Props) => {
         text={code}
         language={'tsx'}
         startingLineNumber={0}
+        theme={a11yDark}
         wrapLongLines
         showLineNumbers={false}
       />
