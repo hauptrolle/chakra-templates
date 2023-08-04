@@ -61,6 +61,7 @@ export const CodeSample = (props: Props) => {
       <CodeBlock
         text={code}
         language={'tsx'}
+        theme={a11yDark}
         startingLineNumber={0}
         wrapLongLines
         showLineNumbers={false}
