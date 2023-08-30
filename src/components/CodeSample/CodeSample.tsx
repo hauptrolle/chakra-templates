@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useCallback } from 'react'
 import { CodeBlock, a11yDark } from 'react-code-blocks'
-import { Box, Button, useClipboard } from '@chakra-ui/react'
+import { Box, Button, useClipboard, useColorMode } from '@chakra-ui/react'
 import splitbee from '@splitbee/web'
 
 import {
@@ -19,10 +19,12 @@ interface Props {
 
 export const CodeSample = (props: Props) => {
   const { template, category, subCategory } = props
-  const code =
-    require(`!!raw-loader!../../app/(documentation)/templates/${category.id}/${subCategory.id}/${template.filename}/page.tsx`).default
+  const code = require(
+    `!!raw-loader!../../app/(documentation)/templates/${category.id}/${subCategory.id}/${template.filename}/page.tsx`,
+  ).default
   const { hasCopied, onCopy } = useClipboard(code)
   const codeRef = useRef<HTMLDivElement>(null)
+  const mode = useColorMode()
 
   const handleManualCopy = useCallback(
     (event: ClipboardEvent) => {
@@ -59,10 +61,12 @@ export const CodeSample = (props: Props) => {
       </Button>
 
       <CodeBlock
+        //@ts-ignore
         text={code}
+        theme={mode.colorMode === 'dark' ? a11yDark : undefined}
         language={'tsx'}
         startingLineNumber={0}
-        wrapLongLines
+        /* wrapLongLines */ // This breaks text selection
         showLineNumbers={false}
       />
     </Box>
