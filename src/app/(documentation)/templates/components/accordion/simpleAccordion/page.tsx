@@ -21,17 +21,14 @@ export default function SimpleAccordion() {
       justify={'center'}
       bg={useColorModeValue('gray.50', 'gray.800')}>
       <Container>
-        <Accordion allowMultiple width="100%" maxW="lg" bg="white" rounded="lg">
+        <Accordion allowMultiple width="100%" maxW="lg" rounded="lg">
           <AccordionItem>
             <AccordionButton
               display="flex"
               alignItems="center"
               justifyContent="space-between"
-              p={4}
-              _hover={{ bg: 'gray.100' }}>
-              <Text fontSize="md" color="gray.800">
-                What is Chakra UI?
-              </Text>
+              p={4}>
+              <Text fontSize="md">What is Chakra UI?</Text>
               <ChevronDownIcon fontSize="24px" />
             </AccordionButton>
             <AccordionPanel pb={4}>
@@ -46,9 +43,7 @@ export default function SimpleAccordion() {
               display="flex"
               alignItems="center"
               justifyContent="space-between"
-              p={4}
-              _hover={{ bg: 'gray.100' }}
-              color="gray.800">
+              p={4}>
               <Text fontSize="md">What advantages to use?</Text>
               <ChevronDownIcon fontSize="24px" />
             </AccordionButton>
@@ -65,9 +60,7 @@ export default function SimpleAccordion() {
               display="flex"
               alignItems="center"
               justifyContent="space-between"
-              p={4}
-              _hover={{ bg: 'gray.100' }}
-              color="gray.800">
+              p={4}>
               <Text fontSize="md">How to start using Chakra UI?</Text>
               <ChevronDownIcon fontSize="24px" />
             </AccordionButton>
