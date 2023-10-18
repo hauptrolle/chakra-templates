@@ -11,6 +11,9 @@ const variants = {
     opacity: 1,
     y: 0,
     display: 'block',
+    transitionEnd: {
+      display: 'block',
+    },
   },
   closed: {
     opacity: 0,
