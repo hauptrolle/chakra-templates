@@ -12,9 +12,5 @@ export const carousel: SubCategory = {
       name: 'Carousel with Caption',
       filename: 'captionCarousel',
     },
-    {
-      name: 'Curved Carousel',
-      filename: 'curvedCarousel',
-    },
   ],
 }
