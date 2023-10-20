@@ -67,7 +67,7 @@ export default function CurvedCarousel() {
     },
     {
       title: 'Image 4',
-      image: 'https://source.unsplash.com/random',
+      image: 'https://images.unsplash.com/photo-1695937881958-d17f02448575?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY5NzgyNDk2NQ&ixlib=rb-4.0.3&q=80&w=1080',
     },
   ]
 
