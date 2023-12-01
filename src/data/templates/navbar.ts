@@ -20,5 +20,9 @@ export const navbar: SubCategory = {
       name: 'With user dropdown and Dark theme switcher',
       filename: 'withDarkModeSwitcher',
     },
+    {
+      name: 'With MutliLevel Navbar, Sidebar & CTA',
+      filename: 'withMultiLevel',
+    },
   ],
 }
